@@ -1,0 +1,602 @@
+{
+ "a_panel_vs_solver_same_items": {
+  "n": 608,
+  "label_agreement_weighted": 0.6756476401401743,
+  "LC_onecoin": {
+   "auroc_panel": 0.755503215310042,
+   "auroc_solver_pure": 0.7979899385814667,
+   "diff_panel_minus_solver": -0.042486723271424665,
+   "diff_ci": [
+    -0.10961773232046408,
+    0.01761585184654154
+   ]
+  },
+  "LC_maj": {
+   "auroc_panel": 0.7645348575053601,
+   "auroc_solver_pure": 0.8009262277638546,
+   "diff_panel_minus_solver": -0.03639137025849448,
+   "diff_ci": [
+    -0.10891604704945976,
+    0.026547609517990896
+   ]
+  },
+  "LC_huiwalter": {
+   "auroc_panel": 0.7554217936364959,
+   "auroc_solver_pure": 0.7973618006933976,
+   "diff_panel_minus_solver": -0.04194000705690171,
+   "diff_ci": [
+    -0.11042209158742217,
+    0.01804344036096986
+   ]
+  },
+  "LC_onecoin_str": {
+   "auroc_panel": 0.756724896332309,
+   "auroc_solver_pure": 0.7998865417013677,
+   "diff_panel_minus_solver": -0.043161645369058754,
+   "diff_ci": [
+    -0.10941376392856605,
+    0.017476296278120605
+   ]
+  },
+  "LC_ds_binary": {
+   "auroc_panel": 0.7870853204383782,
+   "auroc_solver_pure": 0.8119019644545709,
+   "diff_panel_minus_solver": -0.024816644016192657,
+   "diff_ci": [
+    -0.09565466475123106,
+    0.03972989269212086
+   ]
+  },
+  "LC_granular": {
+   "auroc_panel": 0.753178093921586,
+   "auroc_solver_pure": 0.7817469497221397,
+   "diff_panel_minus_solver": -0.028568855800553683,
+   "diff_ci": [
+    -0.09141937792348499,
+    0.03204497745568953
+   ]
+  },
+  "A3": {
+   "auroc_panel": 0.643165842956317,
+   "auroc_solver_pure": 0.6028687184832916,
+   "diff_panel_minus_solver": 0.04029712447302536,
+   "diff_ci": [
+    -0.028227930908450667,
+    0.10271600683124739
+   ]
+  },
+  "A1": {
+   "auroc_panel": 0.6584440186981033,
+   "auroc_solver_pure": 0.6345419275787927,
+   "diff_panel_minus_solver": 0.02390209111931063,
+   "diff_ci": [
+    -0.03498158512460052,
+    0.07934292125134103
+   ]
+  },
+  "A0": {
+   "auroc_panel": 0.6564884709223496,
+   "auroc_solver_pure": 0.6854786620494351,
+   "diff_panel_minus_solver": -0.028990191127085452,
+   "diff_ci": [
+    -0.08871983912549075,
+    0.025036016068885208
+   ]
+  },
+  "B1": {
+   "auroc_panel": 0.7620781771476446,
+   "auroc_solver_pure": 0.7574069166304919,
+   "diff_panel_minus_solver": 0.00467126051715272,
+   "diff_ci": [
+    -0.04648200047228407,
+    0.057989684724315364
+   ]
+  },
+  "B1plus": {
+   "auroc_panel": 0.8266908118039646,
+   "auroc_solver_pure": 0.7378670754808634,
+   "diff_panel_minus_solver": 0.08882373632310125,
+   "diff_ci": [
+    0.03540824089912287,
+    0.14193866896993135
+   ]
+  },
+  "B3nli": {
+   "auroc_panel": 0.734814686096281,
+   "auroc_solver_pure": 0.67211869978117,
+   "diff_panel_minus_solver": 0.06269598631511097,
+   "diff_ci": [
+    -0.008027993884427204,
+    0.13874576603871533
+   ]
+  },
+  "B3cos": {
+   "auroc_panel": 0.7238619494371595,
+   "auroc_solver_pure": 0.6427828283960934,
+   "diff_panel_minus_solver": 0.08107912104106618,
+   "diff_ci": [
+    0.01326842569646841,
+    0.14430387944578704
+   ]
+  },
+  "B1L": {
+   "auroc_panel": 0.7051095698023535,
+   "auroc_solver_pure": 0.6370141043208046,
+   "diff_panel_minus_solver": 0.06809546548154888,
+   "diff_ci": [
+    0.019007516645618713,
+    0.12330379304208207
+   ]
+  },
+  "B1plusL": {
+   "auroc_panel": 0.7919591742018018,
+   "auroc_solver_pure": 0.6837351365234179,
+   "diff_panel_minus_solver": 0.10822403767838396,
+   "diff_ci": [
+    0.06558286204367289,
+    0.15253313788415004
+   ]
+  },
+  "A1L": {
+   "auroc_panel": 0.5579714390195822,
+   "auroc_solver_pure": 0.5762843056766861,
+   "diff_panel_minus_solver": -0.018312866657103855,
+   "diff_ci": [
+    -0.07368773723393468,
+    0.04001330648219915
+   ]
+  },
+  "B3nliL": {
+   "auroc_panel": 0.7484179683415247,
+   "auroc_solver_pure": 0.6621769704352277,
+   "diff_panel_minus_solver": 0.08624099790629702,
+   "diff_ci": [
+    0.009296133282980134,
+    0.16584582890131402
+   ]
+  },
+  "B3cosL": {
+   "auroc_panel": 0.7237243812494997,
+   "auroc_solver_pure": 0.6780994609424424,
+   "diff_panel_minus_solver": 0.045624920307057226,
+   "diff_ci": [
+    -0.01813501330247349,
+    0.10910061301357084
+   ]
+  },
+  "B3cL": {
+   "auroc_panel": 0.6014810021397452,
+   "auroc_solver_pure": 0.5631286574592197,
+   "diff_panel_minus_solver": 0.03835234468052551,
+   "diff_ci": [
+    0.003105238556052376,
+    0.08114672874260181
+   ]
+  },
+  "B7": {
+   "auroc_panel": 0.5109977054350503,
+   "auroc_solver_pure": 0.5147510923922979,
+   "diff_panel_minus_solver": -0.003753386957247584,
+   "diff_ci": [
+    -0.012724601563146093,
+    0.004621065703947585
+   ]
+  },
+  "Ccov": {
+   "auroc_panel": 0.6560236843351084,
+   "auroc_solver_pure": 0.6727012413821384,
+   "diff_panel_minus_solver": -0.01667755704703,
+   "diff_ci": [
+    -0.07343241089757054,
+    0.037971157537758905
+   ]
+  }
+ },
+ "b_nonequiv": {
+  "n": 545,
+  "faithful_share_weighted": 0.43937690653835404,
+  "kish_n_eff": 422.77781281402656,
+  "LC_onecoin": {
+   "auroc": 0.722357606554147,
+   "ci": [
+    0.6694857821472802,
+    0.7696101751420049
+   ],
+   "n": 545,
+   "preregistered_reading": "not a checker artefact"
+  },
+  "LC_maj": {
+   "auroc": 0.7411018799882325,
+   "ci": [
+    0.6929562166564531,
+    0.7862866560587062
+   ],
+   "n": 545,
+   "preregistered_reading": "not a checker artefact"
+  },
+  "LC_huiwalter": {
+   "auroc": 0.7213163536151974,
+   "ci": [
+    0.6686685747049834,
+    0.7696717498157662
+   ],
+   "n": 545,
+   "preregistered_reading": "not a checker artefact"
+  },
+  "LC_onecoin_str": {
+   "auroc": 0.7231070783447693,
+   "ci": [
+    0.6694271442593467,
+    0.771310965493624
+   ],
+   "n": 545,
+   "preregistered_reading": "not a checker artefact"
+  },
+  "LC_ds_binary": {
+   "auroc": 0.7733777604558709,
+   "ci": [
+    0.7292659517646335,
+    0.8146076516392091
+   ],
+   "n": 545,
+   "preregistered_reading": "not a checker artefact"
+  },
+  "LC_granular": {
+   "auroc": 0.7257222172955352,
+   "ci": [
+    0.6737340258272045,
+    0.7730984662247287
+   ],
+   "n": 545,
+   "preregistered_reading": "not a checker artefact"
+  },
+  "A3": {
+   "auroc": 0.6093835653839039,
+   "ci": [
+    0.5539996635206507,
+    0.6671056656092765
+   ],
+   "n": 545,
+   "preregistered_reading": null
+  },
+  "A1": {
+   "auroc": 0.6224108447279053,
+   "ci": [
+    0.5686828509441497,
+    0.6764865621631189
+   ],
+   "n": 543,
+   "preregistered_reading": null
+  },
+  "A0": {
+   "auroc": 0.5928113289291604,
+   "ci": [
+    0.536045882647025,
+    0.6460244910701219
+   ],
+   "n": 545,
+   "preregistered_reading": null
+  },
+  "B1": {
+   "auroc": 0.7088065461327671,
+   "ci": [
+    0.6608759800518077,
+    0.7531512244934386
+   ],
+   "n": 545,
+   "preregistered_reading": null
+  },
+  "B1plus": {
+   "auroc": 0.7845857019797192,
+   "ci": [
+    0.7415269930890717,
+    0.8230843445722242
+   ],
+   "n": 545,
+   "preregistered_reading": null
+  },
+  "B3nli": {
+   "auroc": 0.7086690308475103,
+   "ci": [
+    0.6552796916284966,
+    0.757375356830982
+   ],
+   "n": 545,
+   "preregistered_reading": null
+  },
+  "B3cos": {
+   "auroc": 0.6787506287628849,
+   "ci": [
+    0.6269119917935041,
+    0.7296173883029815
+   ],
+   "n": 545,
+   "preregistered_reading": null
+  },
+  "B1L": {
+   "auroc": 0.6630601914458857,
+   "ci": [
+    0.6190213904339884,
+    0.7060991712475954
+   ],
+   "n": 545,
+   "preregistered_reading": null
+  },
+  "B1plusL": {
+   "auroc": 0.7887752658497331,
+   "ci": [
+    0.7557196115881782,
+    0.8241091296022071
+   ],
+   "n": 545,
+   "preregistered_reading": null
+  },
+  "A1L": {
+   "auroc": 0.5377379521349744,
+   "ci": [
+    0.48156598778938003,
+    0.5946758737927933
+   ],
+   "n": 543,
+   "preregistered_reading": null
+  },
+  "B3nliL": {
+   "auroc": 0.7307653581356925,
+   "ci": [
+    0.6776582300687215,
+    0.7780059514089589
+   ],
+   "n": 545,
+   "preregistered_reading": null
+  },
+  "B3cosL": {
+   "auroc": 0.670481951235054,
+   "ci": [
+    0.6158690923526772,
+    0.7177242866405302
+   ],
+   "n": 545,
+   "preregistered_reading": null
+  },
+  "B3cL": {
+   "auroc": 0.6026235536116638,
+   "ci": [
+    0.5647990952235773,
+    0.6407964693218503
+   ],
+   "n": 545,
+   "preregistered_reading": null
+  },
+  "B7": {
+   "auroc": 0.5069005452797603,
+   "ci": [
+    0.49373971714937553,
+    0.5235569367712141
+   ],
+   "n": 545,
+   "preregistered_reading": null
+  },
+  "Ccov": {
+   "auroc": 0.6015664923711301,
+   "ci": [
+    0.5469895844198823,
+    0.6516979266834265
+   ],
+   "n": 545,
+   "preregistered_reading": null
+  }
+ },
+ "d_no_bijection": {
+  "n": 472,
+  "faithful_share_weighted": 0.44726369748101363,
+  "kish_n_eff": 364.636063701124,
+  "LC_onecoin": {
+   "auroc": 0.7114109029569516,
+   "ci": [
+    0.6526646232163505,
+    0.7671260646218834
+   ],
+   "n": 472,
+   "preregistered_reading": "not a checker artefact"
+  },
+  "LC_maj": {
+   "auroc": 0.7489142927748444,
+   "ci": [
+    0.7014221801744733,
+    0.7956432566388055
+   ],
+   "n": 472,
+   "preregistered_reading": "not a checker artefact"
+  },
+  "LC_huiwalter": {
+   "auroc": 0.7107426459506179,
+   "ci": [
+    0.6515783842892089,
+    0.766508875927328
+   ],
+   "n": 472,
+   "preregistered_reading": "not a checker artefact"
+  },
+  "LC_onecoin_str": {
+   "auroc": 0.7099586809418862,
+   "ci": [
+    0.6512050340179383,
+    0.7645974792246024
+   ],
+   "n": 472,
+   "preregistered_reading": "not a checker artefact"
+  },
+  "LC_ds_binary": {
+   "auroc": 0.7785530979990736,
+   "ci": [
+    0.7339283701636926,
+    0.8216074961852281
+   ],
+   "n": 472,
+   "preregistered_reading": "not a checker artefact"
+  },
+  "LC_granular": {
+   "auroc": 0.7154455292694275,
+   "ci": [
+    0.659483446235548,
+    0.7694265251115154
+   ],
+   "n": 472,
+   "preregistered_reading": "not a checker artefact"
+  },
+  "A3": {
+   "auroc": 0.6161367225559351,
+   "ci": [
+    0.5578574276574908,
+    0.6746389498103681
+   ],
+   "n": 472,
+   "preregistered_reading": null
+  },
+  "A1": {
+   "auroc": 0.6171499032672003,
+   "ci": [
+    0.5602080903975479,
+    0.6773859187845629
+   ],
+   "n": 470,
+   "preregistered_reading": null
+  },
+  "A0": {
+   "auroc": 0.6060884637451656,
+   "ci": [
+    0.544100268351823,
+    0.6666063550787821
+   ],
+   "n": 472,
+   "preregistered_reading": null
+  },
+  "B1": {
+   "auroc": 0.7021928299604049,
+   "ci": [
+    0.6454660624885526,
+    0.7549806955137747
+   ],
+   "n": 472,
+   "preregistered_reading": null
+  },
+  "B1plus": {
+   "auroc": 0.7829107753125051,
+   "ci": [
+    0.7351973976044388,
+    0.8258053418028648
+   ],
+   "n": 472,
+   "preregistered_reading": null
+  },
+  "B3nli": {
+   "auroc": 0.7168740001350582,
+   "ci": [
+    0.6573748532689356,
+    0.7691371540763748
+   ],
+   "n": 472,
+   "preregistered_reading": null
+  },
+  "B3cos": {
+   "auroc": 0.6784573533722053,
+   "ci": [
+    0.612977336419287,
+    0.7352844343741243
+   ],
+   "n": 472,
+   "preregistered_reading": null
+  },
+  "B1L": {
+   "auroc": 0.6586100816597745,
+   "ci": [
+    0.6108625107887207,
+    0.7059653362283809
+   ],
+   "n": 472,
+   "preregistered_reading": null
+  },
+  "B1plusL": {
+   "auroc": 0.7878703051590228,
+   "ci": [
+    0.7496930143193856,
+    0.8233841022872197
+   ],
+   "n": 472,
+   "preregistered_reading": null
+  },
+  "A1L": {
+   "auroc": 0.5381130361634229,
+   "ci": [
+    0.4823719152374597,
+    0.5976811300129236
+   ],
+   "n": 470,
+   "preregistered_reading": null
+  },
+  "B3nliL": {
+   "auroc": 0.7380936901464493,
+   "ci": [
+    0.6880010991332862,
+    0.7888628126073841
+   ],
+   "n": 472,
+   "preregistered_reading": null
+  },
+  "B3cosL": {
+   "auroc": 0.6880689048528102,
+   "ci": [
+    0.6313808876872233,
+    0.7381578718129439
+   ],
+   "n": 472,
+   "preregistered_reading": null
+  },
+  "B3cL": {
+   "auroc": 0.6109966663884732,
+   "ci": [
+    0.5726701385830523,
+    0.6512256190685766
+   ],
+   "n": 472,
+   "preregistered_reading": null
+  },
+  "B7": {
+   "auroc": 0.5069568811677762,
+   "ci": [
+    0.4908659193200908,
+    0.526588269902946
+   ],
+   "n": 472,
+   "preregistered_reading": null
+  },
+  "Ccov": {
+   "auroc": 0.6176294137662607,
+   "ci": [
+    0.5601350260348786,
+    0.674561081870656
+   ],
+   "n": 472,
+   "preregistered_reading": null
+  }
+ },
+ "c_class_position": {
+  "panel_faithful_nonequiv": {
+   "n": 250,
+   "share_LC_lt_0.5": 0.421935764131143,
+   "share_minority_class": 0.3206696285902786,
+   "share_singleton": 0.21563170566805268,
+   "share_minority_or_singleton": 0.3463842669046338,
+   "mean_LC": 0.5797208195708533
+  },
+  "panel_unfaithful_nonequiv": {
+   "n": 295,
+   "share_LC_lt_0.5": 0.7416513441876483,
+   "share_minority_class": 0.5772413508440494,
+   "share_singleton": 0.5956212266637698,
+   "share_minority_or_singleton": 0.6878427281332778,
+   "mean_LC": 0.26083650026541005
+  }
+ },
+ "reading_rule": "'not a checker artefact' iff (b) AUROC 95% LB > 0.5 AND point >= 0.60; 'partial' iff LB > 0.5 but point < 0.60; 'artefact' iff CI includes 0.5"
+}

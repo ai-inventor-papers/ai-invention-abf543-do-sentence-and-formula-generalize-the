@@ -1,0 +1,112 @@
+{
+ "A3": {
+  "n": 50,
+  "max_abs_diff": 0.0,
+  "share_exact": 1.0,
+  "share_lt_0.01": 1.0
+ },
+ "A0": {
+  "n": 50,
+  "max_abs_diff": 0.33333333333333326,
+  "share_exact": 0.76,
+  "share_lt_0.01": 0.76
+ },
+ "mismatch_detail": [
+  {
+   "item": "0166601dd0:gpt-3.5-turbo",
+   "metric": "A0",
+   "mine": 0.6,
+   "iter1": 0.625,
+   "cov_mine": true,
+   "cov_iter1": true
+  },
+  {
+   "item": "0208f0729c:gpt-4",
+   "metric": "A0",
+   "mine": 0.6666666666666667,
+   "iter1": 1.0,
+   "cov_mine": true,
+   "cov_iter1": true
+  },
+  {
+   "item": "0208f0729c:text-davinci-003",
+   "metric": "A0",
+   "mine": 0.8,
+   "iter1": 1.0,
+   "cov_mine": true,
+   "cov_iter1": true
+  },
+  {
+   "item": "032de04afe:gpt-3.5-turbo",
+   "metric": "A0",
+   "mine": 0.6666666666666667,
+   "iter1": 0.5,
+   "cov_mine": true,
+   "cov_iter1": true
+  },
+  {
+   "item": "032de04afe:gpt-4",
+   "metric": "A0",
+   "mine": 0.6666666666666667,
+   "iter1": 0.5,
+   "cov_mine": true,
+   "cov_iter1": true
+  },
+  {
+   "item": "032de04afe:text-davinci-003",
+   "metric": "A0",
+   "mine": 0.6666666666666667,
+   "iter1": 0.5,
+   "cov_mine": true,
+   "cov_iter1": true
+  },
+  {
+   "item": "0449213340:gpt-3.5-turbo",
+   "metric": "A0",
+   "mine": 0.6666666666666667,
+   "iter1": 0.8,
+   "cov_mine": true,
+   "cov_iter1": true
+  },
+  {
+   "item": "0449213340:gpt-4",
+   "metric": "A0",
+   "mine": 0.6666666666666667,
+   "iter1": 0.8,
+   "cov_mine": true,
+   "cov_iter1": true
+  },
+  {
+   "item": "051b20dd39:gpt-4",
+   "metric": "A0",
+   "mine": 0.75,
+   "iter1": 1.0,
+   "cov_mine": true,
+   "cov_iter1": true
+  },
+  {
+   "item": "051b20dd39:text-davinci-003",
+   "metric": "A0",
+   "mine": 0.6666666666666667,
+   "iter1": 1.0,
+   "cov_mine": true,
+   "cov_iter1": true
+  },
+  {
+   "item": "06b729053a:gpt-4",
+   "metric": "A0",
+   "mine": 0.6666666666666667,
+   "iter1": 0.5,
+   "cov_mine": true,
+   "cov_iter1": false
+  },
+  {
+   "item": "06cb075bb7:gpt-3.5-turbo",
+   "metric": "A0",
+   "mine": 0.8,
+   "iter1": 0.75,
+   "cov_mine": true,
+   "cov_iter1": true
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+{
+ "errors": {},
+ "B3L_back": {
+  "n": 1197,
+  "n_nonempty": 1197
+ },
+ "seconds": {
+  "b1plus": 2798.6
+ },
+ "B1plusL": {
+  "n": 609,
+  "parse_rate": 0.7487684729064039
+ },
+ "B1plusL_retry_2048": 354
+}

@@ -1,0 +1,48 @@
+14:55:39|INFO   |===== stage local (limit_sents=None)
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 600.57it/s]
+15:01:19|INFO   |loaded Qwen/Qwen3-8B:bf16 (399 tensors) in 202s; VRAM 16.4 GB
+15:01:19|INFO   |[B1L] 7236 prompts, 5858 to generate (bs 64)
+15:01:28|INFO   |[B1L] 640/5858 9s
+15:01:36|INFO   |[B1L] 1280/5858 17s
+15:01:44|INFO   |[B1L] 1920/5858 25s
+15:01:53|INFO   |[B1L] 2560/5858 34s
+15:02:02|INFO   |[B1L] 3200/5858 43s
+15:02:12|INFO   |[B1L] 3840/5858 53s
+15:02:22|INFO   |[B1L] 4480/5858 63s
+15:02:34|INFO   |[B1L] 5120/5858 75s
+15:02:47|INFO   |[B1L] 5760/5858 88s
+15:02:50|INFO   |[B1L_retest] 300 prompts, 300 to generate (bs 7)
+15:02:51|INFO   |[B1L_retest] 70/300 1s
+15:02:53|INFO   |[B1L_retest] 140/300 3s
+15:02:54|INFO   |[B1L_retest] 210/300 4s
+15:02:56|INFO   |[B1L_retest] 280/300 6s
+15:02:56|INFO   |local part b1 done in 97s
+15:02:56|INFO   |[B3L] 1197 prompts, 1045 to generate (bs 48)
+15:03:25|INFO   |[B3L] 480/1045 29s
+15:04:34|INFO   |[B3L] 960/1045 98s
+15:04:53|INFO   |local part b3 done in 116s
+15:04:53|INFO   |[RECALL_L] 208 prompts, 208 to generate (bs 32)
+15:06:08|INFO   |local part recall done in 75s
+15:06:52|INFO   |worker workers/armA.py probes exit=0 in 44s |  / ==== Wed Sep 23 15:06:08 2026 workers/armA.py probes / probes 804 sentences; no-question=1
+15:06:52|INFO   |[A1L] 847 prompts, 847 to generate (bs 24)
+15:08:03|WARNING|[A1L] OOM -> batch 12
+15:08:21|INFO   |[A1L] 216/847 89s
+15:10:19|INFO   |[A1L] 336/847 207s
+15:12:51|INFO   |[A1L] 456/847 359s
+15:15:17|WARNING|[A1L] OOM -> batch 6
+15:15:42|INFO   |[A1L] 564/847 530s
+15:17:52|INFO   |[A1L] 624/847 661s
+15:20:17|INFO   |[A1L] 684/847 805s
+15:22:51|INFO   |[A1L] 744/847 960s
+15:26:01|INFO   |[A1L] 804/847 1149s
+15:26:46|WARNING|[A1L] OOM -> batch 3
+15:28:29|INFO   |[A1L] 840/847 1297s
+15:29:04|INFO   |local part a1 done in 1377s
+15:29:04|INFO   |[B3cL] 1197 prompts, 1061 to generate (bs 32)
+15:29:38|INFO   |[B3cL] 320/1061 34s
+15:30:20|INFO   |[B3cL] 640/1061 76s
+15:31:12|INFO   |[B3cL] 960/1061 128s
+15:31:36|INFO   |local part b3c done in 152s
+15:31:36|INFO   |[B1plusL] 1197 prompts, 1129 to generate (bs 48)
+15:32:12|WARNING|[B1plusL] OOM -> batch 24
+15:33:27|WARNING|[B1plusL] OOM -> batch 12

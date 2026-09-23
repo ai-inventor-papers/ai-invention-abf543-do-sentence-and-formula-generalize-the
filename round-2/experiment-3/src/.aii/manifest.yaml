@@ -1,0 +1,25 @@
+entries:
+  - path: .venv/
+    delete: regenerable
+    source: "uv venv .venv --python 3.12 && uv pip install --python .venv/bin/python -r pyproject.toml"
+  - path: .nltk_data/
+    delete: redownloadable
+    source: "bash restore.sh  # curl https://raw.githubusercontent.com/nltk/nltk_data/gh-pages/packages/corpora/{wordnet,omw-1.4}.zip into .nltk_data/corpora and unzip"
+  - path: vendor/armA/__pycache__/
+    delete: regenerable
+    source: "created automatically by Python on import"
+  - path: vendor/armA/src/__pycache__/
+    delete: regenerable
+    source: "created automatically by Python on import"
+  - path: vendor/armB/src/__pycache__/
+    delete: regenerable
+    source: "created automatically by Python on import"
+  - path: vendor/ds/src/__pycache__/
+    delete: regenerable
+    source: "created automatically by Python on import"
+  - path: src/__pycache__/
+    delete: regenerable
+    source: "created automatically by Python on import"
+  - path: workers/__pycache__/
+    delete: regenerable
+    source: "created automatically by Python on import"

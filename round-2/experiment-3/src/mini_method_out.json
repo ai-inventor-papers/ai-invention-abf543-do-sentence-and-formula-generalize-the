@@ -1,0 +1,1589 @@
+{
+  "metadata": {
+    "method_name": "Frozen held-out confirmation of gold-free NL->FOL faithfulness metrics (iter 2)",
+    "description": "LC latent-class agreement (Arm B), A3/A0/Ccov monotonicity signature (Arm A) and baselines re-run with frozen iter-1 code on 700 sentences x 9 systems; primary labels = 609 panel3 items (post-stratified weights).",
+    "metrics": [
+      "A0",
+      "A1",
+      "A1L",
+      "A3",
+      "B1",
+      "B1L",
+      "B1plus",
+      "B1plusL",
+      "B2",
+      "B2_armB",
+      "B3cL",
+      "B3cos",
+      "B3cosL",
+      "B3nli",
+      "B3nliL",
+      "B7",
+      "B7_arity_self",
+      "B7_arity_story",
+      "B7_jacc",
+      "B7_joint",
+      "B8",
+      "Ccov",
+      "LC_ds_binary",
+      "LC_granular",
+      "LC_huiwalter",
+      "LC_maj",
+      "LC_onecoin",
+      "LC_onecoin_str",
+      "LC_within"
+    ],
+    "confirmation_table": {
+      "LC_onecoin": {
+        "AUROC_P": 0.7555169837743296,
+        "CI_P": [
+          0.7006236012860347,
+          0.8078232199107888
+        ],
+        "n_P": 609,
+        "AUROC_S": 0.8099228227657309,
+        "CI_S": [
+          0.7883597447321458,
+          0.8338417430923859
+        ],
+        "AUROC_T": 0.6797575298372774,
+        "AUROC_U": 0.8360426658832287,
+        "AUROC_D": null,
+        "coverage": 0.9368253968253968,
+        "coverage_run_rows": 0.9368253968253968,
+        "n_run_rows": 6300,
+        "C1": true,
+        "C2_delta": 0.01941815219010401,
+        "C2_ci": [
+          -0.0032021339573466727,
+          0.043006139445505395
+        ],
+        "C2": false,
+        "C3": true,
+        "CONFIRMED": false,
+        "top_tercile_AUROC_P": 0.7192065552318565,
+        "top_tercile_CI_P": [
+          0.63363700196164,
+          0.7897494005904371
+        ],
+        "crossover_P": false,
+        "crossover_S": false,
+        "contamination_delta": null,
+        "contamination_delta_ci": null,
+        "usd_per_item": 0.0,
+        "seconds_per_item": null,
+        "note": ""
+      },
+      "LC_onecoin_str": {
+        "AUROC_P": 0.7572923419413926,
+        "CI_P": [
+          0.7015809832928772,
+          0.8100611630757427
+        ],
+        "n_P": 609,
+        "AUROC_S": 0.8106338324815382,
+        "CI_S": [
+          0.7889005584567556,
+          0.8346703024908384
+        ],
+        "AUROC_T": 0.6803826060439513,
+        "AUROC_U": 0.839087213731349,
+        "AUROC_D": null,
+        "coverage": 0.9368253968253968,
+        "coverage_run_rows": 0.9368253968253968,
+        "n_run_rows": 6300,
+        "C1": true,
+        "C2_delta": 0.020869948180045172,
+        "C2_ci": [
+          -0.0024456658099204524,
+          0.044949174076340456
+        ],
+        "C2": false,
+        "C3": true,
+        "CONFIRMED": false,
+        "top_tercile_AUROC_P": 0.7201580724791034,
+        "top_tercile_CI_P": [
+          0.6336567852579486,
+          0.7904482359105424
+        ],
+        "crossover_P": null,
+        "crossover_S": null,
+        "contamination_delta": null,
+        "contamination_delta_ci": null,
+        "usd_per_item": 0.0,
+        "seconds_per_item": null,
+        "note": ""
+      },
+      "LC_huiwalter": {
+        "AUROC_P": 0.7554321867939221,
+        "CI_P": [
+          0.6999369107766734,
+          0.8085264532761685
+        ],
+        "n_P": 609,
+        "AUROC_S": 0.810141207871556,
+        "CI_S": [
+          0.7885857362369976,
+          0.8339267374260145
+        ],
+        "AUROC_T": 0.6799672338618596,
+        "AUROC_U": 0.8365495565060329,
+        "AUROC_D": null,
+        "coverage": 0.9368253968253968,
+        "coverage_run_rows": 0.9368253968253968,
+        "n_run_rows": 6300,
+        "C1": true,
+        "C2_delta": 0.019218749511070166,
+        "C2_ci": [
+          -0.0032108936321368765,
+          0.04308641826148381
+        ],
+        "C2": false,
+        "C3": true,
+        "CONFIRMED": false,
+        "top_tercile_AUROC_P": 0.7177252932892689,
+        "top_tercile_CI_P": [
+          0.6311551836123706,
+          0.7887439092471761
+        ],
+        "crossover_P": null,
+        "crossover_S": null,
+        "contamination_delta": null,
+        "contamination_delta_ci": null,
+        "usd_per_item": 0.0,
+        "seconds_per_item": null,
+        "note": ""
+      },
+      "LC_maj": {
+        "AUROC_P": 0.7649691620290806,
+        "CI_P": [
+          0.7103230173713669,
+          0.8163185486213163
+        ],
+        "n_P": 609,
+        "AUROC_S": 0.8236433097117069,
+        "CI_S": [
+          0.8039053124634259,
+          0.8455634069819146
+        ],
+        "AUROC_T": 0.6643903357911659,
+        "AUROC_U": 0.8474530197711729,
+        "AUROC_D": null,
+        "coverage": 0.9368253968253968,
+        "coverage_run_rows": 0.9368253968253968,
+        "n_run_rows": 6300,
+        "C1": true,
+        "C2_delta": 0.02760404417374074,
+        "C2_ci": [
+          -0.001560015785076324,
+          0.05618473782432058
+        ],
+        "C2": false,
+        "C3": true,
+        "CONFIRMED": false,
+        "top_tercile_AUROC_P": 0.7436787825666734,
+        "top_tercile_CI_P": [
+          0.6515659206724398,
+          0.8127847360152707
+        ],
+        "crossover_P": null,
+        "crossover_S": null,
+        "contamination_delta": null,
+        "contamination_delta_ci": null,
+        "usd_per_item": 0.0,
+        "seconds_per_item": null,
+        "note": ""
+      },
+      "LC_ds_binary": {
+        "AUROC_P": 0.7874105368408495,
+        "CI_P": [
+          0.7333517398012359,
+          0.8362859504307744
+        ],
+        "n_P": 609,
+        "AUROC_S": 0.8314281329719883,
+        "CI_S": [
+          0.8123184474633773,
+          0.8532606005735868
+        ],
+        "AUROC_T": 0.6765936769858614,
+        "AUROC_U": 0.8704420188835666,
+        "AUROC_D": null,
+        "coverage": 0.9368253968253968,
+        "coverage_run_rows": 0.9368253968253968,
+        "n_run_rows": 6300,
+        "C1": true,
+        "C2_delta": 0.021568827851725647,
+        "C2_ci": [
+          -0.004514119978572903,
+          0.04855419517416493
+        ],
+        "C2": false,
+        "C3": true,
+        "CONFIRMED": false,
+        "top_tercile_AUROC_P": 0.7773965690864459,
+        "top_tercile_CI_P": [
+          0.6965325241549278,
+          0.8427304921052982
+        ],
+        "crossover_P": null,
+        "crossover_S": null,
+        "contamination_delta": null,
+        "contamination_delta_ci": null,
+        "usd_per_item": 0.0,
+        "seconds_per_item": null,
+        "note": ""
+      },
+      "LC_granular": {
+        "AUROC_P": 0.7532160328713537,
+        "CI_P": [
+          0.6969090073935347,
+          0.8051408205410001
+        ],
+        "n_P": 609,
+        "AUROC_S": 0.8130969555314493,
+        "CI_S": [
+          0.7930888519059284,
+          0.8362391375692979
+        ],
+        "AUROC_T": 0.6852962460197242,
+        "AUROC_U": 0.8321633033947015,
+        "AUROC_D": null,
+        "coverage": 0.9368253968253968,
+        "coverage_run_rows": 0.9368253968253968,
+        "n_run_rows": 6300,
+        "C1": true,
+        "C2_delta": 0.01964684343550227,
+        "C2_ci": [
+          -0.0003971770312541448,
+          0.04231439159141257
+        ],
+        "C2": false,
+        "C3": true,
+        "CONFIRMED": false,
+        "top_tercile_AUROC_P": 0.7252497554731233,
+        "top_tercile_CI_P": [
+          0.6432389974096963,
+          0.7945994500890367
+        ],
+        "crossover_P": null,
+        "crossover_S": null,
+        "contamination_delta": null,
+        "contamination_delta_ci": null,
+        "usd_per_item": 0.0,
+        "seconds_per_item": null,
+        "note": "post-hoc; never a CONFIRM claim"
+      },
+      "LC_within": {
+        "AUROC_P": 0.7275235535108622,
+        "CI_P": [
+          0.5807894850544021,
+          0.8535656558494974
+        ],
+        "n_P": 138,
+        "AUROC_S": 0.7534217628188808,
+        "CI_S": [
+          0.7270591400324941,
+          0.7801447180152721
+        ],
+        "AUROC_T": 0.6638680427957021,
+        "AUROC_U": 0.8339143495502612,
+        "AUROC_D": null,
+        "coverage": 0.20984126984126983,
+        "coverage_run_rows": 0.9442857142857143,
+        "n_run_rows": 1400,
+        "C1": true,
+        "C2_delta": -0.0039943418429927435,
+        "C2_ci": [
+          -0.029901911850254297,
+          0.017060054473899387
+        ],
+        "C2": false,
+        "C3": true,
+        "CONFIRMED": false,
+        "top_tercile_AUROC_P": 0.6702002588037187,
+        "top_tercile_CI_P": [
+          0.48250909322832997,
+          0.8587551266561345
+        ],
+        "crossover_P": null,
+        "crossover_S": null,
+        "contamination_delta": null,
+        "contamination_delta_ci": null,
+        "usd_per_item": 0.0,
+        "seconds_per_item": null,
+        "note": "C2 on the 2-system subset"
+      },
+      "A3": {
+        "AUROC_P": 0.6417871237057632,
+        "CI_P": [
+          0.588958724597593,
+          0.6946861960836475
+        ],
+        "n_P": 609,
+        "AUROC_S": 0.6085318680717868,
+        "CI_S": [
+          0.5816346562606693,
+          0.6350340723312703
+        ],
+        "AUROC_T": 0.5992193770123773,
+        "AUROC_U": 0.6631415893914524,
+        "AUROC_D": null,
+        "coverage": 0.9041269841269841,
+        "coverage_run_rows": 0.9041269841269841,
+        "n_run_rows": 6300,
+        "C1": false,
+        "C2_delta": 0.016020027968347228,
+        "C2_ci": [
+          -0.00024478113350048195,
+          0.03535238376705289
+        ],
+        "C2": false,
+        "C3": true,
+        "CONFIRMED": false,
+        "top_tercile_AUROC_P": 0.5696498135852719,
+        "top_tercile_CI_P": [
+          0.4879237304646437,
+          0.6450285500983224
+        ],
+        "crossover_P": false,
+        "crossover_S": false,
+        "contamination_delta": 0.14130703486120516,
+        "contamination_delta_ci": [
+          0.10790432805204805,
+          0.17528599405402293
+        ],
+        "usd_per_item": 0.0,
+        "seconds_per_item": 2.2512390634920636,
+        "note": ""
+      },
+      "A1": {
+        "AUROC_P": 0.6571152586589961,
+        "CI_P": [
+          0.6031591831943676,
+          0.7083256025464497
+        ],
+        "n_P": 607,
+        "AUROC_S": 0.5791926331597738,
+        "CI_S": [
+          0.5476848905963093,
+          0.6114478915532172
+        ],
+        "AUROC_T": 0.5894188906334803,
+        "AUROC_U": 0.6986368430103722,
+        "AUROC_D": null,
+        "coverage": 0.5323809523809524,
+        "coverage_run_rows": 0.8748043818466353,
+        "n_run_rows": 3834,
+        "C1": false,
+        "C2_delta": 0.012113986415712041,
+        "C2_ci": [
+          -0.0024702495567700184,
+          0.02784718726042544
+        ],
+        "C2": false,
+        "C3": true,
+        "CONFIRMED": false,
+        "top_tercile_AUROC_P": 0.5958255136679768,
+        "top_tercile_CI_P": [
+          0.5139644382454073,
+          0.6766068772919768
+        ],
+        "crossover_P": false,
+        "crossover_S": false,
+        "contamination_delta": 0.14166051414951042,
+        "contamination_delta_ci": [
+          0.11192059870882681,
+          0.1758147428159447
+        ],
+        "usd_per_item": 0.0003601967918622848,
+        "seconds_per_item": 2.7887986176317163,
+        "note": ""
+      },
+      "A0": {
+        "AUROC_P": 0.6555065968547217,
+        "CI_P": [
+          0.6036446232086324,
+          0.7045318955975108
+        ],
+        "n_P": 609,
+        "AUROC_S": 0.6543609921331658,
+        "CI_S": [
+          0.6334480117595632,
+          0.6744836616100288
+        ],
+        "AUROC_T": 0.6173209698310458,
+        "AUROC_U": 0.6967702258568937,
+        "AUROC_D": null,
+        "coverage": 0.9041269841269841,
+        "coverage_run_rows": 0.9041269841269841,
+        "n_run_rows": 6300,
+        "C1": false,
+        "C2_delta": 0.01489891043797309,
+        "C2_ci": [
+          -0.0024698782131992807,
+          0.03364130648954112
+        ],
+        "C2": false,
+        "C3": true,
+        "CONFIRMED": false,
+        "top_tercile_AUROC_P": 0.5939712030609325,
+        "top_tercile_CI_P": [
+          0.5118044329796412,
+          0.6553352778225775
+        ],
+        "crossover_P": null,
+        "crossover_S": null,
+        "contamination_delta": 0.18552652906397848,
+        "contamination_delta_ci": [
+          0.15761210661761013,
+          0.21380053164818263
+        ],
+        "usd_per_item": 0.0,
+        "seconds_per_item": 0.0007553174603174604,
+        "note": ""
+      },
+      "Ccov": {
+        "AUROC_P": 0.6550497577284732,
+        "CI_P": [
+          0.6065815657826491,
+          0.7047703708472837
+        ],
+        "n_P": 609,
+        "AUROC_S": 0.6417032919923804,
+        "CI_S": [
+          0.6195809884439517,
+          0.661618320296037
+        ],
+        "AUROC_T": 0.6136700715999751,
+        "AUROC_U": 0.6945681773583425,
+        "AUROC_D": null,
+        "coverage": 0.9373015873015873,
+        "coverage_run_rows": 0.9373015873015873,
+        "n_run_rows": 6300,
+        "C1": false,
+        "C2_delta": 0.010477879587108108,
+        "C2_ci": [
+          -0.004149179275580386,
+          0.025160036196866204
+        ],
+        "C2": false,
+        "C3": true,
+        "CONFIRMED": false,
+        "top_tercile_AUROC_P": 0.605496250952031,
+        "top_tercile_CI_P": [
+          0.5221988486916058,
+          0.6661595303641377
+        ],
+        "crossover_P": null,
+        "crossover_S": null,
+        "contamination_delta": 0.2362975699514161,
+        "contamination_delta_ci": [
+          0.20104109721297223,
+          0.27454762733408566
+        ],
+        "usd_per_item": 0.0,
+        "seconds_per_item": 0.0005956349206349207,
+        "note": ""
+      },
+      "B1": {
+        "AUROC_P": 0.7620608053198747,
+        "CI_P": [
+          0.7178496640975425,
+          0.8044489651067718
+        ],
+        "n_P": 609,
+        "AUROC_S": 0.7126446529509637,
+        "CI_S": [
+          0.6920288929340651,
+          0.7345095155935543
+        ],
+        "AUROC_T": 0.6373960657744926,
+        "AUROC_U": 0.8331047186721274,
+        "AUROC_D": null,
+        "coverage": 1.0,
+        "coverage_run_rows": 1.0,
+        "n_run_rows": 6300,
+        "C1": true,
+        "C2_delta": null,
+        "C2_ci": null,
+        "C2": false,
+        "C3": true,
+        "CONFIRMED": false,
+        "top_tercile_AUROC_P": 0.7785270542484983,
+        "top_tercile_CI_P": [
+          0.717892491800421,
+          0.8274605203860559
+        ],
+        "crossover_P": null,
+        "crossover_S": null,
+        "contamination_delta": 0.09647435897435896,
+        "contamination_delta_ci": [
+          0.06756944444444445,
+          0.12633814102564103
+        ],
+        "usd_per_item": 2.5216222222222222e-05,
+        "seconds_per_item": 0.5164122222222222,
+        "note": ""
+      },
+      "B1plus": {
+        "AUROC_P": 0.8254501751506904,
+        "CI_P": [
+          0.7878354211963151,
+          0.8599625644240335
+        ],
+        "n_P": 609,
+        "AUROC_S": 0.8020687274845223,
+        "CI_S": [
+          0.7670205415178716,
+          0.8339323144975969
+        ],
+        "AUROC_T": 0.8020687274845223,
+        "AUROC_U": 0.9020442264640954,
+        "AUROC_D": null,
+        "coverage": 0.09666666666666666,
+        "coverage_run_rows": 1.0,
+        "n_run_rows": 609,
+        "C1": true,
+        "C2_delta": 0.03388227552885459,
+        "C2_ci": [
+          0.01685621807194796,
+          0.05200683751470742
+        ],
+        "C2": true,
+        "C3": true,
+        "CONFIRMED": true,
+        "top_tercile_AUROC_P": 0.8341486847704187,
+        "top_tercile_CI_P": [
+          0.788900087850299,
+          0.8697047796705046
+        ],
+        "crossover_P": false,
+        "crossover_S": false,
+        "contamination_delta": null,
+        "contamination_delta_ci": null,
+        "usd_per_item": 0.0011374486863711,
+        "seconds_per_item": 2.4227241379310347,
+        "note": ""
+      },
+      "B2": {
+        "AUROC_P": 0.5,
+        "CI_P": [
+          0.4999999999999999,
+          0.5000000000000002
+        ],
+        "n_P": 609,
+        "AUROC_S": 0.5,
+        "CI_S": [
+          0.5,
+          0.5
+        ],
+        "AUROC_T": 0.5563695485710433,
+        "AUROC_U": 0.5,
+        "AUROC_D": null,
+        "coverage": 1.0,
+        "coverage_run_rows": 1.0,
+        "n_run_rows": 6300,
+        "C1": false,
+        "C2_delta": null,
+        "C2_ci": null,
+        "C2": false,
+        "C3": true,
+        "CONFIRMED": false,
+        "top_tercile_AUROC_P": 0.5000000000000002,
+        "top_tercile_CI_P": [
+          0.49999999999999983,
+          0.5000000000000002
+        ],
+        "crossover_P": null,
+        "crossover_S": null,
+        "contamination_delta": null,
+        "contamination_delta_ci": null,
+        "usd_per_item": 0.0,
+        "seconds_per_item": null,
+        "note": ""
+      },
+      "B2_armB": {
+        "AUROC_P": 0.5110042928892548,
+        "CI_P": [
+          0.49536385710899394,
+          0.5261901069624623
+        ],
+        "n_P": 609,
+        "AUROC_S": 0.5092649958808158,
+        "CI_S": [
+          0.5066089591187072,
+          0.5121634560230071
+        ],
+        "AUROC_T": 0.5596353475431526,
+        "AUROC_U": 0.5193620958790399,
+        "AUROC_D": null,
+        "coverage": 1.0,
+        "coverage_run_rows": 1.0,
+        "n_run_rows": 6300,
+        "C1": false,
+        "C2_delta": -0.0005238633648876334,
+        "C2_ci": [
+          -0.005011364060777071,
+          0.003081870990074844
+        ],
+        "C2": false,
+        "C3": true,
+        "CONFIRMED": false,
+        "top_tercile_AUROC_P": 0.4985840023210765,
+        "top_tercile_CI_P": [
+          0.4784151955470167,
+          0.5153109587660023
+        ],
+        "crossover_P": null,
+        "crossover_S": null,
+        "contamination_delta": null,
+        "contamination_delta_ci": null,
+        "usd_per_item": 0.0,
+        "seconds_per_item": null,
+        "note": ""
+      },
+      "B3cos": {
+        "AUROC_P": 0.7229396085564955,
+        "CI_P": [
+          0.6734892833903102,
+          0.7698804887443289
+        ],
+        "n_P": 609,
+        "AUROC_S": 0.6470067661424026,
+        "CI_S": [
+          0.6087591875594233,
+          0.6871708075194468
+        ],
+        "AUROC_T": 0.6424517556140548,
+        "AUROC_U": 0.7642832805677345,
+        "AUROC_D": null,
+        "coverage": 0.14047619047619048,
+        "coverage_run_rows": 1.0,
+        "n_run_rows": 885,
+        "C1": true,
+        "C2_delta": null,
+        "C2_ci": null,
+        "C2": false,
+        "C3": true,
+        "CONFIRMED": false,
+        "top_tercile_AUROC_P": 0.6686369531752409,
+        "top_tercile_CI_P": [
+          0.5887449704755523,
+          0.7309555408940441
+        ],
+        "crossover_P": null,
+        "crossover_S": null,
+        "contamination_delta": 0.0700879354113474,
+        "contamination_delta_ci": [
+          0.02948655922127028,
+          0.10740708080918873
+        ],
+        "usd_per_item": 0.00011599751412429378,
+        "seconds_per_item": 0.01877435387027393,
+        "note": ""
+      },
+      "B3nli": {
+        "AUROC_P": 0.7337004967493959,
+        "CI_P": [
+          0.6816473533136108,
+          0.7818777866973816
+        ],
+        "n_P": 609,
+        "AUROC_S": 0.6314776851727383,
+        "CI_S": [
+          0.5961974424161242,
+          0.6722260576609158
+        ],
+        "AUROC_T": 0.659376009197489,
+        "AUROC_U": 0.812085988748651,
+        "AUROC_D": null,
+        "coverage": 0.14047619047619048,
+        "coverage_run_rows": 1.0,
+        "n_run_rows": 885,
+        "C1": true,
+        "C2_delta": null,
+        "C2_ci": null,
+        "C2": false,
+        "C3": true,
+        "CONFIRMED": false,
+        "top_tercile_AUROC_P": 0.6681000173550375,
+        "top_tercile_CI_P": [
+          0.5948540949793112,
+          0.7356853036082579
+        ],
+        "crossover_P": false,
+        "crossover_S": false,
+        "contamination_delta": 0.07392334497340833,
+        "contamination_delta_ci": [
+          0.01814814723379291,
+          0.13119801013003662
+        ],
+        "usd_per_item": 0.00011599751412429378,
+        "seconds_per_item": 0.01877435387027393,
+        "note": ""
+      },
+      "B7": {
+        "AUROC_P": 0.510955854088776,
+        "CI_P": [
+          0.5003757639316457,
+          0.5262364090868223
+        ],
+        "n_P": 609,
+        "AUROC_S": 0.5089017248384944,
+        "CI_S": [
+          0.5058235734567486,
+          0.5123581415206724
+        ],
+        "AUROC_T": 0.5564924515844025,
+        "AUROC_U": 0.5174187228305211,
+        "AUROC_D": null,
+        "coverage": 1.0,
+        "coverage_run_rows": 1.0,
+        "n_run_rows": 6300,
+        "C1": false,
+        "C2_delta": null,
+        "C2_ci": null,
+        "C2": false,
+        "C3": true,
+        "CONFIRMED": false,
+        "top_tercile_AUROC_P": 0.4972557930547033,
+        "top_tercile_CI_P": [
+          0.4855309412264276,
+          0.5077327638879168
+        ],
+        "crossover_P": null,
+        "crossover_S": null,
+        "contamination_delta": null,
+        "contamination_delta_ci": null,
+        "usd_per_item": 0.0,
+        "seconds_per_item": null,
+        "note": ""
+      },
+      "B7_arity_self": {
+        "AUROC_P": 0.5010126532064371,
+        "CI_P": [
+          0.4999999999999999,
+          0.5032465750803522
+        ],
+        "n_P": 609,
+        "AUROC_S": 0.5006009162855023,
+        "CI_S": [
+          0.4998095796938542,
+          0.5013953836911629
+        ],
+        "AUROC_T": 0.5565844472330962,
+        "AUROC_U": 0.5014357225705048,
+        "AUROC_D": null,
+        "coverage": 1.0,
+        "coverage_run_rows": 1.0,
+        "n_run_rows": 6300,
+        "C1": false,
+        "C2_delta": -8.567370690548692e-05,
+        "C2_ci": [
+          -0.0002661386459843512,
+          2.430488191799418e-05
+        ],
+        "C2": false,
+        "C3": true,
+        "CONFIRMED": false,
+        "top_tercile_AUROC_P": 0.5020464995177119,
+        "top_tercile_CI_P": [
+          0.4999999999999999,
+          0.5067383529092309
+        ],
+        "crossover_P": null,
+        "crossover_S": null,
+        "contamination_delta": null,
+        "contamination_delta_ci": null,
+        "usd_per_item": 0.0,
+        "seconds_per_item": null,
+        "note": ""
+      },
+      "B7_arity_story": {
+        "AUROC_P": 0.5113435770832816,
+        "CI_P": [
+          0.5015332821435955,
+          0.5251988513705832
+        ],
+        "n_P": 609,
+        "AUROC_S": 0.5085641753989645,
+        "CI_S": [
+          0.5055936788442202,
+          0.5122247479274933
+        ],
+        "AUROC_T": 0.5566222982491722,
+        "AUROC_U": 0.5145761433789556,
+        "AUROC_D": null,
+        "coverage": 1.0,
+        "coverage_run_rows": 1.0,
+        "n_run_rows": 6300,
+        "C1": false,
+        "C2_delta": -0.0015249314248808599,
+        "C2_ci": [
+          -0.014780551337277594,
+          0.00650108848625891
+        ],
+        "C2": false,
+        "C3": true,
+        "CONFIRMED": false,
+        "top_tercile_AUROC_P": 0.50517223085948,
+        "top_tercile_CI_P": [
+          0.496478240242474,
+          0.5170828490752495
+        ],
+        "crossover_P": null,
+        "crossover_S": null,
+        "contamination_delta": null,
+        "contamination_delta_ci": null,
+        "usd_per_item": 0.0,
+        "seconds_per_item": null,
+        "note": ""
+      },
+      "B7_joint": {
+        "AUROC_P": 0.4996122770054943,
+        "CI_P": [
+          0.4946789201112927,
+          0.5069859727089082
+        ],
+        "n_P": 609,
+        "AUROC_S": 0.50033754943953,
+        "CI_S": [
+          0.49931166846119635,
+          0.5014045303662744
+        ],
+        "AUROC_T": 0.5562397019062736,
+        "AUROC_U": 0.5028425794515653,
+        "AUROC_D": null,
+        "coverage": 1.0,
+        "coverage_run_rows": 1.0,
+        "n_run_rows": 6300,
+        "C1": false,
+        "C2_delta": -0.0014303256328733749,
+        "C2_ci": [
+          -0.014691008551134043,
+          0.006634830941017169
+        ],
+        "C2": false,
+        "C3": true,
+        "CONFIRMED": false,
+        "top_tercile_AUROC_P": 0.49208356219522353,
+        "top_tercile_CI_P": [
+          0.4826898323366257,
+          0.498166268189203
+        ],
+        "crossover_P": null,
+        "crossover_S": null,
+        "contamination_delta": null,
+        "contamination_delta_ci": null,
+        "usd_per_item": 0.0,
+        "seconds_per_item": null,
+        "note": ""
+      },
+      "B7_jacc": {
+        "AUROC_P": 0.7871896505020636,
+        "CI_P": [
+          0.6698020979301296,
+          0.8789150075088211
+        ],
+        "n_P": 138,
+        "AUROC_S": 0.6588319160853404,
+        "CI_S": [
+          0.6305224970442187,
+          0.68766385064813
+        ],
+        "AUROC_T": 0.6056851955786494,
+        "AUROC_U": 0.8363056626678493,
+        "AUROC_D": null,
+        "coverage": 0.21095238095238095,
+        "coverage_run_rows": 0.9492857142857143,
+        "n_run_rows": 1400,
+        "C1": true,
+        "C2_delta": 0.0030173070426602333,
+        "C2_ci": [
+          -0.023091981121323095,
+          0.028193200141927395
+        ],
+        "C2": false,
+        "C3": true,
+        "CONFIRMED": false,
+        "top_tercile_AUROC_P": 0.7965220063974896,
+        "top_tercile_CI_P": [
+          0.6733745304399773,
+          0.8888988595421403
+        ],
+        "crossover_P": null,
+        "crossover_S": null,
+        "contamination_delta": null,
+        "contamination_delta_ci": null,
+        "usd_per_item": 0.0,
+        "seconds_per_item": null,
+        "note": "C2 on the 2-system subset"
+      },
+      "B8": {
+        "AUROC_P": 0.7706136219797638,
+        "CI_P": [
+          0.6595236153206481,
+          0.8600577690163269
+        ],
+        "n_P": 138,
+        "AUROC_S": 0.7476857273791945,
+        "CI_S": [
+          0.7232485425460508,
+          0.773346907092649
+        ],
+        "AUROC_T": 0.6500230164808181,
+        "AUROC_U": 0.8515764951179245,
+        "AUROC_D": null,
+        "coverage": 0.20984126984126983,
+        "coverage_run_rows": 0.9442857142857143,
+        "n_run_rows": 1400,
+        "C1": true,
+        "C2_delta": 0.025802168093911115,
+        "C2_ci": [
+          -0.007846506469714248,
+          0.06714262534915832
+        ],
+        "C2": false,
+        "C3": true,
+        "CONFIRMED": false,
+        "top_tercile_AUROC_P": 0.7059582887667656,
+        "top_tercile_CI_P": [
+          0.5502746067880696,
+          0.8474048009675995
+        ],
+        "crossover_P": null,
+        "crossover_S": null,
+        "contamination_delta": null,
+        "contamination_delta_ci": null,
+        "usd_per_item": 0.0,
+        "seconds_per_item": null,
+        "note": "C2 on the 2-system subset"
+      },
+      "B1L": {
+        "AUROC_P": 0.7043984135978141,
+        "CI_P": [
+          0.6640988220287497,
+          0.7458196927276847
+        ],
+        "n_P": 609,
+        "AUROC_S": 0.6624949830448662,
+        "CI_S": [
+          0.6457581361769175,
+          0.679224521647378
+        ],
+        "AUROC_T": 0.6052919545086552,
+        "AUROC_U": 0.7506903844123555,
+        "AUROC_D": null,
+        "coverage": 1.0,
+        "coverage_run_rows": 1.0,
+        "n_run_rows": 6300,
+        "C1": true,
+        "C2_delta": 0.016704177854498514,
+        "C2_ci": [
+          -0.0006154947072207287,
+          0.034816281419956255
+        ],
+        "C2": false,
+        "C3": true,
+        "CONFIRMED": false,
+        "top_tercile_AUROC_P": 0.6428692994231757,
+        "top_tercile_CI_P": [
+          0.5819640731537394,
+          0.7030535983241457
+        ],
+        "crossover_P": null,
+        "crossover_S": null,
+        "contamination_delta": 0.026121794871794866,
+        "contamination_delta_ci": [
+          0.012978098290598289,
+          0.039262820512820505
+        ],
+        "usd_per_item": 0.0,
+        "seconds_per_item": 0.015294952380952383,
+        "note": ""
+      },
+      "B1plusL": {
+        "AUROC_P": 0.7911177653034102,
+        "CI_P": [
+          0.7531432429348531,
+          0.8264355434587329
+        ],
+        "n_P": 609,
+        "AUROC_S": 0.7806426213948271,
+        "CI_S": [
+          0.7507587908552059,
+          0.8080452651959437
+        ],
+        "AUROC_T": 0.7806426213948271,
+        "AUROC_U": 0.8729338496485883,
+        "AUROC_D": null,
+        "coverage": 0.07238095238095238,
+        "coverage_run_rows": 0.7487684729064039,
+        "n_run_rows": 609,
+        "C1": true,
+        "C2_delta": 0.04581215427074414,
+        "C2_ci": [
+          0.021230689321042835,
+          0.072920322898239
+        ],
+        "C2": true,
+        "C3": true,
+        "CONFIRMED": true,
+        "top_tercile_AUROC_P": 0.7585636769460505,
+        "top_tercile_CI_P": [
+          0.7121568014697406,
+          0.8013628878444806
+        ],
+        "crossover_P": null,
+        "crossover_S": null,
+        "contamination_delta": null,
+        "contamination_delta_ci": null,
+        "usd_per_item": 0.0,
+        "seconds_per_item": 4.912883579638752,
+        "note": ""
+      },
+      "A1L": {
+        "AUROC_P": 0.5566762382633484,
+        "CI_P": [
+          0.4995734482046907,
+          0.6096624066169357
+        ],
+        "n_P": 607,
+        "AUROC_S": 0.5610817965621243,
+        "CI_S": [
+          0.5348634241539845,
+          0.5882501532480774
+        ],
+        "AUROC_T": 0.5576291316921343,
+        "AUROC_U": 0.568732437929139,
+        "AUROC_D": null,
+        "coverage": 0.8955555555555555,
+        "coverage_run_rows": 0.8968367509140042,
+        "n_run_rows": 6291,
+        "C1": false,
+        "C2_delta": -0.0009273348284732919,
+        "C2_ci": [
+          -0.0054042854823193095,
+          0.0030154979388711534
+        ],
+        "C2": false,
+        "C3": true,
+        "CONFIRMED": false,
+        "top_tercile_AUROC_P": 0.4969826094612738,
+        "top_tercile_CI_P": [
+          0.4136334181361482,
+          0.579154106155477
+        ],
+        "crossover_P": null,
+        "crossover_S": null,
+        "contamination_delta": 0.10613190090853208,
+        "contamination_delta_ci": [
+          0.07839258646149673,
+          0.1367526584416102
+        ],
+        "usd_per_item": 0.0,
+        "seconds_per_item": 2.065250166905103,
+        "note": ""
+      },
+      "B3cosL": {
+        "AUROC_P": 0.72322776032495,
+        "CI_P": [
+          0.671601344795702,
+          0.7702970499122994
+        ],
+        "n_P": 609,
+        "AUROC_S": 0.616895192006094,
+        "CI_S": [
+          0.5793576371660905,
+          0.6527025749085514
+        ],
+        "AUROC_T": 0.6292410094643633,
+        "AUROC_U": 0.7614717864149095,
+        "AUROC_D": null,
+        "coverage": 0.14047619047619048,
+        "coverage_run_rows": 1.0,
+        "n_run_rows": 885,
+        "C1": true,
+        "C2_delta": 0.014318516307095797,
+        "C2_ci": [
+          -0.0007761725460397851,
+          0.029742498620693596
+        ],
+        "C2": false,
+        "C3": true,
+        "CONFIRMED": false,
+        "top_tercile_AUROC_P": 0.6969428671506742,
+        "top_tercile_CI_P": [
+          0.6083612524223079,
+          0.7595650021563097
+        ],
+        "crossover_P": null,
+        "crossover_S": null,
+        "contamination_delta": 0.10088677212404899,
+        "contamination_delta_ci": [
+          0.07089147969650535,
+          0.1301630977048682
+        ],
+        "usd_per_item": 0.0,
+        "seconds_per_item": 0.018779213665521634,
+        "note": ""
+      },
+      "B3nliL": {
+        "AUROC_P": 0.7475174602734581,
+        "CI_P": [
+          0.6966728685440344,
+          0.7960666723763962
+        ],
+        "n_P": 609,
+        "AUROC_S": 0.6407867320876461,
+        "CI_S": [
+          0.6023682490217985,
+          0.6778844600105862
+        ],
+        "AUROC_T": 0.6745181080435793,
+        "AUROC_U": 0.8139128169877183,
+        "AUROC_D": null,
+        "coverage": 0.14047619047619048,
+        "coverage_run_rows": 1.0,
+        "n_run_rows": 885,
+        "C1": true,
+        "C2_delta": 0.011214904075837584,
+        "C2_ci": [
+          -0.004037897790895398,
+          0.027829967549368482
+        ],
+        "C2": false,
+        "C3": true,
+        "CONFIRMED": false,
+        "top_tercile_AUROC_P": 0.7169120336176601,
+        "top_tercile_CI_P": [
+          0.6410480644846991,
+          0.7736125168256837
+        ],
+        "crossover_P": null,
+        "crossover_S": null,
+        "contamination_delta": 0.09192853029785161,
+        "contamination_delta_ci": [
+          0.0348205679695003,
+          0.14997141618985038
+        ],
+        "usd_per_item": 0.0,
+        "seconds_per_item": 0.018779213665521634,
+        "note": ""
+      },
+      "B3cL": {
+        "AUROC_P": 0.6010987269530911,
+        "CI_P": [
+          0.5667763688865919,
+          0.637115572593272
+        ],
+        "n_P": 609,
+        "AUROC_S": 0.5797766276829323,
+        "CI_S": [
+          0.5558589367712476,
+          0.6047167225797168
+        ],
+        "AUROC_T": 0.5797455439711183,
+        "AUROC_U": 0.6306126665083591,
+        "AUROC_D": null,
+        "coverage": 0.14047619047619048,
+        "coverage_run_rows": 1.0,
+        "n_run_rows": 885,
+        "C1": false,
+        "C2_delta": 0.0024925741098899,
+        "C2_ci": [
+          -0.007846752267188206,
+          0.012911051936515521
+        ],
+        "C2": false,
+        "C3": true,
+        "CONFIRMED": false,
+        "top_tercile_AUROC_P": 0.6060950290543899,
+        "top_tercile_CI_P": [
+          0.5504961990670536,
+          0.6525107577990665
+        ],
+        "crossover_P": null,
+        "crossover_S": null,
+        "contamination_delta": 0.11858974358974358,
+        "contamination_delta_ci": [
+          0.06402243589743589,
+          0.1794871794871795
+        ],
+        "usd_per_item": 0.0,
+        "seconds_per_item": 0.1400535593220339,
+        "note": ""
+      }
+    },
+    "circularity_b": {
+      "n": 545,
+      "faithful_share_weighted": 0.43937690653835404,
+      "LC_onecoin": {
+        "auroc": 0.722357606554147,
+        "ci": [
+          0.6694857821472802,
+          0.7696101751420049
+        ],
+        "n": 545,
+        "preregistered_reading": "not a checker artefact"
+      },
+      "LC_maj": {
+        "auroc": 0.7411018799882325,
+        "ci": [
+          0.6929562166564531,
+          0.7862866560587062
+        ],
+        "n": 545,
+        "preregistered_reading": "not a checker artefact"
+      },
+      "A3": {
+        "auroc": 0.6093835653839039,
+        "ci": [
+          0.5539996635206507,
+          0.6671056656092765
+        ],
+        "n": 545,
+        "preregistered_reading": null
+      },
+      "B1": {
+        "auroc": 0.7088065461327671,
+        "ci": [
+          0.6608759800518077,
+          0.7531512244934386
+        ],
+        "n": 545,
+        "preregistered_reading": null
+      },
+      "B1L": {
+        "auroc": 0.6630601914458857,
+        "ci": [
+          0.6190213904339884,
+          0.7060991712475954
+        ],
+        "n": 545,
+        "preregistered_reading": null
+      }
+    },
+    "openrouter_spend_usd": 2.7016992000000037,
+    "deviations": [
+      "D-LLM",
+      "D-B1plusL",
+      "D-B3c-parse",
+      "D-14B",
+      "D-B1-maxtokens",
+      "D-LC-uncovered",
+      "D-A0-textside",
+      "D-A1-rewire",
+      "D-adapter",
+      "D-B7-port",
+      "D-B3c",
+      "D-strata",
+      "D-rerank-story",
+      "D-panel-slice"
+    ]
+  },
+  "datasets": [
+    {
+      "dataset": "heldout_confirm",
+      "examples": [
+        {
+          "input": "{\"sentence\": \"There are no elements with atomic number between 61-63 that are not scarce in China.\", \"candidate_fol\": \"¬∃x (AtomicNumberBetween61And63(x) ∧ ¬ScarceInChina(x))\"}",
+          "output": "unknown",
+          "predict_A0": "0.5000",
+          "predict_A1L": "0.5000",
+          "predict_A3": "0.5000",
+          "predict_B1": "0.9000",
+          "predict_B1L": "0.9500",
+          "predict_B2": "1.0000",
+          "predict_B2_armB": "1.0000",
+          "predict_B7": "1.0000",
+          "predict_B7_arity_self": "1.0000",
+          "predict_B7_arity_story": "1.0000",
+          "predict_B7_joint": "1.0000",
+          "predict_Ccov": "0.4286",
+          "predict_LC_ds_binary": "0.0000",
+          "predict_LC_granular": "0.0106",
+          "predict_LC_huiwalter": "0.0125",
+          "predict_LC_maj": "0.0000",
+          "predict_LC_onecoin": "0.0111",
+          "predict_LC_onecoin_str": "0.0113",
+          "metadata_item_id": "00176f9c72:deepseek-v3.1:0",
+          "metadata_fold": "heldout_confirm",
+          "metadata_sentence_id": "00176f9c72",
+          "metadata_system": "deepseek-v3.1",
+          "metadata_corpus": "folio",
+          "metadata_complexity_tercile": "top",
+          "metadata_n_conditions": 2,
+          "metadata_parse_ok": true,
+          "metadata_label_source": "unknown",
+          "metadata_L1_audited_status": "no_audited_gold",
+          "metadata_L3_sampling_weight": null,
+          "metadata_L3_primary_error": null,
+          "metadata_uncovered_metrics": [
+            "A0",
+            "A1L",
+            "A3"
+          ],
+          "metadata_A3_error_type_pred": "dropped_condition"
+        },
+        {
+          "input": "{\"sentence\": \"There are no elements with atomic number between 61-63 that are not scarce in China.\", \"candidate_fol\": \"¬∃x ( (AtomicNumber(x, 61) ∨ AtomicNumber(x, 62) ∨ AtomicNumber(x, 63)) ∧ ¬ScarceInChina(x) )\"}",
+          "output": "unknown",
+          "predict_A0": "0.6667",
+          "predict_A1L": "0.4000",
+          "predict_A3": "0.6667",
+          "predict_B1": "1.0000",
+          "predict_B1L": "0.9500",
+          "predict_B2": "1.0000",
+          "predict_B2_armB": "1.0000",
+          "predict_B7": "1.0000",
+          "predict_B7_arity_self": "1.0000",
+          "predict_B7_arity_story": "1.0000",
+          "predict_B7_joint": "1.0000",
+          "predict_Ccov": "0.7500",
+          "predict_LC_ds_binary": "0.0000",
+          "predict_LC_granular": "0.0211",
+          "predict_LC_huiwalter": "0.0226",
+          "predict_LC_maj": "0.0000",
+          "predict_LC_onecoin": "0.0224",
+          "predict_LC_onecoin_str": "0.0229",
+          "metadata_item_id": "00176f9c72:gemini-2.5-flash:0",
+          "metadata_fold": "heldout_confirm",
+          "metadata_sentence_id": "00176f9c72",
+          "metadata_system": "gemini-2.5-flash",
+          "metadata_corpus": "folio",
+          "metadata_complexity_tercile": "top",
+          "metadata_n_conditions": 2,
+          "metadata_parse_ok": true,
+          "metadata_label_source": "unknown",
+          "metadata_L1_audited_status": "no_audited_gold",
+          "metadata_L3_sampling_weight": null,
+          "metadata_L3_primary_error": null,
+          "metadata_uncovered_metrics": [],
+          "metadata_A3_error_type_pred": "dropped_condition"
+        },
+        {
+          "input": "{\"sentence\": \"There are no elements with atomic number between 61-63 that are not scarce in China.\", \"candidate_fol\": \"¬∃x ( (AtomicNumber(x) ∧ (61 < x ∧ x < 63)) ∧ ¬ScarceInChina(x) )\"}",
+          "output": "unknown",
+          "predict_A0": "0.5000",
+          "predict_A1L": "0.5000",
+          "predict_A3": "0.5000",
+          "predict_B1": "0.9000",
+          "predict_B1L": "0.9500",
+          "predict_B2": "0.0000",
+          "predict_B2_armB": "0.0000",
+          "predict_B7": "0.0000",
+          "predict_B7_arity_self": "0.0000",
+          "predict_B7_arity_story": "0.0000",
+          "predict_B7_joint": "0.0000",
+          "predict_Ccov": "0.5000",
+          "predict_LC_ds_binary": "0.5000",
+          "predict_LC_granular": "0.5000",
+          "predict_LC_huiwalter": "0.5000",
+          "predict_LC_maj": "0.5000",
+          "predict_LC_onecoin": "0.5000",
+          "predict_LC_onecoin_str": "0.5000",
+          "metadata_item_id": "00176f9c72:gemma-3-27b:0",
+          "metadata_fold": "heldout_confirm",
+          "metadata_sentence_id": "00176f9c72",
+          "metadata_system": "gemma-3-27b",
+          "metadata_corpus": "folio",
+          "metadata_complexity_tercile": "top",
+          "metadata_n_conditions": 2,
+          "metadata_parse_ok": false,
+          "metadata_label_source": "unknown",
+          "metadata_L1_audited_status": "unparseable",
+          "metadata_L3_sampling_weight": null,
+          "metadata_L3_primary_error": null,
+          "metadata_uncovered_metrics": [
+            "A0",
+            "A1L",
+            "A3",
+            "Ccov",
+            "LC_ds_binary",
+            "LC_granular",
+            "LC_huiwalter",
+            "LC_maj",
+            "LC_onecoin",
+            "LC_onecoin_str"
+          ],
+          "metadata_A3_error_type_pred": "other"
+        }
+      ]
+    },
+    {
+      "dataset": "contamination",
+      "examples": [
+        {
+          "input": "{\"sentence\": \"It is false that Galloway simultaneously participated in the conference physically and received souvenirs.\", \"candidate_fol\": \"¬(AttendedInPerson(galloway, conference) ∧ ProvidedWithSouvenirs(galloway, souvenirs))\"}",
+          "output": "faithful",
+          "predict_A0": "0.3333",
+          "predict_A1": "0.1667",
+          "predict_A1L": "0.2000",
+          "predict_A3": "0.1667",
+          "predict_B1": "0.9000",
+          "predict_B1L": "0.9500",
+          "predict_B2": "1.0000",
+          "predict_B2_armB": "1.0000",
+          "predict_B3cL": "1.0000",
+          "predict_B3cos": "0.6798",
+          "predict_B3cosL": "0.8950",
+          "predict_B3nli": "0.0433",
+          "predict_B3nliL": "0.9961",
+          "predict_Ccov": "0.5000",
+          "metadata_item_id": "001946ac92:deepseek-v3.1:0:renamed",
+          "metadata_fold": "contamination",
+          "metadata_sentence_id": "001946ac92",
+          "metadata_system": "deepseek-v3.1",
+          "metadata_corpus": "folio",
+          "metadata_complexity_tercile": "top",
+          "metadata_n_conditions": null,
+          "metadata_parse_ok": true,
+          "metadata_label_source": "transfer:equiv_audited_gold",
+          "metadata_L1_audited_status": null,
+          "metadata_L3_sampling_weight": null,
+          "metadata_L3_primary_error": null,
+          "metadata_uncovered_metrics": [],
+          "metadata_A3_error_type_pred": "conflation",
+          "metadata_original_item_id": "001946ac92:deepseek-v3.1:0"
+        },
+        {
+          "input": "{\"sentence\": \"It is false that Galloway simultaneously participated in the conference physically and received souvenirs.\", \"candidate_fol\": \"¬(Attended(galloway, conference) ∧ ProvidedSouvenirs(galloway))\"}",
+          "output": "unfaithful",
+          "predict_A0": "0.6667",
+          "predict_A1": "0.4286",
+          "predict_A1L": "0.5000",
+          "predict_A3": "0.4286",
+          "predict_B1": "0.9000",
+          "predict_B1L": "0.9500",
+          "predict_B2": "1.0000",
+          "predict_B2_armB": "1.0000",
+          "predict_Ccov": "0.6667",
+          "metadata_item_id": "001946ac92:gemini-2.5-flash:0:renamed",
+          "metadata_fold": "contamination",
+          "metadata_sentence_id": "001946ac92",
+          "metadata_system": "gemini-2.5-flash",
+          "metadata_corpus": "folio",
+          "metadata_complexity_tercile": "top",
+          "metadata_n_conditions": null,
+          "metadata_parse_ok": true,
+          "metadata_label_source": "transfer:equiv_audited_gold",
+          "metadata_L1_audited_status": null,
+          "metadata_L3_sampling_weight": null,
+          "metadata_L3_primary_error": null,
+          "metadata_uncovered_metrics": [],
+          "metadata_A3_error_type_pred": "conflation",
+          "metadata_original_item_id": "001946ac92:gemini-2.5-flash:0"
+        },
+        {
+          "input": "{\"sentence\": \"It is false that Galloway simultaneously participated in the conference physically and received souvenirs.\", \"candidate_fol\": \"¬(AttendedInPerson(galloway) ∧ ProvidedWithSouvenirs(galloway))\"}",
+          "output": "unfaithful",
+          "predict_A0": "0.5000",
+          "predict_A1": "0.5000",
+          "predict_A1L": "0.5000",
+          "predict_A3": "0.5000",
+          "predict_B1": "1.0000",
+          "predict_B1L": "0.9500",
+          "predict_B2": "1.0000",
+          "predict_B2_armB": "1.0000",
+          "predict_Ccov": "0.3333",
+          "metadata_item_id": "001946ac92:gemma-3-27b:0:renamed",
+          "metadata_fold": "contamination",
+          "metadata_sentence_id": "001946ac92",
+          "metadata_system": "gemma-3-27b",
+          "metadata_corpus": "folio",
+          "metadata_complexity_tercile": "top",
+          "metadata_n_conditions": null,
+          "metadata_parse_ok": true,
+          "metadata_label_source": "transfer:equiv_audited_gold",
+          "metadata_L1_audited_status": null,
+          "metadata_L3_sampling_weight": null,
+          "metadata_L3_primary_error": null,
+          "metadata_uncovered_metrics": [
+            "A0",
+            "A1",
+            "A1L",
+            "A3"
+          ],
+          "metadata_A3_error_type_pred": "conflation",
+          "metadata_original_item_id": "001946ac92:gemma-3-27b:0"
+        }
+      ]
+    },
+    {
+      "dataset": "transfer_unlabeled",
+      "examples": [
+        {
+          "input": "{\"sentence\": \"(1) ‘AI system’ means a machine-based system that is designed to operate with varying levels of autonomy and that may exhibit adaptiveness after deployment, and that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments;\", \"candidate_fol\": \"∀s ((MachineBasedSystem(s) ∧ ∃a (Autonomy(a) ∧ OperatesWithVaryingLevelsOf(s, a)) ∧ ∃d (Deployment(d) ∧ ExhibitsAdaptivenessAfter(s, d)) ∧ ∃o ((ExplicitObjective(o) ∨ ImplicitObjective(o)) ∧ IntendedPurpose(o) ∧ HasObjective(s, o)) ∧ ∃i (Input(i) ∧ Receives(s, i) ∧ InfersFrom(s, i)) ∧ ∃out (Output(out) ∧ Generates(s, out) ∧ (IsOutputType(out, p) ∨ IsOutputType(out, c) ∨ IsOutputType(out, r) ∨ IsOutputType(out, dec)) ∧ ∃e ((PhysicalEnvironment(e) ∨ VirtualEnvironment(e)) ∧ Environment(e) ∧ CanInfluence(out, e)))) ⇒ AISystem(s))\"}",
+          "output": "unlabeled",
+          "predict_A0": "0.5000",
+          "predict_A3": "0.5000",
+          "predict_Ccov": "0.7273",
+          "metadata_item_id": "01_AI_system:grounded:run_1",
+          "metadata_fold": "transfer_unlabeled",
+          "metadata_sentence_id": null,
+          "metadata_system": null,
+          "metadata_corpus": "eu_ai_act_art3_pilot",
+          "metadata_complexity_tercile": null,
+          "metadata_n_conditions": null,
+          "metadata_parse_ok": true,
+          "metadata_label_source": "none",
+          "metadata_L1_audited_status": null,
+          "metadata_L3_sampling_weight": null,
+          "metadata_L3_primary_error": null,
+          "metadata_uncovered_metrics": [
+            "A0",
+            "A3"
+          ],
+          "metadata_A3_error_type_pred": "other",
+          "metadata_condition": "grounded"
+        },
+        {
+          "input": "{\"sentence\": \"(1) ‘AI system’ means a machine-based system that is designed to operate with varying levels of autonomy and that may exhibit adaptiveness after deployment, and that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments;\", \"candidate_fol\": \"∀s ((MachineBased(s) ∧ ∃a (Autonomy(a) ∧ DesignedToOperateWithVaryingLevelsOf(s, a)) ∧ ∃d (Deployment(d) ∧ AfterDeployment(s, d) ∧ ExhibitsAdaptiveness(s)) ∧ ∃o (IntendedPurpose(o) ∧ HasObjective(s, o) ∧ (Explicit(o) ∨ Implicit(o))) ∧ ∃i (Input(i) ∧ ReceivesInput(s, i) ∧ ∃out (Output(out) ∧ Infers(s, i, out) ∧ (∃p (Prediction(p) ∧ IsOutput(p, out)) ∨ ∃c (Content(c) ∧ IsOutput(c, out)) ∨ ∃r (Recommendation(r) ∧ IsOutput(r, out)) ∨ ∃dec (Decision(dec) ∧ IsOutput(dec, out))) ∧ ∃e (Environment(e) ∧ (Physical(e) ∨ Virtual(e)) ∧ CanInfluence(out, e))))) ⇒ AISystem(s))\"}",
+          "output": "unlabeled",
+          "predict_A0": "0.4857",
+          "predict_A3": "0.3333",
+          "predict_Ccov": "0.6364",
+          "metadata_item_id": "01_AI_system:grounded:run_2",
+          "metadata_fold": "transfer_unlabeled",
+          "metadata_sentence_id": null,
+          "metadata_system": null,
+          "metadata_corpus": "eu_ai_act_art3_pilot",
+          "metadata_complexity_tercile": null,
+          "metadata_n_conditions": null,
+          "metadata_parse_ok": true,
+          "metadata_label_source": "none",
+          "metadata_L1_audited_status": null,
+          "metadata_L3_sampling_weight": null,
+          "metadata_L3_primary_error": null,
+          "metadata_uncovered_metrics": [],
+          "metadata_A3_error_type_pred": "conflation",
+          "metadata_condition": "grounded"
+        },
+        {
+          "input": "{\"sentence\": \"(1) ‘AI system’ means a machine-based system that is designed to operate with varying levels of autonomy and that may exhibit adaptiveness after deployment, and that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments;\", \"candidate_fol\": \"∀s ((MachineBasedSystem(s) ∧ ∃a (Autonomy(a) ∧ OperatesWithVaryingLevelsOf(s, a)) ∧ ∃d (Deployment(d) ∧ ExhibitsAdaptivenessAfter(s, d)) ∧ ∃o ((ExplicitObjective(o) ∨ ImplicitObjective(o)) ∧ Objective(o) ∧ ForObjective(s, o)) ∧ ∃i (Input(i) ∧ ReceivesInput(s, i) ∧ ∃out (Output(out) ∧ InfersHowToGenerate(s, out, i) ∧ (∃p (Prediction(p) ∧ IsOutput(p, out)) ∨ ∃c (Content(c) ∧ IsOutput(c, out)) ∨ ∃r (Recommendation(r) ∧ IsOutput(r, out)) ∨ ∃dec (Decision(dec) ∧ IsOutput(dec, out))) ∧ ∃e ((PhysicalEnvironment(e) ∨ VirtualEnvironment(e)) ∧ Environment(e) ∧ CanInfluence(out, e))))) ⇒ AISystem(s))\"}",
+          "output": "unlabeled",
+          "predict_A0": "0.5758",
+          "predict_A3": "0.3857",
+          "predict_Ccov": "0.7273",
+          "metadata_item_id": "01_AI_system:grounded:run_3",
+          "metadata_fold": "transfer_unlabeled",
+          "metadata_sentence_id": null,
+          "metadata_system": null,
+          "metadata_corpus": "eu_ai_act_art3_pilot",
+          "metadata_complexity_tercile": null,
+          "metadata_n_conditions": null,
+          "metadata_parse_ok": true,
+          "metadata_label_source": "none",
+          "metadata_L1_audited_status": null,
+          "metadata_L3_sampling_weight": null,
+          "metadata_L3_primary_error": null,
+          "metadata_uncovered_metrics": [],
+          "metadata_A3_error_type_pred": "swapped_args",
+          "metadata_condition": "grounded"
+        }
+      ]
+    }
+  ]
+}

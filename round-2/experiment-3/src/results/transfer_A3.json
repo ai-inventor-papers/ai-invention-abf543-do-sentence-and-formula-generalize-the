@@ -1,0 +1,182 @@
+{
+ "n_rows": 367,
+ "LC": "not applicable (one system per definition; latent-class agreement needs >= 2 systems)",
+ "all": {
+  "n": 367,
+  "dataset_parse_ok": 289,
+  "A3_covered": 262,
+  "A3_coverage": 0.7138964577656676,
+  "uncovered_reasons": {
+   "timeout>120s": 4,
+   "unparseable: unsupported symbol '⊆'": 54,
+   "unparseable: unsupported symbol '⇒'": 20,
+   "unparseable: unsupported symbol '⇔'": 3,
+   "error:ArgumentError:argument 2: _Timeout: ": 1,
+   "low_coverage": 17,
+   "unparseable: unsupported symbol '\"'": 5,
+   "unparseable: unsupported symbol \"'\"": 1
+  },
+  "mean_A3_score_covered": 0.4953166392262929,
+  "A3_pred_type_dist_covered": {
+   "conflation": {
+    "n": 256,
+    "share": 0.9770992366412213
+   },
+   "swapped_args": {
+    "n": 6,
+    "share": 0.022900763358778626
+   }
+  },
+  "A3_pred_type_dist_flagged_only": {
+   "conflation": {
+    "n": 256,
+    "share": 0.9770992366412213
+   },
+   "swapped_args": {
+    "n": 6,
+    "share": 0.022900763358778626
+   }
+  }
+ },
+ "grounded": {
+  "n": 186,
+  "dataset_parse_ok": 158,
+  "A3_covered": 139,
+  "A3_coverage": 0.7473118279569892,
+  "uncovered_reasons": {
+   "timeout>120s": 3,
+   "unparseable: unsupported symbol '⊆'": 22,
+   "low_coverage": 12,
+   "unparseable: unsupported symbol '\"'": 4,
+   "unparseable: unsupported symbol '⇒'": 6
+  },
+  "mean_A3_score_covered": 0.4772429659554174,
+  "A3_pred_type_dist_covered": {
+   "conflation": {
+    "n": 133,
+    "share": 0.9568345323741008
+   },
+   "swapped_args": {
+    "n": 6,
+    "share": 0.04316546762589928
+   }
+  },
+  "A3_pred_type_dist_flagged_only": {
+   "conflation": {
+    "n": 133,
+    "share": 0.9568345323741008
+   },
+   "swapped_args": {
+    "n": 6,
+    "share": 0.04316546762589928
+   }
+  }
+ },
+ "ungrounded": {
+  "n": 181,
+  "dataset_parse_ok": 131,
+  "A3_covered": 123,
+  "A3_coverage": 0.6795580110497238,
+  "uncovered_reasons": {
+   "unparseable: unsupported symbol '⊆'": 32,
+   "unparseable: unsupported symbol '⇒'": 14,
+   "unparseable: unsupported symbol '⇔'": 3,
+   "error:ArgumentError:argument 2: _Timeout: ": 1,
+   "unparseable: unsupported symbol '\"'": 1,
+   "low_coverage": 5,
+   "unparseable: unsupported symbol \"'\"": 1,
+   "timeout>120s": 1
+  },
+  "mean_A3_score_covered": 0.5157413594267131,
+  "A3_pred_type_dist_covered": {
+   "conflation": {
+    "n": 123,
+    "share": 1.0
+   }
+  },
+  "A3_pred_type_dist_flagged_only": {
+   "conflation": {
+    "n": 123,
+    "share": 1.0
+   }
+  }
+ },
+ "heldout_panel_unfaithful": {
+  "n": 302,
+  "A3_pred_type_dist_covered": {
+   "conflation": {
+    "n": 153,
+    "share": 0.5444839857651246
+   },
+   "dropped_condition": {
+    "n": 45,
+    "share": 0.1601423487544484
+   },
+   "none": {
+    "n": 25,
+    "share": 0.08896797153024912
+   },
+   "other": {
+    "n": 24,
+    "share": 0.08540925266903915
+   },
+   "negation_polarity": {
+    "n": 12,
+    "share": 0.042704626334519574
+   },
+   "swapped_args": {
+    "n": 8,
+    "share": 0.028469750889679714
+   },
+   "added_condition": {
+    "n": 8,
+    "share": 0.028469750889679714
+   },
+   "quantifier": {
+    "n": 4,
+    "share": 0.014234875444839857
+   },
+   "connective_andor": {
+    "n": 1,
+    "share": 0.0035587188612099642
+   },
+   "reversed_implication": {
+    "n": 1,
+    "share": 0.0035587188612099642
+   }
+  },
+  "panel_primary_error_mix_weighted": {
+   "added_condition": 0.24869150710962742,
+   "quantifier_forall_exists": 0.21834455025035862,
+   "dropped_condition": 0.14436956391774475,
+   "implication_direction_or_only": 0.0836084060844538,
+   "syntax_unparseable": 0.057792794018601365,
+   "quantifier_scope": 0.055652199279315986,
+   "conflation": 0.04266580351742532,
+   "connective_and_or": 0.04054404965076626,
+   "wrong_constant": 0.03907826935151304,
+   "negation_polarity": 0.03215847901618828,
+   "argument_swap": 0.015405145526546605,
+   "cardinality_numeric": 0.013544236636095915,
+   "wrong_split": 0.008144995641362666
+  },
+  "A3_type_equals_panel_primary_share": 0.08896797153024912,
+  "A3_flags_any_error_share": 0.9110320284697508,
+  "n_covered": 281,
+  "note": "descriptive; A3 types mapped to the panel taxonomy with A3_TO_PANEL"
+ },
+ "heldout_panel_faithful_A3_flag_rate": 0.773972602739726,
+ "A3_to_panel_type_map": {
+  "swapped_args": "argument_swap",
+  "conflation": "conflation",
+  "dropped_condition": "dropped_condition",
+  "added_condition": "added_condition",
+  "wrong_split": "wrong_split",
+  "reversed_implication": "implication_direction_or_only",
+  "quantifier": "quantifier_forall_exists",
+  "negation_polarity": "negation_polarity",
+  "connective_andor": "connective_and_or",
+  "other": "other",
+  "none": "none"
+ }
+}

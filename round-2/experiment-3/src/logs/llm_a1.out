@@ -1,0 +1,6 @@
+17:34:43|INFO   |===== stage llm (limit_sents=None)
+17:34:44|INFO   |A1 (gemini): 530 sentences (panel + contamination), 562 calls
+17:34:45|INFO   |[A1] pilot $/call=None remaining uncached=542 projected $0.000 (phase spent $0.063, cap $1.9; total spent $1.055)
+17:44:01|INFO   |A1: {"phase": "A1", "n_requests": 562, "n_unique_bodies": 562, "n_uncached_before": 542, "pilot_usd_per_call": null, "pilot_seconds": 0.0, "projected_remaining_usd": 0.0, "n_paid": 542, "n_cached": 40, "n_failed": 0, "phase_spent_usd": 1.6467711000000018, "phase_spent_total": 1.7093731000000019, "wall_s": 556.2, "n_sentences_ok": 530}
+18:08:48|INFO   |worker workers/armA.py score exit=0 in 1488s | armA batches 100/133 1041s / armA batches 120/133 1302s / armA score done in 1445s
+ --out armA_scores_a1.jsonl --variants A1 --workers 12 / armA score: 7236 items, 0 to score in 0 batches; variants=['A1'] / armA score done in 0s

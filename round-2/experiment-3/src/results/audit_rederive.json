@@ -1,0 +1,134 @@
+{
+ "n_panel": 609,
+ "judge_used": "B1",
+ "checks": {
+  "P:LC_onecoin": {
+   "rederived": 0.7555169837743315,
+   "analysis": 0.7555169837743296,
+   "absdiff": 1.887379141862766e-15,
+   "ok": true
+  },
+  "circ_b:LC_onecoin": {
+   "rederived": 0.7223576065541478,
+   "analysis": 0.722357606554147,
+   "absdiff": 7.771561172376096e-16,
+   "n": 545,
+   "ok": true
+  },
+  "P:A3": {
+   "rederived": 0.6417871237057636,
+   "analysis": 0.6417871237057632,
+   "absdiff": 4.440892098500626e-16,
+   "ok": true
+  },
+  "circ_b:A3": {
+   "rederived": 0.6093835653839036,
+   "analysis": 0.6093835653839039,
+   "absdiff": 3.3306690738754696e-16,
+   "n": 545,
+   "ok": true
+  },
+  "P:B1": {
+   "rederived": 0.7620608053198755,
+   "analysis": 0.7620608053198747,
+   "absdiff": 7.771561172376096e-16,
+   "ok": true
+  },
+  "circ_b:B1": {
+   "rederived": 0.7088065461327672,
+   "analysis": 0.7088065461327671,
+   "absdiff": 1.1102230246251565e-16,
+   "n": 545,
+   "ok": true
+  }
+ },
+ "all_ok": true,
+ "placebo_permuted_labels": {
+  "P:LC_onecoin": {
+   "real": 0.7555169837743315,
+   "perm_mean": 0.4993036056010156,
+   "perm_sd": 0.029559726755190325,
+   "perm_p_one_sided": 0.004975124378109453,
+   "shuffled_label_ci": [
+    0.46855067419351953,
+    0.5935475104762331
+   ],
+   "shuffled_ci_covers_0.5": true
+  },
+  "circ_b:LC_onecoin": {
+   "real": 0.7223576065541478,
+   "perm_mean": 0.4978102635132312,
+   "perm_sd": 0.028445057722574,
+   "perm_p_one_sided": 0.004975124378109453,
+   "shuffled_label_ci": [
+    0.45813946039779435,
+    0.5719931021412786
+   ],
+   "shuffled_ci_covers_0.5": true
+  },
+  "P:A3": {
+   "real": 0.6417871237057636,
+   "perm_mean": 0.5007009441030129,
+   "perm_sd": 0.030352230075534763,
+   "perm_p_one_sided": 0.004975124378109453,
+   "shuffled_label_ci": [
+    0.45019768203036853,
+    0.5538898426482026
+   ],
+   "shuffled_ci_covers_0.5": true
+  },
+  "circ_b:A3": {
+   "real": 0.6093835653839036,
+   "perm_mean": 0.4979022182881744,
+   "perm_sd": 0.028693641058179026,
+   "perm_p_one_sided": 0.004975124378109453,
+   "shuffled_label_ci": [
+    0.4205091337403893,
+    0.5355853444841968
+   ],
+   "shuffled_ci_covers_0.5": true
+  },
+  "P:B1": {
+   "real": 0.7620608053198755,
+   "perm_mean": 0.49944678018962735,
+   "perm_sd": 0.028082377478259708,
+   "perm_p_one_sided": 0.004975124378109453,
+   "shuffled_label_ci": [
+    0.4304208305859917,
+    0.5369658300759398
+   ],
+   "shuffled_ci_covers_0.5": true
+  },
+  "circ_b:B1": {
+   "real": 0.7088065461327672,
+   "perm_mean": 0.5028156137188254,
+   "perm_sd": 0.029402910820917075,
+   "perm_p_one_sided": 0.004975124378109453,
+   "shuffled_label_ci": [
+    0.42185122875327474,
+    0.5263772666452923
+   ],
+   "shuffled_ci_covers_0.5": true
+  }
+ },
+ "placebo_ok": true,
+ "C2_independent": {
+  "base": [
+   "B1",
+   "B2",
+   "B3nli",
+   "B3cos",
+   "B7"
+  ],
+  "auc_base": 0.7973232586298693,
+  "LC_onecoin": 0.019901391474703045,
+  "LC_onecoin_shuffled_placebo": 0.0036518858851081193,
+  "A3": 0.012153298066455043,
+  "A3_shuffled_placebo": 0.004858306515283184,
+  "analysis_delta": {
+   "LC_onecoin": 0.01941815219010401,
+   "A3": 0.016020027968347228
+  },
+  "note": "different folds and solver than analysis.py; agreement within ~0.02 expected, placebo ~0"
+ }
+}

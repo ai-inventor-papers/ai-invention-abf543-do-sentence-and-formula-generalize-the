@@ -1,0 +1,8 @@
+16:24:28|INFO   |===== stage local (limit_sents=None)
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 308.70it/s]
+16:26:58|INFO   |loaded Qwen/Qwen3-8B:bf16 (399 tensors) in 35s; VRAM 16.4 GB
+16:26:58|INFO   |[B1plusL] 609 prompts, 0 to generate (bs 16)
+16:26:58|INFO   |[B1plusL] 354 prompts, 348 to generate (bs 12)
+16:42:49|INFO   |[B1plusL] 120/348 951s
+16:58:55|INFO   |[B1plusL] 240/348 1917s
+17:13:37|INFO   |local part b1plus done in 2799s
