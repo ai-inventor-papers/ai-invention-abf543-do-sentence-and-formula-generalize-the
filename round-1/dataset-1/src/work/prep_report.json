@@ -1,0 +1,152 @@
+{
+ "folio_train_stories_dropped_count_mismatch": 0,
+ "folio_refined_story_alignment": {
+  "aligned": 1001,
+  "misaligned": 0
+ },
+ "folio_disjointness": {
+  "train_stories_total": 340,
+  "stories_excluded_sharing_val_sentence": 5,
+  "v2_validation_story_ids_in_train": 0
+ },
+ "exclusions": {
+  "malls_v0.1_test": {
+   "gold_unparseable": 2,
+   "gold_unsat": 2,
+   "ground_fact_or_trivial": 2
+  },
+  "folio_v2_train": {
+   "ground_fact_or_trivial": 951,
+   "gold_unparseable": 89,
+   "gold_valid_tautology": 6,
+   "gold_unsat": 1
+  },
+  "proverqa_easy": {
+   "ground_fact_or_trivial": 1385,
+   "duplicate_template": 95,
+   "over_2_per_story": 33
+  },
+  "proverqa_medium": {
+   "ground_fact_or_trivial": 2911,
+   "over_2_per_story": 845,
+   "duplicate_template": 162
+  },
+  "proverqa_hard": {
+   "ground_fact_or_trivial": 5013,
+   "duplicate_template": 189,
+   "over_2_per_story": 2750
+  }
+ },
+ "eligible_counts": {
+  "malls_v0.1_test": 994,
+  "folio_v2_train": 1589,
+  "proverqa_medium": 947,
+  "proverqa_hard": 997
+ },
+ "complexity": {
+  "z_params": {
+   "n_tokens": {
+    "mean": 14.151756129887342,
+    "sd": 5.718208691194396
+   },
+   "n_quantifiers": {
+    "mean": 0.8212944554892865,
+    "sd": 0.7597397068171663
+   },
+   "nesting_depth": {
+    "mean": 3.075988513364259,
+    "sd": 1.4701222328271382
+   },
+   "n_conditions": {
+    "mean": 2.559752595537884,
+    "sd": 1.7485292679079376
+   }
+  },
+  "tercile_cutpoints": [
+   -0.25394332419591126,
+   0.09037598003908619
+  ],
+  "pool_size": 4527,
+  "composite": "mean of 4 z-scores",
+  "features": [
+   "n_tokens",
+   "n_quantifiers",
+   "nesting_depth",
+   "n_conditions"
+  ]
+ },
+ "tercile_by_corpus_pool": {
+  "malls_v0.1_test": {
+   "top": 704,
+   "bottom": 105,
+   "middle": 185
+  },
+  "folio_v2_train": {
+   "bottom": 844,
+   "top": 440,
+   "middle": 305
+  },
+  "proverqa_medium": {
+   "bottom": 258,
+   "top": 189,
+   "middle": 500
+  },
+  "proverqa_hard": {
+   "middle": 528,
+   "bottom": 285,
+   "top": 184
+  }
+ },
+ "sample_shortfall": {},
+ "sample_counts": {
+  "malls": 250,
+  "folio": 250,
+  "proverqa_hard": 120,
+  "proverqa_medium": 80
+ },
+ "sample_terciles": {
+  "malls": {
+   "top": 113,
+   "middle": 75,
+   "bottom": 62
+  },
+  "folio": {
+   "top": 113,
+   "middle": 75,
+   "bottom": 62
+  },
+  "proverqa_hard": {
+   "top": 54,
+   "middle": 36,
+   "bottom": 30
+  },
+  "proverqa_medium": {
+   "top": 36,
+   "middle": 24,
+   "bottom": 20
+  }
+ },
+ "sample_top_share": 0.4514285714285714,
+ "screen_unmatched_lines": {
+  "logiclm_gpt-3.5-turbo": 151,
+  "logiclm_gpt-4": 79,
+  "logiclm_text-davinci-003": 112
+ },
+ "screen_matched_unique_sentences": 547,
+ "screen_gold_exclusions": {
+  "gold_unparseable": 5
+ },
+ "screen_eligible_sorted": 542,
+ "screen_with_paper_corrected_conclusion": 73,
+ "calibration_composition": {
+  "gold:none": 15,
+  "mutant:negation_flip": 3,
+  "mutant:quantifier_swap": 3,
+  "mutant:implication_reversal": 3,
+  "mutant:drop_conjunct": 3,
+  "mutant:connective_and_or": 3,
+  "rewrite:predicate_renaming": 3,
+  "rewrite:material_implication": 3,
+  "rewrite:contrapositive": 4
+ }
+}
