@@ -1,0 +1,10 @@
+{
+ "n_requested": 150,
+ "n_kept": 134,
+ "drops": {
+  "wordnet_derived": 16
+ },
+ "spent_total": 0.014587200000000002,
+ "model": "openai/gpt-4.1-mini",
+ "prompt": "Here is a first-order logic formula:\n{f}\n\nRename EVERY predicate to a DIFFERENT but natural name with the same meaning (use a paraphrase, an abbreviation, a different wording, or a compound, e.g. IsAGreatPlace -> ExcellentLocation, Teacher -> Educator, OwnsCar -> HasAutomobile). Do NOT just use a one-word dictionary synonym of the last word; do not change constants or variables. Predicates: {p}.\nReturn ONLY a JSON object mapping each old predicate name to its new name."
+}

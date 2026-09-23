@@ -1,0 +1,8 @@
+14:52:14|INFO   |B1: 1665 to do (5 already done)
+14:52:43|INFO   |B1: 1665 units; uncached 1440 (dry-run est $0.173)
+14:52:55|INFO   |run_batch: 1665 jobs, 1440 uncached, est $0.432; spent so far $0.0158 of cap $6.0
+14:54:43|INFO   |B1 done: parsed 1665/1665; spent 0.0594
+14:54:43|INFO   |TJ: 1665 to do (5 already done)
+14:55:02|INFO   |TJ: 1665 units; uncached 1665 (dry-run est $0.666)
+14:55:12|INFO   |run_batch: 1665 jobs, 1665 uncached, est $0.666; spent so far $0.0594 of cap $6.0
+14:57:37|INFO   |TJ done: parsed 1665/1665; spent 0.4340

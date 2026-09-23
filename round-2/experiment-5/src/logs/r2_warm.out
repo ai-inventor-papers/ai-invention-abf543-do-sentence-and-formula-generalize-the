@@ -1,0 +1,5 @@
+15:12:18|INFO   |DEV: 400 items -> 278 usable; drops {'not_single_span': 96, 'no_concept': 26}
+15:12:23|INFO   |TEST: 600 items -> 439 usable; drops {'not_single_span': 131, 'no_concept': 30}
+15:12:23|INFO   |run_batch: 28 jobs, 28 uncached, est $0.112; spent so far $0.4340 of cap $6.0
+15:12:48|INFO   |run_batch: 44 jobs, 44 uncached, est $0.176; spent so far $0.5381 of cap $6.0
+warm done 278 439 0.1040837 0.1434721 0.681600199999999

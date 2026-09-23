@@ -1,0 +1,105 @@
+{
+ "DIAGNOSER_POSITIVE": {
+  "pass": false,
+  "D_rule_top1_w": 0.11104651507581638,
+  "TJ_top1_w": 0.3024935310406232,
+  "delta_vs_TJ": -0.1914470159648068,
+  "delta_ci95": [
+   -0.26454283571495846,
+   -0.12392327325409008
+  ],
+  "majority_top1_w": 0.2486915071096273,
+  "recall_added_dropped_forallexists": {
+   "added_condition": 0.08108108108108109,
+   "dropped_condition": 0.425531914893617,
+   "quantifier_forall_exists": 0.1
+  },
+  "rule": "D_rule top1 >= TJ-0.05 (CI lower) AND >= majority+0.15 AND recall>=0.6 on added/dropped/\u2200\u2203"
+ },
+ "FLAGGER_POSITIVE": {
+  "pass": false,
+  "pooled_auroc": 0.6734989699627857,
+  "pooled_auroc_ci": [
+   0.6339130813596924,
+   0.7124902131094194
+  ],
+  "proverqa_P@25": 0.4,
+  "pooled_enrich@50": 0.5757575757575758,
+  "pooled_enrich@50_ci": [
+   0.33954853432456594,
+   0.7550606435643565
+  ],
+  "Ccov_auroc": 0.6859881711855396,
+  "B1_auroc": 0.8396879984051036,
+  "TJ_auroc": 0.8594373006379585
+ },
+ "POLARITY_CARRIES_SIGNAL": {
+  "pass": false,
+  "delta_M2_M0": 0.011052090812325277,
+  "ci95": [
+   -0.010181393913067716,
+   0.03141779016628654
+  ],
+  "delta_M1_M0": {
+   "delta": 0.009171039197537367,
+   "ci95": [
+    -0.012089402559033069,
+    0.029340732237954543
+   ]
+  }
+ },
+ "RENAME_FIXED": {
+  "pass": false,
+  "FA_rename_test": 0.12903225806451613,
+  "FA_RENAME2_test": 0.5149253731343284,
+  "criterion5_full_match": 0.256,
+  "legacy_FA_rename_test": 0.41935483870967744,
+  "legacy_FA_RENAME2_test": 0.5746268656716418,
+  "legacy_criterion5": 0.212
+ },
+ "BLIND_SPOTS_CONFIRMED": {
+  "pass": false,
+  "visible_det": 0.7272565144948594,
+  "visible_ci": [
+   0.6691219133588794,
+   0.785929474536859
+  ],
+  "blind_det": 0.5912373669208794,
+  "blind_ci": [
+   0.43309620599716286,
+   0.7664041787705791
+  ],
+  "blind_n": 23,
+  "visible_ge_0.80": false,
+  "blind_ci_contains_0.5": true,
+  "blind_upper_lt_visible_lower": false,
+  "BLIND_SPOTS_CONFIRMED": false,
+  "power_note": "blind pool is small (n<~31); CI-overlap statement only, never a confirmation of \u22480.5",
+  "visible_per_type_det_S": {
+   "added_condition": [
+    0.7604869389851526,
+    65
+   ],
+   "dropped_condition": [
+    0.8527835479700184,
+    36
+   ],
+   "quantifier_forall_exists": [
+    0.6161374894875083,
+    56
+   ],
+   "negation_polarity": [
+    0.5875543803376527,
+    5
+   ],
+   "argument_swap": [
+    0.12057728119180634,
+    2
+   ],
+   "implication_direction_or_only": [
+    0.8664925631258965,
+    24
+   ]
+  }
+ }
+}

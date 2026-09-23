@@ -1,0 +1,12 @@
+{
+ "n_compared": {
+  "A3": 50,
+  "A0": 50
+ },
+ "max_abs_diff": {
+  "A3": 0.0,
+  "A0": 0.0
+ },
+ "pass": true,
+ "mismatches": []
+}
