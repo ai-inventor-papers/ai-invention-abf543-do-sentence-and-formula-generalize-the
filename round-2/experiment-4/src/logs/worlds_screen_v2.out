@@ -1,0 +1,13 @@
+2026-09-23 14:59:53.207 | INFO     | __main__:<module>:38 - screen: 1574 formulas
+2026-09-23 14:59:59.143 | INFO     | worlds:compute:92 - worlds: 0 cached, 1039 canonical forms to solve (1282 sources)
+2026-09-23 15:03:21.659 | INFO     | worlds:compute:114 -   worlds 100/1039 (203s)
+2026-09-23 15:03:23.467 | INFO     | worlds:compute:114 -   worlds 200/1039 (204s)
+2026-09-23 15:03:25.449 | INFO     | worlds:compute:114 -   worlds 300/1039 (206s)
+2026-09-23 15:03:27.481 | INFO     | worlds:compute:114 -   worlds 400/1039 (208s)
+2026-09-23 15:03:29.461 | INFO     | worlds:compute:114 -   worlds 500/1039 (210s)
+2026-09-23 15:03:31.535 | INFO     | worlds:compute:114 -   worlds 600/1039 (212s)
+2026-09-23 15:03:33.657 | INFO     | worlds:compute:114 -   worlds 700/1039 (215s)
+2026-09-23 15:03:35.755 | INFO     | worlds:compute:114 -   worlds 800/1039 (217s)
+2026-09-23 15:03:37.597 | INFO     | worlds:compute:114 -   worlds 900/1039 (218s)
+2026-09-23 15:03:39.448 | INFO     | worlds:compute:114 -   worlds 1000/1039 (220s)
+2026-09-23 15:03:42.114 | INFO     | __main__:<module>:40 - done 1282; errors 0

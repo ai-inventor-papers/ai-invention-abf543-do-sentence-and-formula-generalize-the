@@ -1,0 +1,20 @@
+2026-09-23 15:15:30.489 | INFO     | __main__:run:56 - gemini key: limit=50 reset=daily remaining=45.664506983
+2026-09-23 15:15:56.332 | INFO     | __main__:one_sentence:129 - google/gemini-2.5-flash: 100/1872 items, 23s, cum $0.642
+2026-09-23 15:16:23.196 | INFO     | __main__:one_sentence:129 - google/gemini-2.5-flash: 200/1872 items, 50s, cum $0.695
+2026-09-23 15:16:48.457 | INFO     | __main__:one_sentence:129 - google/gemini-2.5-flash: 300/1872 items, 75s, cum $0.750
+2026-09-23 15:17:06.902 | INFO     | __main__:one_sentence:129 - google/gemini-2.5-flash: 400/1872 items, 94s, cum $0.790
+2026-09-23 15:17:35.437 | INFO     | __main__:one_sentence:129 - google/gemini-2.5-flash: 500/1872 items, 122s, cum $0.858
+2026-09-23 15:17:59.979 | INFO     | __main__:one_sentence:129 - google/gemini-2.5-flash: 600/1872 items, 147s, cum $0.916
+2026-09-23 15:18:29.517 | INFO     | __main__:one_sentence:129 - google/gemini-2.5-flash: 700/1872 items, 177s, cum $0.990
+2026-09-23 15:18:51.140 | INFO     | __main__:one_sentence:129 - google/gemini-2.5-flash: 800/1872 items, 198s, cum $1.055
+2026-09-23 15:19:15.341 | INFO     | __main__:one_sentence:129 - google/gemini-2.5-flash: 900/1872 items, 222s, cum $1.129
+2026-09-23 15:19:39.243 | INFO     | __main__:one_sentence:129 - google/gemini-2.5-flash: 1000/1872 items, 246s, cum $1.203
+2026-09-23 15:20:02.581 | INFO     | __main__:one_sentence:129 - google/gemini-2.5-flash: 1100/1872 items, 270s, cum $1.266
+2026-09-23 15:20:22.378 | INFO     | __main__:one_sentence:129 - google/gemini-2.5-flash: 1200/1872 items, 289s, cum $1.315
+2026-09-23 15:20:44.326 | INFO     | __main__:one_sentence:129 - google/gemini-2.5-flash: 1300/1872 items, 311s, cum $1.370
+2026-09-23 15:21:01.829 | INFO     | __main__:one_sentence:129 - google/gemini-2.5-flash: 1400/1872 items, 329s, cum $1.424
+2026-09-23 15:21:24.270 | INFO     | __main__:one_sentence:129 - google/gemini-2.5-flash: 1500/1872 items, 351s, cum $1.493
+2026-09-23 15:21:45.356 | INFO     | __main__:one_sentence:129 - google/gemini-2.5-flash: 1600/1872 items, 372s, cum $1.550
+2026-09-23 15:22:02.349 | INFO     | __main__:one_sentence:129 - google/gemini-2.5-flash: 1700/1872 items, 389s, cum $1.597
+2026-09-23 15:22:24.696 | INFO     | __main__:one_sentence:129 - google/gemini-2.5-flash: 1800/1872 items, 412s, cum $1.657
+2026-09-23 15:23:16.127 | INFO     | __main__:run:136 - done 1872/1872; cum $1.713

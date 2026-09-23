@@ -1,0 +1,37 @@
+2026-09-23 14:20:59.460 | INFO     | __main__:pair_labels:42 - pairs: 0 cached, 29117 to run
+2026-09-23 14:21:20.129 | INFO     | __main__:pair_labels:56 -   pairs 2000/29117 (21s)
+2026-09-23 14:21:31.675 | INFO     | __main__:pair_labels:56 -   pairs 4000/29117 (32s)
+2026-09-23 14:21:46.718 | INFO     | __main__:pair_labels:56 -   pairs 6000/29117 (47s)
+2026-09-23 14:22:05.240 | INFO     | __main__:pair_labels:56 -   pairs 8000/29117 (66s)
+2026-09-23 14:22:14.461 | INFO     | __main__:pair_labels:56 -   pairs 10000/29117 (75s)
+2026-09-23 14:22:28.521 | INFO     | __main__:pair_labels:56 -   pairs 12000/29117 (89s)
+2026-09-23 14:22:39.730 | INFO     | __main__:pair_labels:56 -   pairs 14000/29117 (100s)
+2026-09-23 14:22:56.326 | INFO     | __main__:pair_labels:56 -   pairs 16000/29117 (117s)
+2026-09-23 14:23:15.325 | INFO     | __main__:pair_labels:56 -   pairs 18000/29117 (136s)
+2026-09-23 14:23:52.550 | INFO     | __main__:pair_labels:56 -   pairs 20000/29117 (173s)
+2026-09-23 14:25:05.026 | INFO     | __main__:pair_labels:56 -   pairs 22000/29117 (246s)
+2026-09-23 14:25:37.746 | INFO     | __main__:pair_labels:56 -   pairs 24000/29117 (278s)
+2026-09-23 14:26:10.167 | INFO     | __main__:pair_labels:56 -   pairs 26000/29117 (311s)
+2026-09-23 14:26:33.775 | INFO     | __main__:pair_labels:56 -   pairs 28000/29117 (334s)
+2026-09-23 14:27:33.482 | INFO     | __main__:run:109 - EM done in 2s: pi=0.999 rho=0.077
+{
+ "p_w": {
+  "deepseek-v3.1": 0.4733996574322329,
+  "gemini-2.5-flash": 0.6482708656104262,
+  "gemma-3-27b": 0.5505035506385879,
+  "gpt-4.1-mini": 0.6517510480933588,
+  "gpt-oss-120b": 0.6653039615090558,
+  "llama-3.1-8b": 0.3448027254813769,
+  "mistral-small-3.2-24b": 0.5034229657947752,
+  "phi-4": 0.4240680911407593,
+  "qwen-2.5-7b": 0.3286302905479022
+ },
+ "pi": 0.999,
+ "rho": 0.07664088706280148,
+ "loglik": -6843.696327306227,
+ "iters": 8,
+ "n_pairs": 22951,
+ "n_sample_pairs": 6166,
+ "n_unlabeled_pairs_counted_nonequiv": 61,
+ "equiv_share": 0.3583286131323254
+}

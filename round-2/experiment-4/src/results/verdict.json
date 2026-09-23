@@ -1,0 +1,69 @@
+{
+ "crossover": {
+  "label": "REVERSED",
+  "H1_top_delta_TVJT-B1": {
+   "point": -0.09771217213263172,
+   "ci": [
+    -0.1839903486919557,
+    -0.013696040581103732
+   ]
+  },
+  "H2_growth_TVJT-B1": {
+   "point": 0.027657479997351242,
+   "ci": [
+    -0.12621180688251082,
+    0.18598958964116155
+   ]
+  },
+  "H2_nc_monotone": {
+   "deltas": [
+    -0.0034483318851695755,
+    -0.15699753655639537,
+    -0.06040398731365948
+   ],
+   "non_decreasing": false
+  }
+ },
+ "JUDGE_MATCHED": false,
+ "JUDGE_MATCHED_detail": {
+  "point": -0.11961514635492287,
+  "ci": [
+   -0.2078471196961592,
+   -0.03458260373001334
+  ]
+ },
+ "STACK_INCREMENT": false,
+ "STACK_INCREMENT_detail": {
+  "point": -0.0024801726178830252,
+  "ci": [
+   -0.008434635625546583,
+   0.0025626330100989004
+  ]
+ },
+ "REPAIR_OK": false,
+ "REPAIR_detail": {
+  "screen_paired_G2_FA_C3_all": 0.2124248496993988,
+  "screen_paired_G2_FA_C3_nonRENAME": 0.0,
+  "screen_paired_G2_FA_C3_RENAME": 0.38686131386861317,
+  "heldout_g2": {
+   "paired_FA": {
+    "CONTRAPOSITIVE": 0.0,
+    "ALL": 0.07650273224043716,
+    "REORDER": 0.0,
+    "DEMORGAN": 0.0,
+    "RENAME": 0.2641509433962264,
+    "PRENEX": 0.0
+   },
+   "n": {
+    "CONTRAPOSITIVE": 51,
+    "ALL": 183,
+    "REORDER": 46,
+    "DEMORGAN": 31,
+    "RENAME": 53,
+    "PRENEX": 2
+   },
+   "paired_FA_all": 0.07650273224043716
+  },
+  "reading": "REPAIR_OK fails only through RENAME (plan F2: verbaliser/synonym limitation); every non-RENAME meaning-preserving rewrite has paired FA 0 (screen and held-out)"
+ }
+}

@@ -1,0 +1,59 @@
+{
+ "labels": {
+  "P": "heldout_confirm & label_source==panel3 (609); y = L3_majority, w = L3_sampling_weight",
+  "T": "heldout_confirm top tercile; y_hard = output∈{faithful,unfaithful}; y_soft = stratum p",
+  "Ccon": "contamination rows paired with originals"
+ },
+ "power_switch": {
+  "n_panel_top_label_free": 389,
+  "threshold": 150,
+  "decision": "H1 on P-top"
+ },
+ "H1": "P-top: ΔAUROC_w(TVJT − B1) > 0 with paired sentence-cluster bootstrap (2000×, strata=corpus, seed 0) 95% CI lower bound > 0",
+ "H2": "Δ_top − Δ_bottom > 0 (paired bootstrap CI) and Δ per n_conditions bin {0-1,2-3,4+} non-decreasing",
+ "H2b": "weighted GLM y ~ z(s) + c + z(s):c, cluster-robust by sentence; joint β(TVJT:c) − β(B1:c) > 0",
+ "repeat_for": [
+  "LC_onecoin",
+  "A3",
+  "B1x3",
+  "TVJT_iter1",
+  "TVJT_lite",
+  "B3sc (2 systems)"
+ ],
+ "error_types": "detection P(err < faithful same sentence), Wilson CIs; head-to-head scope∪cardinality vs A3",
+ "stacking": "GroupKFold(5, sentence) weighted logistic C=1; S0=[B1,parse_ok], S1=S0+TVJT, S2=S1+LC+A3, S0z=S0+LC+A3; placebo shuffled TVJT",
+ "contamination": "AUROC orig vs paraphrase (paired over the 104 sentence pairs), mean shift per label class",
+ "decision_table": {
+  "CROSSOVER_CONFIRMED": "H1 LB>0 AND H2 LB>0",
+  "CROSSOVER_PARTIAL": "H1 holds, H2 n.s.",
+  "NOT_REPLICATED": "H1 CI includes 0",
+  "REVERSED": "H1 UB<0",
+  "REPAIR_OK": "frozen screen G2 passed and held-out G2 replication FA<=0.10",
+  "JUDGE_MATCHED": "TVJT − B1x3 top-tercile LB>0",
+  "STACK_INCREMENT": "S2 − S0z LB>0",
+  "PENDING": "verdict for a judge whose scores do not exist yet (gemini key limit)"
+ },
+ "bins": {
+  "tercile": [
+   "bottom",
+   "middle",
+   "top"
+  ],
+  "n_conditions": [
+   [
+    0,
+    1
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    4,
+    99
+   ]
+  ]
+ },
+ "local_variant": "dropped (chance-level world agreement); no local-judge results are reported",
+ "zero_llm_now": "H1/H2-style crossover tables (AUROC_w by tercile / n_conditions with paired bootstrap growth CIs) are run NOW for the zero-LLM metrics LC_onecoin, A3, parse_ok (+B3sc on 2 systems); TVJT*/B1/B1x3 rows are filled by the same code when gemini scores exist"
+}
