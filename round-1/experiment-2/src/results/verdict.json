@@ -1,0 +1,87 @@
+{
+ "rule_candidates": [
+  "TVJT",
+  "NLI_deberta",
+  "LC_onecoin"
+ ],
+ "gates": {
+  "TVJT": {
+   "G1": true,
+   "G2": false,
+   "G3": true,
+   "G4": true
+  },
+  "NLI_deberta": {
+   "G1": true,
+   "G2": false,
+   "G3": false,
+   "G4": false
+  },
+  "LC_onecoin": {
+   "G1": true,
+   "G2": "N/A",
+   "G3": true,
+   "G4": true
+  }
+ },
+ "gate_values": {
+  "TVJT": {
+   "G1_coverage": 0.9304,
+   "G2_FA_at_tau": 0.479,
+   "G3_delta": 0.0388,
+   "G3_ci": [
+    0.0109,
+    0.0673
+   ],
+   "G4_auroc_real": 0.7014,
+   "auroc_ci": [
+    0.6565,
+    0.7445
+   ],
+   "top_tercile_auroc": 0.7508
+  },
+  "NLI_deberta": {
+   "G1_coverage": 0.9184,
+   "G2_FA_at_tau": 0.6834,
+   "G3_delta": 0.0008,
+   "G3_ci": [
+    -0.0168,
+    0.0181
+   ],
+   "G4_auroc_real": 0.6031,
+   "auroc_ci": [
+    0.5504,
+    0.6474
+   ],
+   "top_tercile_auroc": 0.518
+  },
+  "LC_onecoin": {
+   "G1_coverage": 0.9004,
+   "G2_FA_at_tau": "N/A",
+   "G3_delta": 0.1111,
+   "G3_ci": [
+    0.0726,
+    0.1498
+   ],
+   "G4_auroc_real": 0.853,
+   "auroc_ci": [
+    0.8127,
+    0.8876
+   ],
+   "top_tercile_auroc": 0.8285
+  }
+ },
+ "survivors": [
+  "LC_onecoin"
+ ],
+ "ranking_top_tercile": [
+  [
+   "LC_onecoin",
+   0.8285
+  ]
+ ],
+ "outcome": "winner",
+ "advance": [
+  "LC_onecoin"
+ ]
+}

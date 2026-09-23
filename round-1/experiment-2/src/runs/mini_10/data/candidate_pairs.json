@@ -1,0 +1,126 @@
+{
+ "007519ff96": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "014eff9a2b": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "0166601dd0": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "0206b4ea58": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "0208f0729c": {
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "022c51fe40": {
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "026646b128": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "03274a56dd": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "032de04afe": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "0449213340": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ }
+}

@@ -1,0 +1,141 @@
+{
+ "fingerprint_recomputed_matches": true,
+ "fingerprint": "a74f4cdd6586fce69e33aa3882e44faeab848d6e",
+ "real_items_equals_sum_of_system_primaries": true,
+ "real_items_unique": true,
+ "n_sentences": 300,
+ "label_counts_sum": {
+  "L_bij": 833,
+  "L_bij_orig": 833,
+  "L_str": 833,
+  "L_str_orig": 833,
+  "L_bij_cur": 833,
+  "L_any": 833
+ },
+ "unlabeled_L_bij": 0,
+ "every_real_item_scored_by_every_metric": {
+  "B1": true,
+  "B2": true,
+  "B3sc": true,
+  "LC_ds_binary": true,
+  "LC_huiwalter": true,
+  "LC_maj": true,
+  "LC_onecoin": true,
+  "LC_onecoin_str": true,
+  "NLI_deberta": true,
+  "NLI_deberta_gloss": true,
+  "NLI_gemini": true,
+  "TVJT": true,
+  "TVJT_gloss": true,
+  "TVJT_nv": true
+ },
+ "uncovered_real_items_kept_with_0.5": {
+  "B3sc": {
+   "uncovered": 401,
+   "all_uncovered_scored_0.5": true
+  },
+  "LC_ds_binary": {
+   "uncovered": 83,
+   "all_uncovered_scored_0.5": true
+  },
+  "LC_huiwalter": {
+   "uncovered": 83,
+   "all_uncovered_scored_0.5": true
+  },
+  "LC_maj": {
+   "uncovered": 83,
+   "all_uncovered_scored_0.5": true
+  },
+  "LC_onecoin": {
+   "uncovered": 83,
+   "all_uncovered_scored_0.5": true
+  },
+  "LC_onecoin_str": {
+   "uncovered": 83,
+   "all_uncovered_scored_0.5": true
+  },
+  "NLI_deberta": {
+   "uncovered": 68,
+   "all_uncovered_scored_0.5": true
+  },
+  "NLI_deberta_gloss": {
+   "uncovered": 68,
+   "all_uncovered_scored_0.5": true
+  },
+  "NLI_gemini": {
+   "uncovered": 68,
+   "all_uncovered_scored_0.5": true
+  },
+  "TVJT": {
+   "uncovered": 58,
+   "all_uncovered_scored_0.5": true
+  },
+  "TVJT_gloss": {
+   "uncovered": 58,
+   "all_uncovered_scored_0.5": true
+  },
+  "TVJT_nv": {
+   "uncovered": 58,
+   "all_uncovered_scored_0.5": true
+  }
+ },
+ "noise_metric_G3_ci_contains_0": true,
+ "shuffled_label_auroc_mean": 0.501,
+ "bootstrap_seed": 0,
+ "cross_arm_screen_diff": {
+  "/ai-inventor/aii_data/runs/run_qY2a2IS-WLIs/3_invention_loop/iter_1/gen_art/gen_art_experiment_1/data/screen_set.json": {
+   "their_fingerprint": null,
+   "n_theirs": 835,
+   "n_ours": 833,
+   "only_ours": 30,
+   "only_theirs": 32,
+   "identical": false,
+   "only_ours_ids": [
+    "273407fba3:gpt-3.5-turbo",
+    "273407fba3:gpt-4",
+    "273407fba3:text-davinci-003",
+    "5374a5d336:gpt-3.5-turbo",
+    "5374a5d336:gpt-4",
+    "5374a5d336:text-davinci-003",
+    "6b46dbd239:gpt-3.5-turbo",
+    "6b46dbd239:gpt-4",
+    "6b46dbd239:text-davinci-003",
+    "896451cf37:gpt-3.5-turbo",
+    "896451cf37:gpt-4",
+    "896451cf37:text-davinci-003",
+    "952186f250:gpt-3.5-turbo",
+    "952186f250:gpt-4",
+    "952186f250:text-davinci-003",
+    "95880b9e18:gpt-3.5-turbo",
+    "95880b9e18:gpt-4",
+    "95880b9e18:text-davinci-003",
+    "95c86fca04:gpt-3.5-turbo",
+    "95c86fca04:gpt-4"
+   ],
+   "only_theirs_ids": [
+    "10f3fb7abd:gpt-3.5-turbo",
+    "10f3fb7abd:gpt-4",
+    "10f3fb7abd:text-davinci-003",
+    "24ed5583fe:gpt-3.5-turbo",
+    "24ed5583fe:gpt-4",
+    "24ed5583fe:text-davinci-003",
+    "27a659b831:gpt-3.5-turbo",
+    "27a659b831:gpt-4",
+    "27a659b831:text-davinci-003",
+    "28ebc44486:gpt-3.5-turbo",
+    "28ebc44486:gpt-4",
+    "28ebc44486:text-davinci-003",
+    "43185884c1:gpt-3.5-turbo",
+    "43185884c1:gpt-4",
+    "43185884c1:text-davinci-003",
+    "60a2dad8ab:gpt-3.5-turbo",
+    "60a2dad8ab:gpt-4",
+    "60a2dad8ab:text-davinci-003",
+    "65f113d41a:gpt-4",
+    "65f113d41a:text-davinci-003"
+   ],
+   "same_sentence_ids": false
+  }
+ },
+ "cross_arm_diff_explanation": "10 FOLIO-v1 validation examples have len(premises) != len(premises-FOL). Arm B skips zipping those examples' premises (their sentences still enter via other examples of the same story when aligned); zipping by index there misaligns gold (e.g. 'Tom lives in a single-parent family.' -> '\u2200x (SingleParent(x) \u2228 FewResources(x) \u2192 Hardship(x))'). Arm A (gen_art_experiment_1) zips them, which admits ~11 extra sentences (stories 87/105/106/173) with misaligned gold and shifts the sha1-first-300 boundary; the 803 shared items have identical primary candidates."
+}
