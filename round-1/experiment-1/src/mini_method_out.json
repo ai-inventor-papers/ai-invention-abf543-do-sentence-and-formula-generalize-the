@@ -1,0 +1,4929 @@
+{
+  "metadata": {
+    "method_name": "monotonicity-signature screen (Arm A): A1/A2/A3 vs baselines",
+    "description": "Gold-free NL->FOL faithfulness metrics screened on Logic-LM FOLIO-dev outputs",
+    "config": {
+      "workspace": "/ai-inventor/aii_data/runs/run_qY2a2IS-WLIs/3_invention_loop/iter_1/gen_art/gen_art_experiment_1",
+      "candidates": [
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "text_probe_model": "google/gemini-2.5-flash",
+      "text_probe_reasoning": {
+        "max_tokens": 1024
+      },
+      "text_probe_config_choice": "thinking_1024 (pre-registered MED pilot rule); fallback-11 switch to gpt-4.1-mini NOT applied because gpt-4.1-mini piloted worse (down 0.32 vs 0.64) - see probe_config",
+      "B1_model": "google/gemini-2.5-flash",
+      "B1_reasoning": {
+        "max_tokens": 0
+      },
+      "B1_temperature": 0,
+      "B1_prompt": "Sentence: {s}\\nFOL: {f}\\nGive the probability (0-100) that this FOL is a faithful formalization of the sentence. Reply with a number only.",
+      "B3_backtranslation_model": "google/gemini-2.5-flash (thinking off)",
+      "B3_nli_model": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli (GPU)",
+      "B3_cos_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "B4_model": "google/gemini-2.5-flash thinking 1024 (same as probe)",
+      "B4_samples": "all parseable real (810) + gold (300) + 20 mutants/operator (180) + 120 rewrites (budget rule 13: 40/op and 150 rewrites shrunk)",
+      "B1plus": "SKIPPED: optional tier runs only if cumulative spend < $4.30; spend was $4.51 before it (budget rule 12/13)",
+      "B8_self_consistency": "added (not in plan): agreement with the same system's re-translations of the same sentence in other FOLIO stories (Logic-LM translated each story independently)",
+      "A0_Ccov_controls": "added (not in plan): A0 = signature score with polarity/anchor coordinates disabled (alignment-only); Ccov = concept coverage fraction",
+      "A3_implementation": "A3-rules (compact rule-based monotonicity marker over spaCy en_core_web_sm); Udep2Mono was not installed (fallback 10; time box)",
+      "signature_domain_bound_N": 3,
+      "labeler_domain_bound": "1..4 (single grounded query) + unbounded z3 check",
+      "labeler_max_bijections": 5040,
+      "solver_timeout_ms": 5000,
+      "align_thresholds": {
+        "lemma_overlap": 0.5,
+        "minilm_cosine": 0.5
+      },
+      "coverage_rule": "covered = parse_ok and <=20% '?' coords and alignment coverage >= 0.5 and >=1 labelled concept",
+      "post_T1_text_side_fixes": "optional domain nouns/light verbs (person, people, thing, have, take, ...), predicates may align to PROPN concepts and constants to NOUN concepts; tuned only on gold/mutant/rewrite behaviour (T1), never on real-candidate labels",
+      "bootstrap": "1000x, resampling sentences (sid)",
+      "G3": "OOF logistic, 5 sentence-grouped folds x 5 shuffles",
+      "seeds": {
+        "mutants": "sha1-derived per sentence",
+        "bootstrap": 0,
+        "b6_sample": 0
+      },
+      "budget_cap_usd": 5.8
+    },
+    "screen_set_counts": {
+      "gold_v0_unique_sentences": 569,
+      "corrected_release": {
+        "source": "HF DSAVlab-UNIUD/FOLIO_validation-curated (arXiv:2606.02837)",
+        "n_sentence_entries": 410,
+        "story_split_fail": 30,
+        "concl": 202,
+        "story_split_ok": 43
+      },
+      "logiclm_gpt-3.5-turbo": {
+        "n_lines": 1203,
+        "n_matched": 1052,
+        "n_unmatched": 151,
+        "n_unique_matched_sentences": 482
+      },
+      "logiclm_gpt-4": {
+        "n_lines": 1260,
+        "n_matched": 1181,
+        "n_unmatched": 79,
+        "n_unique_matched_sentences": 542
+      },
+      "logiclm_text-davinci-003": {
+        "n_lines": 1165,
+        "n_matched": 1053,
+        "n_unmatched": 112,
+        "n_unique_matched_sentences": 500
+      },
+      "diag_fuzzy95_unmatched_lines": 125,
+      "n_unique_matched_sentences": 547,
+      "gold_exclusions": {
+        "gold_unparseable": 10
+      },
+      "gold_exclusion_examples": {
+        "gold_unparseable": [
+          [
+            "All growth companies’ stocks are volatile.",
+            "∀x (GrowthCompanies’Stocks(x) → PriceVolatile(x))",
+            "unsupported symbol '’'"
+          ],
+          [
+            "All mature companies’ stocks are suitable for a retirement fund.",
+            " ∀x (MatureCompanies’Stocks(x) → SuitableForRetirementRund(x))",
+            "unsupported symbol '’'"
+          ],
+          [
+            "If KO is a growth company’s stock or if its price is volatile, then KO is neithe",
+            "GrowthCompanies’Stocks(kO) ∨ PriceVolatile(kO) → ¬Companies’Stocks(kO) ∨ ¬PriceVolatile(kO)",
+            "unsupported symbol '’'"
+          ],
+          [
+            "KO is a company stock.",
+            "Companies’Stocks(kO)",
+            "unsupported symbol '’'"
+          ],
+          [
+            "KO is a company stock and a growth company’s stock.",
+            "Companies’Stocks(kO) ∧ GrowthCompanies’Stocks(kO)",
+            "unsupported symbol '’'"
+          ]
+        ]
+      },
+      "n_screen_sentences": 300,
+      "n_real": 835,
+      "real_per_system": {
+        "gpt-3.5-turbo": 265,
+        "gpt-4": 298,
+        "text-davinci-003": 272
+      },
+      "duplicate_occurrence_hist": {
+        "1": 368,
+        "2": 73,
+        "3": 330,
+        "4": 20,
+        "5": 44
+      },
+      "n_real_parse_ok": 811,
+      "label_status": {
+        "nonequiv": 446,
+        "equiv": 389
+      },
+      "label_status_by_system": {
+        "gpt-3.5-turbo": {
+          "nonequiv": 145,
+          "equiv": 120
+        },
+        "gpt-4": {
+          "nonequiv": 134,
+          "equiv": 164
+        },
+        "text-davinci-003": {
+          "nonequiv": 167,
+          "equiv": 105
+        }
+      },
+      "label_orig_status_by_system": {
+        "gpt-3.5-turbo": {
+          "equiv": 138,
+          "nonequiv": 126,
+          "unlabeled": 1
+        },
+        "gpt-4": {
+          "equiv": 185,
+          "nonequiv": 112,
+          "unlabeled": 1
+        },
+        "text-davinci-003": {
+          "equiv": 123,
+          "nonequiv": 148,
+          "unlabeled": 1
+        }
+      },
+      "mutant_log": {
+        "NEG": {
+          "kept": 300
+        },
+        "QUANT": {
+          "NA": 143,
+          "kept": 157
+        },
+        "IMPL_REV": {
+          "NA": 176,
+          "kept": 124
+        },
+        "DROP": {
+          "NA": 203,
+          "kept": 95,
+          "equiv_dropped": 2
+        },
+        "ADD": {
+          "kept": 300
+        },
+        "ARG_SWAP": {
+          "kept": 102,
+          "NA": 197,
+          "equiv_dropped": 1
+        },
+        "ANDOR": {
+          "NA": 191,
+          "kept": 109
+        },
+        "SCOPE": {
+          "NA": 299,
+          "equiv_dropped": 1
+        },
+        "MERGE": {
+          "NA": 149,
+          "kept": 151
+        },
+        "CARD": {
+          "NA": 262,
+          "kept": 37,
+          "equiv_dropped": 1
+        },
+        "REORDER": {
+          "NA": 175,
+          "kept": 71
+        },
+        "CONTRAPOS": {
+          "NA": 143,
+          "kept": 115
+        },
+        "PRENEX": {
+          "NA": 222,
+          "kept": 4
+        },
+        "DEMORGAN": {
+          "NA": 173,
+          "kept": 80
+        },
+        "SYN_RENAME": {
+          "kept": 142,
+          "NA": 107
+        }
+      },
+      "n_mutants": 1375,
+      "n_rewrites": 412,
+      "mutants_per_operator": {
+        "ADD": 300,
+        "ANDOR": 109,
+        "CARD": 37,
+        "DROP": 95,
+        "MERGE": 151,
+        "NEG": 300,
+        "QUANT": 157,
+        "ARG_SWAP": 102,
+        "IMPL_REV": 124
+      },
+      "rewrites_per_kind": {
+        "DEMORGAN": 80,
+        "REORDER": 71,
+        "SYN_RENAME": 142,
+        "CONTRAPOS": 115,
+        "PRENEX": 4
+      },
+      "n_tokens_source": "spacy",
+      "tercile_sizes": {
+        "top": 99,
+        "mid": 101,
+        "low": 100
+      },
+      "gold_source": {
+        "corrected": 97,
+        "original": 203
+      },
+      "gold_corr_flag_true": 50
+    },
+    "label_diagnostics": {
+      "per_system": {
+        "gpt-3.5-turbo": {
+          "n": 265,
+          "equiv_rate_primary": 0.4528301886792453,
+          "equiv_rate_orig_gold": 0.5227272727272727,
+          "equiv_rate_primary_lex": 0.4339622641509434,
+          "parse_rate": 0.9660377358490566
+        },
+        "gpt-4": {
+          "n": 298,
+          "equiv_rate_primary": 0.5503355704697986,
+          "equiv_rate_orig_gold": 0.622895622895623,
+          "equiv_rate_primary_lex": 0.5268456375838926,
+          "parse_rate": 0.9798657718120806
+        },
+        "text-davinci-003": {
+          "n": 272,
+          "equiv_rate_primary": 0.3860294117647059,
+          "equiv_rate_orig_gold": 0.45387453874538747,
+          "equiv_rate_primary_lex": 0.3860294117647059,
+          "parse_rate": 0.9669117647058824
+        }
+      },
+      "n_real": 835,
+      "n_labeled": 835,
+      "n_unlabeled": 0,
+      "unlabeled_rate": 0.0,
+      "positive_rate": 0.4658682634730539,
+      "unbounded_check_on_equiv_items": {
+        "unsat": 389
+      },
+      "bounded_vs_unbounded_agreement": 1.0,
+      "nonequiv_reason_counts": {
+        "no_bijection": 70,
+        "vocab_shape": 352,
+        "unparseable": 24
+      },
+      "items_with_both_golds": 277,
+      "orig_vs_corrected_label_agreement": 0.7509025270758123,
+      "equiv_to_orig_but_not_corrected": 62,
+      "equiv_to_corrected_but_not_orig": 4,
+      "blind_vs_lexical_label_disagreements": 12,
+      "gold_source_counts": {
+        "corrected": 97,
+        "original": 203
+      },
+      "gold_wrong_rate_estimate": {
+        "n_sentences_with_curated_gold": 97,
+        "n_curated_marked_corrected": 50,
+        "rate": 0.5154639175257731,
+        "n_ambiguous": 19
+      },
+      "correct_but_inequivalent_estimate": {
+        "note": "Lower bound from label disagreement: an item equivalent to one gold but not the other is correct under at least one reference yet inequivalent to the other; vocab_shape nonequiv (different predicate arity multiset) dominates nonequiv reasons and is where granularity-correct candidates land.",
+        "vocab_shape_share_of_nonequiv": 0.7892376681614349
+      }
+    },
+    "per_metric": {
+      "A1": {
+        "AUROC_real": 0.7113300748152673,
+        "CI95": [
+          0.6625495331101388,
+          0.7562775840376366
+        ],
+        "n": 835,
+        "AUROC_unparseable_as_0": 0.7163100741236008,
+        "AUROC_orig_gold": 0.7115435999907063,
+        "AUROC_lexical_bijection": 0.7165655079749342,
+        "AUROC_orig_gold_lexical": 0.7094473792317351,
+        "AUROC_corrected_gold_subset": 0.7602831196581197,
+        "n_corrected_gold_subset": 277,
+        "per_tercile": {
+          "low": {
+            "AUROC": 0.7260325406758448,
+            "CI95": [
+              0.646896134386878,
+              0.8052800276917329
+            ],
+            "underpowered": false
+          },
+          "mid": {
+            "AUROC": 0.7388390657337144,
+            "CI95": [
+              0.661223032714412,
+              0.8108368353715321
+            ],
+            "underpowered": false
+          },
+          "top": {
+            "AUROC": 0.5065599073895428,
+            "CI95": [
+              0.3973091914532387,
+              0.6009928535495926
+            ],
+            "underpowered": false
+          }
+        },
+        "G1_coverage": 0.859880239520958,
+        "G4_auroc_ge_0.65": true,
+        "delta_vs_B1_per_tercile": {
+          "low": {
+            "delta": 0.04590112640801003,
+            "CI95": [
+              -0.04944453276405026,
+              0.1440950446392479
+            ]
+          },
+          "mid": {
+            "delta": 0.116142702276535,
+            "CI95": [
+              0.014564743705967718,
+              0.21616706068287828
+            ]
+          },
+          "top": {
+            "delta": -0.02678628850729936,
+            "CI95": [
+              -0.14499692192849467,
+              0.09235760546779814
+            ]
+          }
+        },
+        "crossover_trend": {
+          "spearman_tercile_vs_delta": -0.5,
+          "slope": -0.036343707457654695,
+          "slope_CI95": [
+            -0.11546347830971367,
+            0.044347537497073014
+          ],
+          "caveat": "FOLIO's top tercile is only mildly conditioned (1 unless/except in 2656 pairs); crossover test weak by construction"
+        },
+        "delta_vs_B1_halves": {
+          "bottom": 0.06573837917327263,
+          "top": 0.05610264728031067
+        },
+        "G2_false_alarm": 0.13106796116504854,
+        "G2_false_alarm_delta0": 0.13106796116504854,
+        "G2_delta": 0.0,
+        "G2_n_rewrites": 412,
+        "G2_by_kind": {
+          "DEMORGAN": {
+            "rate": 0.0,
+            "n": 80
+          },
+          "REORDER": {
+            "rate": 0.0,
+            "n": 71
+          },
+          "SYN_RENAME": {
+            "rate": 0.38028169014084506,
+            "n": 142
+          },
+          "CONTRAPOS": {
+            "rate": 0.0,
+            "n": 115
+          },
+          "PRENEX": {
+            "rate": 0.0,
+            "n": 4
+          }
+        },
+        "G2_by_cause": {
+          "alignment(rename)": 0.38028169014084506,
+          "other": 0.0
+        },
+        "G3_increment_over_B1_parse": {
+          "base": [
+            "B1",
+            "parse_okf"
+          ],
+          "auc_base_oof": 0.6227938718341844,
+          "auc_with_metric_oof": 0.7067852490576043,
+          "delta_auroc": 0.08399137722341987,
+          "ci95": [
+            0.037132360605905704,
+            0.1380741977319372
+          ],
+          "passes": true
+        },
+        "increment_over_best_baselines": {
+          "base": [
+            "B1",
+            "parse_okf",
+            "B3nli",
+            "B7",
+            "B8"
+          ],
+          "auc_base_oof": 0.6766429962995838,
+          "auc_with_metric_oof": 0.7335239258994547,
+          "delta_auroc": 0.0568809295998709,
+          "ci95": [
+            0.021914482990818617,
+            0.09248283786976982
+          ],
+          "passes": true
+        },
+        "usd_per_item_amortised": 0.0008946222754491018,
+        "usd_per_sentence_text_probe": 0.0024900319999999997,
+        "seconds_per_item": 0.01645437125748503
+      },
+      "A2": {
+        "AUROC_real": 0.7107191026779024,
+        "CI95": [
+          0.6619856455848144,
+          0.7557404218432544
+        ],
+        "n": 835,
+        "AUROC_unparseable_as_0": 0.7156991019862359,
+        "AUROC_orig_gold": 0.7110847138641697,
+        "AUROC_lexical_bijection": 0.7159284398781462,
+        "AUROC_orig_gold_lexical": 0.708949783314336,
+        "AUROC_corrected_gold_subset": 0.7602831196581197,
+        "n_corrected_gold_subset": 277,
+        "per_tercile": {
+          "low": {
+            "AUROC": 0.7240300375469336,
+            "CI95": [
+              0.645286765567286,
+              0.803462442844973
+            ],
+            "underpowered": false
+          },
+          "mid": {
+            "AUROC": 0.7388390657337144,
+            "CI95": [
+              0.661223032714412,
+              0.8108368353715321
+            ],
+            "underpowered": false
+          },
+          "top": {
+            "AUROC": 0.5070100971123546,
+            "CI95": [
+              0.3975356147570246,
+              0.6012532460964272
+            ],
+            "underpowered": false
+          }
+        },
+        "G1_coverage": 0.859880239520958,
+        "G4_auroc_ge_0.65": true,
+        "delta_vs_B1_per_tercile": {
+          "low": {
+            "delta": 0.04389862327909888,
+            "CI95": [
+              -0.05173681691647073,
+              0.1425605188928717
+            ]
+          },
+          "mid": {
+            "delta": 0.116142702276535,
+            "CI95": [
+              0.014564743705967718,
+              0.21616706068287828
+            ]
+          },
+          "top": {
+            "delta": -0.026336098784487616,
+            "CI95": [
+              -0.14498927666855582,
+              0.09307680153219103
+            ]
+          }
+        },
+        "crossover_trend": {
+          "spearman_tercile_vs_delta": -0.5,
+          "slope": -0.03511736103179325,
+          "slope_CI95": [
+            -0.11321931033362216,
+            0.04539073741581472
+          ],
+          "caveat": "FOLIO's top tercile is only mildly conditioned (1 unless/except in 2656 pairs); crossover test weak by construction"
+        },
+        "delta_vs_B1_halves": {
+          "bottom": 0.06435973438110332,
+          "top": 0.05652262063372537
+        },
+        "G2_false_alarm": 0.13106796116504854,
+        "G2_false_alarm_delta0": 0.13106796116504854,
+        "G2_delta": 0.0,
+        "G2_n_rewrites": 412,
+        "G2_by_kind": {
+          "DEMORGAN": {
+            "rate": 0.0,
+            "n": 80
+          },
+          "REORDER": {
+            "rate": 0.0,
+            "n": 71
+          },
+          "SYN_RENAME": {
+            "rate": 0.38028169014084506,
+            "n": 142
+          },
+          "CONTRAPOS": {
+            "rate": 0.0,
+            "n": 115
+          },
+          "PRENEX": {
+            "rate": 0.0,
+            "n": 4
+          }
+        },
+        "G2_by_cause": {
+          "alignment(rename)": 0.38028169014084506,
+          "other": 0.0
+        },
+        "G3_increment_over_B1_parse": {
+          "base": [
+            "B1",
+            "parse_okf"
+          ],
+          "auc_base_oof": 0.6227938718341844,
+          "auc_with_metric_oof": 0.7063990685556849,
+          "delta_auroc": 0.08360519672150046,
+          "ci95": [
+            0.03628331160927254,
+            0.13773998579202276
+          ],
+          "passes": true
+        },
+        "increment_over_best_baselines": {
+          "base": [
+            "B1",
+            "parse_okf",
+            "B3nli",
+            "B7",
+            "B8"
+          ],
+          "auc_base_oof": 0.6766429962995838,
+          "auc_with_metric_oof": 0.7328956620978246,
+          "delta_auroc": 0.05625266579824084,
+          "ci95": [
+            0.02137211541035536,
+            0.09216520247096734
+          ],
+          "passes": true
+        },
+        "usd_per_item_amortised": 0.0008946222754491018,
+        "usd_per_sentence_text_probe": 0.0024900319999999997,
+        "seconds_per_item": 0.01645437125748503
+      },
+      "A3": {
+        "AUROC_real": 0.7181919835844467,
+        "CI95": [
+          0.6733891231808881,
+          0.7633632824838965
+        ],
+        "n": 835,
+        "AUROC_unparseable_as_0": 0.7228953162645395,
+        "AUROC_orig_gold": 0.7138845001045564,
+        "AUROC_lexical_bijection": 0.7253512561824564,
+        "AUROC_orig_gold_lexical": 0.7225121650629807,
+        "AUROC_corrected_gold_subset": 0.7815438034188035,
+        "n_corrected_gold_subset": 277,
+        "per_tercile": {
+          "low": {
+            "AUROC": 0.757008760951189,
+            "CI95": [
+              0.6729770656401275,
+              0.8355803382190825
+            ],
+            "underpowered": false
+          },
+          "mid": {
+            "AUROC": 0.7369419532866857,
+            "CI95": [
+              0.6638465109985394,
+              0.8035316127446046
+            ],
+            "underpowered": false
+          },
+          "top": {
+            "AUROC": 0.5075245996527108,
+            "CI95": [
+              0.38514293402983163,
+              0.6162696151280472
+            ],
+            "underpowered": false
+          }
+        },
+        "G1_coverage": 0.8838323353293414,
+        "G4_auroc_ge_0.65": true,
+        "delta_vs_B1_per_tercile": {
+          "low": {
+            "delta": 0.07687734668335422,
+            "CI95": [
+              -0.016360136605415798,
+              0.17419019596632798
+            ]
+          },
+          "mid": {
+            "delta": 0.11424558982950628,
+            "CI95": [
+              0.013696186125213295,
+              0.21287238693415472
+            ]
+          },
+          "top": {
+            "delta": -0.025821596244131384,
+            "CI95": [
+              -0.14360743328619555,
+              0.09775989231255051
+            ]
+          }
+        },
+        "crossover_trend": {
+          "spearman_tercile_vs_delta": -0.5,
+          "slope": -0.0513494714637428,
+          "slope_CI95": [
+            -0.12804534602720197,
+            0.028083405847517347
+          ],
+          "caveat": "FOLIO's top tercile is only mildly conditioned (1 unless/except in 2656 pairs); crossover test weak by construction"
+        },
+        "delta_vs_B1_halves": {
+          "bottom": 0.09365593621470092,
+          "top": 0.05287319701094839
+        },
+        "G2_false_alarm": 0.14320388349514562,
+        "G2_false_alarm_delta0": 0.14320388349514562,
+        "G2_delta": 0.0,
+        "G2_n_rewrites": 412,
+        "G2_by_kind": {
+          "DEMORGAN": {
+            "rate": 0.0,
+            "n": 80
+          },
+          "REORDER": {
+            "rate": 0.0,
+            "n": 71
+          },
+          "SYN_RENAME": {
+            "rate": 0.4154929577464789,
+            "n": 142
+          },
+          "CONTRAPOS": {
+            "rate": 0.0,
+            "n": 115
+          },
+          "PRENEX": {
+            "rate": 0.0,
+            "n": 4
+          }
+        },
+        "G2_by_cause": {
+          "alignment(rename)": 0.4154929577464789,
+          "other": 0.0
+        },
+        "G3_increment_over_B1_parse": {
+          "base": [
+            "B1",
+            "parse_okf"
+          ],
+          "auc_base_oof": 0.6227938718341844,
+          "auc_with_metric_oof": 0.7162553171867615,
+          "delta_auroc": 0.09346144535257705,
+          "ci95": [
+            0.04756005041581398,
+            0.1433358592604906
+          ],
+          "passes": true
+        },
+        "increment_over_best_baselines": {
+          "base": [
+            "B1",
+            "parse_okf",
+            "B3nli",
+            "B7",
+            "B8"
+          ],
+          "auc_base_oof": 0.6766429962995838,
+          "auc_with_metric_oof": 0.7382704877402101,
+          "delta_auroc": 0.06162749144062629,
+          "ci95": [
+            0.02865288437677782,
+            0.09672442434925518
+          ],
+          "passes": true
+        },
+        "usd_per_item_amortised": 0.0,
+        "usd_per_sentence_text_probe": 0.0,
+        "seconds_per_item": 0.01645437125748503
+      },
+      "B1": {
+        "AUROC_real": 0.6440510911040151,
+        "CI95": [
+          0.5972697750506097,
+          0.6928368014694114
+        ],
+        "n": 835,
+        "AUROC_unparseable_as_0": 0.6591236584550475,
+        "AUROC_orig_gold": 0.6660296475289853,
+        "AUROC_lexical_bijection": 0.649238993200746,
+        "AUROC_orig_gold_lexical": 0.6633098228905694,
+        "AUROC_corrected_gold_subset": 0.7210202991452992,
+        "n_corrected_gold_subset": 277,
+        "per_tercile": {
+          "low": {
+            "AUROC": 0.6801314142678347,
+            "CI95": [
+              0.5919915100635349,
+              0.7632673177083333
+            ],
+            "underpowered": false
+          },
+          "mid": {
+            "AUROC": 0.6226963634571794,
+            "CI95": [
+              0.5311892528906724,
+              0.7063536778403188
+            ],
+            "underpowered": false
+          },
+          "top": {
+            "AUROC": 0.5333461958968422,
+            "CI95": [
+              0.41820310898806184,
+              0.6400525118370209
+            ],
+            "underpowered": false
+          }
+        },
+        "G1_coverage": 1.0,
+        "G4_auroc_ge_0.65": false,
+        "G2_false_alarm": 0.308252427184466,
+        "G2_false_alarm_delta0": 0.42961165048543687,
+        "G2_delta": 0.1,
+        "G2_n_rewrites": 412,
+        "G2_by_kind": {
+          "DEMORGAN": {
+            "rate": 0.3875,
+            "n": 80
+          },
+          "REORDER": {
+            "rate": 0.19718309859154928,
+            "n": 71
+          },
+          "SYN_RENAME": {
+            "rate": 0.24647887323943662,
+            "n": 142
+          },
+          "CONTRAPOS": {
+            "rate": 0.4,
+            "n": 115
+          },
+          "PRENEX": {
+            "rate": 0.25,
+            "n": 4
+          }
+        },
+        "usd_per_item_amortised": 2.3649461077844314e-05,
+        "seconds_per_item": 0.5622514970059881
+      },
+      "B2": {
+        "AUROC_real": 0.5269058295964126,
+        "CI95": [
+          0.5154494798825441,
+          0.5409145021645021
+        ],
+        "n": 835,
+        "AUROC_unparseable_as_0": 0.5269058295964126,
+        "AUROC_orig_gold": 0.5310880829015544,
+        "AUROC_lexical_bijection": 0.5262008733624455,
+        "AUROC_orig_gold_lexical": 0.529925187032419,
+        "AUROC_corrected_gold_subset": 0.5125,
+        "n_corrected_gold_subset": 277,
+        "per_tercile": {
+          "low": {
+            "AUROC": 0.5319148936170213,
+            "CI95": [
+              0.505100752422181,
+              0.5707251082251082
+            ],
+            "underpowered": false
+          },
+          "mid": {
+            "AUROC": 0.5215827338129496,
+            "CI95": [
+              0.5034958964646465,
+              0.5489583333333333
+            ],
+            "underpowered": false
+          },
+          "top": {
+            "AUROC": 0.528169014084507,
+            "CI95": [
+              0.5130298913043477,
+              0.546880255044843
+            ],
+            "underpowered": false
+          }
+        },
+        "G1_coverage": 1.0,
+        "G4_auroc_ge_0.65": false,
+        "delta_vs_B1_per_tercile": {
+          "low": {
+            "delta": -0.14821652065081348,
+            "CI95": [
+              -0.2350160185248007,
+              -0.05882393760068117
+            ]
+          },
+          "mid": {
+            "delta": -0.10111362964422976,
+            "CI95": [
+              -0.18474414595028055,
+              -0.00903492790897329
+            ]
+          },
+          "top": {
+            "delta": -0.005177181812335174,
+            "CI95": [
+              -0.11453070243225637,
+              0.11188406729492896
+            ]
+          }
+        },
+        "crossover_trend": {
+          "spearman_tercile_vs_delta": 1.0,
+          "slope": 0.07151966941923917,
+          "slope_CI95": [
+            0.001896992552290378,
+            0.14497836652325455
+          ],
+          "caveat": "FOLIO's top tercile is only mildly conditioned (1 unless/except in 2656 pairs); crossover test weak by construction"
+        },
+        "delta_vs_B1_halves": {
+          "bottom": -0.1388295305714483,
+          "top": -0.005821699588715701
+        },
+        "G2_false_alarm": null,
+        "usd_per_item_amortised": 0.0
+      },
+      "B2sat": {
+        "AUROC_real": 0.5291479820627802,
+        "CI95": [
+          0.5172738356225671,
+          0.5433899532676265
+        ],
+        "n": 835,
+        "AUROC_unparseable_as_0": 0.5291479820627802,
+        "AUROC_orig_gold": 0.533678756476684,
+        "AUROC_lexical_bijection": 0.5283842794759825,
+        "AUROC_orig_gold_lexical": 0.5324189526184538,
+        "AUROC_corrected_gold_subset": 0.515625,
+        "n_corrected_gold_subset": 277,
+        "per_tercile": {
+          "low": {
+            "AUROC": 0.5319148936170213,
+            "CI95": [
+              0.505100752422181,
+              0.5707251082251082
+            ],
+            "underpowered": false
+          },
+          "mid": {
+            "AUROC": 0.525179856115108,
+            "CI95": [
+              0.5043468890554722,
+              0.5515907224958949
+            ],
+            "underpowered": false
+          },
+          "top": {
+            "AUROC": 0.5305164319248826,
+            "CI95": [
+              0.5144917064589093,
+              0.5494921875000001
+            ],
+            "underpowered": false
+          }
+        },
+        "G1_coverage": 1.0,
+        "G4_auroc_ge_0.65": false,
+        "delta_vs_B1_per_tercile": {
+          "low": {
+            "delta": -0.14821652065081348,
+            "CI95": [
+              -0.2350160185248007,
+              -0.05882393760068117
+            ]
+          },
+          "mid": {
+            "delta": -0.0975165073420714,
+            "CI95": [
+              -0.18206303057944848,
+              -0.0005549906594924727
+            ]
+          },
+          "top": {
+            "delta": -0.0028297639719595535,
+            "CI95": [
+              -0.11202275028534113,
+              0.11374717338086777
+            ]
+          }
+        },
+        "crossover_trend": {
+          "spearman_tercile_vs_delta": 1.0,
+          "slope": 0.07269337833942695,
+          "slope_CI95": [
+            0.003887404639257847,
+            0.14694462838895705
+          ],
+          "caveat": "FOLIO's top tercile is only mildly conditioned (1 unless/except in 2656 pairs); crossover test weak by construction"
+        },
+        "delta_vs_B1_halves": {
+          "bottom": -0.13576204590887153,
+          "top": -0.0040549151364188685
+        },
+        "G2_false_alarm": null,
+        "G3_increment_over_B1_parse": {
+          "base": [
+            "B1",
+            "parse_okf"
+          ],
+          "auc_base_oof": 0.6227938718341844,
+          "auc_with_metric_oof": 0.623165642615883,
+          "delta_auroc": 0.00037177078169858824,
+          "ci95": [
+            -0.0002694447374576109,
+            0.0011865896663862785
+          ],
+          "passes": false
+        },
+        "increment_over_best_baselines": {
+          "base": [
+            "B1",
+            "parse_okf",
+            "B3nli",
+            "B7",
+            "B8"
+          ],
+          "auc_base_oof": 0.6766429962995838,
+          "auc_with_metric_oof": 0.6767352185089974,
+          "delta_auroc": 9.222220941362824e-05,
+          "ci95": [
+            -0.0008853847383033548,
+            0.0008543762215573264
+          ],
+          "passes": false
+        },
+        "usd_per_item_amortised": 0.0
+      },
+      "B3cos": {
+        "AUROC_real": 0.6144708174346086,
+        "CI95": [
+          0.5616774442143573,
+          0.6632500516479993
+        ],
+        "n": 835,
+        "AUROC_unparseable_as_0": 0.628255155797895,
+        "AUROC_orig_gold": 0.6206783382513534,
+        "AUROC_lexical_bijection": 0.6097494584921178,
+        "AUROC_orig_gold_lexical": 0.6105762276443462,
+        "AUROC_corrected_gold_subset": 0.6536858974358974,
+        "n_corrected_gold_subset": 277,
+        "per_tercile": {
+          "low": {
+            "AUROC": 0.7022841051314141,
+            "CI95": [
+              0.6164319314521521,
+              0.7871048534381577
+            ],
+            "underpowered": false
+          },
+          "mid": {
+            "AUROC": 0.5171232876712328,
+            "CI95": [
+              0.43541139993653477,
+              0.6011763298855164
+            ],
+            "underpowered": false
+          },
+          "top": {
+            "AUROC": 0.42401440607112995,
+            "CI95": [
+              0.31397881123888965,
+              0.5285805849032204
+            ],
+            "underpowered": false
+          }
+        },
+        "G1_coverage": 1.0,
+        "G4_auroc_ge_0.65": false,
+        "delta_vs_B1_per_tercile": {
+          "low": {
+            "delta": 0.022152690863579405,
+            "CI95": [
+              -0.07928989975520302,
+              0.12744498242339375
+            ]
+          },
+          "mid": {
+            "delta": -0.10557307578594655,
+            "CI95": [
+              -0.19988405989576624,
+              -0.0023590182743658053
+            ]
+          },
+          "top": {
+            "delta": -0.10933178982571223,
+            "CI95": [
+              -0.2376299761351807,
+              0.015551953120657342
+            ]
+          }
+        },
+        "crossover_trend": {
+          "spearman_tercile_vs_delta": -1.0,
+          "slope": -0.06574224034464582,
+          "slope_CI95": [
+            -0.15368311148829109,
+            0.021729035032113472
+          ],
+          "caveat": "FOLIO's top tercile is only mildly conditioned (1 unless/except in 2656 pairs); crossover test weak by construction"
+        },
+        "delta_vs_B1_halves": {
+          "bottom": -0.026757197674685873,
+          "top": -0.09466778659560904
+        },
+        "G2_false_alarm": null,
+        "G3_increment_over_B1_parse": {
+          "base": [
+            "B1",
+            "parse_okf"
+          ],
+          "auc_base_oof": 0.6227938718341844,
+          "auc_with_metric_oof": 0.6382727932954454,
+          "delta_auroc": 0.015478921461260953,
+          "ci95": [
+            -0.00829647612680746,
+            0.037713916301457484
+          ],
+          "passes": false
+        },
+        "increment_over_best_baselines": {
+          "base": [
+            "B1",
+            "parse_okf",
+            "B3nli",
+            "B7",
+            "B8"
+          ],
+          "auc_base_oof": 0.6766429962995838,
+          "auc_with_metric_oof": 0.6768072671101018,
+          "delta_auroc": 0.00016427081051795245,
+          "ci95": [
+            -0.0047478212507828434,
+            0.004976618652248207
+          ],
+          "passes": false
+        },
+        "usd_per_item_amortised": 5.9159760479041916e-05
+      },
+      "B3nli": {
+        "AUROC_real": 0.6597346305924123,
+        "CI95": [
+          0.6116325675357107,
+          0.7063843823280902
+        ],
+        "n": 835,
+        "AUROC_unparseable_as_0": 0.6751760867810991,
+        "AUROC_orig_gold": 0.6537704175282884,
+        "AUROC_lexical_bijection": 0.6562206803887274,
+        "AUROC_orig_gold_lexical": 0.6401600407334331,
+        "AUROC_corrected_gold_subset": 0.7548076923076923,
+        "n_corrected_gold_subset": 277,
+        "per_tercile": {
+          "low": {
+            "AUROC": 0.680944931163955,
+            "CI95": [
+              0.5853598692987887,
+              0.7753238785342296
+            ],
+            "underpowered": false
+          },
+          "mid": {
+            "AUROC": 0.6247905784961073,
+            "CI95": [
+              0.5409705260767684,
+              0.7014504484065552
+            ],
+            "underpowered": false
+          },
+          "top": {
+            "AUROC": 0.4716702038716316,
+            "CI95": [
+              0.3597648399392107,
+              0.5723614573994793
+            ],
+            "underpowered": false
+          }
+        },
+        "G1_coverage": 1.0,
+        "G4_auroc_ge_0.65": true,
+        "delta_vs_B1_per_tercile": {
+          "low": {
+            "delta": 0.0008135168961203032,
+            "CI95": [
+              -0.08537462485210705,
+              0.08132841434612642
+            ]
+          },
+          "mid": {
+            "delta": 0.002094215038927927,
+            "CI95": [
+              -0.0964112350448655,
+              0.09521888400679111
+            ]
+          },
+          "top": {
+            "delta": -0.06167599202521057,
+            "CI95": [
+              -0.18328051778887647,
+              0.04798233389274639
+            ]
+          }
+        },
+        "crossover_trend": {
+          "spearman_tercile_vs_delta": -0.5,
+          "slope": -0.031244754460665443,
+          "slope_CI95": [
+            -0.10484739935123999,
+            0.046055143098650185
+          ],
+          "caveat": "FOLIO's top tercile is only mildly conditioned (1 unless/except in 2656 pairs); crossover test weak by construction"
+        },
+        "delta_vs_B1_halves": {
+          "bottom": 0.006341766043978847,
+          "top": -0.03397439610728137
+        },
+        "G2_false_alarm": null,
+        "G3_increment_over_B1_parse": {
+          "base": [
+            "B1",
+            "parse_okf"
+          ],
+          "auc_base_oof": 0.6227938718341844,
+          "auc_with_metric_oof": 0.6497486944793479,
+          "delta_auroc": 0.026954822645163468,
+          "ci95": [
+            -0.00533278636726423,
+            0.05970998340358726
+          ],
+          "passes": false
+        },
+        "increment_over_best_baselines": {
+          "base": [
+            "B1",
+            "parse_okf",
+            "B7",
+            "B8"
+          ],
+          "auc_base_oof": 0.6453277923155845,
+          "auc_with_metric_oof": 0.6766429962995838,
+          "delta_auroc": 0.03131520398399934,
+          "ci95": [
+            0.0010021334273937839,
+            0.06090059476030236
+          ],
+          "passes": true
+        },
+        "usd_per_item_amortised": 5.9159760479041916e-05
+      },
+      "B4": {
+        "AUROC_real": 0.7149123312621762,
+        "CI95": [
+          0.6646689538532987,
+          0.7599738140073711
+        ],
+        "n": 835,
+        "AUROC_unparseable_as_0": 0.7209298304264125,
+        "AUROC_orig_gold": 0.7191413601617138,
+        "AUROC_lexical_bijection": 0.7190587608446365,
+        "AUROC_orig_gold_lexical": 0.7157107231920199,
+        "AUROC_corrected_gold_subset": 0.7699519230769232,
+        "n_corrected_gold_subset": 277,
+        "per_tercile": {
+          "low": {
+            "AUROC": 0.7096057571964957,
+            "CI95": [
+              0.6306635251322751,
+              0.7843608069405197
+            ],
+            "underpowered": false
+          },
+          "mid": {
+            "AUROC": 0.7688725731743373,
+            "CI95": [
+              0.6916451498033319,
+              0.836895305984313
+            ],
+            "underpowered": false
+          },
+          "top": {
+            "AUROC": 0.5207730400668853,
+            "CI95": [
+              0.4194068372498582,
+              0.6178663193134147
+            ],
+            "underpowered": false
+          }
+        },
+        "G1_coverage": 0.8215568862275449,
+        "G4_auroc_ge_0.65": true,
+        "delta_vs_B1_per_tercile": {
+          "low": {
+            "delta": 0.029474342928660913,
+            "CI95": [
+              -0.06300189034339745,
+              0.1284394807825076
+            ]
+          },
+          "mid": {
+            "delta": 0.14617620971715795,
+            "CI95": [
+              0.033869976385869395,
+              0.2537963486863873
+            ]
+          },
+          "top": {
+            "delta": -0.012573155829956884,
+            "CI95": [
+              -0.12897344259621643,
+              0.11078658820085405
+            ]
+          }
+        },
+        "crossover_trend": {
+          "spearman_tercile_vs_delta": -0.5,
+          "slope": -0.0210237493793089,
+          "slope_CI95": [
+            -0.09409207600603246,
+            0.058699154691539815
+          ],
+          "caveat": "FOLIO's top tercile is only mildly conditioned (1 unless/except in 2656 pairs); crossover test weak by construction"
+        },
+        "delta_vs_B1_halves": {
+          "bottom": 0.06030422095080534,
+          "top": 0.07673926895672833
+        },
+        "G2_false_alarm": 0.18333333333333332,
+        "G2_false_alarm_delta0": 0.18333333333333332,
+        "G2_delta": 0.0,
+        "G2_n_rewrites": 120,
+        "G2_by_kind": {
+          "REORDER": {
+            "rate": 0.08695652173913043,
+            "n": 23
+          },
+          "SYN_RENAME": {
+            "rate": 0.3111111111111111,
+            "n": 45
+          },
+          "CONTRAPOS": {
+            "rate": 0.06451612903225806,
+            "n": 31
+          },
+          "DEMORGAN": {
+            "rate": 0.21052631578947367,
+            "n": 19
+          },
+          "PRENEX": {
+            "rate": 0.0,
+            "n": 2
+          }
+        },
+        "G2_by_cause": {
+          "alignment(rename)": 0.3111111111111111,
+          "other": 0.10666666666666667
+        },
+        "G3_increment_over_B1_parse": {
+          "base": [
+            "B1",
+            "parse_okf"
+          ],
+          "auc_base_oof": 0.6227938718341844,
+          "auc_with_metric_oof": 0.7109150748729063,
+          "delta_auroc": 0.08812120303872184,
+          "ci95": [
+            0.03987498716121743,
+            0.14209841732261982
+          ],
+          "passes": true
+        },
+        "increment_over_best_baselines": {
+          "base": [
+            "B1",
+            "parse_okf",
+            "B3nli",
+            "B7",
+            "B8"
+          ],
+          "auc_base_oof": 0.6766429962995838,
+          "auc_with_metric_oof": 0.7407921887788627,
+          "delta_auroc": 0.06414919247927886,
+          "ci95": [
+            0.027238110273650532,
+            0.10182611358809936
+          ],
+          "passes": true
+        },
+        "usd_per_item_amortised": 0.004106970576131687,
+        "usd_per_sentence_text_probe": 0.0024863361486486485,
+        "seconds_per_item": 0.016962098765432098
+      },
+      "B5": {
+        "AUROC_real": 0.7413138206508583,
+        "CI95": [
+          0.6939088367127048,
+          0.7819988145483766
+        ],
+        "n": 835,
+        "AUROC_unparseable_as_0": 0.7444954868756268,
+        "AUROC_orig_gold": 0.7434129510444016,
+        "AUROC_lexical_bijection": 0.7522355298669107,
+        "AUROC_orig_gold_lexical": 0.747154734972314,
+        "AUROC_corrected_gold_subset": 0.7906517094017095,
+        "n_corrected_gold_subset": 277,
+        "per_tercile": {
+          "low": {
+            "AUROC": 0.7734042553191489,
+            "CI95": [
+              0.6982039028275588,
+              0.8463974720372646
+            ],
+            "underpowered": false
+          },
+          "mid": {
+            "AUROC": 0.7577855523800139,
+            "CI95": [
+              0.6818439909353476,
+              0.8186613886204154
+            ],
+            "underpowered": false
+          },
+          "top": {
+            "AUROC": 0.5834137243552642,
+            "CI95": [
+              0.46227110372320185,
+              0.6878509919307406
+            ],
+            "underpowered": false
+          }
+        },
+        "G1_coverage": 0.8706586826347306,
+        "G4_auroc_ge_0.65": true,
+        "delta_vs_B1_per_tercile": {
+          "low": {
+            "delta": 0.09327284105131417,
+            "CI95": [
+              0.004431571526557471,
+              0.19360177400425477
+            ]
+          },
+          "mid": {
+            "delta": 0.1350891889228345,
+            "CI95": [
+              0.0375838470687972,
+              0.23484400335056374
+            ]
+          },
+          "top": {
+            "delta": 0.050067528458421995,
+            "CI95": [
+              -0.05949301700512978,
+              0.15264595040443707
+            ]
+          }
+        },
+        "crossover_trend": {
+          "spearman_tercile_vs_delta": -0.5,
+          "slope": -0.021602656296446105,
+          "slope_CI95": [
+            -0.09345487159814458,
+            0.05279194419990912
+          ],
+          "caveat": "FOLIO's top tercile is only mildly conditioned (1 unless/except in 2656 pairs); crossover test weak by construction"
+        },
+        "delta_vs_B1_halves": {
+          "bottom": 0.10158314376967426,
+          "top": 0.10770144239124135
+        },
+        "G2_false_alarm": 0.1407766990291262,
+        "G2_false_alarm_delta0": 0.1407766990291262,
+        "G2_delta": 0.0,
+        "G2_n_rewrites": 412,
+        "G2_by_kind": {
+          "DEMORGAN": {
+            "rate": 0.0,
+            "n": 80
+          },
+          "REORDER": {
+            "rate": 0.0,
+            "n": 71
+          },
+          "SYN_RENAME": {
+            "rate": 0.4084507042253521,
+            "n": 142
+          },
+          "CONTRAPOS": {
+            "rate": 0.0,
+            "n": 115
+          },
+          "PRENEX": {
+            "rate": 0.0,
+            "n": 4
+          }
+        },
+        "G2_by_cause": {
+          "alignment(rename)": 0.4084507042253521,
+          "other": 0.0
+        },
+        "G3_increment_over_B1_parse": {
+          "base": [
+            "B1",
+            "parse_okf"
+          ],
+          "auc_base_oof": 0.6227938718341844,
+          "auc_with_metric_oof": 0.7363856963353199,
+          "delta_auroc": 0.11359182450113547,
+          "ci95": [
+            0.06521503192195098,
+            0.1680096062474117
+          ],
+          "passes": true
+        },
+        "increment_over_best_baselines": {
+          "base": [
+            "B1",
+            "parse_okf",
+            "B3nli",
+            "B7",
+            "B8"
+          ],
+          "auc_base_oof": 0.6766429962995838,
+          "auc_with_metric_oof": 0.757006005971388,
+          "delta_auroc": 0.08036300967180421,
+          "ci95": [
+            0.04290285665702636,
+            0.11690519849516365
+          ],
+          "passes": true
+        },
+        "usd_per_item_amortised": 0.0,
+        "usd_per_sentence_text_probe": 0.0,
+        "seconds_per_item": 0.01645437125748503
+      },
+      "B5A2": {
+        "AUROC_real": 0.7415645497827015,
+        "CI95": [
+          0.6941774124323729,
+          0.7818993209514319
+        ],
+        "n": 835,
+        "AUROC_unparseable_as_0": 0.74474621600747,
+        "AUROC_orig_gold": 0.7437208113571412,
+        "AUROC_lexical_bijection": 0.7524671909930154,
+        "AUROC_orig_gold_lexical": 0.7474382489252507,
+        "AUROC_corrected_gold_subset": 0.7905448717948719,
+        "n_corrected_gold_subset": 277,
+        "per_tercile": {
+          "low": {
+            "AUROC": 0.7734042553191489,
+            "CI95": [
+              0.6982039028275588,
+              0.8463974720372646
+            ],
+            "underpowered": false
+          },
+          "mid": {
+            "AUROC": 0.7577855523800139,
+            "CI95": [
+              0.6818439909353476,
+              0.8186613886204154
+            ],
+            "underpowered": false
+          },
+          "top": {
+            "AUROC": 0.584121165348254,
+            "CI95": [
+              0.4630253010338506,
+              0.6876443562145617
+            ],
+            "underpowered": false
+          }
+        },
+        "G1_coverage": 0.8706586826347306,
+        "G4_auroc_ge_0.65": true,
+        "delta_vs_B1_per_tercile": {
+          "low": {
+            "delta": 0.09327284105131417,
+            "CI95": [
+              0.004431571526557471,
+              0.19360177400425477
+            ]
+          },
+          "mid": {
+            "delta": 0.1350891889228345,
+            "CI95": [
+              0.0375838470687972,
+              0.23484400335056374
+            ]
+          },
+          "top": {
+            "delta": 0.0507749694514118,
+            "CI95": [
+              -0.05800968673051751,
+              0.15412417555254188
+            ]
+          }
+        },
+        "crossover_trend": {
+          "spearman_tercile_vs_delta": -0.5,
+          "slope": -0.02124893579995117,
+          "slope_CI95": [
+            -0.09280726963188975,
+            0.05279986790186267
+          ],
+          "caveat": "FOLIO's top tercile is only mildly conditioned (1 unless/except in 2656 pairs); crossover test weak by construction"
+        },
+        "delta_vs_B1_halves": {
+          "bottom": 0.10158314376967426,
+          "top": 0.10830967966170413
+        },
+        "G2_false_alarm": 0.1407766990291262,
+        "G2_false_alarm_delta0": 0.1407766990291262,
+        "G2_delta": 0.0,
+        "G2_n_rewrites": 412,
+        "G2_by_kind": {
+          "DEMORGAN": {
+            "rate": 0.0,
+            "n": 80
+          },
+          "REORDER": {
+            "rate": 0.0,
+            "n": 71
+          },
+          "SYN_RENAME": {
+            "rate": 0.4084507042253521,
+            "n": 142
+          },
+          "CONTRAPOS": {
+            "rate": 0.0,
+            "n": 115
+          },
+          "PRENEX": {
+            "rate": 0.0,
+            "n": 4
+          }
+        },
+        "G2_by_cause": {
+          "alignment(rename)": 0.4084507042253521,
+          "other": 0.0
+        },
+        "G3_increment_over_B1_parse": {
+          "base": [
+            "B1",
+            "parse_okf"
+          ],
+          "auc_base_oof": 0.6227938718341844,
+          "auc_with_metric_oof": 0.7363972241114967,
+          "delta_auroc": 0.11360335227731222,
+          "ci95": [
+            0.06515824616346806,
+            0.16759497551471136
+          ],
+          "passes": true
+        },
+        "increment_over_best_baselines": {
+          "base": [
+            "B1",
+            "parse_okf",
+            "B3nli",
+            "B7",
+            "B8"
+          ],
+          "auc_base_oof": 0.6766429962995838,
+          "auc_with_metric_oof": 0.7570175337475648,
+          "delta_auroc": 0.08037453744798095,
+          "ci95": [
+            0.043415413010431995,
+            0.11670001732161511
+          ],
+          "passes": true
+        },
+        "usd_per_item_amortised": 0.0,
+        "usd_per_sentence_text_probe": 0.0,
+        "seconds_per_item": 0.01645437125748503
+      },
+      "B7": {
+        "AUROC_real": 0.5371021476247018,
+        "CI95": [
+          0.5188553654062558,
+          0.5565371148277767
+        ],
+        "n": 835,
+        "AUROC_unparseable_as_0": 0.5371021476247018,
+        "AUROC_orig_gold": 0.5451857617509701,
+        "AUROC_lexical_bijection": 0.535160367414546,
+        "AUROC_orig_gold_lexical": 0.5423621919678762,
+        "AUROC_corrected_gold_subset": 0.5181089743589743,
+        "n_corrected_gold_subset": 277,
+        "per_tercile": {
+          "low": {
+            "AUROC": 0.5610137672090112,
+            "CI95": [
+              0.5088159722935336,
+              0.617700569421309
+            ],
+            "underpowered": false
+          },
+          "mid": {
+            "AUROC": 0.5328914950231596,
+            "CI95": [
+              0.5047054632977696,
+              0.5651441494167294
+            ],
+            "underpowered": false
+          },
+          "top": {
+            "AUROC": 0.5446009389671361,
+            "CI95": [
+              0.5243210549258936,
+              0.5701411469110257
+            ],
+            "underpowered": false
+          }
+        },
+        "G1_coverage": 1.0,
+        "G4_auroc_ge_0.65": false,
+        "delta_vs_B1_per_tercile": {
+          "low": {
+            "delta": -0.11911764705882355,
+            "CI95": [
+              -0.21113090368220083,
+              -0.02775925987427268
+            ]
+          },
+          "mid": {
+            "delta": -0.0898048684340198,
+            "CI95": [
+              -0.17488980179846833,
+              -0.0015547751342467817
+            ]
+          },
+          "top": {
+            "delta": 0.011254743070293949,
+            "CI95": [
+              -0.10167484461909566,
+              0.13291617766854905
+            ]
+          }
+        },
+        "crossover_trend": {
+          "spearman_tercile_vs_delta": 1.0,
+          "slope": 0.06518619506455876,
+          "slope_CI95": [
+            -0.008319409789582517,
+            0.14442943856032442
+          ],
+          "caveat": "FOLIO's top tercile is only mildly conditioned (1 unless/except in 2656 pairs); crossover test weak by construction"
+        },
+        "delta_vs_B1_halves": {
+          "bottom": -0.11835665540773421,
+          "top": 0.007747784278514747
+        },
+        "G2_false_alarm": null,
+        "G3_increment_over_B1_parse": {
+          "base": [
+            "B1",
+            "parse_okf"
+          ],
+          "auc_base_oof": 0.6227938718341844,
+          "auc_with_metric_oof": 0.6205142540952425,
+          "delta_auroc": -0.002279617738941919,
+          "ci95": [
+            -0.011027215085063657,
+            0.006452508082854632
+          ],
+          "passes": false
+        },
+        "increment_over_best_baselines": {
+          "base": [
+            "B1",
+            "parse_okf",
+            "B3nli",
+            "B8"
+          ],
+          "auc_base_oof": 0.679092648737132,
+          "auc_with_metric_oof": 0.6766429962995838,
+          "delta_auroc": -0.0024496524375482442,
+          "ci95": [
+            -0.006189706664366903,
+            0.0011944405724374375
+          ],
+          "passes": false
+        },
+        "usd_per_item_amortised": 0.0
+      },
+      "B8": {
+        "AUROC_real": 0.6080700197124974,
+        "CI95": [
+          0.5644503671829253,
+          0.6550188006214779
+        ],
+        "n": 835,
+        "AUROC_unparseable_as_0": 0.6208658512686318,
+        "AUROC_orig_gold": 0.578303980111062,
+        "AUROC_lexical_bijection": 0.5962291360198302,
+        "AUROC_orig_gold_lexical": 0.5705602582869971,
+        "AUROC_corrected_gold_subset": 0.5205128205128207,
+        "n_corrected_gold_subset": 277,
+        "per_tercile": {
+          "low": {
+            "AUROC": 0.575907384230288,
+            "CI95": [
+              0.5028833441105308,
+              0.6486466007632264
+            ],
+            "underpowered": false
+          },
+          "mid": {
+            "AUROC": 0.6404602345520843,
+            "CI95": [
+              0.5696956907728961,
+              0.7118465391325861
+            ],
+            "underpowered": false
+          },
+          "top": {
+            "AUROC": 0.7009453984179047,
+            "CI95": [
+              0.6202609202861219,
+              0.773839811997753
+            ],
+            "underpowered": false
+          }
+        },
+        "G1_coverage": 0.5449101796407185,
+        "G4_auroc_ge_0.65": false,
+        "delta_vs_B1_per_tercile": {
+          "low": {
+            "delta": -0.10422403003754677,
+            "CI95": [
+              -0.20889277597402586,
+              -0.0005880342881586249
+            ]
+          },
+          "mid": {
+            "delta": 0.01776387109490496,
+            "CI95": [
+              -0.08434938904571088,
+              0.12435238905861637
+            ]
+          },
+          "top": {
+            "delta": 0.16759920252106253,
+            "CI95": [
+              0.04554760886096975,
+              0.29416132282076013
+            ]
+          }
+        },
+        "crossover_trend": {
+          "spearman_tercile_vs_delta": 1.0,
+          "slope": 0.13591161627930468,
+          "slope_CI95": [
+            0.05837502685472284,
+            0.21739740692252124
+          ],
+          "caveat": "FOLIO's top tercile is only mildly conditioned (1 unless/except in 2656 pairs); crossover test weak by construction"
+        },
+        "delta_vs_B1_halves": {
+          "bottom": -0.05953447760851083,
+          "top": 0.15567977755894113
+        },
+        "G2_false_alarm": null,
+        "G3_increment_over_B1_parse": {
+          "base": [
+            "B1",
+            "parse_okf"
+          ],
+          "auc_base_oof": 0.6227938718341844,
+          "auc_with_metric_oof": 0.6494287986904446,
+          "delta_auroc": 0.02663492685626012,
+          "ci95": [
+            -0.009351336399833626,
+            0.06595188228263343
+          ],
+          "passes": false
+        },
+        "increment_over_best_baselines": {
+          "base": [
+            "B1",
+            "parse_okf",
+            "B3nli",
+            "B7"
+          ],
+          "auc_base_oof": 0.6487976529447703,
+          "auc_with_metric_oof": 0.6766429962995838,
+          "delta_auroc": 0.02784534335481348,
+          "ci95": [
+            0.005848028016403381,
+            0.05118851925047577
+          ],
+          "passes": true
+        },
+        "usd_per_item_amortised": 0.0
+      },
+      "A0": {
+        "AUROC_real": 0.67429997579167,
+        "CI95": [
+          0.6287984452219305,
+          0.7149664336854925
+        ],
+        "n": 835,
+        "AUROC_unparseable_as_0": 0.677274142045258,
+        "AUROC_orig_gold": 0.6629917051976115,
+        "AUROC_lexical_bijection": 0.6785672917656053,
+        "AUROC_orig_gold_lexical": 0.6644294137047174,
+        "AUROC_corrected_gold_subset": 0.7437767094017094,
+        "n_corrected_gold_subset": 277,
+        "per_tercile": {
+          "low": {
+            "AUROC": 0.6943992490613266,
+            "CI95": [
+              0.6199512193053603,
+              0.7700666612134635
+            ],
+            "underpowered": false
+          },
+          "mid": {
+            "AUROC": 0.6649748694195329,
+            "CI95": [
+              0.5868374115439993,
+              0.7359226479293228
+            ],
+            "underpowered": false
+          },
+          "top": {
+            "AUROC": 0.5190365939931828,
+            "CI95": [
+              0.40486129808435456,
+              0.6184785458705854
+            ],
+            "underpowered": false
+          }
+        },
+        "G1_coverage": 0.859880239520958,
+        "G4_auroc_ge_0.65": true,
+        "delta_vs_B1_per_tercile": {
+          "low": {
+            "delta": 0.014267834793491807,
+            "CI95": [
+              -0.08265484132142419,
+              0.11238858843810605
+            ]
+          },
+          "mid": {
+            "delta": 0.042278505962353496,
+            "CI95": [
+              -0.06489070360583189,
+              0.14594276095398476
+            ]
+          },
+          "top": {
+            "delta": -0.014309601903659375,
+            "CI95": [
+              -0.13121369326567373,
+              0.09242618931701208
+            ]
+          }
+        },
+        "crossover_trend": {
+          "spearman_tercile_vs_delta": -0.5,
+          "slope": -0.014288718348575594,
+          "slope_CI95": [
+            -0.08797694137356474,
+            0.059162940960235014
+          ],
+          "caveat": "FOLIO's top tercile is only mildly conditioned (1 unless/except in 2656 pairs); crossover test weak by construction"
+        },
+        "delta_vs_B1_halves": {
+          "bottom": 0.03126077066243882,
+          "top": 0.031092509992469486
+        },
+        "G2_false_alarm": 0.13349514563106796,
+        "G2_false_alarm_delta0": 0.13349514563106796,
+        "G2_delta": 0.0,
+        "G2_n_rewrites": 412,
+        "G2_by_kind": {
+          "DEMORGAN": {
+            "rate": 0.0,
+            "n": 80
+          },
+          "REORDER": {
+            "rate": 0.0,
+            "n": 71
+          },
+          "SYN_RENAME": {
+            "rate": 0.3873239436619718,
+            "n": 142
+          },
+          "CONTRAPOS": {
+            "rate": 0.0,
+            "n": 115
+          },
+          "PRENEX": {
+            "rate": 0.0,
+            "n": 4
+          }
+        },
+        "G2_by_cause": {
+          "alignment(rename)": 0.3873239436619718,
+          "other": 0.0
+        },
+        "G3_increment_over_B1_parse": {
+          "base": [
+            "B1",
+            "parse_okf"
+          ],
+          "auc_base_oof": 0.6227938718341844,
+          "auc_with_metric_oof": 0.689995043056244,
+          "delta_auroc": 0.0672011712220596,
+          "ci95": [
+            0.02465511075537133,
+            0.11318668008031224
+          ],
+          "passes": true
+        },
+        "increment_over_best_baselines": {
+          "base": [
+            "B1",
+            "parse_okf",
+            "B3nli",
+            "B7",
+            "B8"
+          ],
+          "auc_base_oof": 0.6766429962995838,
+          "auc_with_metric_oof": 0.7130477134655953,
+          "delta_auroc": 0.03640471716601146,
+          "ci95": [
+            0.008476742067550112,
+            0.06529648341798279
+          ],
+          "passes": true
+        },
+        "usd_per_item_amortised": 0.0,
+        "usd_per_sentence_text_probe": 0.0,
+        "seconds_per_item": 0.01645437125748503
+      },
+      "Ccov": {
+        "AUROC_real": 0.6613831025856803,
+        "CI95": [
+          0.6155160906902672,
+          0.7063974497482817
+        ],
+        "n": 835,
+        "AUROC_unparseable_as_0": 0.6665014352081341,
+        "AUROC_orig_gold": 0.6440670089918444,
+        "AUROC_lexical_bijection": 0.6727641805566815,
+        "AUROC_orig_gold_lexical": 0.6572287379000296,
+        "AUROC_corrected_gold_subset": 0.7415064102564103,
+        "n_corrected_gold_subset": 277,
+        "per_tercile": {
+          "low": {
+            "AUROC": 0.6773466833541928,
+            "CI95": [
+              0.5937848749763973,
+              0.7589831423637173
+            ],
+            "underpowered": false
+          },
+          "mid": {
+            "AUROC": 0.6511530501626096,
+            "CI95": [
+              0.5699316727944735,
+              0.7241427764454408
+            ],
+            "underpowered": false
+          },
+          "top": {
+            "AUROC": 0.45970801980834786,
+            "CI95": [
+              0.33941843387922666,
+              0.5710221736441748
+            ],
+            "underpowered": false
+          }
+        },
+        "G1_coverage": 0.9712574850299401,
+        "G4_auroc_ge_0.65": true,
+        "delta_vs_B1_per_tercile": {
+          "low": {
+            "delta": -0.002784730913641953,
+            "CI95": [
+              -0.0986538249099579,
+              0.092934875316251
+            ]
+          },
+          "mid": {
+            "delta": 0.028456686705430223,
+            "CI95": [
+              -0.08185858081154213,
+              0.1352151884324343
+            ]
+          },
+          "top": {
+            "delta": -0.07363817608849432,
+            "CI95": [
+              -0.1868855863355031,
+              0.03768335643409559
+            ]
+          }
+        },
+        "crossover_trend": {
+          "spearman_tercile_vs_delta": -0.5,
+          "slope": -0.0354267225874262,
+          "slope_CI95": [
+            -0.11137317559354704,
+            0.040539281574893594
+          ],
+          "caveat": "FOLIO's top tercile is only mildly conditioned (1 unless/except in 2656 pairs); crossover test weak by construction"
+        },
+        "delta_vs_B1_halves": {
+          "bottom": 0.02455136600721486,
+          "top": -0.01691478885477604
+        },
+        "G2_false_alarm": 0.16019417475728157,
+        "G2_false_alarm_delta0": 0.16019417475728157,
+        "G2_delta": 0.0,
+        "G2_n_rewrites": 412,
+        "G2_by_kind": {
+          "DEMORGAN": {
+            "rate": 0.0,
+            "n": 80
+          },
+          "REORDER": {
+            "rate": 0.0,
+            "n": 71
+          },
+          "SYN_RENAME": {
+            "rate": 0.4647887323943662,
+            "n": 142
+          },
+          "CONTRAPOS": {
+            "rate": 0.0,
+            "n": 115
+          },
+          "PRENEX": {
+            "rate": 0.0,
+            "n": 4
+          }
+        },
+        "G2_by_cause": {
+          "alignment(rename)": 0.4647887323943662,
+          "other": 0.0
+        },
+        "G3_increment_over_B1_parse": {
+          "base": [
+            "B1",
+            "parse_okf"
+          ],
+          "auc_base_oof": 0.6227938718341844,
+          "auc_with_metric_oof": 0.679092648737132,
+          "delta_auroc": 0.0562987769029476,
+          "ci95": [
+            0.019021206192568314,
+            0.09883066725065183
+          ],
+          "passes": true
+        },
+        "increment_over_best_baselines": {
+          "base": [
+            "B1",
+            "parse_okf",
+            "B3nli",
+            "B7",
+            "B8"
+          ],
+          "auc_base_oof": 0.6766429962995838,
+          "auc_with_metric_oof": 0.7008628540468259,
+          "delta_auroc": 0.024219857747242113,
+          "ci95": [
+            0.004279548934667344,
+            0.043925960843500034
+          ],
+          "passes": true
+        },
+        "usd_per_item_amortised": 0.0,
+        "usd_per_sentence_text_probe": 0.0,
+        "seconds_per_item": 0.01645437125748503
+      }
+    },
+    "tercile_counts": {
+      "low": {
+        "n": 264,
+        "pos": 170,
+        "neg": 94
+      },
+      "mid": {
+        "n": 285,
+        "pos": 146,
+        "neg": 139
+      },
+      "top": {
+        "n": 286,
+        "pos": 73,
+        "neg": 213
+      }
+    },
+    "mutant_detection": {
+      "A0": {
+        "ADD": {
+          "n": 300,
+          "detection_strict": 0.6633333333333333,
+          "strict_CI95": [
+            0.6080909561297259,
+            0.7144455234043472
+          ],
+          "detection_tiehalf": 0.7983333333333333,
+          "tiehalf_CI95": [
+            0.7492868279541631,
+            0.8398359254805212
+          ]
+        },
+        "ANDOR": {
+          "n": 109,
+          "detection_strict": 0.0,
+          "strict_CI95": [
+            0.0,
+            0.03404418228738337
+          ],
+          "detection_tiehalf": 0.5,
+          "tiehalf_CI95": [
+            0.40774467185118335,
+            0.5922553281488167
+          ]
+        },
+        "ARG_SWAP": {
+          "n": 102,
+          "detection_strict": 0.0,
+          "strict_CI95": [
+            0.0,
+            0.03629574760774591
+          ],
+          "detection_tiehalf": 0.5,
+          "tiehalf_CI95": [
+            0.40474278556489024,
+            0.5952572144351097
+          ]
+        },
+        "CARD": {
+          "n": 37,
+          "detection_strict": 0.0,
+          "strict_CI95": [
+            0.0,
+            0.09406095745514377
+          ],
+          "detection_tiehalf": 0.5,
+          "tiehalf_CI95": [
+            0.34665320556403556,
+            0.6533467944359644
+          ]
+        },
+        "DROP": {
+          "n": 95,
+          "detection_strict": 0.5578947368421052,
+          "strict_CI95": [
+            0.45770915955965324,
+            0.6535800142295204
+          ],
+          "detection_tiehalf": 0.7421052631578947,
+          "tiehalf_CI95": [
+            0.6459375072960436,
+            0.8194535830950467
+          ]
+        },
+        "IMPL_REV": {
+          "n": 124,
+          "detection_strict": 0.0,
+          "strict_CI95": [
+            0.0,
+            0.030049686487027695
+          ],
+          "detection_tiehalf": 0.5,
+          "tiehalf_CI95": [
+            0.4133257730247514,
+            0.5866742269752486
+          ]
+        },
+        "MERGE": {
+          "n": 151,
+          "detection_strict": 0.7152317880794702,
+          "strict_CI95": [
+            0.6386060721615949,
+            0.781177758540232
+          ],
+          "detection_tiehalf": 0.8443708609271523,
+          "tiehalf_CI95": [
+            0.7780929368704834,
+            0.8935611922524396
+          ]
+        },
+        "NEG": {
+          "n": 300,
+          "detection_strict": 0.0,
+          "strict_CI95": [
+            0.0,
+            0.012643429997735661
+          ],
+          "detection_tiehalf": 0.5,
+          "tiehalf_CI95": [
+            0.4437784961119509,
+            0.556221503888049
+          ]
+        },
+        "QUANT": {
+          "n": 157,
+          "detection_strict": 0.0,
+          "strict_CI95": [
+            0.0,
+            0.02388436822314625
+          ],
+          "detection_tiehalf": 0.5,
+          "tiehalf_CI95": [
+            0.4227271583556903,
+            0.5772728416443097
+          ]
+        }
+      },
+      "A1": {
+        "ADD": {
+          "n": 300,
+          "detection_strict": 0.6833333333333333,
+          "strict_CI95": [
+            0.6286582253552765,
+            0.7333725169788871
+          ],
+          "detection_tiehalf": 0.8016666666666666,
+          "tiehalf_CI95": [
+            0.7528545917923332,
+            0.8428505387756996
+          ]
+        },
+        "ANDOR": {
+          "n": 109,
+          "detection_strict": 0.03669724770642202,
+          "strict_CI95": [
+            0.014361469198727862,
+            0.09057855292077416
+          ],
+          "detection_tiehalf": 0.4954128440366973,
+          "tiehalf_CI95": [
+            0.40331743223547967,
+            0.5878205877855055
+          ]
+        },
+        "ARG_SWAP": {
+          "n": 102,
+          "detection_strict": 0.30392156862745096,
+          "strict_CI95": [
+            0.22312289773475902,
+            0.39895386603298455
+          ],
+          "detection_tiehalf": 0.6127450980392157,
+          "tiehalf_CI95": [
+            0.5157588461164185,
+            0.7015470147171291
+          ]
+        },
+        "CARD": {
+          "n": 37,
+          "detection_strict": 0.0,
+          "strict_CI95": [
+            0.0,
+            0.09406095745514377
+          ],
+          "detection_tiehalf": 0.5,
+          "tiehalf_CI95": [
+            0.34665320556403556,
+            0.6533467944359644
+          ]
+        },
+        "DROP": {
+          "n": 95,
+          "detection_strict": 0.5789473684210527,
+          "strict_CI95": [
+            0.4784945348956803,
+            0.673263429362284
+          ],
+          "detection_tiehalf": 0.7421052631578947,
+          "tiehalf_CI95": [
+            0.6459375072960436,
+            0.8194535830950467
+          ]
+        },
+        "IMPL_REV": {
+          "n": 124,
+          "detection_strict": 0.6048387096774194,
+          "strict_CI95": [
+            0.5168822918241138,
+            0.686494386815703
+          ],
+          "detection_tiehalf": 0.782258064516129,
+          "tiehalf_CI95": [
+            0.7017324571463032,
+            0.845820139191665
+          ]
+        },
+        "MERGE": {
+          "n": 151,
+          "detection_strict": 0.7019867549668874,
+          "strict_CI95": [
+            0.6247579632379588,
+            0.7691930163437556
+          ],
+          "detection_tiehalf": 0.8178807947019867,
+          "tiehalf_CI95": [
+            0.7486943521094803,
+            0.8712940747732177
+          ]
+        },
+        "NEG": {
+          "n": 300,
+          "detection_strict": 0.5733333333333334,
+          "strict_CI95": [
+            0.5167848970036207,
+            0.6280273999300449
+          ],
+          "detection_tiehalf": 0.7583333333333333,
+          "tiehalf_CI95": [
+            0.7068203281222013,
+            0.8033138997123018
+          ]
+        },
+        "QUANT": {
+          "n": 157,
+          "detection_strict": 0.49044585987261147,
+          "strict_CI95": [
+            0.4134149842915841,
+            0.5679331246553551
+          ],
+          "detection_tiehalf": 0.7197452229299363,
+          "tiehalf_CI95": [
+            0.6448884784550566,
+            0.784105015765344
+          ]
+        }
+      },
+      "A2": {
+        "ADD": {
+          "n": 300,
+          "detection_strict": 0.6833333333333333,
+          "strict_CI95": [
+            0.6286582253552765,
+            0.7333725169788871
+          ],
+          "detection_tiehalf": 0.8016666666666666,
+          "tiehalf_CI95": [
+            0.7528545917923332,
+            0.8428505387756996
+          ]
+        },
+        "ANDOR": {
+          "n": 109,
+          "detection_strict": 0.045871559633027525,
+          "strict_CI95": [
+            0.019750157151731958,
+            0.10291382492579973
+          ],
+          "detection_tiehalf": 0.5,
+          "tiehalf_CI95": [
+            0.40774467185118335,
+            0.5922553281488167
+          ]
+        },
+        "ARG_SWAP": {
+          "n": 102,
+          "detection_strict": 0.30392156862745096,
+          "strict_CI95": [
+            0.22312289773475902,
+            0.39895386603298455
+          ],
+          "detection_tiehalf": 0.6127450980392157,
+          "tiehalf_CI95": [
+            0.5157588461164185,
+            0.7015470147171291
+          ]
+        },
+        "CARD": {
+          "n": 37,
+          "detection_strict": 0.0,
+          "strict_CI95": [
+            0.0,
+            0.09406095745514377
+          ],
+          "detection_tiehalf": 0.5,
+          "tiehalf_CI95": [
+            0.34665320556403556,
+            0.6533467944359644
+          ]
+        },
+        "DROP": {
+          "n": 95,
+          "detection_strict": 0.5789473684210527,
+          "strict_CI95": [
+            0.4784945348956803,
+            0.673263429362284
+          ],
+          "detection_tiehalf": 0.7421052631578947,
+          "tiehalf_CI95": [
+            0.6459375072960436,
+            0.8194535830950467
+          ]
+        },
+        "IMPL_REV": {
+          "n": 124,
+          "detection_strict": 0.6048387096774194,
+          "strict_CI95": [
+            0.5168822918241138,
+            0.686494386815703
+          ],
+          "detection_tiehalf": 0.782258064516129,
+          "tiehalf_CI95": [
+            0.7017324571463032,
+            0.845820139191665
+          ]
+        },
+        "MERGE": {
+          "n": 151,
+          "detection_strict": 0.7019867549668874,
+          "strict_CI95": [
+            0.6247579632379588,
+            0.7691930163437556
+          ],
+          "detection_tiehalf": 0.8178807947019867,
+          "tiehalf_CI95": [
+            0.7486943521094803,
+            0.8712940747732177
+          ]
+        },
+        "NEG": {
+          "n": 300,
+          "detection_strict": 0.5733333333333334,
+          "strict_CI95": [
+            0.5167848970036207,
+            0.6280273999300449
+          ],
+          "detection_tiehalf": 0.7583333333333333,
+          "tiehalf_CI95": [
+            0.7068203281222013,
+            0.8033138997123018
+          ]
+        },
+        "QUANT": {
+          "n": 157,
+          "detection_strict": 0.49044585987261147,
+          "strict_CI95": [
+            0.4134149842915841,
+            0.5679331246553551
+          ],
+          "detection_tiehalf": 0.7197452229299363,
+          "tiehalf_CI95": [
+            0.6448884784550566,
+            0.784105015765344
+          ]
+        }
+      },
+      "A3": {
+        "ADD": {
+          "n": 300,
+          "detection_strict": 0.7166666666666667,
+          "strict_CI95": [
+            0.6631845423956875,
+            0.7646699712719605
+          ],
+          "detection_tiehalf": 0.8233333333333334,
+          "tiehalf_CI95": [
+            0.7761666509606149,
+            0.8623239309741828
+          ]
+        },
+        "ANDOR": {
+          "n": 109,
+          "detection_strict": 0.06422018348623854,
+          "strict_CI95": [
+            0.03145324596985614,
+            0.12665865602373488
+          ],
+          "detection_tiehalf": 0.518348623853211,
+          "tiehalf_CI95": [
+            0.4255286560972558,
+            0.6099192638188036
+          ]
+        },
+        "ARG_SWAP": {
+          "n": 102,
+          "detection_strict": 0.30392156862745096,
+          "strict_CI95": [
+            0.22312289773475902,
+            0.39895386603298455
+          ],
+          "detection_tiehalf": 0.6127450980392157,
+          "tiehalf_CI95": [
+            0.5157588461164185,
+            0.7015470147171291
+          ]
+        },
+        "CARD": {
+          "n": 37,
+          "detection_strict": 0.0,
+          "strict_CI95": [
+            0.0,
+            0.09406095745514377
+          ],
+          "detection_tiehalf": 0.5,
+          "tiehalf_CI95": [
+            0.34665320556403556,
+            0.6533467944359644
+          ]
+        },
+        "DROP": {
+          "n": 95,
+          "detection_strict": 0.6842105263157895,
+          "strict_CI95": [
+            0.585132797889047,
+            0.7689691187128695
+          ],
+          "detection_tiehalf": 0.8052631578947368,
+          "tiehalf_CI95": [
+            0.7144332399036906,
+            0.8723642218937713
+          ]
+        },
+        "IMPL_REV": {
+          "n": 124,
+          "detection_strict": 0.5967741935483871,
+          "strict_CI95": [
+            0.5087811687903511,
+            0.6789511499540951
+          ],
+          "detection_tiehalf": 0.7701612903225806,
+          "tiehalf_CI95": [
+            0.6886598718456984,
+            0.8354261846492139
+          ]
+        },
+        "MERGE": {
+          "n": 151,
+          "detection_strict": 0.7284768211920529,
+          "strict_CI95": [
+            0.6525268862659193,
+            0.7930897955560199
+          ],
+          "detection_tiehalf": 0.8377483443708609,
+          "tiehalf_CI95": [
+            0.770695828156873,
+            0.8880418754059938
+          ]
+        },
+        "NEG": {
+          "n": 300,
+          "detection_strict": 0.6833333333333333,
+          "strict_CI95": [
+            0.6286582253552765,
+            0.7333725169788871
+          ],
+          "detection_tiehalf": 0.8083333333333333,
+          "tiehalf_CI95": [
+            0.7600046477367006,
+            0.8488652370980292
+          ]
+        },
+        "QUANT": {
+          "n": 157,
+          "detection_strict": 0.5605095541401274,
+          "strict_CI95": [
+            0.4823458077344958,
+            0.6357828356015567
+          ],
+          "detection_tiehalf": 0.7261146496815286,
+          "tiehalf_CI95": [
+            0.6515829905896773,
+            0.7898450976660973
+          ]
+        }
+      },
+      "B1": {
+        "ADD": {
+          "n": 300,
+          "detection_strict": 0.78,
+          "strict_CI95": [
+            0.7297464012422271,
+            0.8231732779590409
+          ],
+          "detection_tiehalf": 0.8766666666666667,
+          "tiehalf_CI95": [
+            0.8346254157811881,
+            0.9091832002871845
+          ]
+        },
+        "ANDOR": {
+          "n": 109,
+          "detection_strict": 0.7798165137614679,
+          "strict_CI95": [
+            0.6932434835280575,
+            0.8473372951918471
+          ],
+          "detection_tiehalf": 0.8623853211009175,
+          "tiehalf_CI95": [
+            0.7852989880602104,
+            0.9147974302819615
+          ]
+        },
+        "ARG_SWAP": {
+          "n": 102,
+          "detection_strict": 0.46078431372549017,
+          "strict_CI95": [
+            0.3672332339199432,
+            0.5571821188336056
+          ],
+          "detection_tiehalf": 0.6470588235294118,
+          "tiehalf_CI95": [
+            0.5505209704774588,
+            0.7329214566967336
+          ]
+        },
+        "CARD": {
+          "n": 37,
+          "detection_strict": 0.8378378378378378,
+          "strict_CI95": [
+            0.6886320070454415,
+            0.923488967647029
+          ],
+          "detection_tiehalf": 0.918918918918919,
+          "tiehalf_CI95": [
+            0.7869900750149847,
+            0.9720399336036787
+          ]
+        },
+        "DROP": {
+          "n": 95,
+          "detection_strict": 0.6210526315789474,
+          "strict_CI95": [
+            0.5205920587802135,
+            0.7121034864153317
+          ],
+          "detection_tiehalf": 0.7842105263157895,
+          "tiehalf_CI95": [
+            0.691316114787944,
+            0.8550125565407275
+          ]
+        },
+        "IMPL_REV": {
+          "n": 124,
+          "detection_strict": 0.7983870967741935,
+          "strict_CI95": [
+            0.7192968459185389,
+            0.8595444702101702
+          ],
+          "detection_tiehalf": 0.8991935483870968,
+          "tiehalf_CI95": [
+            0.8336466745810901,
+            0.9407491402397506
+          ]
+        },
+        "MERGE": {
+          "n": 151,
+          "detection_strict": 0.7483443708609272,
+          "strict_CI95": [
+            0.6735514749871414,
+            0.8108144835149667
+          ],
+          "detection_tiehalf": 0.8708609271523179,
+          "tiehalf_CI95": [
+            0.8080424696285909,
+            0.915277361734557
+          ]
+        },
+        "NEG": {
+          "n": 300,
+          "detection_strict": 0.7966666666666666,
+          "strict_CI95": [
+            0.747504723102555,
+            0.8383268417654551
+          ],
+          "detection_tiehalf": 0.895,
+          "tiehalf_CI95": [
+            0.8551761463768015,
+            0.9248355439249873
+          ]
+        },
+        "QUANT": {
+          "n": 157,
+          "detection_strict": 0.7006369426751592,
+          "strict_CI95": [
+            0.6249041305049776,
+            0.7667855816093012
+          ],
+          "detection_tiehalf": 0.821656050955414,
+          "tiehalf_CI95": [
+            0.7543163585169562,
+            0.8736306402694275
+          ]
+        }
+      },
+      "B4": {
+        "ADD": {
+          "n": 20,
+          "detection_strict": 0.65,
+          "strict_CI95": [
+            0.43285051021946463,
+            0.8188104521320554
+          ],
+          "detection_tiehalf": 0.725,
+          "tiehalf_CI95": [
+            0.505880494175146,
+            0.871610949352134
+          ]
+        },
+        "ANDOR": {
+          "n": 20,
+          "detection_strict": 0.25,
+          "strict_CI95": [
+            0.11186005278940309,
+            0.4687050099580636
+          ],
+          "detection_tiehalf": 0.6,
+          "tiehalf_CI95": [
+            0.3865779423152061,
+            0.7811960325858074
+          ]
+        },
+        "ARG_SWAP": {
+          "n": 20,
+          "detection_strict": 0.05,
+          "strict_CI95": [
+            0.008881219432873136,
+            0.23613589351256675
+          ],
+          "detection_tiehalf": 0.5,
+          "tiehalf_CI95": [
+            0.2992949144298199,
+            0.7007050855701801
+          ]
+        },
+        "CARD": {
+          "n": 20,
+          "detection_strict": 0.15,
+          "strict_CI95": [
+            0.05236779195949584,
+            0.36042329588695743
+          ],
+          "detection_tiehalf": 0.475,
+          "tiehalf_CI95": [
+            0.27853373483665333,
+            0.6795227714380933
+          ]
+        },
+        "DROP": {
+          "n": 20,
+          "detection_strict": 0.55,
+          "strict_CI95": [
+            0.3420820083075997,
+            0.7418049791429071
+          ],
+          "detection_tiehalf": 0.725,
+          "tiehalf_CI95": [
+            0.505880494175146,
+            0.871610949352134
+          ]
+        },
+        "IMPL_REV": {
+          "n": 20,
+          "detection_strict": 0.45,
+          "strict_CI95": [
+            0.25819502085709295,
+            0.6579179916924003
+          ],
+          "detection_tiehalf": 0.7,
+          "tiehalf_CI95": [
+            0.4810232237710206,
+            0.854524726031006
+          ]
+        },
+        "MERGE": {
+          "n": 20,
+          "detection_strict": 0.55,
+          "strict_CI95": [
+            0.3420820083075997,
+            0.7418049791429071
+          ],
+          "detection_tiehalf": 0.75,
+          "tiehalf_CI95": [
+            0.5312949900419365,
+            0.888139947210597
+          ]
+        },
+        "NEG": {
+          "n": 20,
+          "detection_strict": 0.35,
+          "strict_CI95": [
+            0.18118954786794464,
+            0.5671494897805354
+          ],
+          "detection_tiehalf": 0.65,
+          "tiehalf_CI95": [
+            0.43285051021946463,
+            0.8188104521320554
+          ]
+        },
+        "QUANT": {
+          "n": 20,
+          "detection_strict": 0.4,
+          "strict_CI95": [
+            0.21880396741419272,
+            0.613422057684794
+          ],
+          "detection_tiehalf": 0.65,
+          "tiehalf_CI95": [
+            0.43285051021946463,
+            0.8188104521320554
+          ]
+        }
+      },
+      "B5": {
+        "ADD": {
+          "n": 300,
+          "detection_strict": 0.71,
+          "strict_CI95": [
+            0.6562534723961281,
+            0.7584362870048228
+          ],
+          "detection_tiehalf": 0.8283333333333334,
+          "tiehalf_CI95": [
+            0.7815781587319668,
+            0.8667859889028535
+          ]
+        },
+        "ANDOR": {
+          "n": 109,
+          "detection_strict": 0.06422018348623854,
+          "strict_CI95": [
+            0.03145324596985614,
+            0.12665865602373488
+          ],
+          "detection_tiehalf": 0.5275229357798165,
+          "tiehalf_CI95": [
+            0.43446572143617107,
+            0.6187061584379177
+          ]
+        },
+        "ARG_SWAP": {
+          "n": 102,
+          "detection_strict": 0.38235294117647056,
+          "strict_CI95": [
+            0.2939418160157895,
+            0.4793042422448567
+          ],
+          "detection_tiehalf": 0.6911764705882353,
+          "tiehalf_CI95": [
+            0.5959452672519094,
+            0.7725298880745406
+          ]
+        },
+        "CARD": {
+          "n": 37,
+          "detection_strict": 0.0,
+          "strict_CI95": [
+            0.0,
+            0.09406095745514377
+          ],
+          "detection_tiehalf": 0.5,
+          "tiehalf_CI95": [
+            0.34665320556403556,
+            0.6533467944359644
+          ]
+        },
+        "DROP": {
+          "n": 95,
+          "detection_strict": 0.6,
+          "strict_CI95": [
+            0.49945418140451453,
+            0.6927725733222401
+          ],
+          "detection_tiehalf": 0.7631578947368421,
+          "tiehalf_CI95": [
+            0.6684929774457604,
+            0.8373669034141207
+          ]
+        },
+        "IMPL_REV": {
+          "n": 124,
+          "detection_strict": 0.7580645161290323,
+          "strict_CI95": [
+            0.6756684154241164,
+            0.8249511012277402
+          ],
+          "detection_tiehalf": 0.8790322580645161,
+          "tiehalf_CI95": [
+            0.8099792338499885,
+            0.9253056812324258
+          ]
+        },
+        "MERGE": {
+          "n": 151,
+          "detection_strict": 0.7615894039735099,
+          "strict_CI95": [
+            0.6876689025855875,
+            0.8225299070366328
+          ],
+          "detection_tiehalf": 0.8708609271523179,
+          "tiehalf_CI95": [
+            0.8080424696285909,
+            0.915277361734557
+          ]
+        },
+        "NEG": {
+          "n": 300,
+          "detection_strict": 0.7066666666666667,
+          "strict_CI95": [
+            0.6527928854718688,
+            0.7553144967957339
+          ],
+          "detection_tiehalf": 0.8483333333333334,
+          "tiehalf_CI95": [
+            0.8033564407459017,
+            0.8845019696890093
+          ]
+        },
+        "QUANT": {
+          "n": 157,
+          "detection_strict": 0.6178343949044586,
+          "strict_CI95": [
+            0.5398709444442559,
+            0.6901690452101618
+          ],
+          "detection_tiehalf": 0.8089171974522293,
+          "tiehalf_CI95": [
+            0.7403322886058074,
+            0.8627455221098285
+          ]
+        }
+      },
+      "B5A2": {
+        "ADD": {
+          "n": 300,
+          "detection_strict": 0.71,
+          "strict_CI95": [
+            0.6562534723961281,
+            0.7584362870048228
+          ],
+          "detection_tiehalf": 0.8283333333333334,
+          "tiehalf_CI95": [
+            0.7815781587319668,
+            0.8667859889028535
+          ]
+        },
+        "ANDOR": {
+          "n": 109,
+          "detection_strict": 0.08256880733944955,
+          "strict_CI95": [
+            0.044046211040786556,
+            0.14951361086886378
+          ],
+          "detection_tiehalf": 0.536697247706422,
+          "tiehalf_CI95": [
+            0.443432923853547,
+            0.6274629159785716
+          ]
+        },
+        "ARG_SWAP": {
+          "n": 102,
+          "detection_strict": 0.38235294117647056,
+          "strict_CI95": [
+            0.2939418160157895,
+            0.4793042422448567
+          ],
+          "detection_tiehalf": 0.6911764705882353,
+          "tiehalf_CI95": [
+            0.5959452672519094,
+            0.7725298880745406
+          ]
+        },
+        "CARD": {
+          "n": 37,
+          "detection_strict": 0.0,
+          "strict_CI95": [
+            0.0,
+            0.09406095745514377
+          ],
+          "detection_tiehalf": 0.5,
+          "tiehalf_CI95": [
+            0.34665320556403556,
+            0.6533467944359644
+          ]
+        },
+        "DROP": {
+          "n": 95,
+          "detection_strict": 0.6,
+          "strict_CI95": [
+            0.49945418140451453,
+            0.6927725733222401
+          ],
+          "detection_tiehalf": 0.7631578947368421,
+          "tiehalf_CI95": [
+            0.6684929774457604,
+            0.8373669034141207
+          ]
+        },
+        "IMPL_REV": {
+          "n": 124,
+          "detection_strict": 0.7580645161290323,
+          "strict_CI95": [
+            0.6756684154241164,
+            0.8249511012277402
+          ],
+          "detection_tiehalf": 0.8790322580645161,
+          "tiehalf_CI95": [
+            0.8099792338499885,
+            0.9253056812324258
+          ]
+        },
+        "MERGE": {
+          "n": 151,
+          "detection_strict": 0.7615894039735099,
+          "strict_CI95": [
+            0.6876689025855875,
+            0.8225299070366328
+          ],
+          "detection_tiehalf": 0.8708609271523179,
+          "tiehalf_CI95": [
+            0.8080424696285909,
+            0.915277361734557
+          ]
+        },
+        "NEG": {
+          "n": 300,
+          "detection_strict": 0.71,
+          "strict_CI95": [
+            0.6562534723961281,
+            0.7584362870048228
+          ],
+          "detection_tiehalf": 0.85,
+          "tiehalf_CI95": [
+            0.8051814866362912,
+            0.8859681123652938
+          ]
+        },
+        "QUANT": {
+          "n": 157,
+          "detection_strict": 0.6178343949044586,
+          "strict_CI95": [
+            0.5398709444442559,
+            0.6901690452101618
+          ],
+          "detection_tiehalf": 0.8089171974522293,
+          "tiehalf_CI95": [
+            0.7403322886058074,
+            0.8627455221098285
+          ]
+        }
+      },
+      "Ccov": {
+        "ADD": {
+          "n": 300,
+          "detection_strict": 0.0,
+          "strict_CI95": [
+            0.0,
+            0.012643429997735661
+          ],
+          "detection_tiehalf": 0.475,
+          "tiehalf_CI95": [
+            0.4191640130732679,
+            0.5314681584266189
+          ]
+        },
+        "ANDOR": {
+          "n": 109,
+          "detection_strict": 0.0,
+          "strict_CI95": [
+            0.0,
+            0.03404418228738337
+          ],
+          "detection_tiehalf": 0.5,
+          "tiehalf_CI95": [
+            0.40774467185118335,
+            0.5922553281488167
+          ]
+        },
+        "ARG_SWAP": {
+          "n": 102,
+          "detection_strict": 0.0,
+          "strict_CI95": [
+            0.0,
+            0.03629574760774591
+          ],
+          "detection_tiehalf": 0.5,
+          "tiehalf_CI95": [
+            0.40474278556489024,
+            0.5952572144351097
+          ]
+        },
+        "CARD": {
+          "n": 37,
+          "detection_strict": 0.0,
+          "strict_CI95": [
+            0.0,
+            0.09406095745514377
+          ],
+          "detection_tiehalf": 0.5,
+          "tiehalf_CI95": [
+            0.34665320556403556,
+            0.6533467944359644
+          ]
+        },
+        "DROP": {
+          "n": 95,
+          "detection_strict": 0.6842105263157895,
+          "strict_CI95": [
+            0.585132797889047,
+            0.7689691187128695
+          ],
+          "detection_tiehalf": 0.8421052631578947,
+          "tiehalf_CI95": [
+            0.7557021433573184,
+            0.9019157017605267
+          ]
+        },
+        "IMPL_REV": {
+          "n": 124,
+          "detection_strict": 0.0,
+          "strict_CI95": [
+            0.0,
+            0.030049686487027695
+          ],
+          "detection_tiehalf": 0.5,
+          "tiehalf_CI95": [
+            0.4133257730247514,
+            0.5866742269752486
+          ]
+        },
+        "MERGE": {
+          "n": 151,
+          "detection_strict": 0.9006622516556292,
+          "strict_CI95": [
+            0.8425706088232716,
+            0.9388731375601294
+          ],
+          "detection_tiehalf": 0.9503311258278145,
+          "tiehalf_CI95": [
+            0.9031598481695644,
+            0.9751570899142579
+          ]
+        },
+        "NEG": {
+          "n": 300,
+          "detection_strict": 0.0,
+          "strict_CI95": [
+            0.0,
+            0.012643429997735661
+          ],
+          "detection_tiehalf": 0.5,
+          "tiehalf_CI95": [
+            0.4437784961119509,
+            0.556221503888049
+          ]
+        },
+        "QUANT": {
+          "n": 157,
+          "detection_strict": 0.0,
+          "strict_CI95": [
+            0.0,
+            0.02388436822314625
+          ],
+          "detection_tiehalf": 0.5,
+          "tiehalf_CI95": [
+            0.4227271583556903,
+            0.5772728416443097
+          ]
+        }
+      }
+    },
+    "mutant_detection_raw_score": {
+      "A1": {
+        "ADD": {
+          "n": 300,
+          "detection_tiehalf_raw": 0.8283333333333334
+        },
+        "ANDOR": {
+          "n": 109,
+          "detection_tiehalf_raw": 0.5
+        },
+        "ARG_SWAP": {
+          "n": 102,
+          "detection_tiehalf_raw": 0.6127450980392157
+        },
+        "CARD": {
+          "n": 37,
+          "detection_tiehalf_raw": 0.5
+        },
+        "DROP": {
+          "n": 95,
+          "detection_tiehalf_raw": 0.7789473684210526
+        },
+        "IMPL_REV": {
+          "n": 124,
+          "detection_tiehalf_raw": 0.8225806451612904
+        },
+        "MERGE": {
+          "n": 151,
+          "detection_tiehalf_raw": 0.9403973509933775
+        },
+        "NEG": {
+          "n": 300,
+          "detection_tiehalf_raw": 0.785
+        },
+        "QUANT": {
+          "n": 157,
+          "detection_tiehalf_raw": 0.7484076433121019
+        }
+      },
+      "A2": {
+        "ADD": {
+          "n": 300,
+          "detection_tiehalf_raw": 0.8283333333333334
+        },
+        "ANDOR": {
+          "n": 109,
+          "detection_tiehalf_raw": 0.5045871559633027
+        },
+        "ARG_SWAP": {
+          "n": 102,
+          "detection_tiehalf_raw": 0.6127450980392157
+        },
+        "CARD": {
+          "n": 37,
+          "detection_tiehalf_raw": 0.5
+        },
+        "DROP": {
+          "n": 95,
+          "detection_tiehalf_raw": 0.7789473684210526
+        },
+        "IMPL_REV": {
+          "n": 124,
+          "detection_tiehalf_raw": 0.8225806451612904
+        },
+        "MERGE": {
+          "n": 151,
+          "detection_tiehalf_raw": 0.9403973509933775
+        },
+        "NEG": {
+          "n": 300,
+          "detection_tiehalf_raw": 0.785
+        },
+        "QUANT": {
+          "n": 157,
+          "detection_tiehalf_raw": 0.7484076433121019
+        }
+      },
+      "A3": {
+        "ADD": {
+          "n": 300,
+          "detection_tiehalf_raw": 0.8383333333333334
+        },
+        "ANDOR": {
+          "n": 109,
+          "detection_tiehalf_raw": 0.5229357798165137
+        },
+        "ARG_SWAP": {
+          "n": 102,
+          "detection_tiehalf_raw": 0.6127450980392157
+        },
+        "CARD": {
+          "n": 37,
+          "detection_tiehalf_raw": 0.5
+        },
+        "DROP": {
+          "n": 95,
+          "detection_tiehalf_raw": 0.8421052631578947
+        },
+        "IMPL_REV": {
+          "n": 124,
+          "detection_tiehalf_raw": 0.8225806451612904
+        },
+        "MERGE": {
+          "n": 151,
+          "detection_tiehalf_raw": 0.9701986754966887
+        },
+        "NEG": {
+          "n": 300,
+          "detection_tiehalf_raw": 0.8466666666666667
+        },
+        "QUANT": {
+          "n": 157,
+          "detection_tiehalf_raw": 0.7643312101910829
+        }
+      },
+      "B5": {
+        "ADD": {
+          "n": 300,
+          "detection_tiehalf_raw": 0.855
+        },
+        "ANDOR": {
+          "n": 109,
+          "detection_tiehalf_raw": 0.536697247706422
+        },
+        "ARG_SWAP": {
+          "n": 102,
+          "detection_tiehalf_raw": 0.6911764705882353
+        },
+        "CARD": {
+          "n": 37,
+          "detection_tiehalf_raw": 0.5
+        },
+        "DROP": {
+          "n": 95,
+          "detection_tiehalf_raw": 0.7947368421052632
+        },
+        "IMPL_REV": {
+          "n": 124,
+          "detection_tiehalf_raw": 0.9475806451612904
+        },
+        "MERGE": {
+          "n": 151,
+          "detection_tiehalf_raw": 0.9602649006622517
+        },
+        "NEG": {
+          "n": 300,
+          "detection_tiehalf_raw": 0.885
+        },
+        "QUANT": {
+          "n": 157,
+          "detection_tiehalf_raw": 0.8662420382165605
+        }
+      },
+      "B5A2": {
+        "ADD": {
+          "n": 300,
+          "detection_tiehalf_raw": 0.855
+        },
+        "ANDOR": {
+          "n": 109,
+          "detection_tiehalf_raw": 0.5458715596330275
+        },
+        "ARG_SWAP": {
+          "n": 102,
+          "detection_tiehalf_raw": 0.6911764705882353
+        },
+        "CARD": {
+          "n": 37,
+          "detection_tiehalf_raw": 0.5
+        },
+        "DROP": {
+          "n": 95,
+          "detection_tiehalf_raw": 0.7947368421052632
+        },
+        "IMPL_REV": {
+          "n": 124,
+          "detection_tiehalf_raw": 0.9475806451612904
+        },
+        "MERGE": {
+          "n": 151,
+          "detection_tiehalf_raw": 0.9602649006622517
+        },
+        "NEG": {
+          "n": 300,
+          "detection_tiehalf_raw": 0.8866666666666667
+        },
+        "QUANT": {
+          "n": 157,
+          "detection_tiehalf_raw": 0.8662420382165605
+        }
+      },
+      "B4": {
+        "ADD": {
+          "n": 20,
+          "detection_tiehalf_raw": 0.775
+        },
+        "ANDOR": {
+          "n": 20,
+          "detection_tiehalf_raw": 0.475
+        },
+        "ARG_SWAP": {
+          "n": 20,
+          "detection_tiehalf_raw": 0.475
+        },
+        "CARD": {
+          "n": 20,
+          "detection_tiehalf_raw": 0.425
+        },
+        "DROP": {
+          "n": 20,
+          "detection_tiehalf_raw": 0.725
+        },
+        "IMPL_REV": {
+          "n": 20,
+          "detection_tiehalf_raw": 0.725
+        },
+        "MERGE": {
+          "n": 20,
+          "detection_tiehalf_raw": 0.9
+        },
+        "NEG": {
+          "n": 20,
+          "detection_tiehalf_raw": 0.65
+        },
+        "QUANT": {
+          "n": 20,
+          "detection_tiehalf_raw": 0.775
+        }
+      }
+    },
+    "blind_spot_tests": {
+      "A1_SCOPE": {
+        "status": "not testable: 0 solver-verified mutants of this operator in the screen"
+      },
+      "A1_CARD": {
+        "detection_tiehalf": 0.5,
+        "CI95": [
+          0.34665320556403556,
+          0.6533467944359644
+        ],
+        "n": 37,
+        "predicted_blind_spot_confirmed": true
+      },
+      "A1_ANDOR": {
+        "detection_tiehalf": 0.4954128440366973,
+        "CI95": [
+          0.40331743223547967,
+          0.5878205877855055
+        ],
+        "n": 109,
+        "predicted_blind_spot_confirmed": true
+      },
+      "A2_ANDOR_predicted_to_detect": {
+        "detection_tiehalf": 0.5,
+        "CI95": [
+          0.40774467185118335,
+          0.5922553281488167
+        ],
+        "detects": false
+      }
+    },
+    "confusion_matrices": {
+      "A1": {
+        "matrix": {
+          "conflation": {
+            "conflation": 57,
+            "dropped_condition": 42,
+            "added_condition": 5,
+            "swapped_args": 1,
+            "negation_polarity": 1
+          },
+          "negation_polarity": {
+            "quantifier": 32,
+            "conflation": 48,
+            "negation_polarity": 73,
+            "added_condition": 5,
+            "other": 9,
+            "swapped_args": 5
+          },
+          "quantifier": {
+            "reversed_implication": 1,
+            "negation_polarity": 6,
+            "quantifier": 39,
+            "conflation": 23,
+            "other": 4,
+            "swapped_args": 1,
+            "added_condition": 3
+          },
+          "added_condition": {
+            "dropped_condition": 46,
+            "conflation": 17,
+            "added_condition": 128,
+            "other": 1,
+            "negation_polarity": 2,
+            "swapped_args": 11
+          },
+          "swapped_args": {
+            "swapped_args": 31
+          },
+          "reversed_implication": {
+            "conflation": 27,
+            "reversed_implication": 26,
+            "negation_polarity": 4,
+            "quantifier": 12,
+            "other": 1,
+            "added_condition": 4,
+            "swapped_args": 1
+          },
+          "dropped_condition": {
+            "added_condition": 2,
+            "dropped_condition": 39,
+            "conflation": 10,
+            "swapped_args": 2,
+            "quantifier": 2
+          },
+          "connective_andor": {
+            "added_condition": 3,
+            "conflation": 1
+          }
+        },
+        "macro_recall_8_nonblind": 0.518599472482661,
+        "n_types_present": 8
+      },
+      "A2": {
+        "matrix": {
+          "conflation": {
+            "conflation": 57,
+            "dropped_condition": 42,
+            "added_condition": 5,
+            "swapped_args": 1,
+            "negation_polarity": 1
+          },
+          "negation_polarity": {
+            "quantifier": 32,
+            "conflation": 48,
+            "negation_polarity": 73,
+            "added_condition": 5,
+            "other": 9,
+            "swapped_args": 5
+          },
+          "quantifier": {
+            "reversed_implication": 1,
+            "negation_polarity": 6,
+            "quantifier": 39,
+            "conflation": 23,
+            "other": 4,
+            "swapped_args": 1,
+            "added_condition": 3
+          },
+          "added_condition": {
+            "dropped_condition": 46,
+            "conflation": 17,
+            "added_condition": 128,
+            "other": 1,
+            "negation_polarity": 2,
+            "swapped_args": 11
+          },
+          "swapped_args": {
+            "swapped_args": 31
+          },
+          "reversed_implication": {
+            "conflation": 27,
+            "reversed_implication": 26,
+            "negation_polarity": 4,
+            "quantifier": 12,
+            "other": 1,
+            "added_condition": 4,
+            "swapped_args": 1
+          },
+          "dropped_condition": {
+            "added_condition": 2,
+            "dropped_condition": 39,
+            "conflation": 10,
+            "swapped_args": 2,
+            "quantifier": 2
+          },
+          "connective_andor": {
+            "connective_andor": 1,
+            "added_condition": 3,
+            "conflation": 1
+          }
+        },
+        "macro_recall_8_nonblind": 0.5435994724826609,
+        "n_types_present": 8
+      },
+      "A3": {
+        "matrix": {
+          "conflation": {
+            "conflation": 72,
+            "dropped_condition": 37,
+            "swapped_args": 1
+          },
+          "negation_polarity": {
+            "quantifier": 34,
+            "negation_polarity": 75,
+            "conflation": 78,
+            "added_condition": 5,
+            "other": 8,
+            "swapped_args": 5
+          },
+          "quantifier": {
+            "reversed_implication": 2,
+            "quantifier": 39,
+            "conflation": 31,
+            "negation_polarity": 8,
+            "other": 5,
+            "swapped_args": 1,
+            "added_condition": 2
+          },
+          "added_condition": {
+            "dropped_condition": 68,
+            "conflation": 21,
+            "added_condition": 112,
+            "negation_polarity": 3,
+            "swapped_args": 11
+          },
+          "swapped_args": {
+            "swapped_args": 31
+          },
+          "reversed_implication": {
+            "conflation": 33,
+            "quantifier": 9,
+            "reversed_implication": 30,
+            "swapped_args": 1,
+            "added_condition": 1
+          },
+          "dropped_condition": {
+            "dropped_condition": 52,
+            "conflation": 9,
+            "other": 1,
+            "swapped_args": 2,
+            "quantifier": 1
+          },
+          "connective_andor": {
+            "connective_andor": 2,
+            "added_condition": 1,
+            "conflation": 4
+          }
+        },
+        "macro_recall_8_nonblind": 0.5594538568677111,
+        "n_types_present": 8
+      }
+    },
+    "system_level": {
+      "A1": {
+        "per_system": {
+          "gpt-3.5-turbo": {
+            "acc": 0.4528301886792453,
+            "ms": 0.7742123390236597
+          },
+          "gpt-4": {
+            "acc": 0.5503355704697986,
+            "ms": 0.7618781293277938
+          },
+          "text-davinci-003": {
+            "acc": 0.3860294117647059,
+            "ms": 0.7009175975168622
+          }
+        },
+        "kendall_tau": 0.33333333333333337,
+        "flag": "n=3 systems: tau takes 4 values; uninterpretable"
+      },
+      "A2": {
+        "per_system": {
+          "gpt-3.5-turbo": {
+            "acc": 0.4528301886792453,
+            "ms": 0.7733947289607667
+          },
+          "gpt-4": {
+            "acc": 0.5503355704697986,
+            "ms": 0.7610476771550597
+          },
+          "text-davinci-003": {
+            "acc": 0.3860294117647059,
+            "ms": 0.7017081672412555
+          }
+        },
+        "kendall_tau": 0.33333333333333337,
+        "flag": "n=3 systems: tau takes 4 values; uninterpretable"
+      },
+      "A3": {
+        "per_system": {
+          "gpt-3.5-turbo": {
+            "acc": 0.4528301886792453,
+            "ms": 0.7635304527757357
+          },
+          "gpt-4": {
+            "acc": 0.5503355704697986,
+            "ms": 0.7606050921487163
+          },
+          "text-davinci-003": {
+            "acc": 0.3860294117647059,
+            "ms": 0.7051149728539435
+          }
+        },
+        "kendall_tau": 0.33333333333333337,
+        "flag": "n=3 systems: tau takes 4 values; uninterpretable"
+      },
+      "B1": {
+        "per_system": {
+          "gpt-3.5-turbo": {
+            "acc": 0.4528301886792453,
+            "ms": 0.7158490566037736
+          },
+          "gpt-4": {
+            "acc": 0.5503355704697986,
+            "ms": 0.7484899328859059
+          },
+          "text-davinci-003": {
+            "acc": 0.3860294117647059,
+            "ms": 0.6266544117647059
+          }
+        },
+        "kendall_tau": 1.0,
+        "flag": "n=3 systems: tau takes 4 values; uninterpretable"
+      },
+      "B2": {
+        "per_system": {
+          "gpt-3.5-turbo": {
+            "acc": 0.4528301886792453,
+            "ms": 0.9660377358490566
+          },
+          "gpt-4": {
+            "acc": 0.5503355704697986,
+            "ms": 0.9798657718120806
+          },
+          "text-davinci-003": {
+            "acc": 0.3860294117647059,
+            "ms": 0.9669117647058824
+          }
+        },
+        "kendall_tau": 0.33333333333333337,
+        "flag": "n=3 systems: tau takes 4 values; uninterpretable"
+      },
+      "B2sat": {
+        "per_system": {
+          "gpt-3.5-turbo": {
+            "acc": 0.4528301886792453,
+            "ms": 0.9660377358490566
+          },
+          "gpt-4": {
+            "acc": 0.5503355704697986,
+            "ms": 0.9765100671140939
+          },
+          "text-davinci-003": {
+            "acc": 0.3860294117647059,
+            "ms": 0.9632352941176471
+          }
+        },
+        "kendall_tau": 1.0,
+        "flag": "n=3 systems: tau takes 4 values; uninterpretable"
+      },
+      "B3cos": {
+        "per_system": {
+          "gpt-3.5-turbo": {
+            "acc": 0.4528301886792453,
+            "ms": 0.8037395753563856
+          },
+          "gpt-4": {
+            "acc": 0.5503355704697986,
+            "ms": 0.8117560018479024
+          },
+          "text-davinci-003": {
+            "acc": 0.3860294117647059,
+            "ms": 0.7548136090489981
+          }
+        },
+        "kendall_tau": 1.0,
+        "flag": "n=3 systems: tau takes 4 values; uninterpretable"
+      },
+      "B3nli": {
+        "per_system": {
+          "gpt-3.5-turbo": {
+            "acc": 0.4528301886792453,
+            "ms": 0.5460862066951484
+          },
+          "gpt-4": {
+            "acc": 0.5503355704697986,
+            "ms": 0.535616473177891
+          },
+          "text-davinci-003": {
+            "acc": 0.3860294117647059,
+            "ms": 0.4244239406409767
+          }
+        },
+        "kendall_tau": 0.33333333333333337,
+        "flag": "n=3 systems: tau takes 4 values; uninterpretable"
+      },
+      "B4": {
+        "per_system": {
+          "gpt-3.5-turbo": {
+            "acc": 0.4528301886792453,
+            "ms": 0.7656265500992063
+          },
+          "gpt-4": {
+            "acc": 0.5503355704697986,
+            "ms": 0.7506754185692542
+          },
+          "text-davinci-003": {
+            "acc": 0.3860294117647059,
+            "ms": 0.6991958846920678
+          }
+        },
+        "kendall_tau": 0.33333333333333337,
+        "flag": "n=3 systems: tau takes 4 values; uninterpretable"
+      },
+      "B5": {
+        "per_system": {
+          "gpt-3.5-turbo": {
+            "acc": 0.4528301886792453,
+            "ms": 0.7959553758610364
+          },
+          "gpt-4": {
+            "acc": 0.5503355704697986,
+            "ms": 0.7905241291147331
+          },
+          "text-davinci-003": {
+            "acc": 0.3860294117647059,
+            "ms": 0.7313050409557763
+          }
+        },
+        "kendall_tau": 0.33333333333333337,
+        "flag": "n=3 systems: tau takes 4 values; uninterpretable"
+      },
+      "B5A2": {
+        "per_system": {
+          "gpt-3.5-turbo": {
+            "acc": 0.4528301886792453,
+            "ms": 0.7959553758610364
+          },
+          "gpt-4": {
+            "acc": 0.5503355704697986,
+            "ms": 0.7905241291147331
+          },
+          "text-davinci-003": {
+            "acc": 0.3860294117647059,
+            "ms": 0.7312744037008744
+          }
+        },
+        "kendall_tau": 0.33333333333333337,
+        "flag": "n=3 systems: tau takes 4 values; uninterpretable"
+      },
+      "B7": {
+        "per_system": {
+          "gpt-3.5-turbo": {
+            "acc": 0.4528301886792453,
+            "ms": 0.909433962264151
+          },
+          "gpt-4": {
+            "acc": 0.5503355704697986,
+            "ms": 0.9664429530201343
+          },
+          "text-davinci-003": {
+            "acc": 0.3860294117647059,
+            "ms": 0.9007352941176471
+          }
+        },
+        "kendall_tau": 1.0,
+        "flag": "n=3 systems: tau takes 4 values; uninterpretable"
+      },
+      "B8": {
+        "per_system": {
+          "gpt-3.5-turbo": {
+            "acc": 0.4528301886792453,
+            "ms": 0.6830188679245283
+          },
+          "gpt-4": {
+            "acc": 0.5503355704697986,
+            "ms": 0.6985458612975393
+          },
+          "text-davinci-003": {
+            "acc": 0.3860294117647059,
+            "ms": 0.6439950980392156
+          }
+        },
+        "kendall_tau": 1.0,
+        "flag": "n=3 systems: tau takes 4 values; uninterpretable"
+      },
+      "A0": {
+        "per_system": {
+          "gpt-3.5-turbo": {
+            "acc": 0.4528301886792453,
+            "ms": 0.8290700808625336
+          },
+          "gpt-4": {
+            "acc": 0.5503355704697986,
+            "ms": 0.8198093107489082
+          },
+          "text-davinci-003": {
+            "acc": 0.3860294117647059,
+            "ms": 0.792769322181087
+          }
+        },
+        "kendall_tau": 0.33333333333333337,
+        "flag": "n=3 systems: tau takes 4 values; uninterpretable"
+      },
+      "Ccov": {
+        "per_system": {
+          "gpt-3.5-turbo": {
+            "acc": 0.4528301886792453,
+            "ms": 0.813600833129135
+          },
+          "gpt-4": {
+            "acc": 0.5503355704697986,
+            "ms": 0.7903356431040994
+          },
+          "text-davinci-003": {
+            "acc": 0.3860294117647059,
+            "ms": 0.7471545815295815
+          }
+        },
+        "kendall_tau": 0.33333333333333337,
+        "flag": "n=3 systems: tau takes 4 values; uninterpretable"
+      }
+    },
+    "score_correlations_spearman": {
+      "A1": {
+        "A1": 1.0,
+        "A2": 0.999,
+        "A3": 0.773,
+        "B1": 0.374,
+        "B2": 0.196,
+        "B2sat": 0.204,
+        "B3cos": 0.362,
+        "B3nli": 0.464,
+        "B4": 0.917,
+        "B5": 0.856,
+        "B5A2": 0.856,
+        "B7": 0.156,
+        "B8": 0.082,
+        "A0": 0.798,
+        "Ccov": 0.71
+      },
+      "A2": {
+        "A1": 0.999,
+        "A2": 1.0,
+        "A3": 0.772,
+        "B1": 0.372,
+        "B2": 0.195,
+        "B2sat": 0.204,
+        "B3cos": 0.362,
+        "B3nli": 0.463,
+        "B4": 0.921,
+        "B5": 0.855,
+        "B5A2": 0.855,
+        "B7": 0.156,
+        "B8": 0.083,
+        "A0": 0.798,
+        "Ccov": 0.709
+      },
+      "A3": {
+        "A1": 0.773,
+        "A2": 0.772,
+        "A3": 1.0,
+        "B1": 0.37,
+        "B2": 0.204,
+        "B2sat": 0.213,
+        "B3cos": 0.367,
+        "B3nli": 0.448,
+        "B4": 0.719,
+        "B5": 0.787,
+        "B5A2": 0.788,
+        "B7": 0.15,
+        "B8": 0.113,
+        "A0": 0.738,
+        "Ccov": 0.792
+      },
+      "B1": {
+        "A1": 0.374,
+        "A2": 0.372,
+        "A3": 0.37,
+        "B1": 1.0,
+        "B2": 0.05,
+        "B2sat": 0.068,
+        "B3cos": 0.374,
+        "B3nli": 0.483,
+        "B4": 0.352,
+        "B5": 0.368,
+        "B5A2": 0.369,
+        "B7": 0.093,
+        "B8": 0.121,
+        "A0": 0.309,
+        "Ccov": 0.36
+      },
+      "B2": {
+        "A1": 0.196,
+        "A2": 0.195,
+        "A3": 0.204,
+        "B1": 0.05,
+        "B2": 1.0,
+        "B2sat": 0.96,
+        "B3cos": 0.101,
+        "B3nli": 0.074,
+        "B4": 0.183,
+        "B5": 0.216,
+        "B5A2": 0.216,
+        "B7": 0.613,
+        "B8": 0.118,
+        "A0": 0.255,
+        "Ccov": 0.227
+      },
+      "B2sat": {
+        "A1": 0.204,
+        "A2": 0.204,
+        "A3": 0.213,
+        "B1": 0.068,
+        "B2": 0.96,
+        "B2sat": 1.0,
+        "B3cos": 0.117,
+        "B3nli": 0.084,
+        "B4": 0.19,
+        "B5": 0.225,
+        "B5A2": 0.225,
+        "B7": 0.612,
+        "B8": 0.123,
+        "A0": 0.266,
+        "Ccov": 0.243
+      },
+      "B3cos": {
+        "A1": 0.362,
+        "A2": 0.362,
+        "A3": 0.367,
+        "B1": 0.374,
+        "B2": 0.101,
+        "B2sat": 0.117,
+        "B3cos": 1.0,
+        "B3nli": 0.759,
+        "B4": 0.34,
+        "B5": 0.368,
+        "B5A2": 0.369,
+        "B7": 0.135,
+        "B8": 0.027,
+        "A0": 0.357,
+        "Ccov": 0.419
+      },
+      "B3nli": {
+        "A1": 0.464,
+        "A2": 0.463,
+        "A3": 0.448,
+        "B1": 0.483,
+        "B2": 0.074,
+        "B2sat": 0.084,
+        "B3cos": 0.759,
+        "B3nli": 1.0,
+        "B4": 0.447,
+        "B5": 0.48,
+        "B5A2": 0.48,
+        "B7": 0.118,
+        "B8": 0.066,
+        "A0": 0.441,
+        "Ccov": 0.481
+      },
+      "B4": {
+        "A1": 0.917,
+        "A2": 0.921,
+        "A3": 0.719,
+        "B1": 0.352,
+        "B2": 0.183,
+        "B2sat": 0.19,
+        "B3cos": 0.34,
+        "B3nli": 0.447,
+        "B4": 1.0,
+        "B5": 0.803,
+        "B5A2": 0.804,
+        "B7": 0.165,
+        "B8": 0.07,
+        "A0": 0.748,
+        "Ccov": 0.67
+      },
+      "B5": {
+        "A1": 0.856,
+        "A2": 0.855,
+        "A3": 0.787,
+        "B1": 0.368,
+        "B2": 0.216,
+        "B2sat": 0.225,
+        "B3cos": 0.368,
+        "B3nli": 0.48,
+        "B4": 0.803,
+        "B5": 1.0,
+        "B5A2": 1.0,
+        "B7": 0.184,
+        "B8": 0.098,
+        "A0": 0.84,
+        "Ccov": 0.744
+      },
+      "B5A2": {
+        "A1": 0.856,
+        "A2": 0.855,
+        "A3": 0.788,
+        "B1": 0.369,
+        "B2": 0.216,
+        "B2sat": 0.225,
+        "B3cos": 0.369,
+        "B3nli": 0.48,
+        "B4": 0.804,
+        "B5": 1.0,
+        "B5A2": 1.0,
+        "B7": 0.183,
+        "B8": 0.098,
+        "A0": 0.839,
+        "Ccov": 0.744
+      },
+      "B7": {
+        "A1": 0.156,
+        "A2": 0.156,
+        "A3": 0.15,
+        "B1": 0.093,
+        "B2": 0.613,
+        "B2sat": 0.612,
+        "B3cos": 0.135,
+        "B3nli": 0.118,
+        "B4": 0.165,
+        "B5": 0.184,
+        "B5A2": 0.183,
+        "B7": 1.0,
+        "B8": 0.106,
+        "A0": 0.215,
+        "Ccov": 0.201
+      },
+      "B8": {
+        "A1": 0.082,
+        "A2": 0.083,
+        "A3": 0.113,
+        "B1": 0.121,
+        "B2": 0.118,
+        "B2sat": 0.123,
+        "B3cos": 0.027,
+        "B3nli": 0.066,
+        "B4": 0.07,
+        "B5": 0.098,
+        "B5A2": 0.098,
+        "B7": 0.106,
+        "B8": 1.0,
+        "A0": 0.044,
+        "Ccov": 0.042
+      },
+      "A0": {
+        "A1": 0.798,
+        "A2": 0.798,
+        "A3": 0.738,
+        "B1": 0.309,
+        "B2": 0.255,
+        "B2sat": 0.266,
+        "B3cos": 0.357,
+        "B3nli": 0.441,
+        "B4": 0.748,
+        "B5": 0.84,
+        "B5A2": 0.839,
+        "B7": 0.215,
+        "B8": 0.044,
+        "A0": 1.0,
+        "Ccov": 0.845
+      },
+      "Ccov": {
+        "A1": 0.71,
+        "A2": 0.709,
+        "A3": 0.792,
+        "B1": 0.36,
+        "B2": 0.227,
+        "B2sat": 0.243,
+        "B3cos": 0.419,
+        "B3nli": 0.481,
+        "B4": 0.67,
+        "B5": 0.744,
+        "B5A2": 0.744,
+        "B7": 0.201,
+        "B8": 0.042,
+        "A0": 0.845,
+        "Ccov": 1.0
+      }
+    },
+    "gold_error_flagging": {
+      "A1": {
+        "n_orig_golds_scored": 72,
+        "base_rate": 0.5833333333333334,
+        "precision_at_k": 0.62,
+        "k": 50,
+        "AUROC_flag": 0.6226190476190476,
+        "note": "only sentences whose NL matches the curated release have a corrected flag; orig==corrected golds are not re-scored (identical formula)"
+      },
+      "A2": {
+        "n_orig_golds_scored": 72,
+        "base_rate": 0.5833333333333334,
+        "precision_at_k": 0.62,
+        "k": 50,
+        "AUROC_flag": 0.6226190476190476,
+        "note": "only sentences whose NL matches the curated release have a corrected flag; orig==corrected golds are not re-scored (identical formula)"
+      },
+      "A3": {
+        "n_orig_golds_scored": 72,
+        "base_rate": 0.5833333333333334,
+        "precision_at_k": 0.64,
+        "k": 50,
+        "AUROC_flag": 0.5416666666666667,
+        "note": "only sentences whose NL matches the curated release have a corrected flag; orig==corrected golds are not re-scored (identical formula)"
+      }
+    },
+    "b6_results": {
+      "config": "thinking_1024",
+      "n_items": 400,
+      "n_parse_fail": 0,
+      "all": {
+        "overall": {
+          "acc": 0.7375,
+          "n": 400
+        },
+        "up": {
+          "acc": 0.875,
+          "n": 200
+        },
+        "up_entailment": {
+          "acc": 0.85,
+          "n": 100
+        },
+        "up_neutral": {
+          "acc": 0.9,
+          "n": 100
+        },
+        "down": {
+          "acc": 0.6,
+          "n": 200
+        },
+        "down_entailment": {
+          "acc": 0.42,
+          "n": 100
+        },
+        "down_neutral": {
+          "acc": 0.78,
+          "n": 100
+        },
+        "balanced_acc": {
+          "acc": 0.7375,
+          "n": 4
+        }
+      },
+      "MED": {
+        "overall": {
+          "acc": 0.7633333333333333,
+          "n": 300
+        },
+        "up": {
+          "acc": 0.9,
+          "n": 150
+        },
+        "up_entailment": {
+          "acc": 0.88,
+          "n": 75
+        },
+        "up_neutral": {
+          "acc": 0.92,
+          "n": 75
+        },
+        "down": {
+          "acc": 0.6266666666666667,
+          "n": 150
+        },
+        "down_entailment": {
+          "acc": 0.4666666666666667,
+          "n": 75
+        },
+        "down_neutral": {
+          "acc": 0.7866666666666666,
+          "n": 75
+        },
+        "balanced_acc": {
+          "acc": 0.7633333333333333,
+          "n": 4
+        }
+      },
+      "HELP": {
+        "overall": {
+          "acc": 0.66,
+          "n": 100
+        },
+        "up": {
+          "acc": 0.8,
+          "n": 50
+        },
+        "up_entailment": {
+          "acc": 0.76,
+          "n": 25
+        },
+        "up_neutral": {
+          "acc": 0.84,
+          "n": 25
+        },
+        "down": {
+          "acc": 0.52,
+          "n": 50
+        },
+        "down_entailment": {
+          "acc": 0.28,
+          "n": 25
+        },
+        "down_neutral": {
+          "acc": 0.76,
+          "n": 25
+        },
+        "balanced_acc": {
+          "acc": 0.66,
+          "n": 4
+        }
+      },
+      "marker_zero_llm": {
+        "n_single_span_edits": 3402,
+        "n_usable": 3401,
+        "acc": 0.8697441928844457,
+        "acc_up": 0.8900445765230312,
+        "acc_down": 0.8564476885644768,
+        "n_up": 1346,
+        "n_down": 2055
+      }
+    },
+    "text_diag": {
+      "llm": {
+        "n": 442,
+        "agree_rate": 0.7828054298642534,
+        "by_label": {
+          "+": {
+            "n": 269,
+            "agree_rate": 0.8252788104089219
+          },
+          "gold=+": {
+            "n": 253,
+            "agree_rate": 0.8774703557312253
+          },
+          "-": {
+            "n": 143,
+            "agree_rate": 0.8181818181818182
+          },
+          "gold=-": {
+            "n": 149,
+            "agree_rate": 0.785234899328859
+          },
+          "gold=±": {
+            "n": 40,
+            "agree_rate": 0.175
+          },
+          "±": {
+            "n": 30,
+            "agree_rate": 0.23333333333333334
+          }
+        }
+      },
+      "marker": {
+        "n": 499,
+        "agree_rate": 0.8717434869739479,
+        "by_label": {
+          "+": {
+            "n": 297,
+            "agree_rate": 0.8855218855218855
+          },
+          "gold=+": {
+            "n": 282,
+            "agree_rate": 0.9326241134751773
+          },
+          "-": {
+            "n": 162,
+            "agree_rate": 0.8641975308641975
+          },
+          "gold=-": {
+            "n": 171,
+            "agree_rate": 0.8187134502923976
+          },
+          "±": {
+            "n": 40,
+            "agree_rate": 0.8
+          },
+          "gold=±": {
+            "n": 46,
+            "agree_rate": 0.6956521739130435
+          }
+        }
+      },
+      "gold_alignment_coverage_mean": 0.7762968975468976
+    },
+    "probe_config": {
+      "model": "google/gemini-2.5-flash",
+      "chosen": "thinking_1024",
+      "reasoning": {
+        "max_tokens": 1024
+      },
+      "rule": "thinking-off unless its downward accuracy < 0.80 AND thinking-on raises downward accuracy by >= 0.05",
+      "pilot": {
+        "thinking_off": {
+          "table": {
+            "overall": {
+              "acc": 0.68,
+              "n": 100
+            },
+            "up": {
+              "acc": 0.88,
+              "n": 50
+            },
+            "up_entailment": {
+              "acc": 0.84,
+              "n": 25
+            },
+            "up_neutral": {
+              "acc": 0.92,
+              "n": 25
+            },
+            "down": {
+              "acc": 0.48,
+              "n": 50
+            },
+            "down_entailment": {
+              "acc": 0.36,
+              "n": 25
+            },
+            "down_neutral": {
+              "acc": 0.6,
+              "n": 25
+            },
+            "balanced_acc": {
+              "acc": 0.6799999999999999,
+              "n": 4
+            }
+          },
+          "n_parse_fail": 0
+        },
+        "thinking_1024": {
+          "table": {
+            "overall": {
+              "acc": 0.77,
+              "n": 100
+            },
+            "up": {
+              "acc": 0.9,
+              "n": 50
+            },
+            "up_entailment": {
+              "acc": 0.88,
+              "n": 25
+            },
+            "up_neutral": {
+              "acc": 0.92,
+              "n": 25
+            },
+            "down": {
+              "acc": 0.64,
+              "n": 50
+            },
+            "down_entailment": {
+              "acc": 0.52,
+              "n": 25
+            },
+            "down_neutral": {
+              "acc": 0.76,
+              "n": 25
+            },
+            "balanced_acc": {
+              "acc": 0.77,
+              "n": 4
+            }
+          },
+          "n_parse_fail": 0
+        },
+        "gpt41mini_nothink": {
+          "table": {
+            "overall": {
+              "acc": 0.59,
+              "n": 100
+            },
+            "up": {
+              "acc": 0.86,
+              "n": 50
+            },
+            "up_entailment": {
+              "acc": 0.8,
+              "n": 25
+            },
+            "up_neutral": {
+              "acc": 0.92,
+              "n": 25
+            },
+            "down": {
+              "acc": 0.32,
+              "n": 50
+            },
+            "down_entailment": {
+              "acc": 0.24,
+              "n": 25
+            },
+            "down_neutral": {
+              "acc": 0.4,
+              "n": 25
+            },
+            "balanced_acc": {
+              "acc": 0.5900000000000001,
+              "n": 4
+            }
+          }
+        }
+      },
+      "b1_config": "thinking_off",
+      "fallback_gpt41mini_triggered": true,
+      "fallback_decision": "DEVIATION from fallback (11): both gemini configs had downward pilot accuracy < 0.70 (off 0.48, thinking-1024 0.64), which pre-registers a switch to openai/gpt-4.1-mini. gpt-4.1-mini was piloted on the same 100 MED items and scored downward 0.32 (overall 0.59), i.e. strictly worse; switching would weaken the text side, so the probe (and B4) keep google/gemini-2.5-flash with thinking budget 1024, the choice of the primary pre-registered rule. B1 stays gemini-2.5-flash thinking-off (cross-arm anchor)."
+    },
+    "cost": {
+      "total_usd": 5.6662159,
+      "by_purpose": {
+        "thinking_check": 3.2099999999999994e-05,
+        "b6_pilot_thinking_off": 0.0031213,
+        "b6_pilot_thinking_1024": 0.0129713,
+        "b6_pilot_gpt41mini": 0.0022104,
+        "probe_A1A2": 0.7470095999999995,
+        "B1": 0.07073290000000018,
+        "B3_backtranslate": 0.04939839999999998,
+        "b6_full": 0.0509546,
+        "B4_test": 0.0103777,
+        "B4": 4.7194076
+      },
+      "cap_usd": 5.8,
+      "n_calls": 5504
+    },
+    "verdict": {
+      "rule": "Primary measure: AUROC_real, item-level AUROC of the metric score on the screen's real candidates against equivalence-up-to-renaming labels, with a 1000x bootstrap clustered by sentence. A candidate SURVIVES iff all four gates hold: (G1) Coverage: at least 70% of real candidates are scored. Unscored items get 0.5 and stay in. (G2) False alarms: at most 10% on solver-verified meaning-preserving rewrites. (G3) Increment: ΔAUROC of logistic(cheap_judge + parse_ok + metric) over logistic(cheap_judge + parse_ok) has a clustered-bootstrap 95% lower bound above 0. (G4) AUROC_real is at least 0.65. Ranking: survivors are ranked by AUROC_real in the TOP complexity tercile. A winner is declared only if it leads the next survivor there by at least 0.03. Otherwise the top two advance as a pre-specified combined score (logistic stack), provided their per-item score correlation is below 0.5; if it is not, the top one advances alone. If no candidate survives, the one with the largest ΔAUROC point estimate advances only if ΔAUROC ≥ 0.03. Otherwise the screen is reported as null, and iter 2 tests the full stack of all four against baselines on held-out. In iter 2 the rule is re-applied with the DATASET's audited screen labels; if the ranking changes, the audited ranking governs.",
+      "gates": {
+        "A1": {
+          "G1": {
+            "value": 0.859880239520958,
+            "pass": true
+          },
+          "G2": {
+            "value": 0.13106796116504854,
+            "pass": false
+          },
+          "G3": {
+            "delta": 0.08399137722341987,
+            "ci95": [
+              0.037132360605905704,
+              0.1380741977319372
+            ],
+            "pass": true
+          },
+          "G4": {
+            "value": 0.7113300748152673,
+            "pass": true
+          },
+          "survives": false,
+          "top_tercile_auroc": 0.5065599073895428
+        },
+        "A2": {
+          "G1": {
+            "value": 0.859880239520958,
+            "pass": true
+          },
+          "G2": {
+            "value": 0.13106796116504854,
+            "pass": false
+          },
+          "G3": {
+            "delta": 0.08360519672150046,
+            "ci95": [
+              0.03628331160927254,
+              0.13773998579202276
+            ],
+            "pass": true
+          },
+          "G4": {
+            "value": 0.7107191026779024,
+            "pass": true
+          },
+          "survives": false,
+          "top_tercile_auroc": 0.5070100971123546
+        },
+        "A3": {
+          "G1": {
+            "value": 0.8838323353293414,
+            "pass": true
+          },
+          "G2": {
+            "value": 0.14320388349514562,
+            "pass": false
+          },
+          "G3": {
+            "delta": 0.09346144535257705,
+            "ci95": [
+              0.04756005041581398,
+              0.1433358592604906
+            ],
+            "pass": true
+          },
+          "G4": {
+            "value": 0.7181919835844467,
+            "pass": true
+          },
+          "survives": false,
+          "top_tercile_auroc": 0.5075245996527108
+        }
+      },
+      "survivors": [],
+      "outcome": "advance_without_survivor",
+      "winner": "A3",
+      "reason": "no survivor; largest ΔAUROC point estimate 0.093 >= 0.03",
+      "delta_point_estimates": {
+        "A1": 0.08399137722341987,
+        "A2": 0.08360519672150046,
+        "A3": 0.09346144535257705
+      }
+    },
+    "diagnosis": {
+      "B6_downward_accuracy": 0.6,
+      "text_side_is_bottleneck": true,
+      "text_side_gap_B5_minus_A1": 0.029983745835590936,
+      "exact_semantics_vs_decomposition_A1_minus_B4": {
+        "delta": -0.004939884837789732,
+        "CI95": [
+          -0.02436433098795817,
+          0.01352321006483827
+        ],
+        "n": 810
+      },
+      "polarity_vs_alignment": {
+        "A1_minus_A0": {
+          "delta": 0.03703009902359733,
+          "CI95": [
+            0.0062576232568014156,
+            0.06856072023789671
+          ]
+        },
+        "A2_minus_A0": {
+          "delta": 0.03641912688623239,
+          "CI95": [
+            0.005919237098302404,
+            0.0677567842674342
+          ]
+        },
+        "A3_minus_A0": {
+          "delta": 0.04389200779277669,
+          "CI95": [
+            0.00899760135173364,
+            0.07835794505772402
+          ]
+        },
+        "A1_minus_Ccov": {
+          "delta": 0.049946972229586994,
+          "CI95": [
+            0.013103265262010593,
+            0.08239504427839849
+          ]
+        },
+        "A3_minus_Ccov": {
+          "delta": 0.05680888099876635,
+          "CI95": [
+            0.029511039017019815,
+            0.08381545504754062
+          ]
+        },
+        "B5_minus_A1": {
+          "delta": 0.029983745835590936,
+          "CI95": [
+            0.004839734192223874,
+            0.05778869997538021
+          ]
+        },
+        "A3_minus_A1": {
+          "delta": 0.006861908769179359,
+          "CI95": [
+            -0.02357698437994641,
+            0.03899398283894331
+          ]
+        },
+        "B4_minus_A0": {
+          "delta": 0.040612355470506234,
+          "CI95": [
+            0.006628777999830299,
+            0.0739214607833411
+          ]
+        },
+        "increment_A1_over_B1_parse_A0": {
+          "base": [
+            "B1",
+            "parse_okf",
+            "A0"
+          ],
+          "auc_base_oof": 0.689995043056244,
+          "auc_with_metric_oof": 0.703312506484374,
+          "delta_auroc": 0.013317463428130005,
+          "ci95": [
+            -0.012529846036108957,
+            0.03998778838803921
+          ],
+          "passes": false
+        },
+        "increment_A2_over_B1_parse_A0": {
+          "base": [
+            "B1",
+            "parse_okf",
+            "A0"
+          ],
+          "auc_base_oof": 0.689995043056244,
+          "auc_with_metric_oof": 0.7026842426827441,
+          "delta_auroc": 0.012689199626500058,
+          "ci95": [
+            -0.012742036960943108,
+            0.03899040322976701
+          ],
+          "passes": false
+        },
+        "increment_A3_over_B1_parse_A0": {
+          "base": [
+            "B1",
+            "parse_okf",
+            "A0"
+          ],
+          "auc_base_oof": 0.689995043056244,
+          "auc_with_metric_oof": 0.7135059425686191,
+          "delta_auroc": 0.02351089951237506,
+          "ci95": [
+            -0.005489003482572302,
+            0.05624912962325524
+          ],
+          "passes": false
+        },
+        "increment_B4_over_B1_parse_A0": {
+          "base": [
+            "B1",
+            "parse_okf",
+            "A0"
+          ],
+          "auc_base_oof": 0.689995043056244,
+          "auc_with_metric_oof": 0.7072895892653348,
+          "delta_auroc": 0.017294546209090766,
+          "ci95": [
+            -0.012377688791465424,
+            0.046566457023186514
+          ],
+          "passes": false
+        }
+      },
+      "median_alignment_coverage_real": 0.8,
+      "alignment_is_bottleneck": false
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "folio_logiclm_screen_real",
+      "examples": [
+        {
+          "input": "Sentence: Some evergreens are not objects of worship.\nCandidate FOL: ∃x (Evergreen(x) ∧ ¬ObjectOfWorship(x))",
+          "output": "unfaithful(nonequiv)",
+          "metadata_item_id": "007519ff96:gpt-3.5-turbo",
+          "metadata_system": "gpt-3.5-turbo",
+          "metadata_tercile": "top",
+          "metadata_gold_fol": "∃x ∃y (Evergreen(x) ∧ Evergreen(y) ∧ ¬ObjectOfWorship(x) ∧ ¬ObjectOfWorship(y) ∧ ¬(x=y))",
+          "metadata_gold_source": "corrected",
+          "metadata_correct_orig_gold": 1,
+          "metadata_parse_ok": true,
+          "predict_A1": "1.0000",
+          "predict_A2": "1.0000",
+          "predict_A3": "1.0000",
+          "predict_B1": "1.0000",
+          "predict_B2": "1.0000",
+          "predict_B2sat": "1.0000",
+          "predict_B3cos": "0.9464",
+          "predict_B3nli": "0.9935",
+          "predict_B4": "1.0000",
+          "predict_B5": "1.0000",
+          "predict_B5A2": "1.0000",
+          "predict_B7": "1.0000",
+          "predict_B8": "0.5000",
+          "predict_A0": "1.0000",
+          "predict_Ccov": "1.0000",
+          "metadata_error_type_pred_A1": "none",
+          "metadata_error_type_pred_A2": "none",
+          "metadata_error_type_pred_A3": "none"
+        },
+        {
+          "input": "Sentence: Some evergreens are not objects of worship.\nCandidate FOL: ∃x (Evergreen(x) ∧ ¬Worship(x))",
+          "output": "unfaithful(nonequiv)",
+          "metadata_item_id": "007519ff96:gpt-4",
+          "metadata_system": "gpt-4",
+          "metadata_tercile": "top",
+          "metadata_gold_fol": "∃x ∃y (Evergreen(x) ∧ Evergreen(y) ∧ ¬ObjectOfWorship(x) ∧ ¬ObjectOfWorship(y) ∧ ¬(x=y))",
+          "metadata_gold_source": "corrected",
+          "metadata_correct_orig_gold": 1,
+          "metadata_parse_ok": true,
+          "predict_A1": "0.8000",
+          "predict_A2": "0.8000",
+          "predict_A3": "0.8000",
+          "predict_B1": "1.0000",
+          "predict_B2": "1.0000",
+          "predict_B2sat": "1.0000",
+          "predict_B3cos": "0.8894",
+          "predict_B3nli": "0.9880",
+          "predict_B4": "0.8000",
+          "predict_B5": "0.8000",
+          "predict_B5A2": "0.8000",
+          "predict_B7": "1.0000",
+          "predict_B8": "0.5000",
+          "predict_A0": "0.8000",
+          "predict_Ccov": "0.6667",
+          "metadata_error_type_pred_A1": "dropped_condition",
+          "metadata_error_type_pred_A2": "dropped_condition",
+          "metadata_error_type_pred_A3": "dropped_condition"
+        },
+        {
+          "input": "Sentence: Some evergreens are not objects of worship.\nCandidate FOL: ∃x (Evergreen(x) ∧ ¬Worship(x))",
+          "output": "unfaithful(nonequiv)",
+          "metadata_item_id": "007519ff96:text-davinci-003",
+          "metadata_system": "text-davinci-003",
+          "metadata_tercile": "top",
+          "metadata_gold_fol": "∃x ∃y (Evergreen(x) ∧ Evergreen(y) ∧ ¬ObjectOfWorship(x) ∧ ¬ObjectOfWorship(y) ∧ ¬(x=y))",
+          "metadata_gold_source": "corrected",
+          "metadata_correct_orig_gold": 1,
+          "metadata_parse_ok": true,
+          "predict_A1": "0.8000",
+          "predict_A2": "0.8000",
+          "predict_A3": "0.8000",
+          "predict_B1": "1.0000",
+          "predict_B2": "1.0000",
+          "predict_B2sat": "1.0000",
+          "predict_B3cos": "0.8894",
+          "predict_B3nli": "0.9880",
+          "predict_B4": "0.8000",
+          "predict_B5": "0.8000",
+          "predict_B5A2": "0.8000",
+          "predict_B7": "1.0000",
+          "predict_B8": "0.5000",
+          "predict_A0": "0.8000",
+          "predict_Ccov": "0.6667",
+          "metadata_error_type_pred_A1": "dropped_condition",
+          "metadata_error_type_pred_A2": "dropped_condition",
+          "metadata_error_type_pred_A3": "dropped_condition"
+        }
+      ]
+    },
+    {
+      "dataset": "folio_screen_gold_mutants",
+      "examples": [
+        {
+          "input": "Sentence: Some evergreens are not objects of worship.\nCandidate FOL: ∃x (∃y (Evergreen(x) ∧ Evergreen(y) ∧ ¬ObjectOfWorship(x) ∧ ¬ObjectOfWorship(y) ∧ x ≠ y ∧ FirTree(y)))",
+          "output": "unfaithful(mutant:ADD)",
+          "metadata_item_id": "007519ff96:M:ADD",
+          "metadata_operator": "ADD",
+          "metadata_error_type": "added_condition",
+          "predict_A0": "1.0000",
+          "predict_A1": "1.0000",
+          "predict_A2": "1.0000",
+          "predict_A3": "1.0000",
+          "predict_B1": "0.0000",
+          "predict_B4": "NA",
+          "predict_B5": "1.0000",
+          "predict_B5A2": "1.0000",
+          "predict_Ccov": "1.0000"
+        },
+        {
+          "input": "Sentence: Some evergreens are not objects of worship.\nCandidate FOL: ∃x (∃y (Evergreen(x) ∨ Evergreen(y) ∨ ¬ObjectOfWorship(x) ∨ ¬ObjectOfWorship(y) ∨ x ≠ y))",
+          "output": "unfaithful(mutant:ANDOR)",
+          "metadata_item_id": "007519ff96:M:ANDOR",
+          "metadata_operator": "ANDOR",
+          "metadata_error_type": "connective_andor",
+          "predict_A0": "1.0000",
+          "predict_A1": "1.0000",
+          "predict_A2": "1.0000",
+          "predict_A3": "1.0000",
+          "predict_B1": "0.0000",
+          "predict_B4": "0.5000",
+          "predict_B5": "1.0000",
+          "predict_B5A2": "1.0000",
+          "predict_Ccov": "1.0000"
+        },
+        {
+          "input": "Sentence: Some evergreens are not objects of worship.\nCandidate FOL: ∃x (∃y (∃y2 (y ≠ y2 ∧ Evergreen(x) ∧ Evergreen(y) ∧ ¬ObjectOfWorship(x) ∧ ¬ObjectOfWorship(y) ∧ x ≠ y ∧ Evergreen(x) ∧ Evergreen(y2) ∧ ¬ObjectOfWorship(x) ∧ ¬ObjectOfWorship(y2) ∧ x ≠ y2)))",
+          "output": "unfaithful(mutant:CARD)",
+          "metadata_item_id": "007519ff96:M:CARD",
+          "metadata_operator": "CARD",
+          "metadata_error_type": "cardinality",
+          "predict_A0": "1.0000",
+          "predict_A1": "1.0000",
+          "predict_A2": "1.0000",
+          "predict_A3": "1.0000",
+          "predict_B1": "0.0000",
+          "predict_B4": "0.5000",
+          "predict_B5": "1.0000",
+          "predict_B5A2": "1.0000",
+          "predict_Ccov": "1.0000"
+        }
+      ]
+    }
+  ]
+}
