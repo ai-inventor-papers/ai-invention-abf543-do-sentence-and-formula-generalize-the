@@ -1,105 +1,22 @@
 {
- "a_adapter_roundtrip": {
-  "pass": true,
-  "info": {
-   "per_corpus": {
-    "folio": {
-     "n": 30,
-     "roundtrip": 30,
-     "armA_canon": 30,
-     "armB_canon": 29
-    },
-    "malls": {
-     "n": 30,
-     "roundtrip": 30,
-     "armA_canon": 30,
-     "armB_canon": 30
-    },
-    "proverqa": {
-     "n": 30,
-     "roundtrip": 30,
-     "armA_canon": 29,
-     "armB_canon": 29
-    }
-   },
-   "worst_failures": [
-    {
-     "raw": "Participated(Guam, SummerOlympics) ∨ ∃t (Participated(Guam, SummerOlympics, t))",
-     "canon": "Participated(Guam, SummerOlympics) ∨ (∃t Participated(Guam, SummerOlympics, t))",
-     "armA": "",
-     "armB": "structure"
-    },
-    {
-     "raw": "∀x((Empathetic(x, \"Dr. Yareli Hernandez\") → (RespectsBoundaries(x) ⊕ ListensActively(x))))",
-     "canon": "∀x (Empathetic(x, \"Dr. Yareli Hernandez\") → (RespectsBoundaries(x) ⊕ ListensActively(x)))",
-     "armA": "unsupported symbol '\"'",
-     "armB": "non_FOL"
-    }
-   ]
-  }
+ "suite": "tests/test_dc.py",
+ "results": {
+  "test_renamed_equivalent": "PASSED",
+  "test_added_conjunct": "PASSED",
+  "test_dropped_conjunct": "PASSED",
+  "test_L3_merges_added_conjunct_known_limit": "PASSED",
+  "test_forall_exists": "PASSED",
+  "test_reversed_implication_anchored": "PASSED",
+  "test_negation_ground": "PASSED",
+  "test_negation_universal_rule_1b": "PASSED",
+  "test_argument_swap": "PASSED",
+  "test_granularity_split_L3": "PASSED",
+  "test_unalignable": "PASSED",
+  "test_idempotence_dev": "PASSED",
+  "test_symmetry_dev": "PASSED",
+  "test_score_group_hand": "PASSED",
+  "test_directional_consensus_api": "PASSED",
+  "test_weights_recover_reliability": "PASSED"
  },
- "b_weighted_auc": {
-  "pass": true,
-  "info": {
-   "max_absdiff": 4.996003610813204e-16
-  }
- },
- "c_strat_bootstrap": {
-  "pass": true,
-  "info": {
-   "strata": {
-    "A": 40,
-    "B": 60
-   }
-  }
- },
- "d_toy_latent_class": {
-  "pass": true,
-  "info": {
-   "post": [
-    {
-     "0": 0.999999999999998,
-     "None": 2.0229267969399156e-15
-    },
-    {
-     "0": 0.9999994907034249,
-     "1": 5.072736056851066e-07,
-     "None": 2.022969495225677e-09
-    },
-    {
-     "0": 0.994903979794129,
-     "1": 0.004074883691998636,
-     "2": 0.0010150645109580298,
-     "None": 6.072002914228952e-06
-    }
-   ],
-   "cls": [
-    {
-     "a": 0,
-     "b": 0,
-     "c": 0
-    },
-    {
-     "a": 0,
-     "b": 0,
-     "c": 1
-    },
-    {
-     "a": 0,
-     "b": 1,
-     "c": 2
-    }
-   ]
-  }
- },
- "e_b1_prompt_request": {
-  "pass": true,
-  "info": {
-   "sha1_B1_PROMPT": "d7fe4b542820d08a2489de0c7fcf8b40baa5187d",
-   "request_diff_keys": [
-    "max_tokens"
-   ]
-  }
- },
- "all_pass": true
+ "summary": "16 passed in 8.38s"
 }

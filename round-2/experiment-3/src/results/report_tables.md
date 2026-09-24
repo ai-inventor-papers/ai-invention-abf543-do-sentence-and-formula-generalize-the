@@ -1,141 +1,194 @@
-| metric | AUROC_P [95% CI] | AUROC_S | AUROC_T | AUROC_U | coverage | C1 | C2 ΔAUROC [CI] | C3 | CONFIRMED | top-tercile AUROC_P |
-|---|---|---|---|---|---|---|---|---|---|---|
-| LC_onecoin | 0.756 [0.701, 0.808] | 0.810 | 0.680 | 0.836 | 0.937 | Y | 0.019 [-0.003, 0.043] | Y | no | 0.719 |
-| LC_huiwalter | 0.755 [0.700, 0.809] | 0.810 | 0.680 | 0.837 | 0.937 | Y | 0.019 [-0.003, 0.043] | Y | no | 0.718 |
-| LC_maj | 0.765 [0.710, 0.816] | 0.824 | 0.664 | 0.847 | 0.937 | Y | 0.028 [-0.002, 0.056] | Y | no | 0.744 |
-| LC_ds_binary | 0.787 [0.733, 0.836] | 0.831 | 0.677 | 0.870 | 0.937 | Y | 0.022 [-0.005, 0.049] | Y | no | 0.777 |
-| LC_onecoin_str | 0.757 [0.702, 0.810] | 0.811 | 0.680 | 0.839 | 0.937 | Y | 0.021 [-0.002, 0.045] | Y | no | 0.720 |
-| LC_granular | 0.753 [0.697, 0.805] | 0.813 | 0.685 | 0.832 | 0.937 | Y | 0.020 [-0.000, 0.042] | Y | no | 0.725 |
-| A3 | 0.642 [0.589, 0.695] | 0.609 | 0.599 | 0.663 | 0.904 | n | 0.016 [-0.000, 0.035] | Y | no | 0.570 |
-| A0 | 0.656 [0.604, 0.705] | 0.654 | 0.617 | 0.697 | 0.904 | n | 0.015 [-0.002, 0.034] | Y | no | 0.594 |
-| Ccov | 0.655 [0.607, 0.705] | 0.642 | 0.614 | 0.695 | 0.937 | n | 0.010 [-0.004, 0.025] | Y | no | 0.605 |
-| A1 | 0.657 [0.603, 0.708] | 0.579 | 0.589 | 0.699 | 0.875 | n | 0.012 [-0.002, 0.028] | Y | no | 0.596 |
-| B1 | 0.762 [0.718, 0.804] | 0.713 | 0.637 | 0.833 | 1.000 | Y | – – | Y | no | 0.779 |
-| B1plus | 0.825 [0.788, 0.860] | 0.802 | 0.802 | 0.902 | 1.000 | Y | 0.034 [0.017, 0.052] | Y | **YES** | 0.834 |
-| B3cos | 0.723 [0.673, 0.770] | 0.647 | 0.642 | 0.764 | 1.000 | Y | – – | Y | no | 0.669 |
-| B3nli | 0.734 [0.682, 0.782] | 0.631 | 0.659 | 0.812 | 1.000 | Y | – – | Y | no | 0.668 |
-| A1L | 0.557 [0.500, 0.610] | 0.561 | 0.558 | 0.569 | 0.896 | n | -0.001 [-0.005, 0.003] | Y | no | 0.497 |
-| B1L | 0.704 [0.664, 0.746] | 0.662 | 0.605 | 0.751 | 1.000 | Y | 0.017 [-0.001, 0.035] | Y | no | 0.643 |
-| B1plusL | 0.791 [0.753, 0.826] | 0.781 | 0.781 | 0.873 | 0.749 | Y | 0.046 [0.021, 0.073] | Y | **YES** | 0.759 |
-| B3cosL | 0.723 [0.672, 0.770] | 0.617 | 0.629 | 0.761 | 1.000 | Y | 0.014 [-0.001, 0.030] | Y | no | 0.697 |
-| B3nliL | 0.748 [0.697, 0.796] | 0.641 | 0.675 | 0.814 | 1.000 | Y | 0.011 [-0.004, 0.028] | Y | no | 0.717 |
-| B3cL | 0.601 [0.567, 0.637] | 0.580 | 0.580 | 0.631 | 1.000 | n | 0.002 [-0.008, 0.013] | Y | no | 0.606 |
-| B2 | 0.500 [0.500, 0.500] | 0.500 | 0.556 | 0.500 | 1.000 | n | – – | Y | no | 0.500 |
-| B2_armB | 0.511 [0.495, 0.526] | 0.509 | 0.560 | 0.519 | 1.000 | n | -0.001 [-0.005, 0.003] | Y | no | 0.499 |
-| B7 | 0.511 [0.500, 0.526] | 0.509 | 0.556 | 0.517 | 1.000 | n | – – | Y | no | 0.497 |
-| B7_arity_self | 0.501 [0.500, 0.503] | 0.501 | 0.557 | 0.501 | 1.000 | n | -0.000 [-0.000, 0.000] | Y | no | 0.502 |
-| B7_arity_story | 0.511 [0.502, 0.525] | 0.509 | 0.557 | 0.515 | 1.000 | n | -0.002 [-0.015, 0.007] | Y | no | 0.505 |
-| B7_joint | 0.500 [0.495, 0.507] | 0.500 | 0.556 | 0.503 | 1.000 | n | -0.001 [-0.015, 0.007] | Y | no | 0.492 |
-| LC_within | 0.728 [0.581, 0.854] | 0.753 | 0.664 | 0.834 | 0.944 | Y | -0.004 [-0.030, 0.017] | Y | no | 0.670 |
-| B8 | 0.771 [0.660, 0.860] | 0.748 | 0.650 | 0.852 | 0.944 | Y | 0.026 [-0.008, 0.067] | Y | no | 0.706 |
-| B7_jacc | 0.787 [0.670, 0.879] | 0.659 | 0.606 | 0.836 | 0.949 | Y | 0.003 [-0.023, 0.028] | Y | no | 0.797 |
+## Dev grid (freeze; 609 dev panel items + 5,846 dev solver rows)
 
-Circularity (b) inside solver-NON-equivalent panel items, n = 545 faithful share 0.439
-| metric | (b) AUROC [CI] | reading | (d) no-bijection AUROC [CI] | (a) panel − solver-pure [CI] |
-|---|---|---|---|---|
-| LC_onecoin | 0.722 [0.669, 0.770] | not a checker artefact | 0.711 [0.653, 0.767] | -0.042 [-0.110, 0.018] |
-| LC_maj | 0.741 [0.693, 0.786] | not a checker artefact | 0.749 [0.701, 0.796] | -0.036 [-0.109, 0.027] |
-| LC_ds_binary | 0.773 [0.729, 0.815] | not a checker artefact | 0.779 [0.734, 0.822] | -0.025 [-0.096, 0.040] |
-| LC_huiwalter | 0.721 [0.669, 0.770] | not a checker artefact | 0.711 [0.652, 0.767] | -0.042 [-0.110, 0.018] |
-| LC_granular | 0.726 [0.674, 0.773] | not a checker artefact | 0.715 [0.659, 0.769] | -0.029 [-0.091, 0.032] |
-| A3 | 0.609 [0.554, 0.667] |  | 0.616 [0.558, 0.675] | 0.040 [-0.028, 0.103] |
-| A0 | 0.593 [0.536, 0.646] |  | 0.606 [0.544, 0.667] | -0.029 [-0.089, 0.025] |
-| Ccov | 0.602 [0.547, 0.652] |  | 0.618 [0.560, 0.675] | -0.017 [-0.073, 0.038] |
-| A1 | 0.622 [0.569, 0.676] |  | 0.617 [0.560, 0.677] | 0.024 [-0.035, 0.079] |
-| B1 | 0.709 [0.661, 0.753] |  | 0.702 [0.645, 0.755] | 0.005 [-0.046, 0.058] |
-| B1plus | 0.785 [0.742, 0.823] |  | 0.783 [0.735, 0.826] | 0.089 [0.035, 0.142] |
-| B3nli | 0.709 [0.655, 0.757] |  | 0.717 [0.657, 0.769] | 0.063 [-0.008, 0.139] |
-| B3cos | 0.679 [0.627, 0.730] |  | 0.678 [0.613, 0.735] | 0.081 [0.013, 0.144] |
-| A1L | 0.538 [0.482, 0.595] |  | 0.538 [0.482, 0.598] | -0.018 [-0.074, 0.040] |
-| B1L | 0.663 [0.619, 0.706] |  | 0.659 [0.611, 0.706] | 0.068 [0.019, 0.123] |
-| B1plusL | 0.789 [0.756, 0.824] |  | 0.788 [0.750, 0.823] | 0.108 [0.066, 0.153] |
-| B3nliL | 0.731 [0.678, 0.778] |  | 0.738 [0.688, 0.789] | 0.086 [0.009, 0.166] |
-| B3cosL | 0.670 [0.616, 0.718] |  | 0.688 [0.631, 0.738] | 0.046 [-0.018, 0.109] |
-| B3cL | 0.603 [0.565, 0.641] |  | 0.611 [0.573, 0.651] | 0.038 [0.003, 0.081] |
-| B7 | 0.507 [0.494, 0.524] |  | 0.507 [0.491, 0.527] | -0.004 [-0.013, 0.005] |
+| config | AUROC_P | AUROC_S | mean | coverage | EQUIV-only-by-L2/L3 share of pairs | non-transitivity |
+|---|---|---|---|---|---|---|
+| L3on_UAin_DS_caps1 | 0.768 | 0.826 | 0.797 | 0.952 | 0.058 | 0.0036 |
+| L3on_UAin_uniform_caps1 | 0.760 | 0.813 | 0.786 | 0.952 | 0.058 | 0.0036 |
+| L3on_UAout_DS_caps1 | 0.782 | 0.814 | 0.798 | 0.930 | 0.058 | 0.0036 |
+| L3on_UAout_uniform_caps1 | 0.774 | 0.797 | 0.785 | 0.930 | 0.058 | 0.0036 |
+| L3off_UAin_DS_caps1 **(frozen)** | 0.777 | 0.855 | 0.816 | 0.952 | 0.001 | 0.0000 |
+| L3off_UAin_uniform_caps1 | 0.771 | 0.841 | 0.806 | 0.952 | 0.001 | 0.0000 |
+| L3off_UAout_DS_caps1 | 0.791 | 0.843 | 0.817 | 0.930 | 0.001 | 0.0000 |
+| L3off_UAout_uniform_caps1 | 0.784 | 0.826 | 0.805 | 0.930 | 0.001 | 0.0000 |
+| L3on_UAin_DS_caps0.5 | 0.768 | 0.826 | 0.797 | 0.952 | 0.058 | 0.0036 |
+| L3on_UAin_uniform_caps0.5 | 0.760 | 0.813 | 0.786 | 0.952 | 0.058 | 0.0036 |
+| L3on_UAout_DS_caps0.5 | 0.782 | 0.814 | 0.798 | 0.930 | 0.058 | 0.0036 |
+| L3on_UAout_uniform_caps0.5 | 0.774 | 0.797 | 0.785 | 0.930 | 0.058 | 0.0036 |
 
-Class position (c): {"panel_faithful_nonequiv": {"n": 250, "share_LC_lt_0.5": 0.421935764131143, "share_minority_class": 0.3206696285902786, "share_singleton": 0.21563170566805268, "share_minority_or_singleton": 0.3463842669046338, "mean_LC": 0.5797208195708533}, "panel_unfaithful_nonequiv": {"n": 295, "share_LC_lt_0.5": 0.7416513441876483, "share_minority_class": 0.5772413508440494, "share_singleton": 0.5956212266637698, "share_minority_or_singleton": 0.6878427281332778, "mean_LC": 0.26083650026541005}}
+## Fresh AUROC (panel: 256 adjudicated items, raked weights; solver: 3,720 audited-solver rows)
 
-Stacking base: ['B1', 'B2', 'B3nli', 'B3cos', 'B7'] AUROC_base 0.788
-- base+A3_over_base+A0: Δ 0.002 [-0.008, 0.013]
-- base+LC+A3: Δ 0.030 [0.005, 0.057]
-- base+LC+A3+A1: Δ 0.029 [0.004, 0.056]
-- base+all: Δ 0.073 [0.038, 0.111]
-- placebo: -0.003 [-0.008, 0.000]
-With B1plus in base: AUROC_base 0.822 {'LC_onecoin': (0.01, [-0.01, 0.03]), 'A3': (0.015, [-0.002, 0.035]), 'A1': (0.011, [-0.004, 0.026]), 'A0': (0.011, [-0.005, 0.031]), 'LC_maj': (0.019, [-0.007, 0.045]), 'LC_huiwalter': (0.01, [-0.01, 0.031])}
-Base without round-trip ['B1', 'B2', 'B7'] AUROC_base 0.730 {'LC_onecoin': (0.049, [0.017, 0.085]), 'LC_maj': (0.062, [0.018, 0.106]), 'LC_ds_binary': (0.056, [0.017, 0.096]), 'LC_huiwalter': (0.049, [0.018, 0.085]), 'A3': (0.06, [0.02, 0.101]), 'A0': (0.057, [0.02, 0.097]), 'Ccov': (0.051, [0.016, 0.092]), 'A1': (0.055, [0.016, 0.095]), 'B3nliL': (0.071, [0.031, 0.113]), 'B3nli': (0.061, [0.022, 0.103])}
-Two-system subset n 138 base ['B1', 'B2', 'B3nli', 'B3cos', 'B7', 'B8'] AUROC_base 0.838 {'LC_onecoin': (-0.026, [-0.079, 0.018]), 'LC_within': (-0.004, [-0.03, 0.017]), 'A3': (-0.008, [-0.03, 0.013]), 'A1': (-0.009, [-0.033, 0.013]), 'B7_jacc': (0.003, [-0.023, 0.028])} B8 over base 0.026 [-0.008, 0.067]
-
-Crossover vs B1
-| pop|metric | gap bottom/middle/top | slope [CI] | top gap CI | CONFIRMED | interaction>0 |
+| metric | AUROC_P [95% CI] | n_P | AUROC_S [95% CI] | n_S | coverage |
 |---|---|---|---|---|---|
-| P|LC_onecoin | -0.051/0.136/-0.059 | -0.004 [-0.074, 0.064] | [-0.137, 0.015] | False | False |
-| P|A3 | -0.144/0.038/-0.209 | -0.032 [-0.117, 0.055] | [-0.307, -0.108] | False | False |
-| P|A1 | -0.114/0.011/-0.183 | -0.034 [-0.114, 0.040] | [-0.279, -0.089] | False | False |
-| P|B1plus | -0.004/0.143/0.056 | 0.030 [-0.031, 0.088] | [0.008, 0.109] | False | False |
-| P|B3nli | -0.074/0.128/-0.110 | -0.018 [-0.090, 0.055] | [-0.192, -0.029] | False | False |
-| S|LC_onecoin | 0.129/0.103/0.071 | -0.029 [-0.059, 0.005] | [0.032, 0.106] | False | False |
-| S|A3 | -0.108/-0.107/-0.130 | -0.011 [-0.052, 0.030] | [-0.184, -0.079] | False | False |
-| S|A1 | -0.068/-0.079/-0.167 | -0.050 [-0.096, 0.003] | [-0.215, -0.114] | False | False |
-| S|B1plus | 0.020/0.136/0.050 | 0.015 [-0.040, 0.068] | [0.005, 0.091] | False | False |
-| S|B3nli | -0.029/0.014/-0.068 | -0.020 [-0.071, 0.035] | [-0.140, 0.005] | False | False |
-| T|LC_onecoin | 0.077/0.040/0.023 | -0.027 [-0.046, -0.009] | [0.003, 0.043] | False | None |
-| T|A3 | -0.080/-0.036/-0.028 | 0.026 [-0.000, 0.050] | [-0.053, -0.001] | False | None |
-| T|A1 | -0.079/0.010/-0.046 | 0.017 [-0.018, 0.047] | [-0.071, -0.017] | False | None |
-| T|B1plus | 0.020/0.136/0.050 | 0.015 [-0.036, 0.062] | [0.005, 0.093] | False | None |
-| T|B3nli | -0.026/0.066/-0.059 | -0.016 [-0.059, 0.031] | [-0.112, -0.004] | False | None |
+| DC0 | 0.853 [0.798, 0.898] | 256 | 0.874 [0.849, 0.897] | 3720 | 1.000 |
+| B8 | 0.843 [0.777, 0.904] | 143 | 0.784 [0.753, 0.813] | 823 | 0.993 |
+| DC_self | 0.842 [0.775, 0.903] | 143 | 0.784 [0.754, 0.814] | 823 | 0.993 |
+| LC_huiwalter | 0.836 [0.778, 0.887] | 256 | 0.852 [0.824, 0.877] | 3720 | 0.984 |
+| LC_onecoin | 0.834 [0.776, 0.885] | 256 | 0.850 [0.823, 0.876] | 3720 | 0.984 |
+| LC_ds_binary | 0.830 [0.773, 0.878] | 256 | 0.865 [0.840, 0.889] | 3720 | 0.984 |
+| DC | 0.827 [0.770, 0.877] | 256 | 0.874 [0.849, 0.897] | 3720 | 1.000 |
+| LC_maj | 0.797 [0.737, 0.850] | 256 | 0.859 [0.833, 0.883] | 3720 | 0.984 |
+| B1 | 0.791 [0.726, 0.843] | 256 | 0.727 [0.698, 0.755] | 3720 | 1.000 |
+| B3nliL | 0.784 [0.724, 0.835] | 256 | 0.619 [0.546, 0.687] | 260 | 1.000 |
+| B3cosL | 0.752 [0.686, 0.817] | 256 | 0.657 [0.587, 0.730] | 260 | 1.000 |
+| VC | 0.674 [0.598, 0.746] | 256 | 0.791 [0.764, 0.815] | 3720 | 1.000 |
+| TJ_L | 0.659 [0.611, 0.710] | 256 | 0.593 [0.557, 0.631] | 260 | 1.000 |
+| B7 | 0.554 [0.522, 0.590] | 256 | 0.503 [0.500, 0.505] | 3720 | 1.000 |
+| B2 | 0.549 [0.518, 0.584] | 256 | 0.500 [0.500, 0.500] | 3720 | 1.000 |
+| sp_net | 0.415 [0.358, 0.467] | 245 | 0.464 [0.449, 0.480] | 3720 | 1.000 |
 
-| cell | n (pos/neg) | LC_onecoin | LC_ds_binary | A3 | B1 | B1plus | B3nli |
-|---|---|---|---|---|---|---|---|
-| P|tn=1 | 105 (64/41) | 0.747 | 0.754 | 0.654 | 0.798 | 0.794 | 0.724 |
-| P|tn=2 | 115 (67/48) | 0.808 | 0.825 | 0.709 | 0.671 | 0.814 | 0.799 |
-| P|tn=3 | 389 (176/213) | 0.719 | 0.777 | 0.570 | 0.779 | 0.834 | 0.668 |
-| P|nbin=0-1 | 209 (116/93) | 0.793 | 0.810 | 0.659 | 0.741 | 0.796 | 0.765 |
-| P|nbin=2-3 | 241 (119/122) | 0.653 | 0.708 | 0.626 | 0.753 | 0.804 | 0.674 |
-| P|nbin=4+ | 159 (72/87) | 0.857 | 0.874 | 0.657 | 0.800 | 0.909 | 0.768 |
-| S|tn=1 | 1528 (729/799) | 0.841 | 0.876 | 0.605 | 0.713 | 0.800 | 0.656 |
-| S|tn=2 | 1773 (666/1107) | 0.794 | 0.808 | 0.583 | 0.691 | 0.794 | 0.623 |
-| S|tn=3 | 2546 (822/1724) | 0.790 | 0.808 | 0.589 | 0.719 | 0.787 | 0.619 |
-| S|nbin=0-1 | 2363 (877/1486) | 0.813 | 0.847 | 0.602 | 0.707 | 0.773 | 0.619 |
-| S|nbin=2-3 | 2093 (738/1355) | 0.770 | 0.796 | 0.583 | 0.668 | 0.775 | 0.599 |
-| S|nbin=4+ | 1391 (602/789) | 0.865 | 0.866 | 0.677 | 0.774 | 0.877 | 0.689 |
+## Pre-registered tests (fresh only; PASS requires both labels; T3 panel-only)
 
-| metric | tau_b all items [CI] | pairwise acc | tau_b panel [CI] |
+| test | panel | solver | verdict |
 |---|---|---|---|
-| LC_onecoin | 0.778 [0.667, 0.944] | 0.889 | 0.556 [0.111, 0.778] |
-| LC_maj | 0.722 [0.556, 0.833] | 0.861 | 0.278 [-0.111, 0.667] |
-| LC_ds_binary | 0.722 [0.611, 0.889] | 0.861 | 0.278 [-0.167, 0.667] |
-| A3 | 0.833 [0.667, 0.889] | 0.917 | 0.222 [-0.056, 0.667] |
-| A0 | 0.556 [0.389, 0.722] | 0.778 | 0.333 [0.056, 0.722] |
-| A1 | – – | – | 0.333 [-0.056, 0.667] |
-| B1 | 0.889 [0.722, 0.944] | 0.944 | 0.722 [0.389, 0.889] |
-| B1plus | – – | – | 0.778 [0.444, 0.944] |
-| B3nli | – – | – | 0.722 [0.333, 0.833] |
-| B1L | 0.889 [0.778, 1.000] | 0.944 | 0.333 [0.165, 0.722] |
-| B1plusL | – – | – | 0.778 [0.444, 0.889] |
-| B2 | 0.817 [0.592, 0.889] | 0.889 | – – |
-| B7 | 0.761 [0.500, 0.833] | 0.861 | 0.377 [-0.131, 0.609] |
-| RANDOM | -0.278 [-0.611, 0.111] | 0.361 | -0.056 [-0.389, 0.333] |
+| T1 Δ AUROC(base+DC − base), base=[B1,B2,B3nliL,B3cosL,B7] | 0.033 [-0.001, 0.066] LB5 0.005 | 0.118 [0.051, 0.192] LB5 0.060 | **PASS** |
+| T1 placebo (DC shuffled in strata) | -0.003 [-0.016, 0.008] | -0.001 [-0.010, 0.007] | – |
+| T1 sensitivity base=[B1,B2,B7] | 0.126 [0.066, 0.189] | 0.159 [0.129, 0.190] (all 3,720 rows) | – |
+| T2 DC − LC_maj (LB>0) | 0.030 [0.012, 0.049] LB5 0.014 | 0.015 [0.005, 0.026] LB5 0.007 | |
+| T2 DC − LC_ds_binary (point>0) | -0.003 [-0.024, 0.017] LB5 -0.021 | 0.009 [-0.000, 0.019] LB5 0.001 | |
+| T2 DC − VC (LB>0) | 0.152 [0.096, 0.209] LB5 0.104 | 0.083 [0.066, 0.102] LB5 0.069 | |
+| T2 overall | False | True | **label-dependent** |
+| T3a top-1 type (DC 0.122 vs majority added_condition 0.255 + 0.10; TJ_L 0.017) | False | panel-only | |
+| T3b recall ≥ 0.5 (added / dropped / ∀∃) | added 0.039 (n=27), dropped 0.410 (n=14), quantifier 0.252 (n=21) | – | |
+| T3c within-sentence DC vs B1 | dropped_condition: DC 1.000 B1 0.643 (pairs 7, underpowered), implication_direction_or_only: DC 1.000 B1 0.786 (pairs 7, underpowered) | – | **fail** |
+| T4 gpt-4.1-mini | DC_self−B8 0.000 (LB5 0.000); stack Δ 0.015 (LB5 -0.062); n=76 | DC_self−B8 -0.002 (LB5 -0.007); stack Δ 0.089 (LB5 0.054); n=431 | **fail** |
+| T4 llama-3.1-8b | DC_self−B8 -0.016 (LB5 -0.041); stack Δ -0.042 (LB5 -0.103); n=67 | DC_self−B8 0.005 (LB5 -0.002); stack Δ 0.125 (LB5 0.081); n=392 | **fail** |
 
-| metric | mean Δ(orig−para) [CI] | AUROC orig | AUROC para | diff [CI] |
+## Circularity (panel items whose candidate is solver-NON-equivalent to the audited gold)
+
+| metric | AUROC_P non-equiv (n=168) | AUROC_P no-bijection (n=143) |
+|---|---|---|
+| DC | 0.776 [0.679, 0.858] | 0.771 [0.678, 0.855] |
+| LC_ds_binary | 0.805 [0.718, 0.878] | 0.796 [0.702, 0.871] |
+| LC_maj | 0.752 [0.654, 0.836] | 0.744 [0.644, 0.829] |
+| B1 | 0.738 [0.659, 0.816] | 0.744 [0.652, 0.822] |
+| B3nliL | 0.799 [0.738, 0.862] | 0.809 [0.733, 0.876] |
+| VC | 0.554 [0.437, 0.671] | 0.585 [0.462, 0.714] |
+| TJ_L | 0.647 [0.575, 0.713] | 0.633 [0.563, 0.706] |
+
+## Component ladder (fresh; derived from one relation cache)
+
+| step | AUROC_P | AUROC_S |
+|---|---|---|
+| L1_uniform | 0.801 | 0.864 |
+| L12_uniform | 0.801 | 0.863 |
+| L123_uniform | 0.791 | 0.839 |
+| LC_maj | 0.797 | 0.859 |
+| LC_ds_binary | 0.830 | 0.865 |
+| LC_onecoin | 0.834 | 0.850 |
+| DC | 0.827 | 0.874 |
+| DC:L3off_UAin_uniform_caps1 | 0.801 | 0.863 |
+| DC:L3on_UAin_DS_caps1 | 0.820 | 0.859 |
+| DC+SP(oof) | 0.791 | 0.867 |
+
+## Complexity (fresh, AUROC)
+
+| stratum | DC P | B1 P | DC S | B1 S | LC_ds_binary S |
+|---|---|---|---|---|---|
+| n_tokens=<=12 | 0.856 (n=80) | 0.764 (n=80) | 0.885 (n=1403) | 0.699 (n=1403) | 0.898 (n=1403) |
+| n_tokens=13-20 | 0.824 (n=136) | 0.797 (n=136) | 0.849 (n=1808) | 0.746 (n=1808) | 0.824 (n=1808) |
+| n_tokens=>20 | 0.727 (n=40) | 0.810 (n=40) | 0.881 (n=509) | 0.750 (n=509) | 0.868 (n=509) |
+| n_quantifiers=0 | 0.923 (n=62) | 0.743 (n=62) | 0.958 (n=932) | 0.814 (n=932) | 0.943 (n=932) |
+| n_quantifiers=1 | 0.829 (n=149) | 0.820 (n=149) | 0.841 (n=2104) | 0.662 (n=2104) | 0.849 (n=2104) |
+| n_quantifiers=2+ | 0.659 (n=45) | 0.778 (n=45) | 0.847 (n=684) | 0.721 (n=684) | 0.847 (n=684) |
+| nesting_depth=<=3 | 0.875 (n=164) | 0.796 (n=164) | 0.872 (n=2364) | 0.737 (n=2364) | 0.861 (n=2364) |
+| nesting_depth=4-5 | 0.661 (n=68) | 0.732 (n=68) | 0.849 (n=924) | 0.600 (n=924) | 0.848 (n=924) |
+| nesting_depth=6+ | 0.736 (n=24) | 0.780 (n=24) | 0.817 (n=432) | 0.734 (n=432) | 0.826 (n=432) |
+| n_conditions=0-1 | 0.768 (n=74) | 0.793 (n=74) | 0.885 (n=1142) | 0.718 (n=1142) | 0.897 (n=1142) |
+| n_conditions=2 | 0.795 (n=58) | 0.806 (n=58) | 0.884 (n=914) | 0.684 (n=914) | 0.873 (n=914) |
+| n_conditions=3+ | 0.871 (n=124) | 0.787 (n=124) | 0.860 (n=1664) | 0.754 (n=1664) | 0.837 (n=1664) |
+
+panel: tercile gap DC−B1 (bottom/middle/top) = 0.088, 0.107, -0.028; slope -0.058 [-0.135, 0.022]
+
+solver: tercile gap DC−B1 (bottom/middle/top) = 0.167, 0.166, 0.118; slope -0.024 [-0.059, 0.009]
+
+## Per panel error type (faithful vs unfaithful-of-type-X; all classes n<30 → descriptive)
+
+| type | n | DC | DC0 | LC_ds_binary | B1 | B3nliL | VC | TJ_L |
+|---|---|---|---|---|---|---|---|---|
+| added_condition | 27 | 0.799 | 0.825 | 0.796 | 0.704 | 0.827 | 0.570 | 0.615 |
+| quantifier_forall_exists | 21 | 0.896 | 0.914 | 0.914 | 0.857 | 0.809 | 0.763 | 0.781 |
+| dropped_condition | 14 | 0.785 | 0.800 | 0.817 | 0.747 | 0.860 | 0.788 | 0.503 |
+| implication_direction_or_only | 12 | 0.881 | 0.923 | 0.921 | 0.860 | 0.829 | 0.664 | 0.723 |
+| quantifier_scope | 10 | 0.822 | 0.838 | 0.792 | 0.875 | 0.639 | 0.723 | 0.785 |
+| syntax_unparseable | 7 | 0.732 | 0.770 | 0.736 | 0.963 | 0.731 | 0.521 | 0.890 |
+| connective_and_or | 6 | 0.810 | 0.863 | 0.751 | 0.704 | 0.809 | 0.545 | 0.567 |
+| conflation | 6 | 0.843 | 0.840 | 0.812 | 0.714 | 0.716 | 0.883 | 0.550 |
+| wrong_constant | 3 | 0.868 | 0.865 | 0.872 | 0.770 | 0.599 | 0.805 | 0.471 |
+| negation_polarity | 3 | 0.754 | 0.883 | 0.758 | 0.996 | 0.785 | 0.612 | 0.846 |
+| other | 3 | 0.763 | 0.760 | 0.753 | 0.654 | 0.603 | 0.485 | 0.471 |
+| argument_swap | 2 | 0.930 | 0.928 | 0.976 | 0.871 | 0.789 | 0.890 | 0.700 |
+| wrong_split | 2 | 0.839 | 0.928 | 0.822 | 0.770 | 0.889 | 0.799 | 0.471 |
+
+Within-sentence paired AUROC (panel, 70 faithful×unfaithful pairs in 70 sentences): DC 0.929 [0.864, 0.979]; DC0 0.929 [0.864, 0.979]; LC_ds_binary 0.914 [0.857, 0.971]; B1 0.786 [0.714, 0.850]; B3nliL 0.721 [0.614, 0.821]; VC 0.736 [0.643, 0.829]; TJ_L 0.693 [0.636, 0.750]
+
+## Shared bias (mode-right vs mode-wrong sentences)
+
+| stratum | DC | B1 | LC_maj |
+|---|---|---|---|
+| panel mode_right (n=195) | 0.883 [0.822, 0.934] | 0.782 | 0.867 |
+| panel mode_wrong (n=61) | 0.419 [0.292, 0.557] | 0.786 | 0.433 |
+| solver mode_right (n=2167) | 0.912 [0.876, 0.946] | 0.752 | 0.899 |
+| solver mode_wrong (n=1553) | 0.517 [0.458, 0.566] | 0.554 | 0.576 |
+
+## System level (9 systems; Kendall τ_b [sentence-bootstrap CI], pairwise accuracy)
+
+| metric | τ_b panel | pairwise panel | τ_b solver | pairwise solver |
 |---|---|---|---|---|
-| B1 | 0.096 [0.068, 0.126] | 0.625 | 0.647 | -0.022 [-0.067, 0.030] |
-| B3cos | 0.070 [0.029, 0.107] | 0.626 | 0.601 | 0.025 [-0.031, 0.088] |
-| B3nli | 0.074 [0.018, 0.131] | 0.611 | 0.565 | 0.046 [-0.034, 0.129] |
-| A1 | 0.142 [0.112, 0.176] | 0.564 | 0.532 | 0.032 [-0.055, 0.121] |
-| B1L | 0.026 [0.013, 0.039] | 0.577 | 0.608 | -0.032 [-0.068, 0.010] |
-| B3cosL | 0.101 [0.071, 0.130] | 0.516 | 0.554 | -0.038 [-0.125, 0.052] |
-| B3nliL | 0.092 [0.035, 0.150] | 0.584 | 0.543 | 0.042 [-0.029, 0.117] |
-| B3cL | 0.119 [0.064, 0.179] | 0.532 | 0.551 | -0.018 [-0.073, 0.039] |
-| A1L | 0.106 [0.078, 0.137] | 0.581 | 0.510 | 0.072 [-0.016, 0.164] |
-| A3 | 0.141 [0.108, 0.175] | 0.579 | 0.525 | 0.054 [-0.052, 0.158] |
-| A0 | 0.186 [0.158, 0.214] | 0.559 | 0.529 | 0.030 [-0.062, 0.126] |
-| Ccov | 0.236 [0.201, 0.275] | 0.567 | 0.598 | -0.031 [-0.094, 0.035] |
-Recall probe (local): {"orig": {"n": 104, "mean_pred_name_recall": 0.33498168498168496, "exact_match_rate": 0.009615384615384616}, "para": {"n": 104, "mean_pred_name_recall": 0.2430631868131868, "exact_match_rate": 0.009615384615384616}, "para_vs_orig_gold": {"n": 104, "mean_pred_name_recall": 0.22875457875457877, "exact_match_rate": 0.0}, "orig_minus_para_recall": 0.09191849816849815, "orig_minus_para_recall_ci": [0.014430517399267461, 0.16908653846153854], "note": "predicate-name recall = |gold predicate names \u2229 output predicate names| / |gold names|; original sentences scored against the original gold, para
+| DC | 0.556 [0.222, 0.722] | 0.778 | 0.889 [0.667, 0.944] | 0.944 |
+| LC_ds_binary | 0.611 [0.222, 0.722] | 0.806 | 0.722 [0.556, 0.889] | 0.861 |
+| LC_maj | 0.500 [0.111, 0.667] | 0.750 | 0.611 [0.389, 0.778] | 0.806 |
+| B1 | 0.833 [0.389, 0.889] | 0.917 | 0.722 [0.611, 0.889] | 0.861 |
+| VC | 0.500 [0.167, 0.722] | 0.750 | 0.611 [0.444, 0.778] | 0.806 |
+| B2 | 0.479 [0.181, 0.761] | 0.722 | 0.704 [0.479, 0.761] | 0.833 |
+| B7 | 0.500 [0.222, 0.770] | 0.750 | 0.611 [0.457, 0.761] | 0.806 |
 
-Judge reliability: {"B1_test_retest": {"n": 300, "spearman": 0.9653877414080269, "mean_abs_diff": 0.012, "share_absdiff_gt_0.2": 0.023333333333333334, "exact_same_share": 0.9133333333333333, "flag_spearman_lt_0.8": false}, "B1_prompts": {"n_rows": 7236, "n_unique_prompts": 5858, "duplicate_share": 0.19043670536207846, "parse_rate": 1.0, "score_sd": 0.2988211270062789, "n_distinct_scores": 12}, "B1L_test_retest": {"n": 300, "spearman": 0.9737294673418578, "mean_abs_diff": 0.003166666666666666, "share_absdiff_gt_0.2": 0.0033333333333333335, "exact_same_share": 0.9733333333333334, "flag_spearman_lt_0.8": false}, "B1L_prompts": {"n_rows": 7236, "n_unique_prompts": 5858, "duplicate_share": 0.19043670536207846, "parse_rate": 1.0, "score_sd": 0.12625093794680645, "n_distinct_scores": 12}, "B1plus_self_preference": {"model": "google/gemini-2.5-pro", "own_family_systems": ["gemini-2.5-flash", "gemma-3-27b"], "n_own": 130, "n_other": 479, "auroc_own_family": 0.8525389992789775, "auroc_other_family": 0.8171537951166116, "mean_score_own_minus_other": 0.04470451260639152, "B1_mean_score_own_minus_other": 0.06038782720411118, "panel_faithful_rate_own_minus_other": 0.1164279166533454}, "B1plusL_self_preference": {"model": "Qwen/Qwen3-8B:bf16:thinking", "own_family_systems": ["qwen-2.5-7b"], "n_own": 60, "n_other": 549, "auroc_own_family": 0.8312826740345945, "auroc_other_family": 0.7871329005085907, "mean_score_own_minus_other": -0.10290528233151175, "B1L_mean_score_own_minus_other": -0.04003642987249523, "pa
-Per error type: {"added_condition": {"LC_onecoin": 0.701, "LC_ds_binary": 0.726, "A3": 0.68, "B1": 0.731, "B1plus": 0.803}, "quantifier_forall_exists": {"LC_onecoin": 0.842, "LC_ds_binary": 0.831, "A3": 0.529, "B1": 0.789, "B1plus": 0.853}, "implication_direction_or_only": {"LC_onecoin": 0.837, "LC_ds_binary": 0.873, "A3": 0.825, "B1": 0.768, "B1plus": 0.846}, "connective_and_or": {"LC_onecoin": 0.881, "LC_ds_binary": 0.932, "A3": 0.767, "B1": 0.9, "B1plus": 0.964}, "dropped_condition": {"LC_onecoin": 0.756, "LC_ds_binary": 0.823, "A3": 0.634, "B1": 0.667, "B1plus": 0.737}, "negation_polarity": {"LC_onecoin": 0.727, "LC_ds_binary": 0.764, "A3": 0.755, "B1": 0.93, "B1plus": 0.914}, "conflation": {"LC_onecoin": 0.724, "LC_ds_binary": 0.813, "A3": 0.675, "B1": 0.781, "B1plus": 0.892}, "syntax_unparseable": {"LC_onecoin": 0.707, "LC_ds_binary": 0.759, "A3": 0.704, "B1": 0.921, "B1plus": 0.931}, "quantifier_scope": {"LC_onecoin": 0.704, "LC_ds_binary": 0.736, "A3": 0.633, "B1": 0.847, "B1plus": 0.775}}
-LC_within vs onecoin: {"P": {"LC_within": 0.728, "LC_onecoin": 0.744, "B8": 0.771, "B7_jacc": 0.787, "n": 138}, "S": {"LC_within": 0.753, "LC_onecoin": 0.815, "B8": 0.748, "B7_jacc": 0.659, "n": 1299}}
-meta: {"n_panel": 609, "panel_kish_n_eff": 350.4623822842649, "n_solver_labelled": 5847, "n_soft": 6148, "n_unanimous": 442, "base_features_used": ["B1", "B2", "B3nli", "B3cos", "B7"], "local_substitutes_used": {"B3c": "B3cL"}}
-sanity: {"random_metric_P": {"auroc": 0.5121851668818771, "ci": [0.4557796938797998, 0.5661589963536119], "n": 609, "n_pos": 307, "kish_n_eff": 350.4623822842649}, "placebo_stack": {"auc_with": 0.7851857393729917, "auc_without": 0.7881041847871764, "delta": -0.0029184454141846228, "ci": [-0.007683818913507098, 0.0003287593216680677], "lb_gt_0": false}, "spearman_LC_maj_vs_LC_onecoin": 0.9017624580320839, "B2_auroc_P": {"auroc": 0.5, "ci": [0.4999999999999999, 0.5000000000000002], "n": 609, "n_pos": 307, "kish_n_eff": 350.4623822842649}, "A0_le_A3_P": false}
-lc fit: {"pairs_missing": {}, "LC_onecoin": {"pi": 0.999, "rho": 0.07460526406883873, "degenerate": false}, "LC_huiwalter": {"pi": {"0": 0.999, "1": 0.999, "2": 0.999}, "rho": 0.07466973440404648}, "LC_onecoin_str": {"pi": 0.999, "rho": 0.07427496572731085, "degenerate": false}, "LC_ds_binary": {}, "LC_granular": {"pi": 0.999, "rho": 0.07205973429373218, "degenerate": false, "pairs_touched": 14018, "pairs_merged": 244}, "LC_within:gpt-4.1-mini": {"pi": 0.9942789798237075, "rho": 0.23630032913814628, "degenerate": false}, "LC_within:llama-3.1-8b": {"pi": 0.985790161852228, "rho": 0.036479054196048195, "degenerate": false}}
+## Invariance under solver-verified meaning-preserving rewrites (400 fresh candidates)
+
+| rewrite | n verified | DC false-alarm rate (|ΔDC|>0.05 or mode flip or type change) |
+|---|---|---|
+| SYN_RENAME | 396 | 0.0025 |
+| RAND_RENAME | 399 | 0.0050 |
+| CONTRAPOS | 311 | 0.0000 |
+| DEMORGAN | 276 | 0.0000 |
+| REORDER | 313 | 0.0000 |
+
+VC on the synonym-renamed subset: false-alarm rate 0.864 (mean |ΔVC| 0.199).
+
+## Wrong-gold flag (gold as a 10th peer)
+
+AUROC of 1 − DC_gold vs the L0 verdict = 0.859 (n=450, base rate 0.458); precision@50 = 0.800.
+
+## Label quality
+
+- Wrong shipped gold (L0): malls 0.553 [0.482, 0.629] (n=170); folio 0.620 [0.540, 0.700] (n=150); proverqa 0.146 [0.092, 0.208] (n=130)
+- Correct-but-inequivalent (panel-faithful share among solver-non-equivalent panel items, weighted): 0.438 (n=168)
+- Panel-unfaithful among solver-equivalent panel items: 0.081 (n=77)
+- Solver–panel agreement (weighted): 0.689
+- Fleiss κ: L3 full-panel subset 0.538 (n=24); L0 subset 0.466 (n=45)
+- Panel weights: {"frame_n": 3933, "n_items": 256, "n_floor_capped": 148, "kish_n_eff": 201.69710288802236, "max_min_ratio": 6.0}
+
+## Coverage and cost
+
+- Relation shares over 14520 fresh greedy pairs: INCOMPARABLE 0.315, WEAKER 0.113, EQUIV 0.385, STRONGER 0.096, UNALIGNABLE 0.090, CONTRADICTORY 0.001; EQUIV non-transitivity 0.0000.
+- Coverage: DC 0.945, LC_maj 0.930, LC_ds_binary 0.930, VC 0.945, B1 1.000, B7 1.000; unparseable greedy outputs 222 (kept, scored 0.5 by DC / 0 by DC0).
+- DC: $0 when peers exist; 0.158 s solver time per item (p95 0.528 s); $0.00039 per item if the 8 peers must be generated. B1: $0.000030 per item.
+
+## Contamination (dev, entity-renamed candidates)
+
+mean DC(original) − DC(renamed) = 0.000 [0.000, 0.000] over 936 pairs (B1 in round 2: +0.096): DC is exactly name-blind.
+
+## Frontier gap (dev anchor only)
+
+stack [B1, B2, DC] OOF AUROC_P 0.796 vs gemini-2.5-pro B1plus 0.825 (B1 0.762), n=609.
+
+## Controlled perturbations of 298 solver-verified faithful anchors (mechanism evidence only)
+
+| operator | n | P(DC(anchor) > DC(mutant)) [95% CI] | DC typing accuracy | mutant still in mode | VC detection |
+|---|---|---|---|---|---|
+| NEG (negation_polarity) | 296 | 0.929 [0.909, 0.949] | 0.020 | 0.051 | 0.500 |
+| IMPL_REV (implication_direction_or_only) | 254 | 0.888 [0.860, 0.915] | 0.228 | 0.130 | 0.500 |
+| ADD (added_condition) | 254 | 0.913 [0.886, 0.939] | 0.720 | 0.079 | 0.960 |
+| ANDOR (connective_and_or) | 204 | 0.919 [0.895, 0.944] | 0.000 | 0.064 | 0.500 |
+| QUANT (quantifier_forall_exists) | 207 | 0.872 [0.838, 0.908] | 0.599 | 0.082 | 0.500 |
+| DROP (dropped_condition) | 163 | 0.887 [0.850, 0.920] | 0.497 | 0.086 | 0.923 |
+| ARG_SWAP (argument_swap) | 51 | 0.647 [0.559, 0.735] | 0.196 | 0.157 | 0.500 |
