@@ -1,0 +1,694 @@
+\begin{thebibliography}{42}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Albert and Dodd(2004)]{Albert2004}
+P.~Albert and Lori~E. Dodd.
+\newblock A Cautionary Note on the Robustness of Latent Class Models for
+  Estimating Diagnostic Error without a Gold Standard.
+\newblock In \emph{Biometrics}, volume~60, 2004.
+\newblock \doi{10.1111/j.0006-341X.2004.00187.x}.
+
+\bibitem[Amrollahi et~al.(2026)Amrollahi, Lopez, and Barrett]{Amrollahi2026}
+Daneshvar Amrollahi, Jerry Lopez, and Clark~W. Barrett.
+\newblock Faithful Autoformalization via Roundtrip Verification and Repair.
+\newblock \emph{ArXiv}, abs/2604.25031, 2026.
+\newblock \doi{10.48550/arXiv.2604.25031}.
+
+\bibitem[Brunello et~al.(2026)Brunello, Curaba, Geatti, Mignani, Montanari, and
+  Saccomanno]{Brunello2026}
+Andrea Brunello, Cristian Curaba, Luca Geatti, Michele Mignani, Angelo
+  Montanari, and N.~Saccomanno.
+\newblock Fixing FOLIO and MALLS: Verified Annotations and an LLM-assisted
+  Framework to Focus Human Relabeling.
+\newblock \emph{ArXiv}, abs/2606.02837, 2026.
+\newblock \doi{10.48550/arXiv.2606.02837}.
+
+\bibitem[Chen and Gao(2021)]{Chen2021}
+Zeming Chen and Qiyue Gao.
+\newblock Monotonicity Marking from Universal Dependency Trees.
+\newblock In \emph{International Conference on Computational Semantics}, volume
+  abs/2104.08659, 2021.
+
+\bibitem[Comanici et~al.(2025)Comanici, Bieber, Schaekermann, Pasupat,
+  Sachdeva, Dhillon, Blistein, Ram, Zhang, Rosen, Marris, Petulla, Gaffney,
+  Aharoni, Lintz, Pais, Jacobsson, Szpektor, Jiang, Haridasan, Omran, Saunshi,
+  Bahri, Mishra, Chu, Boyd, Hekman, Parisi, Zhang, Kawintiranon, Bedrax-Weiss,
+  Wang, Xu, Purkiss, Mendlovic, Deutel, Nguyen, Langley, Korn, Rossazza, Ram'e,
+  Waghmare, Miller, Keshava, Jian, Zhang, Popa, Dhamdhere, Bratanivc, Kim, Koo,
+  Alet, Chen, Nagrani, Muckenhirn, Zhang, Quick, Paveti'c, Nguyen, Carreira,
+  Elabd, roon Qureshi, Mentzer, Yang, Eisenbud, Gulati, Talius, Ni,
+  Ghalebikesabi, Yvinec, Saade, Ulrich, Blanco, Calian, Huang, van~den Oord,
+  Goyal, Chen, Rawlani, Schallhart, Lokhande, Luo, Shan, Montgomery, Krakovna,
+  Piccinini, Barak, Cui, Jia, Dektiarev, Kolganov, Huang, Chen, Wang, Austin,
+  de~Boursac, Sluzhaev, Ding, Li, Bhupatiraju, Agarwal, Kwasiborski, Sandhu,
+  Siegler, Iscen, Ben-David, Butt, Allamanis, Benjamin, Busa-Fekete,
+  Hernández-Campos, Goldshtein, Dibb, Zhang, Marsden, Radebaugh, Roller,
+  Nayyar, Austin, Terzi, Shamanna, Shaw, Singh, Luisier, Mendoncca, Aggarwal,
+  Markeeva, Fantacci, Brin, Choe, Wang, Adam, Dabush, Kiyono, Marcus, Cole,
+  Weber, Lee, Huang, Muzio, Kieliger, Le, Biles, Le, Sharma, Yang, Lamp,
+  Dopson, Hurley, Xu, Shan, Song, Tan, Senges, Zhang, You, Jun, Raposo, Ricco,
+  Yang, Chen, Gupta, Szlam, Villela, Ferng, Kasenberg, Liang, Zhu,
+  Narayanaswamy, Perot, Pucciarelli, Shekhawat, Stern, Ingale, Karp, Bahargam,
+  Goedeckemeyer, Han, Li, Tacchetti, Yu, Chakladar, Zhang, Mahdy, Gao, Johnson,
+  Phatale, Piergiovanni, Lim, Farabet, Lebsack, Guidroz, Blitzer, Duduta,
+  Madras, Li, Dincklage, Li, Mahdieh, Tucker, Jawahar, Xiao, Tarlow, Geirhos,
+  Velan, Vlasic, Bullard, Park, Gupta, Webster, Hitron, Mao, Eisenschlos,
+  Prince, D'Souza, Zheng, Nasso, Botea, Doersch, Unlu, Alberti, Svyatkovskiy,
+  Goel, Choromanski, Jiang, Nguyen, Flynn, Ćurko, Chen, Roth, Milan,
+  Habtegebriel, Narayan, Moffitt, Marcus, Anthony, McMahan, Cheon, Liu, Barnes,
+  Lew, beca Santamaria-Fernandez, Upadhyay, Akula, Hrafnkelsson, Caceres,
+  Bunner, Sokolik, Puttagunta, Moore, Isik, Hartford, Chan, Shenoy,
+  Holtmann-Rice, Park, Viola, Salcianu, Rajayogam, Stewart-Binks, Wu, Everett,
+  Xiong, Manzagol, Leung, Saroufim, Pang, Wegner, Papamakarios, Palomaki,
+  Pankov, Lai, Tubone, Zhao, Strinopoulos, Neel, Wang, Kelley, Li, mei Xu,
+  Vijayakumar, D'olimpio, Levy, Nicosia, Rozhdestvenskiy, Lao, Xie, Katariya,
+  Simon, Kumar, Hartmann, Kilgore, Lee, Mahendru, Ring, Hennigan, Lang, Cherry,
+  Steiner, Hwang, Smith, Wang, Chen, Yang, Kwei, Schlattner, Kim, Girirajan,
+  Momchev, Agarwal, Zhou, Safarli, Garrett, Pierigiovanni, Jauhari, Rochman,
+  Vashishth, Yuan, Angermueller, Blanton, ing Song, Gundavarapu, Avrahami,
+  Deines, Roy, Gupta, Semturs, Vasudevan, Veerubhotla, Sharma, Jacob, Yang,
+  Terzis, Karliner, Wright, Rojas-Esponda, Brown, Roy, Dogra, Kapishnikov,
+  Young, Kan, Rajendran, Ivanova, Deshmukh, Ho, Kwong, Ginzburg, Louis,
+  Sawhney, Petrov, Xie, Bai, Stoyanov, Fabrikant, Jayaram, Li, Heyward, Gilmer,
+  Wang, Soricut, Liu, ping Duan, Hayes, O'Brien, rav Singh~Tomar, Eiger,
+  Fatemi, Hui, Barros, Chukwuka, Butryna, Thakur, Huang, Pan, Tang, Cabi,
+  Doshi, Bakker, Bagri, Ley-Wild, Lelkes, Lees, Kane, Greene, Wu, Bornschein,
+  Surita, Hodkinson, Li, Hidey, Pereira, Ammirati, Lippe, Kraft, Han, Gerlach,
+  Wang, Panait, Han, Farris, Bi, DeBalsi, Wang, Tyen, Cohan, Zhang, Barber,
+  Chung, Kim, Kunesch, Pecht, Akazawa, Friesen, Lyon, Eslami, Wu, Tan, Song,
+  Kumar, Welty, Akol'zin, Gibson, Augenstein, Pillai, Yuen, Phan, Wang, Barr,
+  Zen, Hua, Liu, Wang, Bhatia, Xu, Elyada, Kohli, Olvs'ak, Chen, Mirhoseini,
+  Shazeer, Jakobovits, Tran, Ramsden, Bharti, Alcober, Li, Shetty, Chen,
+  Kalashnikov, Nawhal, Arik, Chen, Blokzijl, Gupta, Rubin, Swavely, Bridgers,
+  Gemp, Su, Suggala, Pluto, Cassin, Vaucher, Ji, Cai, Audibert, Sinha, Tian,
+  Farkash, Hua, Chen, Tran, Loper, Brichtova, McConnaughey, Sandhu, Leland,
+  DeCarlo, Over, Huang, Wu, Fan, Li, Lei, Sharma, Paduraru, Yu, Bovsnjak, Dao,
+  Choi, Kudugunta, Adamek, Guia, Khodaei, Feng, Zeng, Welling, Tata,
+  Butterfield, Vlasov, El-Sayed, Mishra, Sainath, Yang, Skerry-Ryan, Shar,
+  Berry, Rajendran, Kandoor, Burns, Jain, Stone, Park, Wang, Cassirer, Wang,
+  Kobayashi, Rogulenko, Govindaraj, Rybi'nski, Olmert, Evans, Huang, Xu, Shah,
+  Thurk, Sikora, Cai, Xie, Dabir, Shah, Kalb, Zhang, Prabhakara, Sabne,
+  Myaskovsky, Raunak, Huergo, Neyshabur, Clark, Zhang, Krishnan, Cohen, Tewari,
+  Lottes, Yamamori, Li, Elhawaty, Oflazer, Recasens, Luo, Nguyen, Bos, Andra,
+  Salazar, Chi, Ko, Ginsberg, Andreassen, Ruoss, Davchev, Davoodi, Liu, Kim,
+  Ontanon, To, Jia, Ke, Wang, Korsun, Ambar, Kornakov, Giannoumis, Creswell,
+  Zhou, Su, Watts, Zaks, Eltyshev, Feng, Mudgal, Kaskasoli, Love, Dasgupta,
+  Shleifer, Green, Seo, Lee, Webster, Shroff, Raboshchuk, Leal, Manyika, Erell,
+  Murphy, Xiao, Bulyenov, Walker, Collier, Kastelic, George, Prakash, Sidhwani,
+  Frolov, Hansen, Georgiev, Sosea, Apps, Kamath, Reid, Cooney, Magister, Riva,
+  Go, Chen, bastian Krause, Levine, Fornoni, Figotin, Roy, Mahmoudieh, Magay,
+  Madhavan, Miao, Ni, Fujii, Chou, Scrivener, Tsai, Mcloughlin, Selier, Lefdal,
+  Zhao, Karmarkar, Chauhan, Goel, Zhang, Jain, Haghani, Dehghani, Scott,
+  Farnese, Ili'c, Baker, Pawar, Zhong, Camp, Zeldes, Shetty, Iyer, List'ik,
+  Guo, Tang, Geller, Bucher, Ding, Shi, Muir, Grewe, Eskander, Ponce, Gong,
+  Gasaway, Khan, Gupta, Filos, Kuo, Kloboves, Beattie, Wright, Li, Jin,
+  Mariserla, Patel, Heitkaemper, Krishnan, Sharma, Bieber, Frank, Lambert,
+  Caron, Polacek, Gim'enez, Choudhury, Yu, Tavakkol, Ahuja, Och, Jenatton,
+  Skut, Richter, Gaddy, Ly, Bilenko, Umekar, Liang, Sevenich, Joshi, Mansoor,
+  Lin, Sanghai, Singh, Li, Vijayanarasimhan, Abbas, Bitton, Srinivasan,
+  Vuyyuru, Frommgen, Sun, Leith, Castaño, Strouse, Yan, Kyker, Kambala,
+  Jasarevic, Sellam, Jia, Pritzel, Raghavender, Chen, Clay, Gandhe, Kirmani,
+  Ebrahimi, Kirkwood, Mallinson, Wang, Ozturel, Lin, Upadhyay, Cohen-Addad,
+  Purser-Haskell, Xu, Songhori, Seal, berto Magni, Gueta, Zou, Guruganesh,
+  Kagohara, Nguyen, Salama, Ruiz, Frye, Zhu, Lochbrunner, Osindero, Yuan, Lee,
+  Prasad, Thiet, Calandriello, Stone, Feng, Ke, Voitovich, Sampemane, Chiang,
+  da~Wu, Bykovsky, Young, Vilnis, Dasgupta, Chawla, Cao, Liang, Toyama,
+  Payrits, Stefanoiu, Vytiniotis, Anand, Shen, Mitrevski, Tschannen, Gollapudi,
+  AishwaryaP, Leal, Shen, Fu, Wang, Kannan, Kukliansky, Yaroshenko, Grant,
+  Telang, Wood, Chronopoulou, cTifrea, Zhou, Nguyen, Ersoy, Singh, Xie, Taropa,
+  Han, Agustsson, Sozanschi, Peng, Chen, Drori, Robles, Gao, Dotiwalla, Chen,
+  Boral, Bendebury, Nham, Tar, Castro, Jiang, Liu, Halim, Baek, Wan, Liu, Cao,
+  Dai, Acharya, Sun, Xue, Joshi, Lustman, Xian, Joshi, Karkhanis, Kassner,
+  Hall, Ding, Song, Li, Zhu, Kulizhskaya, Ni, Vlaskin, Demmessie, Dery, Zaiem,
+  Huang, Fan, Gimeno, Balashankar, Kojima, Taitelbaum, Meng, Gharibian, Singla,
+  Chen, Slone, Chen, Rajayogam, Schumacher, Kotecha, Blevins, Wang, Taege,
+  Morris, Liu, Jamil, Zhang, Joshi, Ingram, Liechty, Eleryan, Baird, Grills,
+  Bansal, Han, Yalasangi, Xu, Merey, Gao, Weissenberger, Karpov, Riachi, Anand,
+  Prasad, Lamerigts, Hayes, Rogers, Guo, Shenoy, Hu, He, Liu, Zablotskaia,
+  Gubbi, Chang, Pavagadhi, Kjems, Vadali, Machado, Li, shen Wang, Ghosh, Mehta,
+  Alon, Polovets, Tonioni, Kushman, D'sa, Zhuo, Wu, Shah, Youssef, Ye, Snyder,
+  Lenc, Buthpitiya, Tung, Chang, Chen, Saxton, Lee, Zhang, Qin, Radhakrishnan,
+  Chen, Ambroszczyk, Toksoz-Exley, Zhong, Katz, O'Donoghue, von Glehn,
+  Rosenthal, Swietlik, Zhao, Fernando, Wei, Mei, Vassilvitskii, Cedillo,
+  Awasthi, Zheng, Kavukcuoglu, Laish, Pagadora, Brockschmidt, Choquette-Choo,
+  Byravan, Lu, Chen, Chen, Lee, Pasumarthi, Bhatnagar, Shah, Wu, Chen, Nado,
+  Perz, Jiang, Kao, Mallya, Vieillard, Mei, Girgin, Jordan, Ko, Agarwal, Liu,
+  Altun, de~Liedekerke, Kementsietsidis, Peng, Liu, Evci, Humphreys, Tarango,
+  Deng, Lewenberg, Aydin, Wu, Mittal, Munkhdalai, Chatziprimou, Benenson,
+  First, Ma, Li, Joulin, Tomlinson, Zhang, Nasr, Hong, Sander, Hendricks,
+  Sharma, Bolt, V'ertes, Šimša, Levinboim, Sercinoglu, Shukla, Wu, Swanson,
+  Vainstein, Bu, Wang, Julian, Yoon, Lebedev, Girgis, Bandemer, Du, Wang, Chen,
+  Xiao, Lu, Ha, Ionescu, Rowe, Matak, Lebrón, Steiner, Jain, Faruqui, Lacasse,
+  Evans, Subramaniam, Reich, Vezzani, Pandey, Stanton, Zhou, McCafferty,
+  Griffiths, Rieser, Yeganeh, Briakou, Huang, Wei, Luo, Jue, Wang, Cotruta,
+  Khan, Park, Guo, Li, Rong, Antognini, Petrushkina, Tekur, Collins, Bhatia,
+  Kwak, Chen, Neelakantan, Odisho, Peng, Nallatamby, Tulsyan, Pedregosa, Xu,
+  Lin, Wang, Wang, Douglas, Tsarfaty, Gribovskaya, Aravamudhan, Agarwal,
+  Finkelstein, Zhang, Cole, Crone, Velury, Das, Sauer, Xu, Qin, Gu, Marcus,
+  Zheng, Gansbeke, Miryoosefi, Sun, Li, Chen, Yoo, Dubov, Tomala, Yu,
+  Wesołowski, Gunjan, Cao, Luo, Sethi, Socala, Graesser, Kociský, Arturo,
+  Chen, Lee, Wang, Kong, Xu, Tripuraneni, Li, Yu, Porter, Voigtlaender, Zhang,
+  Vezer, York, Wei, Cideron, Kurzeja, Kim, Li, Pouget, Lee, Daugaard, Li,
+  Uthus, Siddhant, Cavallaro, Ganapathy, Shah, Jagerman, Stanway, Mendolicchio,
+  Xiao, Lee, Thompson, Phal, Chase, Lee, Reyes, Shrivastava, Qin, Sukkerd,
+  Odoom, Madmoni, Aslanides, Herzig, Pochernina, Zhang, Barnes, Ikeda, Li,
+  Chang, Mohamed, Sproch, Powell, Samanta, Cevid, Kovsharov, Mallick,
+  Tadepalli, Zheng, Ayoub, Noever, Reisswig, Xu, Oh, Matysiak, Blyth, Ashraf,
+  Amelot, Severson, Bevilacqua, Sano, Dyer, Roval, Sinha, Zhong, Perel,
+  Saboli'c, Mauerer, Gierke, Verzetti, Cabrera, Abdagic, Hemingray, Stone, Lee,
+  Ahmad, Raman, Shani, Lai, Firat, Waters, Ge, Shomrat, Gupta, Aggarwal,
+  Hudson, Jia, Baumgartner, Jain, Kovac, Jung, vZuvzul, Truong, Zadimoghaddam,
+  Peng, Liang, Sterneck, Lakshminarayanan, Reid, Woodman, Zhou, Wang, Coriou,
+  Narayanan, Hoover, Ma, Jindal, Sanford, Reid, Ramaswamy, Kurakin, Zimmermann,
+  Lunts, Dena, Borsos, Cohen, Zhang, Grathwohl, Dadashi, Redshaw, Kessinger,
+  Odell, Bonacina, Dai, Chen, Dubey, Sprechmann, Pajarskas, Zhou, Ahuja,
+  Thomas, Nikoltchev, Kecman, Mankalale, Ryabtsev, She, Walder, Shen, Li,
+  Parada, Panthaplackel, Kwon, Lawlor, Prabhu, Schroecker, Ranzato, Blois,
+  Kemaev, Yu, Lepikhin, Xiong, Sharifzadeh, Johnson, Willcock, Yao, Farquhar,
+  Basu, Shimokawa, Anderson, Li, Pham, Liang, Borgeaud, Moufarek, Kazawa,
+  Kutzman, Sieniek, Smoot, Wang, Axelsson, Fallen, Sundaram, Zhai, Godbole,
+  Maniatis, Wang, Shumailov, Thangaraj, Crocker, Gupta, Wu, Chen, Weisz, Smith,
+  Seyedhosseini, Fang, Luo, Yogev, Cankara, Hard, Ran, Sukthankar, Necula, Liu,
+  Cai, Banzal, Keysers, Ghemawat, Tao, Dunleavy, Chaudhary, Li, Mikuła, Lee,
+  Refice, Somandepalli, Fréchette, Bahir, Karro, Rush, Perrin, Rosgen, Yang,
+  Hu, moud Alnahlawi, Mao-Jones, Garg, Nguyen, Batsaikhan, Iturrate, Levskaya,
+  Singh, Kachra, Lu, Petek, Xu, Graham, Zilka, Karov, Kostelac, Liu, Guo, Wang,
+  Bohnet, Pitler, Bruguier, Kinoshita, Anastasiou, Jha, Liu, Connor, Wallis,
+  Pham, Bailey, Li, tze Cheng, Ma, Li, Maurya, Olszewska, Warmuth, Koh, Paulus,
+  Jonnalagadda, Piqueras, Elqursh, Brown, Shemtov, Maggiore, Xia, Foley,
+  Westberg, van~den Driessche, Soares, Kar, Quinn, Zuo, Wu, Kastner, Bortsova,
+  Bai, Mikhalap, owei Zhou, Brennan, Ramasesh, Zhuang, Maggs, Schalkwyk, Xu,
+  Huang, Howard, Brown, Xue, Shen, Albert, Jha, Zheng, Krayvanova, Hombaiah,
+  Lacombe, Vasudevan, Graur, Xie, Gandhi, Wang, Zelle, Singh, Kim, Cevey,
+  Ungureanu, Noy, Liu, Xie, aoyu Feng, Tsihlas, Formoso, Vats, Wellens, Wang,
+  Bhumihar, Ghosh, Hoffman, Lieber, Lang, Bhatia, Paine, Pyne, Votel, Elish,
+  Schillings, Panagopoulos, Yang, Raveret, Yahav, Liu, Badawy, Agrawal, Badawi,
+  Mirzazadeh, Bromberg, Ye, Liu, Sholokhova, Muraru, Balasubramaniam, Malmaud,
+  Carin, Martins, Jurenka, Botadra, Lacey, Singh, Schain, Zheng, Guyon,
+  Lavrenko, Lee, Zhou, Hassabis, Challagundla, Cheng, Mehta, Mauger, Paganini,
+  Mishra, Lee, Li, Baugher, Skopek, Chang, Zait, Menghani, Bellot, Han, Sarr,
+  Chikkerur, Sahni, Anil, Narayanan, Thekkath, Pighin, Strejvcek, Velic,
+  Bertsch, Tragut, Rong, Parrish, Bailey, Park, Albuquerque, Bapna,
+  Venkataraman, Kosik, Griesser, Deng, Andreev, Dou, Hui, Wei, Yu, Shu, Aharon,
+  Barker, Ghazi, Flennerhag, Breaux, Liu, Bilotti, Woodward, Alon, Winkler,
+  Huang, Andriopoulos, Oliveira, Koanantakool, Akin, Wunder, dos Santos,
+  Bateni, Yang, Horgan, Changpinyo, Amiri, Ma, Lee, Liang, Baddepudi, Latkar,
+  Hadsell, Xu, Mu, Han, Pope, Grover, Kim, Bhagatwala, Sun, Bansal, Globerson,
+  Nazari, Daruki, Soltau, Labanowski, Shafey, Harvey, Ahmad, Rosenfeld, Kong,
+  Pot, Tan, Wei, Langston, Prasetya, Velivckovi'c, Killam, Strudel, Ni, Zhu,
+  Archer, Kopparapu, Nguyen, Parisotto, Masoom, Addepalli, Grimstad, Hu, Moore,
+  Hassidim, Hou, Raghavachari, Lichtarge, Brown, Dib, Ponomareva, Fu, Zhang,
+  Rahman, Iljazi, Leurent, Dulac-Arnold, Du, Asawaroengchai, Jin, Gruzewska,
+  Ji, Uria, Freitas, Barham, Beltrone, Campos, Yan, Kovelamudi, Nguyen, Davies,
+  Wu, Egyed, Toutanova, Attaluri, Fei, Stys, Brahma, Izzard, Velusamy,
+  Lundberg, Zhuang, Sequeira, Santoro, Amid, Aharoni, Ye, Sundararajan, Yu,
+  Ling, Spencer, Song, Djolonga, Kirov, Gupta, Bissacco, Meyer, Bhutani, Dai,
+  Wang, Liu, Sreevatsa, Tan, Wang, Kim, Wang, Irpan, Xiao, Fort, He, Gurney,
+  Gale, Ma, Roy, Patraucean, Bilal, Ghiasi, Hosseini, Johnson, Li, Tay, Beyret,
+  Milli-can, Broder, Lunayach, Swisher, Vuvsak, Parkinson, Tessler, Gilady,
+  Song, Dafoe, Raimond, Yamaguchi, Karo, Nielsen, Kilgour, Dusenberry, Mathews,
+  Choi, Qiao, Mehta, Potluri, Knutsen, Liu, Tan, Sengupta, Gopalakrishnan,
+  Toki, Chiang, Burrows, Vesom, Ahmed, Labzovsky, Vashishtha, Singh, Sharma,
+  Ma, Xie, Talluri, Forbes-Pollard, Selvan, Wee, Matthey, Funkhouser,
+  Gopavarapu, Proleev, Li, Thomas, Kolipaka, Jia, Kakarla, Sunkara, Puigcerver,
+  Sheth, Graves, Wang, Khan, Kang, Buch, Zhang, Savant, Soergel, Lee, Friso,
+  Dong, Arya, Chandrakaladharan, Schenck, Billock, Iyer, Bakalov, Baker, Ruiz,
+  Chandorkar, Trinh, Miecnikowski, Zhou, Huang, Nie, Shah, Thapliyal, Haves,
+  Wang, Shaham, Morris-Suzuki, Radpour, Berrada, Strohmann, Yan, Shen, Goenka,
+  Warkentin, Devi'c, Belov, Webson, Yenugula, Datta, Chang, Ghelani, Kumar,
+  Perot, Lo, Song, Schmit, Chen, Bashlovkina, Pan, Mincu, Roit, Edkins, Davis,
+  Li, Horn, Li, Pradeepkumar, Doi, Zhu, Padmanabhan, Verma, Liu, Chen,
+  Velimirovi'c, Reynolds, Agrawal, Sukhanov, Modi, Goyal, Palowitch,
+  Khajehnouri, Lowe, Klinghoffer, Silver, Tran, Schumann, Piccinno, Liu,
+  Luvci'c, Yang, Kumar, Kannan, Kotikalapudi, Bansal, Fuchs, Hosseini,
+  Abdelhamed, Bloxwich, Yu, Sang, Thornton, Gill, Liu, Shejwalkar, Lin, Yan,
+  Han, Buschmann, Pliskin, Xing, Tatineni, Zhang, Hsiao, Buttimore, Wu, Li,
+  Kovacs, Yeung, Huang, Cohen, Brownfield, Nowak, Rodriguez, Shi, Hasselt, Cen,
+  Ghosal, Majmundar, Yu, Chen, Sinopal-nikov, Zhang, Galić, Lu, Zheng, Song,
+  Wang, Citovsky, Gawde, Galatzer-Levy, Silver, Balazevic, Das, Majumder, Cong,
+  Dutta, Tran, Wan, Yuan, Eppens, Walton, Kim, Ragan, Cobon-Kerr, Liu, Wang,
+  Petrini, Rae, Shivanna, Xiong, Lee, Coquinot, Gu, Patel, Hechtman, Boag,
+  Jankowski, Wertheim, Lee, Covington, Noga, Sobell, Vasanth, Bono, Nagpal,
+  Fan, García, Soparkar, Turker, Howard, Menon, Chen, Verma, Pchelin,
+  Rajamani, Dalibard, Ramalho, Guo, Badola, Bang, Rauschmayr, Proskurnia,
+  Dasari, Chen, Sushkov, Hauth, Sho, Singh, Chandra, Culp, Dylla, Bachem,
+  Besley, Zhao, Lillicrap, Wei, Jishi, Niu, Rrustemi, Kaufman, Poplin, Zhao,
+  Truong, Bharadwaj, Hlavnova, Stickgold, Schmid, Stephanov, Leng, Liu,
+  Hussenot, Dodhia, Franco, Katzen, Sharma, Cogan, Yang, Ray, Caelles, Yan,
+  Kumar, Gillick, Wong, Ainslie, Hoech, Arnold, Abolafia, Dragan, Hora, Hu,
+  Guseynov, Lu, Leichner, Rao, Goyal, Baddi, Diaz, McConnell, Bain, Abernethy,
+  Yan, Schaeffer, Vicol, Thompson, Arenas, Bellaiche, Barrio, Zinke, Patana,
+  Mehta, Kearns, Ruderman, Pollom, D'Ambrosio, Hope, Yu, Gesmundo, Lee,
+  Rosenberg, Zhou, Li, Garmon, Wu, Huda, Fidel, Baeuml, Li, Kirk, May, Tu,
+  Carthy, Fukuzawa, Aperghis, Yeh, Yoshino, Li, Myers, Yao, Limonchik, Ryu,
+  Saxena, Goldin, Zhao, Rhodes, Zhu, Tyam, Howard, Byrd, Ma, Wu, Mullins, Wang,
+  Amini, Baur, Mao, Venugopalan, Song, Ding, Collins, Reddi, Shum, Rusu,
+  Zintgraf, Chan, Goenka, Blondel, Collins, Pan, Giustina, Chinaev, Schuler,
+  Zheng, Valfridsson, Loo, Yakubovich, Smith, Jiang, Munoz, Barcik, Bansal,
+  Yang, Du, Duque, Phuong, Belias, Lad, Liu, Schuster, Duddu, Hu, Kunkle,
+  Watson, Tolins, Smith, Teplyashin, Bingham, Ritter, Andreetto, Pitta, Patel,
+  Viswanadha, Strohman, Ionescu, Luo, Kalley, Wiesner, Deutsch, Lockhart, Choy,
+  Dangovski, Sitawarin, Graves, Lando, van Amersfoort, Elue, Huo, Moradi,
+  Tarbouriech, Michalewski, Ye, Kim, Druinsky, Altch'e, Chen, Dwornik, Juan,
+  Moroshko, Toma, Kahn, Qian, Sieb, Cai, Goldenberg, Netrapalli, Raghuram,
+  Gong, Fan, Palmer, Matias, Gabeur, Pathak, Ouyang, Metzler, Bacon,
+  Venkatachary, Thiagarajan, Cullum, Ofek, Šakėnas, Hammad, Magalhaes,
+  Daswani, car Chang, Popat, Li, Jalan, Hou, Lipschultz, He, Jia, Sessa,
+  Kolhar, Wong, Singh, Haas, Whang, Klimczak-Pluci'nska, Rotival, Chung, Hua,
+  Siddiqui, Serrano, Chen, Porter, Bai, Shivam, Arora, Talukdar, Cobley,
+  Bhardwaj, Gladchenko, Green, Guu, Fischer, Wu, Wang, Singhal, Matejovicova,
+  Martens, Li, Patel, Kemp, Pan, Wang, Chen, Alayrac, Potti, Gemzer, Ie,
+  McKinney, Saeki, Chou, Lamblin, Mah, Fisher, Chadwick, Stritar, Sarvana,
+  Hogue, Shtefan, Hashemi, Xu, Gu, Vikram, Chang, Ramos, Kilpatrick, Xi,
+  Brennan, Sun, hishek Jindal, Gog, Chen, Wu, Lee, Kopalle, Bhojanapalli,
+  Vinyals, Potikha, Ayan, Yuan, Riley, Stańczyk, Kishchenko, Wang, Garrette,
+  Yang, Feinberg, Carey, Azizi, Shah, Moreira, Shi, Feldman, Salesky, Lampe,
+  Pappu, Kim, Adler, Caciularu, Walker, Xu, Blau, Scandinaro, Huang,
+  El-Husseini, Sinha, Ren, Tobin, Sundberg, Sohn, Yadav, Ly, Xue, Xiong,
+  Soudagar, Mondal, Khadke, Ren, Vargas, Bileschi, Chakera, Wang, Wang,
+  Halpern, Jiang, Sindhwani, Petrov, Ponnuramu, Mehta, Watanabe, Chan,
+  Wisniewski, Pham, Zhang, Li, Cesare, Khurshudov, Vasiloff, Tan, Ashwood,
+  Shahriari, Majzoubi, Tanzer, Kozlova, Alazard, Lee-Thorp, Phu, Tian, Ahn,
+  Crawford, Lax, Yuan, Naim, Ross, Ferludin, Guo, Banino, Soyer, Ju,
+  Rogozi'nska, Malhi, Valentine, Balle, Kulshreshtha, Kula, Song, Austin,
+  Schultz, Hirsch, Douillard, Reddy, Fink, Yue, Gupta, Zhang, Rink, Mcduff,
+  Meng, Gyorgy, Razeghi, Liang, Osawa, Atias, Eyal, Hill, Grigorev, Wang,
+  Kulkarni, Soh, Lobov, Charles, Lall, Hashimoto, Kessler, Gomes, Mariet,
+  Driess, Agostini, Akbulut, Hu, Ikonomidis, Caveness, Audhkhasi, Agrawal,
+  Bica, Senter, Mudigonda, Chen, Ye, Wang, Svensson, Franken, Newlan, Lao,
+  Schnider, Alabed, Kready, Emond, Halumi, Zaman, Ye, Raisinghani, Meshram,
+  Chang, Rawat, Stjerngren, Levi, Wang, Long, Rasquinha, Hand, Mavalankar,
+  Agubuzu, Roy, Chen, Wilkiewicz, Zhou, Jastrzębski, Lago, Boppana, Ko,
+  Prendki, Su, Li, Rutherford, Rao, Comanescu, Puigdomènech, Chen, Petrova,
+  Chan, Milutinovic, Ferreira, Cheng, Zhang, Dey, Yang, Sampath, Le, Zhou, Lin,
+  Lam, Kaeser-Chen, Hui, Hirsch, Eccles, Mustafa, Rijhwani, Rivière, Xu, Wang,
+  Geng, ance Si, Khare, Kim, Mirrokni, Lee, Baatarsukh, Braun, Wang, Pallavi,
+  Tanburn, Zhu, Li, Ariafar, Goldberg, Burke, Mirylenka, Guo, Ronneberger,
+  Vogel, Cheng, Shetty, Jia, Jimma, Fry, Xiao, Sundermeyer, Burnell, Assael,
+  Pinto, Chen, Sathyanarayana, Cho, Lu, Agarwal, Basu, Gonzalez, Shah, Wei,
+  Mahaarachchi, Agrawal, Rissa, Donchev, Leal-Cavazos, Hutter, Mircea, Jacovi,
+  Ahmed, Zhang, Hu, Chen, Kanerva, Desjardins, Lee, Parotsidis, Mujika, Weyand,
+  Snoek, Chick, Chen, Chang, Mahintorabi, Wang, Powell, Keller, Gupta, Sha,
+  Garg, Heess, Weisz, Hardin, Wydrowski, Coleman, Zainullina, Joshi, Epasto,
+  Spitz, Xiong, Zhao, Klimovskiy, Zheng, Ferret, Yona, Khawaja, Lespiau,
+  Krikun, Shakeri, Cour, Li, Krivokon, Suh, Hofer, Abdallah, Putikhin,
+  Akerlund, Lattanzi, Kumar, Settle, Srivastava, Campbell-Ajala, Rosseel,
+  Istin, Dikkala, Rao, Young, Lin, Bhaswar, Wang, Elias, Muralidharan, Keeling,
+  Du, Gopal, Dibb, Blundell, Delakis, Liang, Ribeiro, Karadzhov, Garrido,
+  Bapna, Cao, Sadovsky, Tafti, Guez, Devin, Di, Xing, Xu, Lin, Chu, Ponda,
+  Helmholz, Yang, Gao, Javanmardi, Farhan, Ramírez, Figueira, Sim, Bahat,
+  Vaswani, Yuan, Zhang, Rechis, Dai, Oguntebi, Cordell, Rives, Tekelioglu,
+  Kumar, Zhang, Zhou, Savinov, Leach, Tudor, Ganapathy, Zheng, Rossini,
+  Axelrod, Autef, Zhu, Zheng, Zhang, Sun, Ren, Tomašev, Kannen, Sinha, Chen,
+  O'Bryan, Pak, Kusupati, Yang., Ramachandran, Griffin, Kim, Neubeck, Schiff,
+  Spalink, Ling, Nair, Joung, Deng, Bhoopchand, Aroyo, Duerig, Griffith,
+  Barth-Maron, Adès, Haig, Taly, Song, Michel, Orr, Weesner, Tallec, Bostock,
+  Niemczyk, Twigg, Verma, Vallu, Wang, Gelmi, Sodhia, Chuklin, Goldman, George,
+  Bai, Zhang, Sirkovic, Nehoran, Pundak, Mu, Chen, Greve, Zacchello, Amos, Ge,
+  Noland, Bishop, Dudek, Namiki, Buchatskaya, Li, Sadigh, Samsikova, Malkin,
+  Vincent, David, Willoughby, Meadowlark, Gao, Li, Apte, Jhindal, Lin, Polozov,
+  Wang, Mery, Anirudh, Yerram, Stevens, Liu, Fiedel, Sutton, Johnson, Song,
+  Baumli, Shabat, Mohammad, Liu, Selvi, Zhou, Manshadi, Ko, Chen, Bendersky,
+  Mendez, Kothari, Zandieh, Huang, Andor, Pavlick, Brusilovsky, Harlalka,
+  Goldman, Lampinen, Li, Ushio, Gupta, Zhang, Fu, Sewak, Denk, Borovik, Jou,
+  Zipori, Jain, Bai, Luong, Tompson, Li, Liu, Powell, Shen, Feng, Chole, Yu,
+  Chow, Yin, Malmi, Xiao, Pande, Paul, Santo, Dostmohamed, Guadarrama,
+  Phillips, Pillai, Yona, Ghafouri, Lahoti, Lee, Madeka, Sezener, Tokumine,
+  Collister, Cao, Shin, Kalra, Beak, Nottage, Nakashima, Jurin, Sehwag, Gaba,
+  Zeng, McKee, Pereira, Yakar, Panda, Dhar, Zhong, Sohn, Brand, Sjoesund,
+  Carpenter, Lin, Thakoor, Wainwright, Chaugule, Srinivasan, Zhu, Orlando,
+  Weber, Wahid, Baechler, Suman, Mitrovi'c, Taubman, Yu, King, Dillon, Yip,
+  Varma, Izo, Bolelli, de~Balle~Pigem, Trapani, Iliopoulos, Paszke, Ranka, Zou,
+  Pongetti, McGiffin, Siegman, Galt, Hemsley, vZuvzi'c, Carbune, Li, Ott,
+  Quitry, Torres, Chervonyi, Tsai, Eruvbetine, Yang, Denton, Walker, Andavci'c,
+  Shtacher, Premachandran, Lehri, Baetu, Yates, Lamprou, Iinuma, Mihailescu,
+  Albrecht, Dave, Sargsyan, Perozzi, Manning, Zhang, Vnukov, Mordatch,
+  Macherey, Kappedal, Stephan, Tripathi, Macherey, Qian, Bhowmick, Azizi,
+  Leblond, Garlapati, Knight, Wiethoff, Hung, Angelova, Evangelopoulos, Janus,
+  Paparas, Rahtz, Caluwaerts, Sampathkumar, Jarrett, Noghabi, Miech, Yeung,
+  Clark, Prior, Zheng, Pouget-Abadie, Bhattacharya, Krishna, Bishop, Yuan,
+  Deng, Sathe, Krasowiak, Chelba, Hsieh, Vodrahalli, Liu, Koppe, Khalifa,
+  Litchev, Charoenpanit, Roberts, Yadav, Onoe, Ivanov, Mohabey, Birodkar,
+  Raki'cevi'c, Sermanet, Mehta, Subudhi, Choma, Ng, He, Wang, Kementsietsidis,
+  Gu, Gupta, Nystrom, Kazemi, Chung, Cano, Dhawan, Wang, Xia, Yacovone, Jia,
+  Chen, Ivanov, Sheshan, Dalmia, Stradomski, Yin, Haykal, Wang, Duan, Bulut,
+  Kochanski, MacDermed, Godbole, Weng, Chen, Fellinger, Mehran, Suo, Husain,
+  He, Patel, Howland, Parker, Nguyen, Maddineni, Rawles, Khan, Cohen-Ganor,
+  Mandhane, Wu, Kuang, Comcsa, Ganeshan, Sedghi, Bloniarz, Pierse, Briukhov,
+  Mitrichev, Gergely, Zhan, Zhou, Saxena, Lu, Dean, Gupta, Perez-Nieves, Wu,
+  McLean, Liang, Jindal, Tsitsulin, Yu, Alarakyia, Schaul, Patil, Sung, Peake,
+  Yu, Behbahani, Co-Reyes, Ansell, Sun, Barbu, Lee, Noury, Allingham, Piot,
+  Sharma, pher Yew, Korotkov, Xu, Brady, Petrovic, Mourad, Cui, Gupta, Schuh,
+  Khanna, Goldie, Arora, Zubov, Stuart, Epstein, Zhu, Liu, Stuken, Wang,
+  Misiunas, Guo, Gill, Hartman, Nabulsi, rko Roy, Faust, Riesa, Withbroe, Wang,
+  Tagliasacchi, Marzoca, Noraky, Toropov, Mehrotra, Raad, Deur, Xu, Monteiro,
+  Wu, Luan, Ritter, Li, Garnes, He, Zlocha, Zhu, Hessel, Wu, Babbula, Kawamoto,
+  Li, Hassen, Wang, Wieder, Freedman, Zhang, Bai, Yu, Reitter, Sheng, Wirth,
+  Kini, Damen, Gao, Hornung, Voznesensky, Roark, Kuncoro, Zhou, Shah, Brohan,
+  Chen, Wendt, Rim, Rubenstein, Halcrow, Liu, Geri, Sung, Shapiro, Bijwadia,
+  Duvarney, Sorokin, Natsev, Ingle, Gupta, Maeng, Ndebele, Zhu, Anklin, Lee,
+  Liu, Akulov, Gupta, Su, Prost, Liu, Kovalev, Moreno, Scholz, Redmond, Zhou,
+  Castro-Ros, Pinto, Kharrat, Yarom, Sapu-tro, Bulian, Caine, Liu, Abdolmaleki,
+  Iqbal, Misiunas, Sirotenko, Garg, Bensky, Gui, Wang, Koster, Bernico, Huang,
+  Thoppilan, Cohn, Golan, Zhou, Rosenberg, Freitag, Gangwani, Tsang, Shukla,
+  Ren, Giang, Zou, Elisseeff, Lan, Dua, Lall, Shyam, Garcia, Nguyen, Guzmán,
+  Maschinot, Maggioni, Chang, Gregor, Weerts, Venkatesan, Damoc, Liu,
+  Wassenberg, Ho, Roelofs, Hadian, Aubet, Liang, Lachgar, Karmon, Cheng,
+  V'azquez-Reina, Chen, Dai, Brock, Agrawal, Pang, Garst, Sanchez-Vargas,
+  Rendulic, Ayyar, Ravznatovi'c, Ma, Vij, Sharma, Balakrishna, Liu, Mackinnon,
+  Baltateanu, Poklukar, Ibagon, Ji, Jiao, Noble, Stokowiec, Li, Dean, Lindner,
+  Omernick, Chiafullo, Dimarco, Rodrigues, Selo, Honke, Wu, He, Hillier,
+  Mohananey, Piratla, Ye, Malik, Riedel, Albanie, Yang, Vassigh, Bauzá, Li,
+  Tao, Wichers, Maksai, Ittycheriah, Mcilroy, Seybold, Goodman, Datta,
+  Hernandez, Shi, Kochinski, Bulanova, Franko, Sazanovich, Fitzgerald, Kacham,
+  Raghvendra, Hellendoorn, Grushetsky, Salazar, Lazaridou, Chang, Peter, Kafle,
+  Dauphin, Rao, Graziano, Shafran, Liao, Ding, Yan, Chu, Fu, Roulet, Rasskin,
+  Williams, Drath, Mossin, Hoffmann, Orbay, Bertolini, Sheftel, Chiu, Xue,
+  Kuang, Naeem, Nath, Nti, Culliton, Krishnakumar, Isard, Sun, Chakrabarti,
+  Clement, Cohen, Wongpanich, Oh, Murthy, Zheng, Hamrick, Bunyan, Ganesh,
+  Gupta, Frostig, Wieting, Malkov, Marcenac, Lai, Tang, Saleh, Zubach,
+  Kulkarni, Zhou, Zayats, Ding, Tripathi, Pramanik, Zochbauer, Ganapathy,
+  Misra, Behrman, Vallet, Zhang, Sridhar, Jin, Gehman, Babaeizadeh, Põder,
+  Goel, Jain, Nasir, Mittal, Dozat, Ardila, Severyn, Pardo, Jerome, Qin,
+  Rouil-lard, Yazdanbakhsh, Zhang, Agrawal, Shivakumar, Lu, Kallakuri,
+  Chhaparia, Rao, Kwong, Fadeeva, Nigam, Virin, Zhang, Venkatraman, Gunel,
+  Wilson, Wang, Gupta, Gupta, Taiga, Mohamed, Fritz, Rodríguez, Ghahramani,
+  Askham, Belenki, Zhao, Gupta, Jastrzkebski, Kosakai, Katircioglu, Schneider,
+  Panigrahy, Bousmalis, Grabowski, Ramachandran, Hegde, Roșca, Scarpati,
+  Axiotis, Xu, Gleicher, Michaely, Sharma, Jain, Hirnschall, Marian, Jia,
+  Mather, Gupta, Qiu, Nayakanti, Ionita, Zheng, Loher, Shuster, Petrovski,
+  Sharma, Chaabouni, Yeh, An, Gupta, Schwarcz, Ellis, Conway-Rahman, Snaider,
+  Zhai, Atwood, Golovin, Peng, Te, Xia, Scellato, Malihi, Bravzinskas, Ion,
+  Jun, Swirhun, Mariooryad, Sun, Chien, Coaguila, Brand, Gao, Kwiatkowski,
+  Aharoni, Lee, vZani'c, Zhang, Ethier, Nikolaev, Nair, Shalom, Fitoussi,
+  Gupta, Liu, Cattle, Bolukbasi, Murdoch, Huot, Li, Hahn, Khandelwal, Benzing,
+  Conmy, Simanovsky, Beaufays, Weinstein, Chen, Leonhard, and
+  Ramabhadran]{Comanici2025}
+Gheorghe Comanici, E.~Bieber, Mike Schaekermann, Ice Pasupat, Noveen Sachdeva,
+  Inderjit~S. Dhillon, Marcel Blistein, Ori Ram, Dan Zhang, Evan Rosen, et~al.
+\newblock Gemini 2.5: Pushing the Frontier with Advanced Reasoning,
+  Multimodality, Long Context, and Next Generation Agentic Capabilities.
+\newblock \emph{ArXiv}, abs/2507.06261, 2025.
+
+\bibitem[Dawid and Skene(1979)]{Dawid1979}
+A.~Dawid and A.~Skene.
+\newblock Maximum Likelihood Estimation of Observer Error‐Rates Using the EM
+  Algorithm.
+\newblock \emph{Journal of The Royal Statistical Society Series C-applied
+  Statistics}, 28:\penalty0 20--28, 1979.
+\newblock \doi{10.2307/2346806}.
+
+\bibitem[de~Moura and Bjørner(2008)]{Moura2008}
+L.~D. de~Moura and Nikolaj~S. Bjørner.
+\newblock Z3: An Efficient SMT Solver.
+\newblock In \emph{International Conference on Tools and Algorithms for
+  Construction and Analysis of Systems}, pages 337--340, 2008.
+\newblock \doi{10.1007/978-3-540-78800-3_24}.
+
+\bibitem[Fan et~al.(2024)Fan, Ruan, Mechtaev, and Roychoudhury]{Fan2024}
+Zhi-Yu Fan, Haifeng Ruan, Sergey Mechtaev, and Abhik Roychoudhury.
+\newblock Oracle-Guided Program Selection from Large Language Models.
+\newblock In \emph{International Symposium on Software Testing and Analysis},
+  2024.
+\newblock \doi{10.1145/3650212.3680308}.
+
+\bibitem[Farquhar et~al.(2024)Farquhar, Kossen, Kuhn, and Gal]{Farquhar2024}
+Sebastian Farquhar, Jannik Kossen, Lorenz Kuhn, and Y.~Gal.
+\newblock Detecting hallucinations in large language models using semantic
+  entropy.
+\newblock In \emph{Nature}, volume 630, pages 625 -- 630, 2024.
+\newblock \doi{10.1038/s41586-024-07421-0}.
+
+\bibitem[Ganguly et~al.(2025)Ganguly, Singh, Sankar, Zhang, Zhang, Iyengar,
+  Han, Sharma, Kalyanaraman, and Chaudhary]{Ganguly2025}
+Debargha Ganguly, Vikash Singh, Sreehari Sankar, Biyao Zhang, Xuecen Zhang,
+  Srinivasan Iyengar, Xiaotian Han, Amit Sharma, S.~Kalyanaraman, and Vipin
+  Chaudhary.
+\newblock Grammars of Formal Uncertainty: When to Trust LLMs in Automated
+  Reasoning Tasks.
+\newblock In \emph{Neural Information Processing Systems}, volume
+  abs/2505.20047, 2025.
+\newblock \doi{10.48550/arXiv.2505.20047}.
+
+\bibitem[Han et~al.(2022)Han, Schoelkopf, Zhao, Qi, Riddell, Benson, Sun,
+  Zubova, Qiao, Burtell, Peng, Fan, Liu, Wong, Sailor, Ni, Nan, Kasai, Yu,
+  Zhang, Joty, Fabbri, Kryscinski, Lin, Xiong, and Radev]{Han2022}
+Simeng Han, Hailey Schoelkopf, Yilun Zhao, Zhenting Qi, Martin Riddell, Luke
+  Benson, Lucy Sun, E.~Zubova, Yujie Qiao, Matthew Burtell, et~al.
+\newblock FOLIO: Natural Language Reasoning with First-Order Logic.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, volume abs/2209.00840, 2022.
+\newblock \doi{10.48550/arXiv.2209.00840}.
+
+\bibitem[He et~al.(2021)He, Gao, and Chen]{He2021}
+Pengcheng He, Jianfeng Gao, and Weizhu Chen.
+\newblock DeBERTaV3: Improving DeBERTa using ELECTRA-Style Pre-Training with
+  Gradient-Disentangled Embedding Sharing.
+\newblock In \emph{International Conference on Learning Representations},
+  volume abs/2111.09543, 2021.
+
+\bibitem[Hui and Walter(1980)]{Hui1980}
+S.-L. Hui and Stephen~D. Walter.
+\newblock Estimating the error rates of diagnostic tests.
+\newblock In \emph{Biometrics}, volume 36 1, pages 167--71, 1980.
+\newblock \doi{10.2307/2530508}.
+
+\bibitem[Karia et~al.(2024)Karia, Bramblett, Dobhal, and Srivastava]{Karia2024}
+Rushang Karia, Daniel Bramblett, D.~Dobhal, and Siddharth Srivastava.
+\newblock ∀uto∃∨∧L: Autonomous Evaluation of LLMs for Truth Maintenance
+  and Reasoning Tasks.
+\newblock In \emph{International Conference on Learning Representations},
+  volume abs/2410.08437, 2024.
+\newblock \doi{10.48550/arXiv.2410.08437}.
+
+\bibitem[Klopfenstein et~al.(2025)Klopfenstein, He, Tremante, Wang, Narodytska,
+  and Wu]{Klopfenstein2025}
+Rocky Klopfenstein, Yang He, Andrew Tremante, Yuepeng Wang, Nina Narodytska,
+  and Haoze Wu.
+\newblock SpotIt: Evaluating Text-to-SQL Evaluation with Formal Verification.
+\newblock \emph{ArXiv}, abs/2510.26840, 2025.
+\newblock \doi{10.48550/arXiv.2510.26840}.
+
+\bibitem[Kuhn et~al.(2023)Kuhn, Gal, and Farquhar]{Kuhn2023}
+Lorenz Kuhn, Y.~Gal, and Sebastian Farquhar.
+\newblock Semantic Uncertainty: Linguistic Invariances for Uncertainty
+  Estimation in Natural Language Generation.
+\newblock In \emph{International Conference on Learning Representations},
+  volume abs/2302.09664, 2023.
+\newblock \doi{10.48550/arXiv.2302.09664}.
+
+\bibitem[Lee et~al.(2025)Lee, Liu, Ma, Han, Wang, Ji, and Hockenmaier]{Lee2025}
+Jinu Lee, Qi~Liu, Runzhi Ma, V.~Han, Ziqi Wang, Heng Ji, and J.~Hockenmaier.
+\newblock Entailment-Preserving First-order Logic Representations in Natural
+  Language Entailment.
+\newblock In \emph{Annual Meeting of the Association for Computational
+  Linguistics}, volume abs/2502.16757, 2025.
+\newblock \doi{10.48550/arXiv.2502.16757}.
+
+\bibitem[Li et~al.(2024)Li, Wu, Li, Wei, Zhang, Yang, and Ma]{Li2024}
+Zenan Li, Yi-Fan Wu, Zhaoyu Li, Xinming Wei, Xian Zhang, Fan Yang, and Xiaoxing
+  Ma.
+\newblock Autoformalize Mathematical Statements by Symbolic Equivalence and
+  Semantic Consistency.
+\newblock In \emph{Neural Information Processing Systems}, volume
+  abs/2410.20936, 2024.
+\newblock \doi{10.48550/arXiv.2410.20936}.
+
+\bibitem[Liu et~al.(2026)Liu, Parthasarathy, and Murali]{Liu2026}
+Hongyi Liu, Madhusudan Parthasarathy, and Adithya Murali.
+\newblock Faithful Autoformalization of Natural Language Assertions.
+\newblock \emph{ArXiv}, abs/2607.13303, 2026.
+\newblock \doi{10.48550/arXiv.2607.13303}.
+
+\bibitem[Lu et~al.(2024)Lu, Wan, Huang, Xiong, Liu, and Guo]{Lu2024}
+Jianqiao Lu, Yingjia Wan, Yinya Huang, Jing Xiong, Zhengying Liu, and Zhijiang
+  Guo.
+\newblock FormalAlign: Automated Alignment Evaluation for Autoformalization.
+\newblock In \emph{International Conference on Learning Representations},
+  volume abs/2410.10135, 2024.
+\newblock \doi{10.48550/arXiv.2410.10135}.
+
+\bibitem[Mohammad and Sheikh(2026)]{Mohammad2026}
+Noor Islam~S. Mohammad and Tamim Sheikh.
+\newblock The Faithfulness Gap: Certifying Semantic Equivalence Between
+  Natural-Language and Formal Mathematical Statements.
+\newblock \emph{ArXiv}, abs/2606.16541, 2026.
+\newblock \doi{10.48550/arXiv.2606.16541}.
+
+\bibitem[Nahum et~al.(2024)Nahum, Calderon, Keller, Szpektor, and
+  Reichart]{Nahum2024}
+Omer Nahum, Nitay Calderon, Orgad Keller, Idan Szpektor, and Roi Reichart.
+\newblock Are LLMs Better than Reported? Detecting Label Errors and Mitigating
+  Their Effect on Model Performance.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, volume abs/2410.18889, 2024.
+\newblock \doi{10.48550/arXiv.2410.18889}.
+
+\bibitem[Olausson et~al.(2023)Olausson, Gu, Lipkin, Zhang, Solar-Lezama,
+  Tenenbaum, and Levy]{Olausson2023}
+Theo~X. Olausson, Alex Gu, Benjamin Lipkin, Cedegao~E. Zhang, Armando
+  Solar-Lezama, Josh Tenenbaum, and Roger Levy.
+\newblock LINC: A Neurosymbolic Approach for Logical Reasoning by Combining
+  Language Models with First-Order Logic Provers.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, pages 5153--5176, 2023.
+\newblock \doi{10.18653/v1/2023.emnlp-main.313}.
+
+\bibitem[Pan et~al.(2023)Pan, Albalak, Wang, and Wang]{Pan2023}
+Liangming Pan, Alon Albalak, Xinyi Wang, and William~Yang Wang.
+\newblock Logic-LM: Empowering Large Language Models with Symbolic Solvers for
+  Faithful Logical Reasoning.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, volume abs/2305.12295, 2023.
+\newblock \doi{10.48550/arXiv.2305.12295}.
+
+\bibitem[Panickssery et~al.(2024)Panickssery, Bowman, and
+  Feng]{Panickssery2024}
+Arjun Panickssery, Samuel~R. Bowman, and Shi Feng.
+\newblock LLM Evaluators Recognize and Favor Their Own Generations.
+\newblock In \emph{Neural Information Processing Systems}, volume
+  abs/2404.13076, 2024.
+\newblock \doi{10.48550/arXiv.2404.13076}.
+
+\bibitem[Poiroux et~al.(2024)Poiroux, Weiss, Kunvcak, and
+  Bosselut]{Poiroux2024}
+Auguste Poiroux, Gail Weiss, Viktor Kunvcak, and Antoine Bosselut.
+\newblock Reliable Evaluation and Benchmarks for Statement Autoformalization.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, pages 17947--17969, 2024.
+\newblock \doi{10.18653/v1/2025.emnlp-main.907}.
+
+\bibitem[Qi et~al.(2025)Qi, Ma, Li, Du, Hui, Wu, Laili, and He]{Qi2025}
+Cheng-Wen Qi, Ren Ma, Bowen Li, He~Du, Binyuan Hui, Jin-Wang Wu, Yuanjun Laili,
+  and Conghui He.
+\newblock Large Language Models Meet Symbolic Provers for Logical Reasoning
+  Evaluation.
+\newblock In \emph{International Conference on Learning Representations},
+  volume abs/2502.06563, 2025.
+\newblock \doi{10.48550/arXiv.2502.06563}.
+
+\bibitem[Reimers and Gurevych(2019)]{Reimers2019}
+Nils Reimers and Iryna Gurevych.
+\newblock Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, volume abs/1908.10084, 2019.
+\newblock \doi{10.18653/v1/D19-1410}.
+
+\bibitem[Ryu et~al.(2024)Ryu, Kim, Lee, and Yang]{Ryu2024}
+Hyun Ryu, Gyeongman Kim, Hyemin~S. Lee, and Eunho Yang.
+\newblock Divide and Translate: Compositional First-Order Logic Translation and
+  Verification for Complex Logical Reasoning.
+\newblock In \emph{International Conference on Learning Representations},
+  volume abs/2410.08047, 2024.
+\newblock \doi{10.48550/arXiv.2410.08047}.
+
+\bibitem[Sainz et~al.(2023)Sainz, Campos, García-Ferrero, Etxaniz, de~Lacalle,
+  and Agirre]{Sainz2023}
+Oscar Sainz, Jon~Ander Campos, Iker García-Ferrero, Julen Etxaniz, Oier~López
+  de~Lacalle, and Eneko Agirre.
+\newblock NLP Evaluation in trouble: On the Need to Measure LLM Data
+  Contamination for each Benchmark.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, pages 10776--10787, 2023.
+\newblock \doi{10.48550/arXiv.2310.18018}.
+
+\bibitem[Singh et~al.(2026)Singh, Ganguly, Goel, Torkamani, Han, Lilien, Erata,
+  and Chaudhary]{Singh2026}
+Vikash Singh, Debargha Ganguly, Aman Goel, Ali Torkamani, Xiao-Xue Han, Joseph
+  Lilien, Ferhat Erata, and Vipin Chaudhary.
+\newblock Beyond Solver Verdicts: Generative Reward Models for
+  Autoformalization.
+\newblock 2026.
+
+\bibitem[Thatikonda et~al.(2025)Thatikonda, Buntine, and
+  Shareghi]{Thatikonda2025}
+Ramya~Keerthy Thatikonda, W.~Buntine, and Ehsan Shareghi.
+\newblock Assessing the Sensitivity and Alignment of FOL Closeness Metrics.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, pages 16775--16785, 2025.
+\newblock \doi{10.18653/v1/2025.findings-emnlp.910}.
+
+\bibitem[Wang et~al.(2026)Wang, Wong-Toropainen, Amrollahi, Bai, Bansal, Garg,
+  and Gilpin]{Wang2026}
+Olivia~Peiyu Wang, Sanna Wong-Toropainen, Daneshvar Amrollahi, Ryan Bai, Tashvi
+  Bansal, A.~Garg, and Leilani~H. Gilpin.
+\newblock Know Your Limits : On the Faithfulness of LLMs as Solvers and
+  Autoformalizers in Legal Reasoning.
+\newblock \emph{ArXiv}, abs/2606.16118, 2026.
+\newblock \doi{10.48550/arXiv.2606.16118}.
+
+\bibitem[Wang et~al.(2020)Wang, Wei, Dong, Bao, Yang, and Zhou]{Wang2020}
+Wenhui Wang, Furu Wei, Li~Dong, Hangbo Bao, Nan Yang, and Ming Zhou.
+\newblock MiniLM: Deep Self-Attention Distillation for Task-Agnostic
+  Compression of Pre-Trained Transformers.
+\newblock In \emph{Neural Information Processing Systems}, volume
+  abs/2002.10957, 2020.
+
+\bibitem[Wang et~al.(2022)Wang, Wei, Schuurmans, Le, Chi, and Zhou]{Wang2022}
+Xuezhi Wang, Jason Wei, Dale Schuurmans, Quoc Le, Ed~H. Chi, and Denny Zhou.
+\newblock Self-Consistency Improves Chain of Thought Reasoning in Language
+  Models.
+\newblock In \emph{International Conference on Learning Representations},
+  volume abs/2203.11171, 2022.
+
+\bibitem[Xu et~al.(2024)Xu, Lu, Schoenebeck, and Kong]{Xu2024}
+Shengwei Xu, Yuxuan Lu, Grant Schoenebeck, and Yuqing Kong.
+\newblock Benchmarking LLMs' Judgments with No Gold Standard.
+\newblock In \emph{International Conference on Learning Representations},
+  volume abs/2411.07127, 2024.
+\newblock \doi{10.48550/arXiv.2411.07127}.
+
+\bibitem[Yanaka et~al.(2019)Yanaka, Mineshima, Bekki, Inui, Sekine, Abzianidze,
+  and Bos]{Yanaka2019}
+Hitomi Yanaka, K.~Mineshima, D.~Bekki, Kentaro Inui, S.~Sekine, Lasha
+  Abzianidze, and Johan Bos.
+\newblock Can Neural Networks Understand Monotonicity Reasoning?
+\newblock In \emph{BlackboxNLP@ACL}, pages 31--40, 2019.
+\newblock \doi{10.18653/v1/W19-4804}.
+
+\bibitem[Yanaka et~al.(2021)Yanaka, Mineshima, and Inui]{Yanaka2021}
+Hitomi Yanaka, K.~Mineshima, and Kentaro Inui.
+\newblock SyGNS: A Systematic Generalization Testbed Based on Natural Language
+  Semantics.
+\newblock In \emph{Findings}, pages 103--119, 2021.
+\newblock \doi{10.18653/v1/2021.findings-acl.10}.
+
+\bibitem[Yang et~al.(2025)Yang, Li, Yang, Zhang, Hui, Zheng, Yu, Gao, Huang,
+  Lv, Zheng, Liu, Zhou, Huang, Hu, Ge, Wei, Lin, Tang, Yang, Tu, Zhang, Yang,
+  Yang, Zhou, Zhou, Lin, Dang, Bao, Yang, Yu, Deng, Li, Xue, Li, Zhang, Wang,
+  Zhu, Men, Gao, Liu, Luo, Li, Tang, Yin, Ren, Wang, Zhang, Ren, Fan, Su,
+  Zhang, Zhang, Wan, Liu, Wang, Cui, Zhang, Zhou, and Qiu]{Yang2025}
+An~Yang, An-Feng Li, Baosong Yang, Beichen Zhang, Binyuan Hui, Bo~Zheng, Bo-Wen
+  Yu, Chang Gao, Chengen Huang, Chenxu Lv, et~al.
+\newblock Qwen3 Technical Report.
+\newblock 2025.
+
+\bibitem[Yang et~al.(2023)Yang, Xiong, Payani, Shareghi, and Fekri]{Yang2023}
+Yuan Yang, Siheng Xiong, Ali Payani, Ehsan Shareghi, and F.~Fekri.
+\newblock Harnessing the Power of Large Language Models for Natural Language to
+  First-Order Logic Translation.
+\newblock In \emph{Annual Meeting of the Association for Computational
+  Linguistics}, volume abs/2305.15541, 2023.
+\newblock \doi{10.48550/arXiv.2305.15541}.
+
+\bibitem[Zheng et~al.(2023)Zheng, Chiang, Sheng, Zhuang, Wu, Zhuang, Lin, Li,
+  Li, Xing, Zhang, Gonzalez, and Stoica]{Zheng2023}
+Lianmin Zheng, Wei-Lin Chiang, Ying Sheng, Siyuan Zhuang, Zhanghao Wu, Yonghao
+  Zhuang, Zi~Lin, Zhuohan Li, Da-Cheng Li, Eric~P. Xing, et~al.
+\newblock Judging LLM-as-a-judge with MT-Bench and Chatbot Arena.
+\newblock In \emph{Neural Information Processing Systems}, volume
+  abs/2306.05685, 2023.
+\newblock \doi{10.52202/075280-2020}.
+
+\bibitem[Zhong et~al.(2020)Zhong, Yu, and Klein]{Zhong2020}
+Ruiqi Zhong, Tao Yu, and D.~Klein.
+\newblock Semantic Evaluation for Text-to-SQL with Distilled Test Suite.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, pages 396--411, 2020.
+\newblock \doi{10.18653/v1/2020.emnlp-main.29}.
+
+\end{thebibliography}

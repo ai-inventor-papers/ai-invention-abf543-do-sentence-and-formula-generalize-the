@@ -1,0 +1,113 @@
+{
+  "type": "custom_two_panel_barh_bar",
+  "figure_id": "fig1",
+  "title": "Peer agreement predicts faithfulness until peers share an error",
+  "aspect": "16:9",
+  "width_in": 7.0,
+  "font_pt": 9,
+  "renderer": "fig1_render.py (hand-written matplotlib on the aii-data-fig-gen house style; no catalogue type prints 3-decimal value labels, a labelled chance line and per-panel colours)",
+  "bar_baseline": 0.5,
+  "bar_baseline_note": "Bars are anchored at chance (AUROC 0.5), so bar length = margin over chance and below-chance values extend downward/leftward. A bar starting at a truncated axis edge (0.4 or 0.3) would have a length with no meaning.",
+  "provenance": {
+    "run_dir": "/ai-inventor/aii_data/runs/run_ujABDGgoK_5Q/3_invention_loop/iter_2/gen_art/gen_art_experiment_3",
+    "panel_a_source": "results/tests.json -> auroc['<metric>|panel'] and auroc['<metric>|solver'] (auc, ci95, n); cross-checked against results/report_tables.md 'Fresh AUROC' table and results/rederive_headline.json",
+    "panel_b_source": "results/analysis.json -> shared_bias.panel.mode_right / mode_wrong (DC, LC_maj, B1: auc, ci95, n, n_pos)",
+    "metric_code_map": {
+      "Peer agreement (ours)": "DC (Directional Consensus, frozen pre-registered config)",
+      "Binary Dawid-Skene agreement": "LC_ds_binary",
+      "Majority equivalence clustering": "LC_maj",
+      "LLM judge (gemini-2.5-flash)": "B1",
+      "Round-trip NLI (local)": "B3nliL (Qwen3-8B back-translation substitute; solver-label n = 260)",
+      "Vocabulary-conformity control": "VC",
+      "Structural consistency metrics": "B7",
+      "Parse rate": "B2"
+    },
+    "evidence_state": "lead (run's final hypothesis update); all plotted values were read back from the files above"
+  },
+  "panels": [
+    {
+      "id": "a",
+      "kind": "barh",
+      "title": "Fresh set, all items",
+      "xlabel": "AUROC (faithful vs. unfaithful)",
+      "xlim": [0.4, 1.0],
+      "chance_line": 0.5,
+      "value_fmt": "{:.3f}",
+      "highlight_category": "Peer agreement (ours)",
+      "categories": [
+        "Peer agreement (ours)",
+        "Binary Dawid-Skene agreement",
+        "Majority equivalence clustering",
+        "LLM judge (gemini-2.5-flash)",
+        "Round-trip NLI (local)",
+        "Vocabulary-conformity control",
+        "Structural consistency metrics",
+        "Parse rate"
+      ],
+      "series": [
+        {
+          "label": "Panel labels (n = 256)",
+          "color": "#0173B2",
+          "values": [0.827, 0.830, 0.797, 0.791, 0.784, 0.674, 0.554, 0.549],
+          "ci95": [
+            [0.770, 0.877],
+            [0.773, 0.878],
+            [0.737, 0.850],
+            [0.726, 0.843],
+            [0.724, 0.835],
+            [0.598, 0.746],
+            [0.522, 0.590],
+            [0.518, 0.584]
+          ],
+          "n": [256, 256, 256, 256, 256, 256, 256, 256]
+        },
+        {
+          "label": "Audited-solver labels (n = 3,720)",
+          "color": "#DE8F05",
+          "values": [0.874, 0.865, 0.859, 0.727, 0.619, 0.791, 0.503, 0.500],
+          "ci95": [
+            [0.849, 0.897],
+            [0.840, 0.889],
+            [0.833, 0.883],
+            [0.698, 0.755],
+            [0.546, 0.687],
+            [0.764, 0.815],
+            [0.500, 0.505],
+            [0.500, 0.500]
+          ],
+          "n": [3720, 3720, 3720, 3720, 260, 3720, 3720, 3720]
+        }
+      ]
+    },
+    {
+      "id": "b",
+      "kind": "bar",
+      "title": "Split by modal cluster\n(panel labels)",
+      "ylabel": "AUROC (faithful vs. unfaithful)",
+      "ylim": [0.2, 1.0],
+      "ylim_note": "Spec asked for 0.3-1.0; the lower 95% bound of peer agreement in the mode-unfaithful group is 0.292 (analysis.json), so the floor is lowered to 0.2 to keep the whole interval and its value label visible.",
+      "chance_line": 0.5,
+      "value_fmt": "{:.3f}",
+      "categories": ["Mode faithful\n(n = 195)", "Mode unfaithful\n(n = 61)"],
+      "category_n_pos": [128, 12],
+      "series": [
+        {
+          "label": "Peer agreement (ours)",
+          "color": "#0173B2",
+          "values": [0.883, 0.419],
+          "ci95": [[0.822, 0.934], [0.292, 0.557]]
+        },
+        {
+          "label": "Majority equivalence clustering",
+          "color": "#56B4E9",
+          "values": [0.867, 0.433]
+        },
+        {
+          "label": "LLM judge",
+          "color": "#949494",
+          "values": [0.782, 0.786]
+        }
+      ]
+    }
+  ]
+}
