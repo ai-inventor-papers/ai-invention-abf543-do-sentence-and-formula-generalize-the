@@ -1,18 +1,18 @@
-# Repaired world-truth checks lose to the plain judge
+# Stress-testing peer-agreement scores for logic translations
 
 `demo/` — Self-contained demo (Colab-ready notebook or markdown). Run without setup.  
 `src/` — Full source code, data, and outputs from the experiment execution.
 
 **Type:** experiment  
-**ID:** `art_sXkKbn1vj6ZX`
+**ID:** `art_0IXpxygQOyeu`
 
 ## Layman Summary
 
-Tests whether asking an AI if a sentence is true in tiny made-up worlds judges logic translations better than simply asking the AI directly; after fixing its noise, it still loses, even on long sentences.
+Tests a no-answer-key way to score computer translations of sentences into logic, by checking agreement with other systems, and finds where it breaks.
 
 ## Full Summary
 
-Deep test of TVJT (z3 small worlds separating a candidate FOL from its typed mutants; gemini-2.5-flash judges only the SENTENCE's truth per world) against the fixed-prompt LLM judge B1, on held-out art_iyzYyaqlqpSX. PHASE 1 repair (screen only): R1 canonical name-blind normal form + canonical, now DETERMINISTIC worlds (bug found: iter-1 find_world tie-breaks depended on z3 call history; fixed tag + fresh context); R2 world-level answer cache + 3 order-permuted votes; R3 confidence-weighted C3. Equivalent rewrites now get the gold's exact world set (REORDER/DEMORGAN/CONTRAPOSITIVE 1.000 vs iter-1 .02-.18; RENAME .996; held-out replication 137/137 non-RENAME, RENAME 59/60). Judged paired G2 false alarms: 0.000 on every non-RENAME rewrite (screen n=225, held-out n=130) but RENAME .387 screen/.264 held-out (verbaliser limitation, plan F2) -> REPAIR_OK false via RENAME only. Screen C3 AUROC .735 vs iter-1 .701; test-retest kappa .94. iter-1 gemini gave different verdicts to identical (sentence, world) 13.7% of the time. FREEZE: frozen_config/prereg hashed 14:41 UTC (C3 by F4 default because the shared OpenRouter key was at its daily limit; the ex-post freeze rule picks the same C3). PHASE 2 (609 panel3 items, post-stratified weights, 2000x sentence-cluster bootstrap): TVJT* AUROC_w .665 vs B1 .749, B1x3 .774, LC_onecoin .756, A3 .640, TVJT_iter1 .685, flash-lite TVJT .565. Pre-registered H1 on P-top (389): delta(TVJT*-B1) = -.098 [-.184,-.014] => verdict REVERSED; H2 growth +.028 [-.126,+.186] n.s.; JUDGE_MATCHED false (-.120 vs B1x3); STACK_INCREMENT false (S2-S0z -.002); TVJT within-sentence pairwise acc .475 vs B1 .758; error-type naming acc .077 < majority .273. T (2,826 top-tercile, soft labels): TVJT .609 ~ B1 .608, LC .646. Contamination (936 entity-renamed pairs): no AUROC shift for TVJT/B1/LC; A3 mean score -.144 (lexical). Conclusion: the iter-1 crossover was a property of the old screen; B1 is strong on long held-out sentences. PROVIDES: method_out.json (exp_gen_sol_out; screen_real, screen_rewrites, heldout_panel, heldout_top, contamination with predict_TVJT_frozen/B1/B1x3/TVJT_iter1/TVJT_lite/LC_onecoin/LC_maj/A3/B3sc/parse_ok joinable by metadata_item_id), results/analysis.json + verdict.json (all tables), deterministic canonical worlds cache, paid gemini world-level cache, reusable src/metrics_api2.py (canon, distinguishing_worlds, tvjt_score), 5 figures, audit/rederive.py (exact match). Spend $4.10 OpenRouter.
+DEV-set stress test of Directional Consensus (DC), a gold-free NL->FOL faithfulness metric: the reliability-weighted share of 9 peer system formalisations that are logically EQUIVALENT to a candidate under a name-free (L1 bijection / L2 partial / L3 granularity) alignment, z3-checked. Package dc/ (align_pair, pair_relation, best_relation, directional_consensus; 12 unit tests), frozen config sha256 7ebda7e2, prereg before scoring. Results (700 sent x 9 systems, 609 weighted panel labels + solver labels, 2000-draw sentence bootstraps): M0 DC panel AUROC 0.769 [0.717,0.819] (solver 0.815) ~ LC_maj 0.765, LC_ds 0.787, B1 judge 0.762; no-L3 variant DC_L2w 0.774/0.833; L1 cross-check vs round-2 cache 100%. M1 constructed vocab x meaning (223 sent): DC exactly vocab-invariant (gap 0.0015) while B1 judge drops 0.945->0.794 with random tokens and VC falls to 0.176 crossed; BUT L3 name-free definitions absorb negation (NEG AUROC 0.51 vs 1.00 without L3) and dropped restrictors (0.66 vs 0.99); automorphic mutants at chance. DC adds nothing over LC_maj in stacking (panel +0.015 [-0.009,0.040]). M2: rename FA(0.10)=0/999, contamination delta +0.002 vs B1 +0.096; 1/999 exact changes traced to a name-dependent role tie-break. M3 shared-bias dose curve equals the analytic peer-mass curve (0.93/0.77/0.43/0.14/0.06 for k=0..8); real within-sentence concordance falls to 0.45 when wrong clusters dominate (slope -2.08); text-anchored arbiter NOT RUN (OpenRouter run budget 403). M4: within-sentence shuffle keeps AUROC 0.73 (most signal is between-sentence); L3 adds 11.9% spurious cross-sentence EQUIV. M5 ladder: L2 is the whole mechanism (+0.128), L3/DS neutral; typing below majority. M6 reproduces exp5 partnered counts (36/24); arXiv:2606.02837 v1 39%/36% vs v2 42.5%/42%. M7: DC(gold) flags wrong gold AUROC 0.837 [0.809,0.864], adds +0.070 over B1 and +0.048 over TJ. Verdicts 9 PASS/10 FAIL/1 NOT_RUN; amendments (use DC_L2w, name-free tie-break) in results/proposed_amendments.json. Files: method_out.json (6300 dev rows + 3175 probes + 700 golds), results/*.json, README.md; kept cache work/pairs_dc.jsonl (74k relations). Spend $0.088.
 
 ## Dependencies
 
@@ -24,6 +24,7 @@ Deep test of TVJT (z3 small worlds separating a candidate FOL from its typed mut
 - `full_method_out.json`
 - `mini_method_out.json`
 - `preview_method_out.json`
+- `reproducibility.md`
 
 ## Demo Files
 
