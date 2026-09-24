@@ -1,11 +1,0 @@
-Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 851.33it/s]
-04:35:13|INFO   |loaded Qwen/Qwen3-8B:bf16 (399 tensors) in 38s; VRAM 16.4 GB
-04:35:13|INFO   |[b3_local] 680 prompts, 656 to generate (bs 24)
-04:36:05|INFO   |[b3_local] 240/656 52s
-04:37:01|INFO   |[b3_local] 480/656 109s
-Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights:  55%|█████▌    | 57/103 [00:00<00:00, 557.35it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 670.50it/s]
-Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 1058.10it/s]
-/ai-inventor/aii_data/runs/run_ujABDGgoK_5Q/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
-  warnings.warn(
-04:38:18|INFO   |B3 GPU scored 680/680 in 17s on cuda (MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli)
-04:38:19|INFO   |B3 local done: 680

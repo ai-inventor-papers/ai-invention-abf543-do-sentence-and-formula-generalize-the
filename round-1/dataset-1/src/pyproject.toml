@@ -1,5 +1,0 @@
-[project]
-name = "nl2fol-heldout-dataset"
-version = "0.1.0"
-requires-python = ">=3.12"
-dependencies = ["z3-solver", "nltk", "aiohttp", "loguru", "huggingface_hub", "numpy", "scipy", "tenacity", "requests", "pyyaml", "pytest"]

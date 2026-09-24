@@ -1,9 +1,0 @@
-{
- "TVJT_PROMPT": "You will read a sentence and several small, self-contained situations. For each situation, decide whether the sentence is TRUE or FALSE in that situation, using ONLY the listed individuals and facts (anything not listed is false; interpret general statements as being about the individuals listed). Sentence: \"{S}\"\n\n{SITUATIONS}\n\nAnswer with JSON only: {{{KEYS}}}",
- "sha1": "3c78be76fa12707cae2bbec7420f50078ea6ca24",
- "version": "tvjt_v1",
- "frozen_after": "T2 dev-slice check (non-screen FOLIO-dev sentences)",
- "B1_PROMPT": "Sentence: {s}\nFOL: {f}\nGive the probability (0-100) that this FOL is a faithful formalization of the sentence. Reply with a number only.",
- "NLI_GEMINI_PROMPT": "Read a passage and several hypotheses. For each hypothesis, decide whether it is ENTAILED by the passage, CONTRADICTED by the passage, or NEITHER. Use only the passage; treat the named individuals as distinct.\n\n{PAIRS}\n\nAnswer with JSON only: {{{KEYS}}}",
- "NLI_GEMINI_sha1": "3cba09a862d0f5618d77ecc9b660e4522f7e254a"
-}
