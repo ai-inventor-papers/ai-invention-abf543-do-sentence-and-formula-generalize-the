@@ -1,0 +1,134 @@
+# gen_report_doc — report_results
+
+> Phase: `gen_paper_repo` · `gen_full_paper`
+> Run: `gen_paper_repo_231b3d976c60` — Gold-free checks of whether a logic formula matches its sentence
+>
+> Full, verbatim record of every prompt the AI Inventor pipeline gave this agent — system-user, human-user and skill-input — in the order they landed. Nothing truncated.
+
+## Task: `gen_report_doc` (terminal_claude_agent)
+
+### [1] SYSTEM-USER prompt · 2026-09-24 15:06:28 UTC
+
+````
+continue
+
+---
+
+Output the result as JSON to: `./.terminal_claude_agent_struct_out.json`
+
+JSON Schema:
+```json
+{
+  "$defs": {
+    "ReportDocExpectedFiles": {
+      "description": "All expected output files from report generation.",
+      "properties": {
+        "report_tex_path": {
+          "description": "Path to the report's LaTeX source. Example: 'report.tex'",
+          "title": "Report Tex Path",
+          "type": "string"
+        },
+        "report_pdf_path": {
+          "description": "Path to the compiled report PDF. Example: 'report.pdf'",
+          "title": "Report Pdf Path",
+          "type": "string"
+        }
+      },
+      "required": [
+        "report_tex_path",
+        "report_pdf_path"
+      ],
+      "title": "ReportDocExpectedFiles",
+      "type": "object"
+    }
+  },
+  "description": "The typeset research report \u2014 structured output from the report task.",
+  "properties": {
+    "title": {
+      "description": "Title of the report document. Plain and descriptive of what the run investigated; it is an internal record, not a paper title.",
+      "maxLength": 120,
+      "minLength": 12,
+      "title": "Title",
+      "type": "string"
+    },
+    "coverage_note": {
+      "description": "What the report covers, stated so a reader can check it: how many iterations it narrates, how many artifacts it walks through, how many result tables it typesets, and anything named in the inputs that you could NOT include, with the reason. Never a summary of the findings.",
+      "maxLength": 4000,
+      "minLength": 200,
+      "title": "Coverage Note",
+      "type": "string"
+    },
+    "out_expected_files": {
+      "$ref": "#/$defs/ReportDocExpectedFiles",
+      "description": "All output files you created. Must include report.tex and report.pdf."
+    }
+  },
+  "required": [
+    "title",
+    "coverage_note",
+    "out_expected_files"
+  ],
+  "title": "ReportDoc",
+  "type": "object"
+}
+```
+
+IMPORTANT: this task is NOT complete until `./.terminal_claude_agent_struct_out.json` exists and contains JSON matching the schema above.
+````
+
+### [2] HUMAN-USER prompt · 2026-09-24 15:06:28 UTC
+
+```
+I work on converting natural-language text into first-order logic (NL→FOL, autoformalization) with
+LLM pipelines. Evaluation is the bottleneck. Correct FOL for a sentence is not unique — different
+predicate names, different decompositions of the same concept, and logically equivalent rewrites can
+all be correct. Gold FOL annotations are rare and expensive. The metrics in use either need a gold
+formula (exact match, BLEU, prover-checked equivalence to the gold) or only check that the output
+parses. In my own pilot I used cheap structural metrics: whether a set of generated formulas loads
+together without conflicts, whether predicate arities stay consistent, how many predicates are used
+but never defined, and how similar the predicate sets are across reruns. Those measure stability and
+composability, not whether a formula says what the sentence says.
+
+Find new metrics for NL→FOL output quality. Operating situation: you are given a natural-language
+sentence (or short passage) and a candidate FOL formalization produced by any system. There is no gold
+formula, no ontology or controlled vocabulary, and no domain knowledge. The metric returns a score
+that predicts whether the formalization is faithful to the text, and ideally which kind of error it
+contains (quantifier or scope error, dropped or added condition, negation/polarity error, swapped
+arguments, conflated or wrongly split concepts). Metrics may score a single formula or a set (several
+samples for one sentence, or the formalizations of all sentences in one document). They must be
+task-agnostic — usable for any NL→FOL setting, not tied to a domain, dataset or pipeline — and cheap
+enough to run on every output (solver calls and small models are fine; a large-LLM judge per formula
+only if shown to earn its cost).
+
+Requirements:
+- Keep the target fixed: the metric must predict faithfulness to the text. Detecting synthetic
+  perturbations, parse validity, or run-to-run stability are not substitutes for that target.
+- Validate against ground truth, never against the metric itself. Use public datasets with gold
+  sentence-level FOL (e.g. FOLIO, MALLS, or others you find) to build a meta-evaluation set: real
+  candidate formalizations from several different systems, plus controlled perturbations of gold
+  formulas with known error types, labelled via prover-checked equivalence to gold. Handle two known
+  problems: some gold annotations are wrong, and a candidate can be correct without being equivalent
+  to the gold (different vocabulary or granularity). Estimate how often each happens and how it
+  biases the labels. These datasets are public, so check whether LLM-based metrics benefit from having
+  seen the gold.
+- For each metric report: correlation with correctness at item and system level; sensitivity per error
+  type; invariance under meaning-preserving rewrites (variable/predicate renaming, reordering,
+  equivalent restatements); coverage — unparseable outputs are counted and reported, never silently
+  dropped; and cost.
+- Compare against baselines: parse/compile rate, round-trip (FOL→NL→compare) similarity,
+  LLM-as-judge, sampling self-consistency, and the structural consistency metrics described above. A
+  new metric matters only if it adds signal those don't.
+- Report how each metric's reliability changes with sentence complexity (length, number of quantifiers,
+  nesting depth, number of conditions and exceptions). Long, heavily conditioned sentences matter most
+  to me.
+- Negative results are welcome: if a family of metrics does not track correctness, show that clearly.
+
+Out of scope: comparing grounded vs ungrounded generation (ontology vocabulary injected into prompts),
+anything that depends on a particular ontology, and building a better NL→FOL translator. The
+contribution is the measurement, not the translator.
+
+Deliverables: reusable Python functions taking (text, fol) — or a set of such pairs — each with a
+precise statement of what it measures; the meta-evaluation dataset with its labels; and the results.
+
+I appended the a full pilot study using the metrics I already had in the zip for reference.
+```
