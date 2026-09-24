@@ -1,0 +1,189 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{Pan2023,Olausson2023}
+\citation{Han2022,Yang2023,Thatikonda2025}
+\citation{Brunello2026}
+\citation{Zheng2023}
+\citation{Amrollahi2026}
+\citation{Li2024,Ryu2024}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{sec:intro}{{1}{1}{Introduction}{section.1}{}}
+\citation{Han2022}
+\citation{Yang2023}
+\citation{Qi2025}
+\citation{Thatikonda2025}
+\citation{Zhong2020}
+\citation{Klopfenstein2025}
+\citation{Brunello2026}
+\citation{Nahum2024}
+\@writefile{toc}{\contentsline {paragraph}{Contributions.}{2}{section*.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{2}{section.2}\protected@file@percent }
+\newlabel{sec:related}{{2}{2}{Related Work}{section.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Evaluation against gold and label noise.}{2}{section*.3}\protected@file@percent }
+\citation{Zheng2023}
+\citation{Amrollahi2026}
+\citation{Liu2026}
+\citation{Lu2024}
+\citation{Singh2026}
+\citation{Mohammad2026}
+\citation{Lee2025}
+\citation{Karia2024}
+\citation{Poiroux2025}
+\citation{Wang2026}
+\citation{Yanaka2021}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Peer agreement on 450 fresh sentences formalized by nine LLMs. (a) AUROC with 95\% intervals from a bootstrap clustered by sentence, under labels from a blinded LLM panel (256 items) and audited solver labels (3,720 rows; roundtrip NLI on 260 rows). Peer agreement is above the gemini-2.5-flash judge under both label families and ties binary Dawid--Skene agreement; parse rate and the structural consistency metrics are near chance. (b) AUROC under panel labels, split by whether the sentence's modal equivalence cluster is faithful. When most systems share an error, agreement falls below chance while the judge is unaffected.\relax }}{3}{figure.caption.2}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:headline}{{1}{3}{Peer agreement on 450 fresh sentences formalized by nine LLMs. (a) AUROC with 95\% intervals from a bootstrap clustered by sentence, under labels from a blinded LLM panel (256 items) and audited solver labels (3,720 rows; roundtrip NLI on 260 rows). Peer agreement is above the gemini-2.5-flash judge under both label families and ties binary Dawid--Skene agreement; parse rate and the structural consistency metrics are near chance. (b) AUROC under panel labels, split by whether the sentence's modal equivalence cluster is faithful. When most systems share an error, agreement falls below chance while the judge is unaffected.\relax }{figure.caption.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Reference-free faithfulness.}{3}{section*.4}\protected@file@percent }
+\citation{Wang2022}
+\citation{Kuhn2023,Farquhar2024}
+\citation{Li2024}
+\citation{Ryu2024}
+\citation{Ganguly2025}
+\citation{Olausson2023}
+\citation{Fan2024}
+\citation{Li2024}
+\citation{Dawid1979,Hui1980}
+\citation{Albert2004}
+\citation{Xu2024}
+\citation{Moura2008}
+\@writefile{toc}{\contentsline {paragraph}{Agreement among outputs.}{4}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Estimation without a gold standard.}{4}{section*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Method}{4}{section.3}\protected@file@percent }
+\newlabel{sec:method}{{3}{4}{Method}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Problem setup}{4}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Alignment without predicate names, and pairwise relations}{4}{subsection.3.2}\protected@file@percent }
+\citation{Dawid1979}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Peer agreement weighted by reliability}{5}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Flagging wrong gold}{5}{subsection.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experimental Setup}{5}{section.4}\protected@file@percent }
+\newlabel{sec:setup}{{4}{5}{Experimental Setup}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Systems and sentences}{5}{subsection.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The peer agreement score. A candidate formula is compared with each peer formula (other systems' outputs for the same sentence) after a vocabulary alignment that ignores predicate names (a bijection, then a partial map). An SMT solver decides the logical relation of each aligned pair. EQUIV relations define equivalence clusters, from which a Dawid--Skene model with one accuracy parameter per system, fitted without labels, estimates one reliability weight per system. The score is the weighted share of peers that are equivalent to the candidate. The sentence text and predicate names are never read.\relax }}{6}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:method}{{2}{6}{The peer agreement score. A candidate formula is compared with each peer formula (other systems' outputs for the same sentence) after a vocabulary alignment that ignores predicate names (a bijection, then a partial map). An SMT solver decides the logical relation of each aligned pair. EQUIV relations define equivalence clusters, from which a Dawid--Skene model with one accuracy parameter per system, fitted without labels, estimates one reliability weight per system. The score is the weighted share of peers that are equivalent to the candidate. The sentence text and predicate names are never read.\relax }{figure.caption.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Labels}{6}{subsection.4.2}\protected@file@percent }
+\citation{Comanici2025}
+\citation{He2021}
+\citation{Wang2020}
+\citation{Reimers2019}
+\citation{Yang2025}
+\citation{Wang2022}
+\citation{Li2024}
+\citation{Dawid1979}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Label quality. Wrong-gold rates are the panel's audit of shipped gold; the fourth row is the share judged faithful by the panel among candidates that the solver calls not equivalent to audited gold.\relax }}{7}{table.caption.8}\protected@file@percent }
+\newlabel{tab:labels}{{1}{7}{Label quality. Wrong-gold rates are the panel's audit of shipped gold; the fourth row is the share judged faithful by the panel among candidates that the solver calls not equivalent to audited gold.\relax }{table.caption.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Baselines}{7}{subsection.4.3}\protected@file@percent }
+\newlabel{sec:baselines}{{4.3}{7}{Baselines}{subsection.4.3}{}}
+\citation{Chen2021}
+\citation{Yanaka2019}
+\citation{Fan2024}
+\citation{He2021}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Protocol}{8}{subsection.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Results}{8}{section.5}\protected@file@percent }
+\newlabel{sec:results}{{5}{8}{Results}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Peer agreement predicts faithfulness on fresh sentences}{8}{subsection.5.1}\protected@file@percent }
+\newlabel{sec:main}{{5.1}{8}{Peer agreement predicts faithfulness on fresh sentences}{subsection.5.1}{}}
+\citation{Li2024}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces AUROC [95\% CI] on the fresh set under panel labels (256 adjudicated items) and audited solver labels (3,720 rows unless stated). (L) marks a baseline computed with a local Qwen3-8B model. Coverage is the share of rows a score covers without the 0.5 default; the two rows that use samples are computed only for gpt-4.1-mini and llama-3.1-8b.\relax }}{9}{table.caption.9}\protected@file@percent }
+\newlabel{tab:main}{{2}{9}{AUROC [95\% CI] on the fresh set under panel labels (256 adjudicated items) and audited solver labels (3,720 rows unless stated). (L) marks a baseline computed with a local Qwen3-8B model. Coverage is the share of rows a score covers without the 0.5 default; the two rows that use samples are computed only for gpt-4.1-mini and llama-3.1-8b.\relax }{table.caption.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}The incremental signal is small and ties an existing agreement score}{9}{subsection.5.2}\protected@file@percent }
+\newlabel{sec:increment}{{5.2}{9}{The incremental signal is small and ties an existing agreement score}{subsection.5.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Comparisons fixed in advance, on the fresh set. Differences are paired, with 95\% intervals from a bootstrap clustered by sentence.\relax }}{9}{table.caption.10}\protected@file@percent }
+\newlabel{tab:tests}{{3}{9}{Comparisons fixed in advance, on the fresh set. Differences are paired, with 95\% intervals from a bootstrap clustered by sentence.\relax }{table.caption.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}The reliability weights carry the gain; direction and error typing do not}{10}{subsection.5.3}\protected@file@percent }
+\newlabel{sec:ablation}{{5.3}{10}{The reliability weights carry the gain; direction and error typing do not}{subsection.5.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Component ablation on the fresh set, AUROC.\relax }}{10}{table.caption.11}\protected@file@percent }
+\newlabel{tab:ablation}{{4}{10}{Component ablation on the fresh set, AUROC.\relax }{table.caption.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Agreement is exactly invariant to vocabulary}{10}{subsection.5.4}\protected@file@percent }
+\newlabel{sec:invariance}{{5.4}{10}{Agreement is exactly invariant to vocabulary}{subsection.5.4}{}}
+\citation{Sainz2023}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Constructed vocabulary test on 223 development sentences with faithful gold: AUROC of faithful formulas against 739 operator mutants, with the same formulas rendered in the modal peer's vocabulary, in random tokens, in WordNet synonyms, and crossed (faithful formula in random tokens, mutants in conventional names). Peer agreement (without granularity definitions) and majority clustering are unchanged across renderings; the LLM judge loses up to 0.182 AUROC and the vocabulary conformity control collapses in the crossed condition.\relax }}{11}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:vocab}{{3}{11}{Constructed vocabulary test on 223 development sentences with faithful gold: AUROC of faithful formulas against 739 operator mutants, with the same formulas rendered in the modal peer's vocabulary, in random tokens, in WordNet synonyms, and crossed (faithful formula in random tokens, mutants in conventional names). Peer agreement (without granularity definitions) and majority clustering are unchanged across renderings; the LLM judge loses up to 0.182 AUROC and the vocabulary conformity control collapses in the crossed condition.\relax }{figure.caption.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Agreement fails when most systems share an error}{11}{subsection.5.5}\protected@file@percent }
+\newlabel{sec:sharedbias}{{5.5}{11}{Agreement fails when most systems share an error}{subsection.5.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The boundary set by shared error. (a) Controlled dose test on 200 development sentences (560 items, four operators): probability that the faithful formula scores above a mutant when $k$ of its eight peers are replaced by renamed copies of the mutant, for the configuration without granularity definitions, replacing peers in random order or faithful peers first. (b) Real development data (6,772 faithful $\times $ unfaithful pairs in 508 sentences, development configuration): concordance within sentences of the agreement score by the share of peer weight held by clusters with the wrong meaning, with 95\% intervals; logistic slope $-2.08$ [$-2.55$, $-1.61$].\relax }}{12}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:dose}{{4}{12}{The boundary set by shared error. (a) Controlled dose test on 200 development sentences (560 items, four operators): probability that the faithful formula scores above a mutant when $k$ of its eight peers are replaced by renamed copies of the mutant, for the configuration without granularity definitions, replacing peers in random order or faithful peers first. (b) Real development data (6,772 faithful $\times $ unfaithful pairs in 508 sentences, development configuration): concordance within sentences of the agreement score by the share of peer weight held by clusters with the wrong meaning, with 95\% intervals; logistic slope $-2.08$ [$-2.55$, $-1.61$].\relax }{figure.caption.13}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}Complexity and long legal definitions}{12}{subsection.5.6}\protected@file@percent }
+\newlabel{sec:complexity}{{5.6}{12}{Complexity and long legal definitions}{subsection.5.6}{}}
+\citation{Pan2023}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Legal set, weighted AUROC against panel labels from the sentence alone (655 items, 67 faithful), by exception and condition marker count.\relax }}{13}{table.caption.14}\protected@file@percent }
+\newlabel{tab:legal}{{5}{13}{Legal set, weighted AUROC against panel labels from the sentence alone (655 items, 67 faithful), by exception and condition marker count.\relax }{table.caption.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.7}Agreement flags wrong benchmark gold}{13}{subsection.5.7}\protected@file@percent }
+\newlabel{sec:gold}{{5.7}{13}{Agreement flags wrong benchmark gold}{subsection.5.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Wrong-gold flagging with the gold as a tenth peer, against the panel's gold audit.\relax }}{13}{table.caption.16}\protected@file@percent }
+\newlabel{tab:gold}{{6}{13}{Wrong-gold flagging with the gold as a tenth peer, against the panel's gold audit.\relax }{table.caption.16}{}}
+\citation{Panickssery2024}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Reliability by complexity under panel labels. (a) Fresh set: AUROC of peer agreement and the LLM judge per stratum of the four complexity features (items per stratum in parentheses); agreement leads on short sentences, sentences without quantifiers, sentences with shallow nesting and sentences with three or more conditions, and trails on two or more quantifiers, deeper nesting and long sentences. (b) Legal definitions (655 items, panel labels from the sentence alone) by number of exception and condition markers: every reference-free score trails both judges in every bin; the upper two bins hold only 6 and 5 faithful items.\relax }}{14}{figure.caption.15}\protected@file@percent }
+\newlabel{fig:complexity}{{5}{14}{Reliability by complexity under panel labels. (a) Fresh set: AUROC of peer agreement and the LLM judge per stratum of the four complexity features (items per stratum in parentheses); agreement leads on short sentences, sentences without quantifiers, sentences with shallow nesting and sentences with three or more conditions, and trails on two or more quantifiers, deeper nesting and long sentences. (b) Legal definitions (655 items, panel labels from the sentence alone) by number of exception and condition markers: every reference-free score trails both judges in every bin; the upper two bins hold only 6 and 5 faithful items.\relax }{figure.caption.15}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.8}Other reference-free families do not beat a judge on current systems}{14}{subsection.5.8}\protected@file@percent }
+\newlabel{sec:otherfamilies}{{5.8}{14}{Other reference-free families do not beat a judge on current systems}{subsection.5.8}{}}
+\citation{Albert2004}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Reference-free families on two populations. The 2023 screen is 835 Logic-LM candidates for 300 sentences of the FOLIO validation split, with solver labels against gold; the current systems are the 609 development panel items from nine current LLMs. Judge values come from runs on the same items as each row; three repeated judge runs on the items of current systems gave 0.762, 0.749 and 0.745.\relax }}{15}{table.caption.17}\protected@file@percent }
+\newlabel{tab:families}{{7}{15}{Reference-free families on two populations. The 2023 screen is 835 Logic-LM candidates for 300 sentences of the FOLIO validation split, with solver labels against gold; the current systems are the 609 development panel items from nine current LLMs. Judge values come from runs on the same items as each row; three repeated judge runs on the items of current systems gave 0.762, 0.749 and 0.745.\relax }{table.caption.17}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Discussion}{15}{section.6}\protected@file@percent }
+\newlabel{sec:discussion}{{6}{15}{Discussion}{section.6}{}}
+\citation{Singh2026}
+\citation{Lu2024}
+\citation{Brunello2026}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Limitations}{16}{section.7}\protected@file@percent }
+\newlabel{sec:limitations}{{7}{16}{Limitations}{section.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{16}{section.8}\protected@file@percent }
+\newlabel{sec:conclusion}{{8}{16}{Conclusion}{section.8}{}}
+\bibstyle{plainnat}
+\bibdata{references}
+\bibcite{Albert2004}{{1}{2004}{{Albert and Dodd}}{{}}}
+\bibcite{Amrollahi2026}{{2}{2026}{{Amrollahi et~al.}}{{Amrollahi, Lopez, and Barrett}}}
+\bibcite{Brunello2026}{{3}{2026}{{Brunello et~al.}}{{Brunello, Curaba, Geatti, Mignani, Montanari, and Saccomanno}}}
+\bibcite{Chen2021}{{4}{2021}{{Chen and Gao}}{{}}}
+\bibcite{Comanici2025}{{5}{2025}{{Comanici et~al.}}{{Comanici, Bieber, Schaekermann, Pasupat, Sachdeva, Dhillon, Blistein, Ram, Zhang, Rosen, et~al.}}}
+\bibcite{Dawid1979}{{6}{1979}{{Dawid and Skene}}{{}}}
+\bibcite{Moura2008}{{7}{2008}{{de~Moura and Bj{\o }rner}}{{}}}
+\bibcite{Fan2024}{{8}{2024}{{Fan et~al.}}{{Fan, Ruan, Mechtaev, and Roychoudhury}}}
+\bibcite{Farquhar2024}{{9}{2024}{{Farquhar et~al.}}{{Farquhar, Kossen, Kuhn, and Gal}}}
+\bibcite{Ganguly2025}{{10}{2025}{{Ganguly et~al.}}{{Ganguly, Singh, Sankar, Zhang, Zhang, Iyengar, Han, Sharma, Kalyanaraman, and Chaudhary}}}
+\bibcite{Han2022}{{11}{2022}{{Han et~al.}}{{Han, Schoelkopf, Zhao, Qi, Riddell, Benson, Sun, Zubova, Qiao, Burtell, et~al.}}}
+\bibcite{He2021}{{12}{2021}{{He et~al.}}{{He, Gao, and Chen}}}
+\bibcite{Hui1980}{{13}{1980}{{Hui and Walter}}{{}}}
+\bibcite{Karia2024}{{14}{2024}{{Karia et~al.}}{{Karia, Bramblett, Dobhal, and Srivastava}}}
+\bibcite{Klopfenstein2025}{{15}{2025}{{Klopfenstein et~al.}}{{Klopfenstein, He, Tremante, Wang, Narodytska, and Wu}}}
+\bibcite{Kuhn2023}{{16}{2023}{{Kuhn et~al.}}{{Kuhn, Gal, and Farquhar}}}
+\bibcite{Lee2025}{{17}{2025}{{Lee et~al.}}{{Lee, Liu, Ma, Han, Wang, Ji, and Hockenmaier}}}
+\bibcite{Li2024}{{18}{2024}{{Li et~al.}}{{Li, Wu, Li, Wei, Zhang, Yang, and Ma}}}
+\bibcite{Liu2026}{{19}{2026}{{Liu et~al.}}{{Liu, Parthasarathy, and Murali}}}
+\bibcite{Lu2024}{{20}{2024}{{Lu et~al.}}{{Lu, Wan, Huang, Xiong, Liu, and Guo}}}
+\bibcite{Mohammad2026}{{21}{2026}{{Mohammad and Sheikh}}{{}}}
+\bibcite{Nahum2024}{{22}{2024}{{Nahum et~al.}}{{Nahum, Calderon, Keller, Szpektor, and Reichart}}}
+\bibcite{Olausson2023}{{23}{2023}{{Olausson et~al.}}{{Olausson, Gu, Lipkin, Zhang, Solar-Lezama, Tenenbaum, and Levy}}}
+\bibcite{Pan2023}{{24}{2023}{{Pan et~al.}}{{Pan, Albalak, Wang, and Wang}}}
+\bibcite{Panickssery2024}{{25}{2024}{{Panickssery et~al.}}{{Panickssery, Bowman, and Feng}}}
+\bibcite{Poiroux2025}{{26}{2025}{{Poiroux et~al.}}{{Poiroux, Weiss, Kun{\v {c}}ak, and Bosselut}}}
+\bibcite{Qi2025}{{27}{2025}{{Qi et~al.}}{{Qi, Ma, Li, Du, Hui, Wu, Laili, and He}}}
+\bibcite{Reimers2019}{{28}{2019}{{Reimers and Gurevych}}{{}}}
+\bibcite{Ryu2024}{{29}{2024}{{Ryu et~al.}}{{Ryu, Kim, Lee, and Yang}}}
+\bibcite{Sainz2023}{{30}{2023}{{Sainz et~al.}}{{Sainz, Campos, Garc{\'i}a-Ferrero, Etxaniz, de~Lacalle, and Agirre}}}
+\bibcite{Singh2026}{{31}{2026}{{Singh et~al.}}{{Singh, Ganguly, Goel, Torkamani, Han, Lilien, Erata, and Chaudhary}}}
+\bibcite{Thatikonda2025}{{32}{2025}{{Thatikonda et~al.}}{{Thatikonda, Buntine, and Shareghi}}}
+\bibcite{Wang2026}{{33}{2026}{{Wang et~al.}}{{Wang, Wong-Toropainen, Amrollahi, Bai, Bansal, Garg, and Gilpin}}}
+\bibcite{Wang2020}{{34}{2020}{{Wang et~al.}}{{Wang, Wei, Dong, Bao, Yang, and Zhou}}}
+\bibcite{Wang2022}{{35}{2022}{{Wang et~al.}}{{Wang, Wei, Schuurmans, Le, Chi, and Zhou}}}
+\bibcite{Xu2024}{{36}{2024}{{Xu et~al.}}{{Xu, Lu, Schoenebeck, and Kong}}}
+\bibcite{Yanaka2019}{{37}{2019}{{Yanaka et~al.}}{{Yanaka, Mineshima, Bekki, Inui, Sekine, Abzianidze, and Bos}}}
+\bibcite{Yanaka2021}{{38}{2021}{{Yanaka et~al.}}{{Yanaka, Mineshima, and Inui}}}
+\bibcite{Yang2025}{{39}{2025}{{Yang et~al.}}{{Yang, Li, Yang, Zhang, Hui, Zheng, Yu, Gao, Huang, Lv, et~al.}}}
+\bibcite{Yang2023}{{40}{2023}{{Yang et~al.}}{{Yang, Xiong, Payani, Shareghi, and Fekri}}}
+\bibcite{Zheng2023}{{41}{2023}{{Zheng et~al.}}{{Zheng, Chiang, Sheng, Zhuang, Wu, Zhuang, Lin, Li, Li, Xing, et~al.}}}
+\bibcite{Zhong2020}{{42}{2020}{{Zhong et~al.}}{{Zhong, Yu, and Klein}}}
+\gdef \@abspage@last{20}
