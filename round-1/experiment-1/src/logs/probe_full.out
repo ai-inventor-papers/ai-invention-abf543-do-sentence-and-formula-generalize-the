@@ -1,2 +1,0 @@
-12:30:52|INFO   |probe: 300 sentences, 302 calls, 4240 questions
-12:35:38|INFO   |probe done: llm labels {'+': 569, '-': 316, '±': 81, '?': 64, '0': 2}; marker {'+': 865, '-': 402, '±': 89}; mean m1/m2 consistency 0.948; parse_fail=2; reasoning_tokens=235088; spent=0.7653

@@ -1,9 +1,0 @@
-pairs: 17978 jobs, 7360 new unique (757 identical strings), 6603 to solve
-pairs 1000/6603 18s (56.6/s)
-pairs 2000/6603 24s (84.4/s)
-pairs 3000/6603 28s (108.7/s)
-pairs 4000/6603 29s (137.1/s)
-pairs 5000/6603 31s (163.6/s)
-pairs 6000/6603 32s (190.2/s)
-pairs done: {'n_solved': 6603, 'wall_s': 41.4, 'mean_s': 0.05861214599424504, 'p95_s': 0.12889999999999963, 'max_s': 21.002}
-{"n_solved": 6603, "wall_s": 41.4, "mean_s": 0.05861214599424504, "p95_s": 0.12889999999999963, "max_s": 21.002}

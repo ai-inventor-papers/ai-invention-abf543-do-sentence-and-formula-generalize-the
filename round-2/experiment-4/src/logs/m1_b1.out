@@ -1,7 +1,0 @@
-04:15:18|INFO   |[M1_B1_syn] pilot $/call 0.000028; 1076 uncached -> projected $0.030; spent $0.001 (hard stop $2.7)
-04:16:02|INFO   |syn: {"phase": "M1_B1_syn", "n": 1096, "pilot_usd_per_call": 2.8015000000000002e-05, "projected_usd": 0.030144140000000003, "spent_before": 0.0005602999999999999, "n_paid": 1096, "n_cached": 20, "n_failed": 0, "spent_after": 0.03107260000000002, "phase_spent": 0.03107260000000002}
-04:16:03|INFO   |[M1_B1_conf] pilot $/call 0.000029; 963 uncached -> projected $0.027; spent $0.032 (hard stop $2.7)
-04:16:37|INFO   |conf: {"phase": "M1_B1_conf", "n": 983, "pilot_usd_per_call": 2.854e-05, "projected_usd": 0.02748402, "spent_before": 0.03164340000000002, "n_paid": 983, "n_cached": 20, "n_failed": 0, "spent_after": 0.05776849999999989, "phase_spent": 0.026695900000000012}
-04:16:38|INFO   |[M1_B1_tok] pilot $/call 0.000027; 1076 uncached -> projected $0.029; spent $0.058 (hard stop $2.7)
-04:17:16|INFO   |tok: {"phase": "M1_B1_tok", "n": 1096, "pilot_usd_per_call": 2.708e-05, "projected_usd": 0.02913808, "spent_before": 0.058310099999999906, "n_paid": 1096, "n_cached": 20, "n_failed": 0, "spent_after": 0.08834709999999998, "phase_spent": 0.030578600000000004}
-04:17:17|INFO   |B1 rows 3175; parse rate 1.000; ledger $0.0883
