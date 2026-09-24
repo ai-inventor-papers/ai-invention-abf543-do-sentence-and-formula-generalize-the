@@ -1,18 +1,18 @@
-# Held-out check of gold-free logic-translation metrics
+# Checking a formula against its peers on fresh data
 
 `demo/` — Self-contained demo (Colab-ready notebook or markdown). Run without setup.  
 `src/` — Full source code, data, and outputs from the experiment execution.
 
 **Type:** experiment  
-**ID:** `art_9sEYxfGs3C-z`
+**ID:** `art_D-NE4j8Hew3l`
 
 ## Layman Summary
 
-Re-tests, on 6,300 fresh machine translations of sentences into logic, whether previously promising automatic quality scores really predict human-style correctness judgments.
+Scores a computer-made logic translation of a sentence by checking, with a logic solver, how many other systems' translations say exactly the same thing, then tests that score on new, independently labelled data.
 
 ## Full Summary
 
-Frozen held-out confirmation of the iter-1 gold-free NL->FOL faithfulness metrics on art_iyzYyaqlqpSX (700 sentences x 9 systems = 6,300 candidates; primary labels = 609 panel3 items, post-stratified weights, Kish n_eff 350; 1000x sentence bootstrap within corpus x tercile). Iter-1 code vendored read-only, sha1-frozen (36 files identical); pre-flight reproduces screen LC_onecoin exactly (833/833) and A3 50/50. Frozen gemini metrics run after a key outage ($2.70): B1 on all rows, B3 on panel+contamination slice, B1plus=gemini-2.5-pro and A1 on panel(+contamination) only; B3c/recall only as local Qwen3-8B substitutes (suffix L, secondary rows). PANEL AUROC: LC_onecoin .756 [.701,.808] (solver .810, unanimous .836), LC_ds_binary .787, LC_maj .765; A3 .642 (fails C1; A0 .656, Ccov .655, polarity increment +.002 n.s.); A1 .657; B1 .762; B1plus .825; B3nli .734, B3cos .723; B2/B7 structural ~.50; B8 .771 / B7_jacc .787 (2 systems). C1-C3 over frozen base [B1,B2,B3nli,B3cos,B7] (AUROC .788): NO candidate confirms; only baseline B1plus (+.034 [.017,.052]). LC C2 +.019 [-.003,.043]; +.049 [.017,.085] without round-trip; +.010 with B1plus in base; LC+A3 +.030 [.005,.057]. Circularity: LC AUROC inside 545 solver-NON-equivalent panel items .722 [.669,.770] -> pre-registered 'not a checker artefact'; panel minus solver-pure -.042 [-.110,.018]; faithful-but-inequivalent items in minority/singleton LC classes 35% vs 69% for unfaithful. No complexity crossover (top tercile: B1 .779 > LC .719; B1plus .834; A3 .570). System tau easy (B1 .89, LC .78). Contamination: all metrics score originals above entity-renamed paraphrases (B1 +.096) with no AUROC change; local recall probe +.09 predicate-name recall, ~1% exact. Screen re-rank under audited labels: LC_onecoin still sole winner (changed=false). Transfer: A3 types 98% 'conflation' on EU-AI-Act (degenerate decoder). Files: results/{confirmation_table,analysis,circularity,system_level,screen_rerank,transfer_A3,deviations,audit_rederive,integrity}.json, results/heldout_scores.jsonl (item x metric, join by metadata_item_id), method_out.json (predict_<metric>). Audit: independent numpy re-derivation of headline AUROCs and circularity (b) matches to 1e-6; independent C2 for LC +.020 vs +.019; permuted/shuffled placebos ~.50 / ~0.
+Freeze-then-confirm test of Directional Consensus (DC), a gold-free, text-blind NL->FOL faithfulness score: lexical-free vocabulary alignment of each peer output (L1 bijection / L2 partial map / L3 granularity), z3 entailment relation, DS-weighted EQUIV share. Library dc/ (directional_consensus, align_pair, pair_relation, fit_weights, type_error; 16 unit tests). Config frozen on 700 dev sentences (L3 off, UNALIGNABLE in denominator, DS weights; sha256 receipt 04:14 UTC; dev AUROC 0.777 panel/0.855 solver) BEFORE fresh labels. Fresh set: 450 overlap-free sentences (MALLS 170, FOLIO-v2-train 150, ProverQA 130) x 9 systems (4,050 greedy + 4,500 samples), labels: L0 gold audit (wrong gold MALLS 55%, FOLIO 62%, ProverQA 15%), L1 audited-solver (3,720 rows), L3 blinded panel (256 items, raked weights, Kish 202; planned ~1,000 but the $7 OpenRouter key shared by 3 experiments ran out; spend $2.38). Results: DC AUROC 0.827 panel / 0.874 solver; LC_ds_binary 0.830/0.865; B1 flash judge 0.791/0.727; VC 0.674/0.791; B2/B7 ~0.5. T1 (increment over frozen base [B1,B2,B3nliL,B3cosL,B7]) PASS: +0.033 (LB5 +0.005) panel, +0.118 solver; vs API-only base +0.126/+0.159. T2 label-dependent (DC not > LC_ds_binary on panel, -0.003). T3 typing fail (top-1 0.12). T4 DC_self == B8, fail. Secondaries: circularity AUROC 0.776 on solver-non-equivalent panel items; DC collapses when the modal cluster is wrong (0.42 vs B1 0.79); DC weaker than B1 on 2+ quantifiers / long sentences, stronger with 3+ conditions; invariance false alarms <=0.5% (VC 86%); gold-as-peer wrong-gold flag AUROC 0.86; controlled mutants detected 0.87-0.93 (arg swap 0.65); 43.8% correct-but-inequivalent. B3/TJ use local Qwen3-8B substitutes (key exhausted); B1plus, arbiter, EU-AI-Act not run. Headline AUROCs, T1, T2, placebos, wrong-gold and correct-but-inequivalent rates independently re-derived (results/rederive_headline.json). Outputs: method_out.json (exp_gen_sol_out, 4,050 examples, predict_DC etc.), results/fresh_set.jsonl (labelled meta-eval set, 8,550 rows), tests.json, analysis*.json, report_tables.md, deviations.json.
 
 ## Dependencies
 
@@ -24,6 +24,7 @@ Frozen held-out confirmation of the iter-1 gold-free NL->FOL faithfulness metric
 - `full_method_out.json`
 - `mini_method_out.json`
 - `preview_method_out.json`
+- `reproducibility.md`
 
 ## Demo Files
 
