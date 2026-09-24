@@ -1,16 +1,0 @@
-15:34:34|INFO   |text extraction: 1123 sentences in 5s
-15:34:40|INFO   |run_batch: 1102 jobs, 799 uncached, est $3.196; spent so far $0.9321 of cap $6.0
-15:43:01|WARNING|[probe_A1A2] attempt 0: TimeoutError()
-15:46:32|INFO   |probes: 1055 sentences, $3.111
-Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights:  41%|████      | 42/103 [00:00<00:00, 400.07it/s]Loading weights:  81%|████████  | 83/103 [00:00<00:00, 363.99it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 456.88it/s]
-Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 17019.12it/s]
-15:48:19|INFO   |scored 1000/6300 (107s)
-15:48:30|INFO   |scored 2000/6300 (118s)
-15:48:40|INFO   |scored 3000/6300 (127s)
-15:48:49|INFO   |scored 4000/6300 (137s)
-15:48:58|INFO   |scored 5000/6300 (146s)
-15:49:11|INFO   |scored 6000/6300 (159s)
-15:49:14|INFO   |heldout_scores: 6300 rows in 161s
-15:49:46|INFO   |scored 1000/1060 (33s)
-15:49:47|INFO   |gold_scores: 1060 rows in 33s
-15:50:04|INFO   |transfer_scores: 367 rows in 17s

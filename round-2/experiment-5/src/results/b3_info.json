@@ -1,6 +1,0 @@
-{
- "n": 680,
- "covered": 680,
- "source": "local_qwen3_8b",
- "api_flash_backtranslations_before_budget_stop": 40
-}

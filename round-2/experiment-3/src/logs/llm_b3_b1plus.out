@@ -1,10 +1,0 @@
-17:28:18|INFO   |===== stage llm (limit_sents=None)
-17:28:21|INFO   |[B3] pilot $/call=0.00011780499999999999 remaining uncached=1197 projected $0.141 (phase spent $0.002, cap $0.4; total spent $0.196)
-17:29:06|INFO   |B3 back: {"phase": "B3", "n_requests": 1197, "n_unique_bodies": 1045, "n_uncached_before": 1197, "pilot_usd_per_call": 0.00011780499999999999, "pilot_seconds": 1.64, "projected_remaining_usd": 0.141012585, "n_paid": 1065, "n_cached": 152, "n_failed": 0, "phase_spent_usd": 0.12693690000000007, "phase_spent_total": 0.12693690000000007, "wall_s": 46.7}
-Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 1185.67it/s]
-Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 863.87it/s]
-/ai-inventor/aii_data/runs/run_qY2a2IS-WLIs/3_invention_loop/iter_2/gen_art/gen_art_experiment_3/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
-  warnings.warn(
-17:32:03|INFO   |B3 GPU scored 1197/1197 in 22s on cuda (MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli)
-17:32:09|INFO   |B1plus pilot google/gemini-2.5-pro: $/call=0.0012234375000000001 parse=1.00 ok=20/20
-17:33:38|INFO   |B1plus: {"chain": [{"model": "google/gemini-2.5-pro", "pilot_usd_per_call": 0.0012234375000000001, "pilot_parse_rate": 1.0, "n_ok": 20}], "model": "google/gemini-2.5-pro", "frontier": true, "n_affordable": 1410, "n_run": 609, "n_paid": 569, "n_cached": 40, "phase_spent": 0.6722000000000002, "parse_rate": 1.0}

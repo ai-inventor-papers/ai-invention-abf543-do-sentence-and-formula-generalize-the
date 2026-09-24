@@ -1,7 +1,0 @@
-04:40:51|INFO   |loaded Qwen/Qwen3-8B@b968826d9c46:bf16 in 29s; VRAM 16.4 GB
-04:40:51|INFO   |[b3L_back] 272 prompts, 264 to generate
-04:41:28|INFO   |[tjL] 272 prompts, 264 to generate
-Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 1119.90it/s]
-Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 829.28it/s]
-04:42:23|INFO   |B3 GPU scored 272/272 in 18s on cuda (MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli)
-04:42:23|INFO   |TJ_L parsed 272/272; B3L covered 272

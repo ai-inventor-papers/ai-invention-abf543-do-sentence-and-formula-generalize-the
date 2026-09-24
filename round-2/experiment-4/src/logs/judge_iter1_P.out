@@ -1,3 +1,0 @@
-2026-09-23 15:19:38.418 | INFO     | __main__:main:45 - iter-1 worlds: 0 cached, 609 to compute
-2026-09-23 15:21:40.960 | INFO     | __main__:main:53 - limit=50 reset=daily remaining=39.644802159
-2026-09-23 15:22:16.800 | INFO     | __main__:main:83 - TVJT_iter1 P: 34s cum $2.388

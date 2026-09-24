@@ -1,3 +1,0 @@
-17:22:12|INFO   |===== stage llm (limit_sents=None)
-17:22:15|INFO   |[B1] pilot $/call=3.079444444444444e-05 remaining uncached=7236 projected $0.223 (phase spent $0.001, cap $1.0; total spent $0.001)
-17:25:48|INFO   |B1 b1_scores.jsonl: {"phase": "B1", "n_requests": 7236, "n_unique_bodies": 5858, "n_uncached_before": 7236, "pilot_usd_per_call": 3.079444444444444e-05, "pilot_seconds": 1.35, "projected_remaining_usd": 0.22282859999999996, "n_paid": 5876, "n_cached": 1380, "n_failed": 0, "phase_spent_usd": 0.1838864000000006, "phase_spent_total": 0.1838864000000006, "wall_s": 213.8, "n_retry_48": 0, "parse_rate": 1.0}

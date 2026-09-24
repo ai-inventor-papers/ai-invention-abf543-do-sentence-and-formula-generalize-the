@@ -1,8 +1,0 @@
-04:25:32|INFO   |pairs: 3982 requested, 3908 to compute (70086 cached)
-04:25:49|INFO   |  pairs 800/3908 16s (48.8/s)
-04:25:52|INFO   |  pairs 1600/3908 20s (80.7/s)
-04:25:57|INFO   |  pairs 2400/3908 25s (96.7/s)
-04:26:11|INFO   |  pairs 3200/3908 39s (81.9/s)
-04:26:33|INFO   |pairs done 3908 in 60s
-04:26:33|INFO   |(a) {"n": 3982, "shape_isomorphic_rate": 0.1617277749874435, "n_non_iso": 3338, "EQUIV_L1": 0.1617277749874435, "ENTAIL_L1": 0.27649422400803614, "EQUIV_L2": 0.1617277749874435, "ENTAIL_L2": 0.27749874434957306, "EQUIV_L3": 0.2614264188849824, "ENTAIL_L3": 0.38950276243093923, "spurious_EQUIV_non_iso_L2": 0.0, "spurious_EQUIV_non_iso_L3": 0.1189334931096465, "L3_increment_EQUIV_non_iso": 0.1189334931096465, "spurious_ENTAIL_non_iso_L3": 0.4646494907130018, "lexical_EQUIV_rate": 0.07332998493219488}
-04:26:37|INFO   |M4 done

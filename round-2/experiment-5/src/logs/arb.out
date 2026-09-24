@@ -1,5 +1,0 @@
-04:43:06|INFO   |arb worlds for 143 sentences
-Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 812.46it/s]
-04:45:13|INFO   |loaded Qwen/Qwen3-8B:bf16 (399 tensors) in 40s; VRAM 16.4 GB
-04:45:13|INFO   |[arb_local] 143 prompts, 143 to generate (bs 16)
-04:45:20|INFO   |arb: 143 worlds, 397 candidates adjusted
