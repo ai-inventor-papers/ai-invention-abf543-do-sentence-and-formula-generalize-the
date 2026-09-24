@@ -1,0 +1,3 @@
+# Workspace is ~8.5 MB in total; no single path exceeds the 10 MB auto-keep floor,
+# and there are no cache directories. Nothing needs a keep/delete decision.
+entries: []

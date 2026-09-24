@@ -1,0 +1,62 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: paper.aux
+The style file: plainnatetal.bst
+Database file #1: references.bib
+Reallocated buffer (elt_size=1) to 40000 items from 20000.
+Reallocated sv_buffer (elt_size=1) to 40000 items from 20000.
+Reallocated ex_buf (elt_size=1) to 40000 items from 20000.
+Reallocated out_buf (elt_size=1) to 40000 items from 20000.
+Reallocated name_tok (elt_size=4) to 40000 items from 20000.
+Reallocated name_sep_char (elt_size=1) to 40000 items from 20000.
+Reallocated buffer (elt_size=1) to 60000 items from 40000.
+Reallocated sv_buffer (elt_size=1) to 60000 items from 40000.
+Reallocated ex_buf (elt_size=1) to 60000 items from 40000.
+Reallocated out_buf (elt_size=1) to 60000 items from 40000.
+Reallocated name_tok (elt_size=4) to 60000 items from 40000.
+Reallocated name_sep_char (elt_size=1) to 60000 items from 40000.
+Reallocated str_pool (elt_size=1) to 130000 items from 65000.
+Warning--empty booktitle in Singh2026
+Warning--empty booktitle in Yang2025
+You've used 42 entries,
+            2791 wiz_defined-function locations,
+            868 strings with 71874 characters,
+and the built_in function-call counts, 150779 in all, are:
+= -- 12147
+> -- 22619
+< -- 40
++ -- 7399
+- -- 7357
+* -- 15644
+:= -- 24075
+add.period$ -- 161
+call.type$ -- 42
+change.case$ -- 3654
+chr.to.int$ -- 42
+cite$ -- 86
+duplicate$ -- 1072
+empty$ -- 1789
+format.name$ -- 7413
+if$ -- 29289
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 42
+newline$ -- 253
+num.names$ -- 168
+pop$ -- 7619
+preamble$ -- 1
+purify$ -- 3654
+quote$ -- 0
+skip$ -- 4314
+stack$ -- 0
+substring$ -- 432
+swap$ -- 201
+text.length$ -- 33
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 462
+warning$ -- 2
+while$ -- 147
+width$ -- 0
+write$ -- 620
+(There were 2 warnings)
