@@ -1,0 +1,2 @@
+04:19:32|INFO   |L0 spend $0.8761
+04:19:32|INFO   |L0 wrong-gold by corpus: {'proverqa': (0.146, 130), 'malls': (0.553, 170), 'folio': (0.62, 150)}; rules Counter({'M3_accept': 194, 'M3+M1_reject': 192, 'M2_tiebreak': 64}); sources Counter({'original': 244, 'panel_corrected': 193, 'panel_flagged_uncorrected': 13}); full-subset cascade==majority 45/45

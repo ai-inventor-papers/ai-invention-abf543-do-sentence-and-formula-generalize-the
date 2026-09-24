@@ -1,0 +1,91 @@
+{
+ "frozen_at": 1790224968.916307,
+ "frozen_at_iso": "2026-09-24T04:42:48+0000",
+ "limits": {
+  "l1_cap": 5040,
+  "l2_cap": 2000,
+  "l3_cap": 300,
+  "l2_min_cov": 0.5,
+  "l3_max_defs": 2,
+  "l3_max_lits": 2,
+  "domains": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "z3_timeout_ms": 5000,
+  "pair_seconds": 20.0,
+  "order": "default",
+  "n_random": 24,
+  "n_models": 6,
+  "max_z3_maps": 40
+ },
+ "big_rule_applied": false,
+ "big_rule": {
+  "pair_seconds": 10.0,
+  "domains": [
+   1,
+   2,
+   3
+  ]
+ },
+ "code_sha1": {
+  "__init__.py": "187961030fb4738ad2fdbea3423582131de15c24",
+  "api.py": "4c6ae474529495c52d2e37004826c31008baa1d9",
+  "core.py": "c9e6cee8ae8aca4e38867adec27f9770cdd5481c",
+  "worker.py": "7661d8556ac6bcbdde58762c9a345b225d3c3919",
+  "src/run_dc.py": "1d1fd7bb77ceb41015a6e9f2a1dc217ad9213e28",
+  "src/dc_score.py": "36424ca707510c1f198212106151bdb556f1f301"
+ },
+ "variants": [
+  "DC",
+  "DC_fp"
+ ],
+ "ds_weights": {
+  "p_w": {
+   "deepseek-v3.1": 0.07842421058341299,
+   "gemini-2.5-flash": 0.0860650996311403,
+   "gemma-3-27b": 0.09770526994107533,
+   "gpt-4.1-mini": 0.12826135255121993,
+   "gpt-oss-120b": 0.10712567929445836,
+   "llama-3.1-8b": 0.012594135050848339,
+   "mistral-small-3.2-24b": 0.07219769521200259,
+   "phi-4": 0.072721991943826,
+   "qwen-2.5-7b": 0.03920124346092423,
+   "pilot": 0.001
+  },
+  "w": {
+   "deepseek-v3.1": 0.05,
+   "gemini-2.5-flash": 0.05,
+   "gemma-3-27b": 0.05,
+   "gpt-4.1-mini": 0.05,
+   "gpt-oss-120b": 0.05,
+   "llama-3.1-8b": 0.05,
+   "mistral-small-3.2-24b": 0.05,
+   "phi-4": 0.05,
+   "qwen-2.5-7b": 0.05,
+   "pilot": 0.05
+  },
+  "pi": 0.17420659246418826,
+  "rho": 0.0072804252324788635,
+  "loglik": -706.0378269392736
+ },
+ "ds_bin": {
+  "p_w": {
+   "deepseek-v3.1": 0.07064143024869321,
+   "gemini-2.5-flash": 0.07242585507445624,
+   "gemma-3-27b": 0.07176925133526793,
+   "gpt-4.1-mini": 0.10547719244792138,
+   "gpt-oss-120b": 0.09171468876974813,
+   "llama-3.1-8b": 0.006428238227275891,
+   "mistral-small-3.2-24b": 0.058307910856030244,
+   "phi-4": 0.058406894094992896,
+   "qwen-2.5-7b": 0.025735277155468732
+  },
+  "pi": 0.13327077374515156,
+  "rho": 0.006122531648971625
+ },
+ "pilot_weight_rule": "pilot family = one rater: w_pilot split equally over its parseable runs",
+ "peers": "system candidate: the other 8 systems' greedy outputs + pilot family (AI-Act Art.3 only); pilot candidate: the 9 systems' greedy outputs; samples are never peers (only DC_lone/B8)"
+}

@@ -1,0 +1,17 @@
+04:04:21|INFO   |frozen check: {'prompt_sha1': 'afabb41eedb31b3ee96e32419bd8e4abd727f758', 'frozen_sha1': 'afabb41eedb31b3ee96e32419bd8e4abd727f758', 'prompt_matches_frozen': True, 'prompt_matches_vendor_file': True, 'n_systems': 9}
+04:04:21|INFO   |jobs 2822 (greedy 1242)
+04:04:39|INFO   |200/2822 phase $0.042 total $0.042
+04:04:56|INFO   |400/2822 phase $0.064 total $0.064
+04:05:15|INFO   |600/2822 phase $0.089 total $0.089
+04:05:42|INFO   |800/2822 phase $0.114 total $0.114
+04:06:09|INFO   |1000/2822 phase $0.140 total $0.140
+04:06:33|INFO   |1200/2822 phase $0.157 total $0.157
+04:07:01|INFO   |1400/2822 phase $0.172 total $0.172
+04:07:33|INFO   |1600/2822 phase $0.189 total $0.189
+04:08:03|INFO   |1800/2822 phase $0.203 total $0.203
+04:08:38|INFO   |2000/2822 phase $0.220 total $0.220
+04:09:06|INFO   |2200/2822 phase $0.236 total $0.236
+04:09:27|INFO   |2400/2822 phase $0.254 total $0.254
+04:09:49|INFO   |2600/2822 phase $0.273 total $0.273
+04:10:11|INFO   |2800/2822 phase $0.292 total $0.292
+04:10:39|INFO   |full summary: {"per_system": {"deepseek-v3.1": {"n": 158, "parse_rate": 0.7531645569620253, "trunc_rate": 0.0, "usd_per_call": 0.00015065215189873418, "fail": 0}, "gemini-2.5-flash": {"n": 158, "parse_rate": 0.7278481012658228, "trunc_rate": 0.0, "usd_per_call": 0.0002775835443037975, "fail": 0}, "gemma-3-27b": {"n": 158, "parse_rate": 0.7088607594936709, "trunc_rate": 0.0, "usd_per_call": 5.110205696202531e-05, "fail": 0}, "gpt-4.1-mini": {"n": 158, "parse_rate": 0.8354430379746836, "trunc_rate": 0.0, "usd_per_call": 0.0001886379746835443, "fail": 0}, "gpt-oss-120b": {"n": 158, "parse_rate": 0.8354430379746836, "trunc_rate": 0.0, "usd_per_call": 0.0001085645253164557, "fail": 0}, "llama-3.1-8b": {"n": 158, "parse_rate": 0.6582278481012658, "trunc_rate": 0.0, "usd_per_call": 7.65306329113924e-06, "fail": 0}, "mistral-small-3.2-24b": {"n": 158, "parse_rate": 0.7341772151898734, "trunc_rate": 0.04430379746835443, "usd_per_call": 5.200996835443038e-05, "fail": 0}, "phi-4": {"n": 158, "parse_rate": 0.5506329113924051, "trunc_rate": 0.012658227848101266, "usd_per_call": 3.469474683544304e-05, "fail": 0}, "qwen-2.5-7b": {"n": 158, "parse_rate": 0.7974683544303798, "trunc_rate": 0.0, "usd_per_call": 3.429810126582278e-05, "fail": 0}}, "parse_rate": 0.7334739803094233, "trunc_rate": 0.006329113924050633, "usd_per_call": 0.00010057734810126581, "n": 1422, "samples": {"per_system": {"gpt-4.1-mini": {"n": 790, "parse_rate": 0.7924050632911392, "trunc_rate": 0.0, "usd_per_call": 0.00018621164556962023

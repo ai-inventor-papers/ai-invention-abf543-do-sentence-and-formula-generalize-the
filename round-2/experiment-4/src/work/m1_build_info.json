@@ -1,0 +1,54 @@
+{
+ "n_eligible": 251,
+ "n_relaxed_pool": 71,
+ "flag_relaxed": false,
+ "n_chosen": 251,
+ "n_built": 223,
+ "build_fail": {
+  "no_renderable_mode_member": 28
+ },
+ "per_corpus": {
+  "folio": 19,
+  "malls": 60,
+  "proverqa": 144
+ },
+ "render_level": {
+  "1": 223
+ },
+ "mutants": {
+  "DROP_CONJ": {
+   "(True, False)": 88,
+   "(False, None)": 135
+  },
+  "ADD_CONJ": {
+   "(True, True)": 113,
+   "(True, False)": 110
+  },
+  "QUANT": {
+   "(False, None)": 101,
+   "(True, False)": 122
+  },
+  "IMPL_REV": {
+   "(True, False)": 209,
+   "(False, None)": 14
+  },
+  "NEG": {
+   "(True, False)": 223
+  },
+  "ARG_SWAP": {
+   "(False, None)": 215,
+   "(True, False)": 8
+  }
+ },
+ "iso_counts": {
+  "DROP_CONJ": 0,
+  "ADD_CONJ": 0,
+  "QUANT": 0,
+  "IMPL_REV": 20,
+  "NEG": 0,
+  "ARG_SWAP": 1
+ },
+ "canon_same_ast_rate": 1.0,
+ "n_probes": 3175,
+ "seconds": 108.01273345947266
+}

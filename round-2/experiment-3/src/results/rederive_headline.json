@@ -1,0 +1,33 @@
+{
+ "n_panel": 256,
+ "n_solver": 3720,
+ "kish": 201.69710288802224,
+ "AUROC_panel_DC": 0.8266578921845189,
+ "AUROC_solver_DC": 0.8741019618679193,
+ "AUROC_panel_LC_ds_binary": 0.829520492946042,
+ "AUROC_solver_LC_ds_binary": 0.8652262749071259,
+ "AUROC_panel_LC_maj": 0.7968846160822833,
+ "AUROC_solver_LC_maj": 0.8590120045439193,
+ "AUROC_panel_B1": 0.7913200701866097,
+ "AUROC_solver_B1": 0.7267237726812193,
+ "AUROC_panel_VC": 0.6743669265339903,
+ "AUROC_solver_VC": 0.7906063676276442,
+ "T2_DC_minus_LCds_panel": -0.0028626007615231153,
+ "T1_panel_delta": 0.02925836992722486,
+ "T1_solver_panelframe_delta": 0.13149350649350666,
+ "T1_solver_allrows_noB3_delta": 0.15357879708943534,
+ "T1_panel_LB5_refit_bootstrap": 0.003528692737528839,
+ "T1_panel_LB5_n_draws": 300,
+ "placebo_permuted_labels_solver_DC_AUROC_mean": 0.5012325964815326,
+ "placebo_permuted_labels_p_value": 0.0,
+ "placebo_T1_panel_delta_shuffledDC": -0.00221496172108393,
+ "placebo_T1_panel_LB5_shuffledDC": -0.020733539239907662,
+ "placebo_T1_passes": false,
+ "wrong_gold_by_corpus": {
+  "folio": 0.62,
+  "malls": 0.5529411764705883,
+  "proverqa": 0.14615384615384616
+ },
+ "correct_but_inequivalent_weighted": 0.4381471509457414,
+ "ledger_usd": 2.3848
+}

@@ -1,0 +1,7 @@
+04:55:51|INFO   |invariance: 249 rewrites, 1972 pairs
+04:55:52|INFO   |[invariance] done 0/73 running 5 elapsed 1s
+04:56:51|INFO   |[invariance] done 22/73 running 4 elapsed 60s
+04:56:52|INFO   |[invariance] done 22/73 running 5 elapsed 61s
+04:57:51|INFO   |[invariance] done 60/73 running 5 elapsed 120s
+04:57:52|INFO   |[invariance] done 60/73 running 5 elapsed 121s
+04:58:27|INFO   |invariance: {'rename': {'n': 100, 'false_alarm_rate': 0.0, 'mean_abs_delta': 0.0}, 'reorder': {'n': 100, 'false_alarm_rate': 0.01, 'mean_abs_delta': 0.00125}, 'contrapositive': {'n': 49, 'false_alarm_rate': 0.02040816326530612, 'mean_abs_delta': 0.0034013605442176874}}

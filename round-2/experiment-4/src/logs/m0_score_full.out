@@ -1,0 +1,10 @@
+04:07:59|INFO   |L1 cross-check vs exp3: n=22198 agreement=1.0
+04:08:08|INFO   |DS: p={'deepseek-v3.1': 0.501, 'gemini-2.5-flash': 0.664, 'gemma-3-27b': 0.585, 'gpt-4.1-mini': 0.682, 'gpt-oss-120b': 0.693, 'llama-3.1-8b': 0.388, 'mistral-small-3.2-24b': 0.53, 'phi-4': 0.471, 'qwen-2.5-7b': 0.392} degenerate=False
+04:08:43|INFO   |  scored 0/700 sentences
+04:08:43|INFO   |  scored 100/700 sentences
+04:08:44|INFO   |  scored 200/700 sentences
+04:08:44|INFO   |  scored 300/700 sentences
+04:08:44|INFO   |  scored 400/700 sentences
+04:08:44|INFO   |  scored 500/700 sentences
+04:08:44|INFO   |  scored 600/700 sentences
+04:08:46|INFO   |scored 6300 items + 700 golds in 48s

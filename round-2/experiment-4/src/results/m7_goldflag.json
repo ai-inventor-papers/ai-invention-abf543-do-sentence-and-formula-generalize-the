@@ -1,0 +1,65 @@
+{
+ "n_golds": 700,
+ "wrong_gold_rate": 0.4342857142857143,
+ "DC_gold_auroc_vs_L0": {
+  "auroc": 0.8369176967038809,
+  "ci": [
+   0.808879998990662,
+   0.8643430371489342
+  ],
+  "n": 700,
+  "n_sentences": 700
+ },
+ "S0_L1_gold_auroc_vs_L0": {
+  "auroc": 0.7047655834662414,
+  "ci": [
+   0.6677918798287651,
+   0.7374877533579259
+  ],
+  "n": 700,
+  "n_sentences": 700
+ },
+ "coverage_DC": 0.9657142857142857,
+ "B1_gold_auroc": 0.8396879984051037,
+ "stack_B1_plus_DC": {
+  "auroc_judge_oof": 0.8254128455608719,
+  "auroc_judge_plus_DC_oof": 0.8957128854332802,
+  "delta": 0.0703000398724083,
+  "ci": [
+   0.04548741370572268,
+   0.09590637651598102
+  ],
+  "n": 700
+ },
+ "TJ_gold_auroc": 0.8594373006379585,
+ "stack_TJ_plus_DC": {
+  "auroc_judge_oof": 0.8412247474747475,
+  "auroc_judge_plus_DC_oof": 0.8894952817650186,
+  "delta": 0.04827053429027106,
+  "ci": [
+   0.028245837789718092,
+   0.07037667909649355
+  ],
+  "n": 700
+ },
+ "per_corpus": {
+  "folio": {
+   "n": 250,
+   "wrong_rate": 0.62,
+   "DC_auroc": 0.732597623089983
+  },
+  "malls": {
+   "n": 250,
+   "wrong_rate": 0.45599999999999996,
+   "DC_auroc": 0.7829269865841073
+  },
+  "proverqa": {
+   "n": 200,
+   "wrong_rate": 0.17500000000000004,
+   "DC_auroc": 0.890995670995671,
+   "P_at_25_wrong_among_lowest_DC": 0.76
+  }
+ },
+ "nearest_neighbour": "Brunello et al., arXiv:2606.02837: LLM-guided relabelling framework directing human reviewers to error-prone NL-FOL instances (v2: 90% accuracy after reviewing <20%)",
+ "P1_PASS": true
+}

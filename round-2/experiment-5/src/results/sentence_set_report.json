@@ -1,0 +1,78 @@
+{
+ "sources": {
+  "ai_act_art3": 68,
+  "GDPR": 25,
+  "DSA": 24,
+  "DMA": 33,
+  "DataAct": 41,
+  "SARA-IRC": 57,
+  "ai_act_other_articles": 1105
+ },
+ "fallback_used": false,
+ "pool_after_filters": 1232,
+ "filtered": {
+  "pointer_definition": 27,
+  "under_10_words": 2,
+  "over_170_words": 3,
+  "duplicate": 21
+ },
+ "pool_by_act_bin": {
+  "AIAct|B0": 974,
+  "AIAct|B1": 101,
+  "AIAct|B2": 10,
+  "DMA|B0": 18,
+  "DSA|B0": 16,
+  "DSA|B1": 4,
+  "DataAct|B0": 24,
+  "DataAct|B1": 8,
+  "GDPR|B0": 21,
+  "GDPR|B1": 3,
+  "SARA-IRC|B0": 39,
+  "SARA-IRC|B1": 10,
+  "SARA-IRC|B2": 4
+ },
+ "n_sentences": 158,
+ "by_source": {
+  "AIAct": 99,
+  "DMA": 10,
+  "DSA": 10,
+  "DataAct": 10,
+  "GDPR": 10,
+  "SARA-IRC": 19
+ },
+ "by_bin": {
+  "B0": 91,
+  "B1": 51,
+  "B2": 16
+ },
+ "ai_act_bins": {
+  "B0": 61,
+  "B1": 5,
+  "B2": 2
+ },
+ "public_bins": {
+  "B0": 30,
+  "B1": 46,
+  "B2": 14
+ },
+ "public_by_act_bin": {
+  "AIAct|B1": 21,
+  "AIAct|B2": 10,
+  "DMA|B0": 10,
+  "DSA|B0": 6,
+  "DSA|B1": 4,
+  "DataAct|B0": 2,
+  "DataAct|B1": 8,
+  "GDPR|B0": 7,
+  "GDPR|B1": 3,
+  "SARA-IRC|B0": 5,
+  "SARA-IRC|B1": 10,
+  "SARA-IRC|B2": 4
+ },
+ "n_tokens_mean_by_bin": {
+  "B0": 35.30769230769231,
+  "B1": 62.90196078431372,
+  "B2": 99.875
+ },
+ "has_cross_reference": 21
+}
