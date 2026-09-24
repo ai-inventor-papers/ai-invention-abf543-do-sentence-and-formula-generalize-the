@@ -1,0 +1,1 @@
+{"key": "d40b703f35df9d064da1ad311a44d30027b424b2", "relation": "UNALIGNABLE", "level": null, "map": null, "cmap": null, "defs": null, "n_maps": {}, "n_z3": 0, "timed_out": false, "relation_l12": "UNALIGNABLE", "level_l12": null, "map_l12": null, "direction": "B_in_A", "seconds": 3.1, "n_preds_a": 3, "n_preds_b": 7, "big_rule_applied": false, "kind": "greedy"}

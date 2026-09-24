@@ -1,149 +1,124 @@
-# sigfaith — naming FOL errors and flagging bad gold (run_qY2a2IS-WLIs, iter 2, experiment 5)
+# Directional consensus on long legal definitions (secondary transfer test, panel-only labels)
 
-This experiment takes the iter-1 **monotonicity-signature** faithfulness metric for NL→FOL (Arm A, variant A3) and:
-1. repairs it on the screen only;
-2. freezes it behind a hash-checked label firewall;
-3. validates it on held-out real outputs (dataset art_iyzYyaqlqpSX) in four roles.
+This is the run's first **labelled** exception-heavy NL→FOL set. It tests whether **directional consensus (DC)** transfers to long, condition-heavy legal sentences. DC is a gold-free, text-blind metric: the solver-checked share of other systems' formalizations that are logically equivalent to a candidate under name-blind vocabulary alignment. DC is compared with every field-standard baseline on the same items.
 
-The four roles are **V1** error-type naming, **V2** blind spots on real errors, **V3** wrong-gold flagging and **V4** the polarity increment. Two further analyses are exploratory: **V5** document conflation and **V6** EU-AI-Act transfer.
+**Label source for every number: the 3-member family-disjoint panel, judging from the sentence only (no gold).** These are secondary transfer results.
+Workspace: `/ai-inventor/aii_data/runs/run_ujABDGgoK_5Q/3_invention_loop/iter_2/gen_art/gen_art_experiment_5`
 
-The headline result is **mostly negative**, and every pre-registered verdict is reported with its numbers.
+## What was done
+1. **Sentences (S1).** 158 sentences:
+   - the 68 AI-Act Art. 3 definitions, from the user's pilot upload;
+   - 59 public statutory items: GDPR Art. 4, DSA Art. 3, DMA Art. 2, Data Act Art. 2 (EUR-Lex), and 19 clauses from SARA/US-IRC;
+   - 31 AI-Act non-Art.-3 sentences, used as the pre-declared F1 top-up where a marker bin ran out.
 
-Workspace (absolute): `/ai-inventor/aii_data/runs/run_qY2a2IS-WLIs/3_invention_loop/iter_2/gen_art/gen_art_experiment_5`
+   Marker bins are B0 91, B1 51, B2 16. Items with ≥4 markers (B2) are rare in statutory text across all sources.
+2. **Candidates (S2).** The 9 OpenRouter systems were run with the frozen round-1 prompt (sha1 `afabb41e…`) and extractor v2. The only change is max_tokens raised to 1024 (D4). Greedy parse rate is 73.3%; 0.6% of outputs were truncated. There are also 2×5 T=0.8 samples, and the user's 367 pilot formulas as the `pilot` family.
+3. **DC (S3, `dc/`).** Contract v1 with its defaults: L1 bijections, then L2 partial maps, then L3 positive granularity definitions. Relations are decided by a numpy refutation filter, then z3 bounded and unbounded checks. The code covers 5,949 pairs in 14 minutes on 6 CPUs. The **freeze** (`results/dc_config.json`, `results/dc_scores_frozen.jsonl`) was written at 04:42:48, before the first panel label was read (asserted in `src/analysis.py`).
+4. **Baselines (S4):**
+   - B1 cheap judge: the exact frozen prompt, run on all 1,789 candidates;
+   - B1plus: gemini-2.5-pro;
+   - B3 round trip;
+   - B2 parse;
+   - B7: the user's structural metrics;
+   - VC: vocabulary conformity, name-based on purpose;
+   - LC_maj and DS_bin: round-2 definitions via vendor L1;
+   - B8 self-consistency, DC_lone, and DC+arb;
+   - variants DC_noL3 and DC_fp.
+5. **Labels (S5).** The panel is claude-haiku-4.5, grok-4.3 and glm-4.6. The calibration gate was passed (0.875 / 0.950 / 0.850). An adjudication sample of 480 system items and 200 pilot items was drawn with a seed before any label existed. Weights are post-stratified.
+6. **Analysis (S6).** Pre-registered tests X1–X5, with 2,000 sentence-clustered bootstrap draws and vendor `stats.py`. It also covers coverage, system level, error distribution, the shared-bias boundary, label robustness, invariance, a placebo, the dev anchor, cross-implementation agreement and cost.
 
-## Headline results
+## Headline results (`results/tests.json`, `results/analysis.json`)
+The table gives weighted AUROC against the panel-majority label on 655 labelled items. 67 are faithful (weighted 9.4%, below 12%, so F7 applies: imbalanced).
 
-All numbers are post-freeze and use panel3 labels with post-stratified weights. CIs come from 2,000 sentence-clustered bootstrap resamples.
+| metric | AUROC [95% CI] | | metric | AUROC [95% CI] |
+|---|---|---|---|---|
+| **DC** | **0.705 [0.608, 0.792]** | | B1 cheap judge | **0.927 [0.900, 0.949]** |
+| DC_fp | 0.712 [0.615, 0.799] | | B1plus gemini-2.5-pro | 0.852 [0.786, 0.904] |
+| DC_noL3 | 0.672 [0.574, 0.763] | | B3 NLI (local back-translation) | 0.694 [0.601, 0.773] |
+| LC_maj | 0.754 [0.670, 0.828] | | B3 cosine | 0.691 [0.620, 0.762] |
+| DS_bin | 0.729 [0.630, 0.824] (n=464) | | VC vocabulary control | 0.685 [0.599, 0.766] |
+| DC+arb (local judge) | 0.610 [0.530, 0.690] | | B7 structural | 0.597 [0.540, 0.650] |
+| DC_lone | 0.742 [0.615, 0.866] (n=315) | | B2 parse | 0.569 [0.515, 0.615] |
+| B8 self-consistency | 0.821 [0.676, 0.942] (n=124) | | placebo (peers shuffled) | 0.506 [0.460, 0.554] |
 
-**Screen repair.** The screen was split sha1-by-sentence into 150 DEV and 150 TEST sentences.
+The pre-registered tests:
+- **X1 PASS.** DC = 0.705, with one-sided 95% lower bound 0.62 > 0.5.
+- **X2 PASS (marginal).** Adding DC to [B1, parse] raises cross-fitted AUROC by ΔAUROC = +0.021 [−0.001, +0.046], one-sided bound +0.002. On covered items only it is +0.034 [0.007, 0.067]. Over the full base [B1, parse, B3nli, B3cos, B7] it is +0.008 [−0.012, 0.028], so **no increment over the full base**. The random-feature placebo gives Δ ≈ 0.003, with a CI containing 0.
+- **Comparison with the cheap judge.** B1 dominates everything here. The frontier judge (pro) is *worse* than B1 against these panel labels (−0.075 [−0.134, −0.026]); stacking [B1, parse, DC] beats pro by +0.075.
+- **DC vs LC_maj.** DC is not better: −0.049 [−0.113, 0.016]. On parseable items only, DC is 0.796 vs LC_maj 0.786 (+0.010 [−0.022, 0.049]). Part of the gap is the contract's 0.5 score for unparseable candidates; LC_maj and DS_bin score them 0. The post-hoc variant DC_unparse0 reaches 0.764 (`analysis.json: posthoc_DC_unparse0`, not pre-registered).
+- **X3, complexity.** DC trails B1 in every marker bin:
 
-**R1 aligner** (Hungarian; lemma, WordNet-path and MiniLM similarity, plus an arity term; polarity-blind).
-- The pre-registered rule picked `τ=0.55, path, MiniLM-L6, β=0.1`, which is the only DET-feasible family.
-- On SCREEN_TEST:
+  | bin | DC − B1 gap [95% CI] |
+  |---|---|
+  | B0 | −0.197 [−0.299, −0.108] |
+  | B1 | −0.365 [−0.583, −0.084] |
+  | B2 | −0.224 [−0.655, −0.105] |
 
-  | Measure | Repaired | Legacy |
-  |---|---|---|
-  | SYN_RENAME false alarms | **0.129** | 0.419 |
-  | FA_RENAME2 (unseen gpt-4.1-mini renames, WordNet-filtered, n=134) | **0.515** | 0.575 |
-  | FA on logical rewrites | 0.007 | 0.0 |
-  | AUROC on real candidates | 0.738 | 0.732 |
+  The B1 and B2 bins are underpowered (6 and 5 positives). The within-sentence gap slope on marker count is −0.046 [−0.133, 0.113], so the prediction slope ≥ 0 is not supported (inconclusive). Coverage falls with markers: B0 77%, B1 70%, B2 52% (mostly parse failures).
+- **X4, error types.** Within-sentence detection is underpowered: at most 44 pairs per type. For exception-involved errors, DC orders 0.878 of pairs correctly vs B1 0.716 (37 pairs). DC's error naming fails: weighted top-1 is 0.044 vs 0.219 for the majority class, and most errors come out as "other".
+- **X5, lone output.** DC_lone 0.828 vs B8 0.821 on gpt-4.1-mini and llama (Δ +0.006 [−0.041, 0.075]). On pilot rows, DC_lone 0.633 vs the user's metric5 Jaccard 0.436.
+- **Shared-bias boundary.** When the modal cluster is panel-faithful, DC reaches 0.889. When it is unfaithful (76% of labelled sentences), DC falls to 0.624 while B1 stays at 0.946. This is the predicted failure mode of consensus.
+- **DS weights degenerate.** All sensitivities are below 0.5, so all weights sit at the 0.05 floor and DC is effectively unweighted. EQUIV agreement is rare on long text: 6% of pairs, versus 19% on the short dev anchor.
+- **Sanity checks.**
+  - Dev anchor (700 short sentences, 609 round-1 panel items): DC 0.774 [0.721, 0.824], within ±0.05 of DS 0.787 / LC 0.756.
+  - Invariance false-alarm rates: rename 0%, reorder 1%, contrapositive 2%.
+  - Cross-implementation agreement with the sibling `dc/` (this run's exp_3): 80% exact relation agreement on dev pairs and 97% on EQUIV-vs-not. On legal pairs it is 67% exact and 99% on EQUIV-vs-not.
+  - T5 re-derivation with sklearn matches to 1e-15.
+- **Panel quality caveats.** Fleiss κ = 0.38 (lower than on public corpora). Label robustness per member: DC ranges from 0.587 (M2 only) to 0.814 (M3 only), and is 0.866 on unanimous items only. The **long-text exception-sensitivity check could not be run** (budget; see below), so the panel's ability to see exception errors is uncertified.
+- **Legal error mix.** The mix differs from public corpora (TVD 0.35 [0.32, 0.39]). implication_direction_or_only accounts for 17.6%, largely "X means Y" formalised with → instead of ↔. 24% of unfaithful items are exception-involved.
+- **Cost.** DC needs $0 per item when peers exist and 1.3 CPU-s per item. B1 costs $0.00006 per item, pro $0.0011 per item, and the panel $0.0051 per item. The total API spend of this artifact is $4.65.
 
-- `R1_TARGET_MISSED` (the ≤0.05 target). The pre-registered mpnet fallback variant broke ADD detection and was rejected.
+## Deviations (full list: `results/deviations.json`)
+**D-BUDGET.** The run-level OpenRouter budget, shared by all sibling experiments, was exhausted at 04:22 UTC (HTTP 403 `aii_run_budget_exhausted`). As a result:
+- 25 of the 680 sampled items are unlabelled, and 10 have only 2 votes;
+- B3 back-translations were produced by local **Qwen3-8B** as a substitute (40 of 680 flash calls had completed);
+- DC+arb verdicts also come from local Qwen3-8B;
+- the exception-sensitivity check, the F7 minority top-up and the sonnet 4th voter were not run.
 
-**R2 text side.** The chosen side is **T1c**: rule default, overridden by a consistent gemini probe '−'.
+Other deviations:
+- **D-L3.** L3 was restricted to positive literals before any label was read.
+- **D-WEIGHTS.** The DS weights degenerate (see above).
+- **D-SET.** B2 is scarce (16 sentences), and the AI Act has 68 Art. 3 definitions, not 63.
+- **D-KILL.** One sentence hit the per-sentence watchdog; 71 of its pairs are UNKNOWN.
+- **D-SAMPLE.** The adjudication sample was redrawn once before any label existed, to meet the minimum of 60 items for llama.
 
-| Text side | DEV balanced | DEV silver | DEV downward | TEST downward (Wilson 95% CI) | TEST balanced |
-|---|---|---|---|---|---|
-| T1c | 0.943 | 0.922 | 0.962 | **0.949 [0.91, 0.97]** | 0.925 |
-| T0 rules | 0.913 | 0.915 | 0.894 | 0.847 | 0.879 |
-
-- T2 with gpt-5-mini tied T1c on the objective and lost the tie-break to the cheaper side. gemini-2.5-pro was ineligible (projected $1.72 > $1.5).
-- **Held-out silver** (text label vs the solver sign of L0-faithful golds): T1c 0.748 vs T0 0.635. Downward concepts: 0.648 vs 0.435.
-
-**R3 decoder.** On SCREEN_TEST mutants, D_rule has macro-F1 0.389, top-1 0.40 and top-2 0.59; D_lr has macro-F1 0.453, so both are carried to held-out. On the SCOPE_SWAP supplement, detection is exactly 0.5 (blind by construction).
-
-**Pre-registered verdicts** (`results/verdict.json`):
-
-| Verdict | Result | Numbers |
-|---|---|---|
-| DIAGNOSER_POSITIVE | **FAIL** | D_rule weighted top-1 **0.111** vs TJ (typed gemini judge) 0.302: Δ −0.19 [−0.26, −0.12], McNemar p=1.5e-7.<br>TJ+ (thinking) 0.281; majority class 0.249; D_lr 0.145.<br>Recall: added 0.08, dropped 0.43, ∀∃ 0.10.<br>With truth permuted, D_rule scores 0.090, so it is barely above chance.<br>Panel ceiling: pairwise primary agreement 0.37; leave-one-member-out 0.55 |
-| FLAGGER_POSITIVE | **FAIL** (one clause) | Pooled held-out gold AUROC 0.673 [0.634, 0.712] (> 0.5 ✓).<br>ProverQA P@25 = 0.40 (✓); pooled enrichment@50 = 0.58 [0.34, 0.76] (✓).<br>But Ccov 0.686 ≥ flag_S, so the "S ≥ coverage control" clause fails ✗.<br>B1 0.840 and TJ 0.859 dominate.<br>**Complementarity**: B1 + flag_S, cross-fitted, 0.861 vs B1 0.808, Δ +0.054 [0.029, 0.079] |
-| POLARITY_CARRIES_SIGNAL | **FAIL** | ΔAUROC(M2 = [B1, parse, A0] + P) = +0.011 [−0.010, 0.031]; with S: +0.009 [−0.012, 0.029].<br>A within-sentence placebo gives a similar value (+0.009), so no evidence that polarity adds over alignment |
-| RENAME_FIXED | **FAIL** | FA_rename 0.129; FA_RENAME2 0.515.<br>Criterion 5 (full signature match on 250 panel-faithful, solver-non-equivalent items) = **0.256** (legacy 0.212; target ≥ 0.80) |
-| BLIND_SPOTS_CONFIRMED | **not confirmed** | PREDICTED_VISIBLE detection 0.73 [0.67, 0.79] (< 0.80).<br>PREDICTED_BLIND 0.59 [0.43, 0.77], n=23. The blind CI contains 0.5, but its upper bound is not below the visible lower bound: underpowered |
-
-**Standalone AUROC** (panel3, weighted):
-
-| Metric | AUROC |
-|---|---|
-| S_frozen | 0.654 [0.60, 0.71] |
-| A0 | 0.673 |
-| Ccov | 0.674 |
-| A3_iter1 | 0.639 |
-| P (polarity-only) | 0.580 |
-| B1 | 0.745 |
-| TJ | 0.777 |
-
-In the top complexity tercile: S 0.608, B1 0.758. Placebo check: S keeps AUROC 0.648 when labels are shuffled *within* sentence, so most of its item-level signal is between sentences.
-
-**Where the signature does work.**
-- **Within-sentence detection**, against faithful partners from other systems: dropped condition 0.85 [0.74, 0.94] and implication 0.87 [0.68, 0.99]. B1 scores 0.62 and 0.77 on these; TJ scores 0.49 and 0.53.
-- **Gold flagging as a complement to an LLM judge.** It adds significant AUROC over B1.
-- **Cost**: zero LLM calls on the formula side, a median 0.06 s per item, and 93.8% coverage (301 unparseable, 88 low-coverage).
-
-**Other results.**
-- V5 (exploratory, 585 documents): the document conflation/split flags hit 16 of 30 real conflation/split errors, but also flag 60 of 120 clean rows. That is no better than chance.
-- V6 transfer (EU AI Act): 289 of 367 formulas parse (66 of the 78 failures use '⊆'). Coverage is 93% of parseable formulas, with median score 0.50. That is far below held-out, which reflects long definitions with many dropped concepts.
-
-**API spend**: $4.48 of the $6 hard cap (cap test passed). By phase:
-
-| Phase | Cost |
-|---|---|
-| Held-out probes | $2.49 |
-| TJ | $0.38 |
-| TJ+ | $0.84 + $0.37 retry |
-| R2 | $0.35 |
-| B1 | $0.04 |
-| RENAME2 | $0.015 |
+Unit tests (`results/unit_tests.json`): 16/20 pass. The 4 failures are documented identifiability limits: positive granularity vs a dropped conjunct, CONTRADICTORY being outranked, and one implication-swap case typed "other".
 
 ## Layout
-
-| Path | What |
+| path | content |
 |---|---|
-| `method.py` | Pipeline driver (`--stages all`) and `make_outputs()` → `method_out.json` (exp_gen_sol_out, validated) |
-| `sigfaith/` | **Deliverable module**:<br>`__init__.py` holds `signature_faithfulness`, `gold_audit` and `document_signature`, with docstrings stating what each measures and its blind spots;<br>`align2.py` (R1); `decoder.py` (R3); `core.py` (front-end adapter, text-side chooser, full-coordinate scorer);<br>`textside.py` (spaCy + probe); `llm.py` (OpenRouter client: ledger, $6 hard cap, cache); `heldout_io.py` (label firewall); `front_parse.py` (dataset parser) |
-| `legacy_armA/` | Vendored iter-1 Arm A code (unchanged except `llm.py` → `legacy_llm.py` to avoid a name clash), plus iter-1 text/formula signatures |
-| `prep_data.py` | Splits the dataset into label-free inputs (`data/heldout_inputs.jsonl`) and firewalled labels (`data/heldout_labels.jsonl`) |
-| `screen_common.py`, `phase1_r1.py`, `phase1_r2.py`, `phase1_r3.py` | Screen repair: regression test, RENAME2, R1 grid, R2 DEV/pilot/select/TEST, R3 calibration |
-| `r2_warm.py`, `tjplus_retry.py`, `key_watch.py` | Probe-cache pre-warm; TJ+ truncation retry; OpenRouter availability poller (used once) |
-| `freeze.py` | Writes `results/frozen_config.json` (config, decoder, sha256 of `sigfaith/` + `legacy_armA/src/`, screen tables); checks the firewall is closed before and open after |
-| `phase2_sigs.py`, `phase2_score.py`, `phase2_llm.py` | Held-out solver signatures; frozen scoring (inputs only); B1/TJ/TJ+ baselines |
-| `analyze.py` | V1–V6, criterion 5, silver, system level, verdicts → `results/analysis.json`, `results/verdict.json`, `results/per_item_panel.jsonl`, `results/per_gold.jsonl` |
-| `audit_rederive.py` | Independent re-derivation (own weighted-AUROC code, raw files) of the V1 top-1, V3 pooled AUROC, V4 ΔAUROC and standalone AUROCs, plus placebos → `results/audit_rederive.json` (all_ok = true) |
-| `make_figures.py`, `figures/` | V1 confusion heatmaps, V2 detection forest, V3 P@50 bars, V4 ΔAUROC forest (PDF+PNG) |
-| `tests/test_align2.py` | 20 tests, all passing (`results/pytest_result.txt`): aligner (teacher↔Educator, ExcellentLocation, rex, Adores arity), polarity-blind sim matrix, 12 solver hand formulas, decoder, budget guard, firewall |
-| `results/` | All screen tables (`r1_grid.json`, `r2_*.json`, `r3_decoder.json`, `regression_test.json`, `rename2_report.json`), frozen config, per-item scores (`heldout_scores.jsonl`, `gold_scores.jsonl`, `transfer_scores.jsonl`), LLM baselines (`llm_baselines.jsonl`), `cost_ledger.jsonl`, solver signatures |
-| `cache/llm/`, `cache/llm_iter1/` | Content-hash cache of every OpenRouter answer (irreproducible, kept; excluded from the GitHub upload) |
-| `data/` | Copied screen set, MED/HELP, blind-spot supplement, adjudication prompt, RENAME2 set, split dataset files |
-| `method_out.json`, `full_/mini_/preview_method_out.json` | Per-item predictions: 6,300 candidates + 700 gold audits + 367 transfer rows. Metadata holds every analysis table, the verdicts and the frozen config |
+| `method.py` | Entry point: re-exports the reusable API (`align_pair`, `pair_relation`, `directional_consensus`, `ds_weights`, `error_type`); `--demo` runs a toy example; `--stages all` runs the pipeline |
+| `dc/` | The DC package, contract v1: `core.py` (alignment and relations), `api.py` (scores, error types, weights), `worker.py`, and `README.md` (one-line MEASURES per function) |
+| `src/` | Pipeline stages: build_sentences, generate_long, panel_nogold, run_dc, dc_score, baselines, local_judge, extra_dc, dev_anchor, crossimpl, analysis, export, deviations, alignment_audit; `llm.py` is the capped client; `stats_ext.py` is a byte-identical copy of the vendor stats |
+| `vendor/` | Read-only copies of round-1/round-2 code; sha1s in `results/frozen_manifest.json` |
+| `prompts/adjudication_nogold.txt` | Panel prompt |
+| `work/sentences.json` | The 158 sentences with provenance, licence and marker features |
+| `work/candidates.jsonl`, `work/generations.jsonl` | All 3,369 candidates plus raw outputs (irreproducible API output) |
+| `work/panel_votes.jsonl`, `work/panel_sample.json` | Every panel vote; the pre-drawn sample |
+| `work/llm_cache.jsonl`, `work/cost_ledger.jsonl` | LLM response cache; per-call spend |
+| `work/dc_pairs/`, `work/dc_tasks/` | Every DC pair relation with its map and definitions (legal, legal_fp, dev, invariance, placebo) |
+| `results/tests.json` | X1–X5 with point estimates, CIs, n, pass/fail and label source |
+| `results/analysis.json` | All secondary analyses |
+| `results/exception_set.jsonl` | The labelled meta-evaluation set: one row per sampled candidate, with provenance, licence, complexity, parse status, all member votes, label, weight and stratum |
+| `results/scores.jsonl` | Every candidate × every metric, with missing-value reasons |
+| `results/dc_scores_frozen.jsonl`, `results/dc_config.json` | Frozen DC scores and configuration (code sha1, limits, DS weights) |
+| `results/unit_tests.json`, `results/audit_rederive.json`, `results/cross_impl.json`, `results/invariance.json`, `results/dev_anchor.json` | Checks |
+| `method_out.json` (+ `full_`/`mini_`/`preview_`) | exp_gen_sol_out: `legal_panel_labelled` (655) and `legal_all_candidates` (1,789) |
+| `logs/alignment_audit.txt` | Sample of L2/L3 EQUIV verdicts with their maps |
 
 ## How to run
-
 ```bash
-uv venv .venv --python=3.12 && uv pip install --python .venv/bin/python -r requirements.txt \
-  --extra-index-url https://download.pytorch.org/whl/cpu
-.venv/bin/python -c "import nltk; [nltk.download(p, download_dir='nltk_data') for p in ('wordnet','omw-1.4')]"
-export OPENROUTER_API_KEY=...        # cached answers in cache/ make a re-run nearly free
-.venv/bin/python method.py --stages all
-.venv/bin/python -m pytest -c pytest.ini tests/test_align2.py
+bash restore.sh                       # venv + raw sources
+.venv/bin/python method.py --demo     # toy example, no API
+.venv/bin/python method.py --stages all   # full pipeline; LLM calls are cached, so a re-run costs $0
 ```
-
-Using the API directly:
-```python
-import sigfaith
-sigfaith.signature_faithfulness("All dogs that are not trained bark.", "∀x ((Dog(x) ∧ ¬Trained(x)) → Bark(x))")
-sigfaith.gold_audit(sentence, gold_fol)["flag_score"]
-sigfaith.document_signature([s1, s2], [f1, f2])
-```
-
-## Deviations (honest list)
-
-1. **OpenRouter daily-limit 403** (shared key) at 14:38 UTC. The first RENAME2 attempt waited, and a watcher (`key_watch.py`) found the key working again at 14:49 after one poll costing $0.0000134 (not in the ledger). No LLM result was substituted.
-2. **Pre-freeze label peek (format only).** While writing `prep_data.py`, the counts of `L3_majority` (307/302) and `L1_audited_status` in the label file were printed to check field formats. These numbers are already published in the dataset README. No metric was compared with any label before the freeze.
-3. `heldout_io.load_inputs()` exposes one **design variable**, `in_panel_sample` (= `L3_selected`, adjudication-sample membership). It was needed to know which items B1/TJ must score. No verdict, weight or type is exposed.
-4. **R2 on MED/HELP** is evaluated probe-style: the iter-1 substitution questions for the edited concept (2 specialised copies × up/down). This lets all text sides be compared on identical items; the iter-1 NLI-style B6 answers cannot give T1b/T1c. Usable items were DEV 278/400 and TEST 439/600, after the iter-1 single-span filter and dropping items with no extracted concept.
-5. **A0_iter1** on held-out uses the T0 text side. In iter-1, A0 used the LLM side's '?' labels; the regression test reproduces that iter-1 convention exactly on the screen.
-6. **TJ+** was run post-freeze on the 302 panel-unfaithful items. Selection by label is allowed for a baseline; the spend was under the $4.5 rule. 87 answers were truncated at max_tokens 1600 and re-asked once at 3000; 19 are still unparsed and count as wrong.
-7. **R1_TARGET_MISSED.** The ≤0.05 FA_rename target was missed. The pre-registered mpnet fallback was evaluated and rejected by the DET constraint.
-8. Solver: heavy formulas fall back to N=2 (>12 predicates or >6 quantifiers). One held-out formula timed out at 120 s, and 374 of 6,371 distinct formulas are unparseable.
-9. Figures were drawn with matplotlib directly, reading numbers from `analysis.json`.
 
 ## Restoring removed files
-
-| Path (deleted after the round) | Restore with |
+| deleted path | restore |
 |---|---|
-| `.venv/` | `uv venv .venv --python=3.12 && uv pip install --python .venv/bin/python -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu` |
-| `nltk_data/` | `.venv/bin/python -c "import nltk; [nltk.download(p, download_dir='nltk_data') for p in ('wordnet','omw-1.4')]"` |
-| `**/__pycache__/`, `.pytest_cache/` | Regenerated automatically by Python / pytest |
+| `.venv/` | `uv venv .venv --python=3.12 && uv pip install --python .venv/bin/python z3-solver numpy scipy scikit-learn pandas aiohttp loguru tenacity beautifulsoup4 lxml requests torch transformers sentence-transformers safetensors huggingface_hub psutil pyyaml sentencepiece protobuf tiktoken` |
+| `raw/pilot/` | `unzip -q -o /ai-inventor/aii_data/runs/run_qY2a2IS-WLIs/user_uploads/dpv_pilot_study.zip -d raw/pilot/` |
+| `**/__pycache__/` | Regenerated automatically by Python |
+| HF models (shared cache, not in this dir) | `huggingface-cli download Qwen/Qwen3-8B`; `MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli`; `sentence-transformers/all-MiniLM-L6-v2` |
 
-SBERT models (`sentence-transformers/all-MiniLM-L6-v2`, `all-mpnet-base-v2`) live in the run's shared HF cache, not in this workspace.
+`restore.sh` does all of the above.
