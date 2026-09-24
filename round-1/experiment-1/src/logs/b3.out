@@ -1,5 +1,0 @@
-Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 7282.39it/s]
-/ai-inventor/aii_data/runs/run_qY2a2IS-WLIs/3_invention_loop/iter_1/gen_art/gen_art_experiment_1/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
-  warnings.warn(
-Loading weights:   0%|          | 0/394 [00:00<?, ?it/s]Loading weights:  24%|██▍       | 95/394 [00:00<00:00, 923.40it/s]Loading weights:  48%|████▊     | 188/394 [00:00<00:00, 879.08it/s]Loading weights:  70%|███████   | 277/394 [00:00<00:00, 849.91it/s]Loading weights:  92%|█████████▏| 363/394 [00:00<00:00, 843.00it/s]Loading weights: 100%|██████████| 394/394 [00:00<00:00, 868.23it/s]
-12:38:15|INFO   |wrote 1670 rows to baseline_b3.jsonl; spent=0.8085

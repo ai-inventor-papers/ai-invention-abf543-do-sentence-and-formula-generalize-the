@@ -1,4 +1,0 @@
-04:11:50|INFO   |[legal] sentences 11 pairs 323 workers 6 budget 300.0s
-04:11:51|INFO   |[legal] done 0/11 running 6 elapsed 1s
-04:12:51|INFO   |[legal] done 10/11 running 0 elapsed 60s
-04:12:51|INFO   |[legal] {"n_pairs": 323, "sec_mean": 0.48304334365325086, "sec_p90": 1.4258, "sec_total": 156.023, "relations": {"EQUIV": 18, "STRONGER": 8, "WEAKER": 58, "COMPATIBLE-INCOMPARABLE": 212, "UNALIGNABLE": 27}, "levels": {"1": 47, "2": 226, "None": 27, "3": 23}, "sec_by_npreds": {"<=6": {"n": 100, "mean": 0.10489999999999997}, "7-12": {"n": 117, "mean": 0.42365811965811956}, ">12": {"n": 106, "mean": 0.9053301886792454}}, "wall_s": 60.4, "n_missing_marked_unknown": 0, "n_sentences": 11, "limits": {"l1_cap": 5040, "l2_cap": 2000, "l3_cap": 300, "l2_min_cov": 0.5, "l3_max_defs": 2, "l3_max_lits": 2, "domains": [1, 2, 3, 4], "z3_timeout_ms": 5000, "pair_seconds": 20.0, "order": "default", "n_random": 24, "n_models": 6, "max_z3_maps": 40}, "big_rule": null}

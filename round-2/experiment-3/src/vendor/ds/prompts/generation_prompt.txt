@@ -1,6 +1,0 @@
-Translate the English sentence into ONE first-order logic formula.
-Syntax: ∀x, ∃x, ¬, ∧, ∨, → (implies), ↔ (iff), ⊕ (exclusive or); predicates written Name(x) or Name(x, y); constants are names such as john. Choose your own predicate and constant names.
-Example of the syntax only: "Every bird that is not a penguin can fly." -> ∀x ((Bird(x) ∧ ¬Penguin(x)) → CanFly(x))
-Output ONLY the formula on a single line, no explanation.
-Sentence: {sentence}
-Formula:
