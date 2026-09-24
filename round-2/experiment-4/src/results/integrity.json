@@ -1,0 +1,24 @@
+{
+ "vendor_unchanged": true,
+ "frozen_config_sha256": "7ebda7e259f85147c6ec26e98cac018c907fc1d2c2352153d0c6679d07f0d960",
+ "frozen_config_unchanged_since_prereg": true,
+ "frozen_engine_code_unchanged": true,
+ "changed_engine_files": [],
+ "ledger_sum_usd": 0.0883471,
+ "ledger_n_calls": 3175,
+ "ledger_by_phase": {
+  "M1_B1_conf": 0.0266959,
+  "M1_B1_syn": 0.0310726,
+  "M1_B1_tok": 0.0305786
+ },
+ "T3_probe_sanity": {
+  "n_sentences": 223,
+  "F_DC_identical_all_arms": 0.9955156950672646,
+  "F_rel_vectors_identical_all_arms": 0.9955156950672646,
+  "M_DC_identical_all_arms": 0.993421052631579,
+  "canon_same_ast_rate": 1.0,
+  "F_conf_equiv_R_identity": "asserted at build time (pair_relation EQUIV required; 28 sentences without a renderable member dropped)"
+ },
+ "T0_pytest": "............                                                             [100%]\n12 passed in 4.92s",
+ "T5_audit_all_match": true
+}

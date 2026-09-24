@@ -1,0 +1,15 @@
+{
+ "vendor/armB/fol_core.py": "bad687bc15b9e8c69ab18312c441575bffab1c8e",
+ "vendor/armB/latent_class.py": "799a3818b5aa584a7cb5e8b39099e9c12743d2ff",
+ "vendor/armB/mutants.py": "b20318c9a1d168f8815800c21cb5f3434e91fc17",
+ "vendor/armB/tvjt.py": "15214b8122e39373dc015d0f8a304d4b1ab6ee90",
+ "vendor/armB/verbalize.py": "a573c316116fef56987d13aab96b2ea66b43f7bb",
+ "vendor/ds/fol_equiv.py": "87cdf404ddef7a3e956c9cc39490c9bceae0e25c",
+ "vendor/ds/fol_granular.py": "b000737e23f730d77a3ed16b75d1c0d208c0da3b",
+ "vendor/ds/fol_parse.py": "a88d3d58b56ca74f5ee64d1f71a009b85cfc3e34",
+ "vendor/exp3/analysis.py": "0251e5b95b6146083cb15c0571e75bd7f77f0465",
+ "vendor/exp3/armB.py": "6cddcb32faeabcad16559059c1e3af335d53b7ee",
+ "vendor/exp3/prompts_frozen.json": "15c1912f9c4040847ddbeeae559e1a4e153b37ac",
+ "vendor/exp3/stats.py": "39103e6e72a1d5c899d6844695a7da06471e79d0",
+ "vendor/exp5/analyze.py": "d594f269e5fe8667d7d93077788bd5f8b1d60156"
+}

@@ -1,0 +1,48 @@
+{
+ "auroc_rederive": {
+  "DC|panel": {
+   "pairwise": 0.8266578921845188,
+   "tests_json": 0.8266578921845197,
+   "abs_diff": 8.881784197001252e-16,
+   "match_1e-6": true
+  },
+  "LC_ds_binary|panel": {
+   "pairwise": 0.829520492946041,
+   "tests_json": 0.8295204929460426,
+   "abs_diff": 1.5543122344752192e-15,
+   "match_1e-6": true
+  },
+  "B1|panel": {
+   "pairwise": 0.7913200701866084,
+   "tests_json": 0.7913200701866098,
+   "abs_diff": 1.3322676295501878e-15,
+   "match_1e-6": true
+  },
+  "DC|solver": {
+   "pairwise": 0.8741019618679193,
+   "tests_json": 0.8741019618679193,
+   "abs_diff": 0.0,
+   "match_1e-6": true
+  },
+  "LC_ds_binary|solver": {
+   "pairwise": 0.865226274907126,
+   "tests_json": 0.865226274907126,
+   "abs_diff": 0.0,
+   "match_1e-6": true
+  },
+  "B1|solver": {
+   "pairwise": 0.7267237726812195,
+   "tests_json": 0.7267237726812195,
+   "abs_diff": 0.0,
+   "match_1e-6": true
+  }
+ },
+ "bounded_vs_unbounded": {
+  "checked_entailments": 153,
+  "unbounded_proved": 153,
+  "unbounded_refuted": 0,
+  "unbounded_unknown": 0,
+  "pairs": 200,
+  "agreement_where_unbounded_finished": 1.0
+ }
+}

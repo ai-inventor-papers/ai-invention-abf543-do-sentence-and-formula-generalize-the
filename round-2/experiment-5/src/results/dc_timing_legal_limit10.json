@@ -1,0 +1,109 @@
+{
+ "n_pairs": 323,
+ "sec_mean": 0.48304334365325086,
+ "sec_p90": 1.4258,
+ "sec_total": 156.023,
+ "relations": {
+  "EQUIV": 18,
+  "STRONGER": 8,
+  "WEAKER": 58,
+  "COMPATIBLE-INCOMPARABLE": 212,
+  "UNALIGNABLE": 27
+ },
+ "levels": {
+  "1": 47,
+  "2": 226,
+  "None": 27,
+  "3": 23
+ },
+ "sec_by_npreds": {
+  "<=6": {
+   "n": 100,
+   "mean": 0.10489999999999997
+  },
+  "7-12": {
+   "n": 117,
+   "mean": 0.42365811965811956
+  },
+  ">12": {
+   "n": 106,
+   "mean": 0.9053301886792454
+  }
+ },
+ "wall_s": 60.4,
+ "n_missing_marked_unknown": 0,
+ "n_sentences": 11,
+ "limits": {
+  "l1_cap": 5040,
+  "l2_cap": 2000,
+  "l3_cap": 300,
+  "l2_min_cov": 0.5,
+  "l3_max_defs": 2,
+  "l3_max_lits": 2,
+  "domains": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "z3_timeout_ms": 5000,
+  "pair_seconds": 20.0,
+  "order": "default",
+  "n_random": 24,
+  "n_models": 6,
+  "max_z3_maps": 40
+ },
+ "big_rule": null,
+ "per_sentence": {
+  "43a721ebe4": {
+   "wall_s": 4.6,
+   "rc": 0,
+   "n_pairs": 32
+  },
+  "789e0f0fec": {
+   "wall_s": 5.1,
+   "rc": 0,
+   "n_pairs": 42
+  },
+  "a8dce0aec6": {
+   "wall_s": 8.1,
+   "rc": 0,
+   "n_pairs": 26
+  },
+  "bf4e447637": {
+   "wall_s": 6.6,
+   "rc": 0,
+   "n_pairs": 20
+  },
+  "cda68e5a9c": {
+   "wall_s": 6.0,
+   "rc": 0,
+   "n_pairs": 14
+  },
+  "f3a1a099da": {
+   "wall_s": 11.7,
+   "rc": 0,
+   "n_pairs": 38
+  },
+  "2a5d5cdfa0": {
+   "wall_s": 4.5,
+   "rc": 0,
+   "n_pairs": 3
+  },
+  "e0b40e3e3d": {
+   "wall_s": 10.0,
+   "rc": 0,
+   "n_pairs": 10
+  },
+  "feca780c31": {
+   "wall_s": 53.3,
+   "rc": 0,
+   "n_pairs": 78
+  },
+  "0cc98a146b": {
+   "wall_s": 60.3,
+   "rc": 0,
+   "n_pairs": 60
+  }
+ }
+}

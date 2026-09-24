@@ -1,0 +1,469 @@
+{
+ "config": {
+  "use_L3": false,
+  "unalign_in_denominator": true,
+  "weights": "DS",
+  "half_caps": false,
+  "rule_1b": false
+ },
+ "config_name": "L3off_UAin_DS_caps1",
+ "typing_rules": {
+  "rule_1b": false,
+  "dev_top1_1b_on": 0.11004390526133473,
+  "dev_top1_1b_off": 0.11004390526133473,
+  "dev_type_distribution": {
+   "other": 164,
+   "quantifier_forall_exists": 34,
+   "added_condition": 15,
+   "dropped_condition": 28,
+   "negation_polarity": 1
+  },
+  "dev_share_other": 0.6776859504132231,
+  "n_typed_dev": 242,
+  "order": "1,1b,2,3,4,5,6,7 (see dc/errtype.py)"
+ },
+ "dc_code_sha256": "7f805769fd6b109ad27f3f5191e877b01cd9d74bb8c8e5bca68398df889df965",
+ "selection_rule": "argmax mean(AUROC_P, AUROC_S); ties within 0.005 -> simpler (L3 off > on, uniform > DS, caps x0.5 > x1, UA in > out)",
+ "grid": [
+  {
+   "config": "L3on_UAin_DS_caps1",
+   "use_L3": true,
+   "unalign_in_denominator": true,
+   "half_caps": false,
+   "rule_1b": true,
+   "AUROC_P": 0.7676810663628807,
+   "AUROC_S": 0.8259328196336052,
+   "mean": 0.796806942998243,
+   "coverage": 0.9522222222222222,
+   "n_P": 609,
+   "n_S": 5846,
+   "nontransitivity": 0.00356328082563824,
+   "share_pairs_equiv_only_L2L3": 0.05838525554442072,
+   "share_equiv_from_L2L3": 0.1399185548710452,
+   "weights": {
+    "deepseek-v3.1": 0.05,
+    "gemini-2.5-flash": 0.7432212989688103,
+    "gemma-3-27b": 0.31531867082044357,
+    "gpt-4.1-mini": 0.926493750827266,
+    "gpt-oss-120b": 0.9051228344969013,
+    "llama-3.1-8b": 0.05,
+    "mistral-small-3.2-24b": 0.15415173793120793,
+    "phi-4": 0.05,
+    "qwen-2.5-7b": 0.05
+   }
+  },
+  {
+   "config": "L3on_UAin_uniform_caps1",
+   "use_L3": true,
+   "unalign_in_denominator": true,
+   "half_caps": false,
+   "rule_1b": true,
+   "AUROC_P": 0.7596624167047638,
+   "AUROC_S": 0.8126676306224923,
+   "mean": 0.786165023663628,
+   "coverage": 0.9522222222222222,
+   "n_P": 609,
+   "n_S": 5846,
+   "nontransitivity": 0.00356328082563824,
+   "share_pairs_equiv_only_L2L3": 0.05838525554442072,
+   "share_equiv_from_L2L3": 0.1399185548710452,
+   "weights": {
+    "deepseek-v3.1": 1.0,
+    "gemini-2.5-flash": 1.0,
+    "gemma-3-27b": 1.0,
+    "gpt-4.1-mini": 1.0,
+    "gpt-oss-120b": 1.0,
+    "llama-3.1-8b": 1.0,
+    "mistral-small-3.2-24b": 1.0,
+    "phi-4": 1.0,
+    "qwen-2.5-7b": 1.0
+   }
+  },
+  {
+   "config": "L3on_UAout_DS_caps1",
+   "use_L3": true,
+   "unalign_in_denominator": false,
+   "half_caps": false,
+   "rule_1b": true,
+   "AUROC_P": 0.7815835729377538,
+   "AUROC_S": 0.8140906628851751,
+   "mean": 0.7978371179114645,
+   "coverage": 0.9296825396825397,
+   "n_P": 609,
+   "n_S": 5846,
+   "nontransitivity": 0.00356328082563824,
+   "share_pairs_equiv_only_L2L3": 0.05838525554442072,
+   "share_equiv_from_L2L3": 0.1399185548710452,
+   "weights": {
+    "deepseek-v3.1": 0.05,
+    "gemini-2.5-flash": 0.7432212989688103,
+    "gemma-3-27b": 0.31531867082044357,
+    "gpt-4.1-mini": 0.926493750827266,
+    "gpt-oss-120b": 0.9051228344969013,
+    "llama-3.1-8b": 0.05,
+    "mistral-small-3.2-24b": 0.15415173793120793,
+    "phi-4": 0.05,
+    "qwen-2.5-7b": 0.05
+   }
+  },
+  {
+   "config": "L3on_UAout_uniform_caps1",
+   "use_L3": true,
+   "unalign_in_denominator": false,
+   "half_caps": false,
+   "rule_1b": true,
+   "AUROC_P": 0.7741573814129806,
+   "AUROC_S": 0.7968054142752619,
+   "mean": 0.7854813978441213,
+   "coverage": 0.9296825396825397,
+   "n_P": 609,
+   "n_S": 5846,
+   "nontransitivity": 0.00356328082563824,
+   "share_pairs_equiv_only_L2L3": 0.05838525554442072,
+   "share_equiv_from_L2L3": 0.1399185548710452,
+   "weights": {
+    "deepseek-v3.1": 1.0,
+    "gemini-2.5-flash": 1.0,
+    "gemma-3-27b": 1.0,
+    "gpt-4.1-mini": 1.0,
+    "gpt-oss-120b": 1.0,
+    "llama-3.1-8b": 1.0,
+    "mistral-small-3.2-24b": 1.0,
+    "phi-4": 1.0,
+    "qwen-2.5-7b": 1.0
+   }
+  },
+  {
+   "config": "L3off_UAin_DS_caps1",
+   "use_L3": false,
+   "unalign_in_denominator": true,
+   "half_caps": false,
+   "rule_1b": true,
+   "AUROC_P": 0.7773224098843372,
+   "AUROC_S": 0.8545046351932342,
+   "mean": 0.8159135225387857,
+   "coverage": 0.9522222222222222,
+   "n_P": 609,
+   "n_S": 5846,
+   "nontransitivity": 0.0,
+   "share_pairs_equiv_only_L2L3": 0.0006535662934076947,
+   "share_equiv_from_L2L3": 0.001817741153659719,
+   "weights": {
+    "deepseek-v3.1": 0.05,
+    "gemini-2.5-flash": 0.5950305705346274,
+    "gemma-3-27b": 0.13475466048179344,
+    "gpt-4.1-mini": 0.7150267388513966,
+    "gpt-oss-120b": 0.6940627183128791,
+    "llama-3.1-8b": 0.05,
+    "mistral-small-3.2-24b": 0.05,
+    "phi-4": 0.05,
+    "qwen-2.5-7b": 0.05
+   }
+  },
+  {
+   "config": "L3off_UAin_uniform_caps1",
+   "use_L3": false,
+   "unalign_in_denominator": true,
+   "half_caps": false,
+   "rule_1b": true,
+   "AUROC_P": 0.7713673867327568,
+   "AUROC_S": 0.8408395209848839,
+   "mean": 0.8061034538588203,
+   "coverage": 0.9522222222222222,
+   "n_P": 609,
+   "n_S": 5846,
+   "nontransitivity": 0.0,
+   "share_pairs_equiv_only_L2L3": 0.0006535662934076947,
+   "share_equiv_from_L2L3": 0.001817741153659719,
+   "weights": {
+    "deepseek-v3.1": 1.0,
+    "gemini-2.5-flash": 1.0,
+    "gemma-3-27b": 1.0,
+    "gpt-4.1-mini": 1.0,
+    "gpt-oss-120b": 1.0,
+    "llama-3.1-8b": 1.0,
+    "mistral-small-3.2-24b": 1.0,
+    "phi-4": 1.0,
+    "qwen-2.5-7b": 1.0
+   }
+  },
+  {
+   "config": "L3off_UAout_DS_caps1",
+   "use_L3": false,
+   "unalign_in_denominator": false,
+   "half_caps": false,
+   "rule_1b": true,
+   "AUROC_P": 0.790552908704472,
+   "AUROC_S": 0.8433253780150284,
+   "mean": 0.8169391433597502,
+   "coverage": 0.9296825396825397,
+   "n_P": 609,
+   "n_S": 5846,
+   "nontransitivity": 0.0,
+   "share_pairs_equiv_only_L2L3": 0.0006535662934076947,
+   "share_equiv_from_L2L3": 0.001817741153659719,
+   "weights": {
+    "deepseek-v3.1": 0.05,
+    "gemini-2.5-flash": 0.5950305705346274,
+    "gemma-3-27b": 0.13475466048179344,
+    "gpt-4.1-mini": 0.7150267388513966,
+    "gpt-oss-120b": 0.6940627183128791,
+    "llama-3.1-8b": 0.05,
+    "mistral-small-3.2-24b": 0.05,
+    "phi-4": 0.05,
+    "qwen-2.5-7b": 0.05
+   }
+  },
+  {
+   "config": "L3off_UAout_uniform_caps1",
+   "use_L3": false,
+   "unalign_in_denominator": false,
+   "half_caps": false,
+   "rule_1b": true,
+   "AUROC_P": 0.7838086797269691,
+   "AUROC_S": 0.8258446816688344,
+   "mean": 0.8048266806979018,
+   "coverage": 0.9296825396825397,
+   "n_P": 609,
+   "n_S": 5846,
+   "nontransitivity": 0.0,
+   "share_pairs_equiv_only_L2L3": 0.0006535662934076947,
+   "share_equiv_from_L2L3": 0.001817741153659719,
+   "weights": {
+    "deepseek-v3.1": 1.0,
+    "gemini-2.5-flash": 1.0,
+    "gemma-3-27b": 1.0,
+    "gpt-4.1-mini": 1.0,
+    "gpt-oss-120b": 1.0,
+    "llama-3.1-8b": 1.0,
+    "mistral-small-3.2-24b": 1.0,
+    "phi-4": 1.0,
+    "qwen-2.5-7b": 1.0
+   }
+  },
+  {
+   "config": "L3on_UAin_DS_caps0.5",
+   "use_L3": true,
+   "unalign_in_denominator": true,
+   "half_caps": true,
+   "rule_1b": true,
+   "AUROC_P": 0.7676810663628807,
+   "AUROC_S": 0.8259328196336052,
+   "mean": 0.796806942998243,
+   "coverage": 0.9522222222222222,
+   "n_P": 609,
+   "n_S": 5846,
+   "nontransitivity": 0.00356328082563824,
+   "share_pairs_equiv_only_L2L3": 0.05838525554442072,
+   "share_equiv_from_L2L3": 0.1399185548710452,
+   "weights": {
+    "deepseek-v3.1": 0.05,
+    "gemini-2.5-flash": 0.7432212989688103,
+    "gemma-3-27b": 0.31531867082044357,
+    "gpt-4.1-mini": 0.926493750827266,
+    "gpt-oss-120b": 0.9051228344969013,
+    "llama-3.1-8b": 0.05,
+    "mistral-small-3.2-24b": 0.15415173793120793,
+    "phi-4": 0.05,
+    "qwen-2.5-7b": 0.05
+   }
+  },
+  {
+   "config": "L3on_UAin_uniform_caps0.5",
+   "use_L3": true,
+   "unalign_in_denominator": true,
+   "half_caps": true,
+   "rule_1b": true,
+   "AUROC_P": 0.7596624167047638,
+   "AUROC_S": 0.8126676306224923,
+   "mean": 0.786165023663628,
+   "coverage": 0.9522222222222222,
+   "n_P": 609,
+   "n_S": 5846,
+   "nontransitivity": 0.00356328082563824,
+   "share_pairs_equiv_only_L2L3": 0.05838525554442072,
+   "share_equiv_from_L2L3": 0.1399185548710452,
+   "weights": {
+    "deepseek-v3.1": 1.0,
+    "gemini-2.5-flash": 1.0,
+    "gemma-3-27b": 1.0,
+    "gpt-4.1-mini": 1.0,
+    "gpt-oss-120b": 1.0,
+    "llama-3.1-8b": 1.0,
+    "mistral-small-3.2-24b": 1.0,
+    "phi-4": 1.0,
+    "qwen-2.5-7b": 1.0
+   }
+  },
+  {
+   "config": "L3on_UAout_DS_caps0.5",
+   "use_L3": true,
+   "unalign_in_denominator": false,
+   "half_caps": true,
+   "rule_1b": true,
+   "AUROC_P": 0.7815835729377538,
+   "AUROC_S": 0.8140906628851751,
+   "mean": 0.7978371179114645,
+   "coverage": 0.9296825396825397,
+   "n_P": 609,
+   "n_S": 5846,
+   "nontransitivity": 0.00356328082563824,
+   "share_pairs_equiv_only_L2L3": 0.05838525554442072,
+   "share_equiv_from_L2L3": 0.1399185548710452,
+   "weights": {
+    "deepseek-v3.1": 0.05,
+    "gemini-2.5-flash": 0.7432212989688103,
+    "gemma-3-27b": 0.31531867082044357,
+    "gpt-4.1-mini": 0.926493750827266,
+    "gpt-oss-120b": 0.9051228344969013,
+    "llama-3.1-8b": 0.05,
+    "mistral-small-3.2-24b": 0.15415173793120793,
+    "phi-4": 0.05,
+    "qwen-2.5-7b": 0.05
+   }
+  },
+  {
+   "config": "L3on_UAout_uniform_caps0.5",
+   "use_L3": true,
+   "unalign_in_denominator": false,
+   "half_caps": true,
+   "rule_1b": true,
+   "AUROC_P": 0.7741573814129806,
+   "AUROC_S": 0.7968054142752619,
+   "mean": 0.7854813978441213,
+   "coverage": 0.9296825396825397,
+   "n_P": 609,
+   "n_S": 5846,
+   "nontransitivity": 0.00356328082563824,
+   "share_pairs_equiv_only_L2L3": 0.05838525554442072,
+   "share_equiv_from_L2L3": 0.1399185548710452,
+   "weights": {
+    "deepseek-v3.1": 1.0,
+    "gemini-2.5-flash": 1.0,
+    "gemma-3-27b": 1.0,
+    "gpt-4.1-mini": 1.0,
+    "gpt-oss-120b": 1.0,
+    "llama-3.1-8b": 1.0,
+    "mistral-small-3.2-24b": 1.0,
+    "phi-4": 1.0,
+    "qwen-2.5-7b": 1.0
+   }
+  }
+ ],
+ "dev_weights_selected": {
+  "deepseek-v3.1": 0.05,
+  "gemini-2.5-flash": 0.5950305705346274,
+  "gemma-3-27b": 0.13475466048179344,
+  "gpt-4.1-mini": 0.7150267388513966,
+  "gpt-oss-120b": 0.6940627183128791,
+  "llama-3.1-8b": 0.05,
+  "mistral-small-3.2-24b": 0.05,
+  "phi-4": 0.05,
+  "qwen-2.5-7b": 0.05
+ },
+ "arbiter": {
+  "mixing_weight": 0.5,
+  "status": "pre-registered; see README (DC+arb)"
+ },
+ "ladder_dev": {
+  "LC_maj(round2)": {
+   "AUROC_P": 0.7649691620290806,
+   "AUROC_S": 0.8373694239650725
+  },
+  "LC_ds_binary(round2)": {
+   "AUROC_P": 0.7874105368408495,
+   "AUROC_S": 0.8442755929551921
+  },
+  "L1_uniform": {
+   "AUROC_P": 0.7711323259804195,
+   "AUROC_S": 0.8413754809473464
+  },
+  "L12_uniform": {
+   "AUROC_P": 0.7713673867327568,
+   "AUROC_S": 0.8408395209848839
+  },
+  "L123_uniform": {
+   "AUROC_P": 0.7596624167047638,
+   "AUROC_S": 0.8126676306224923
+  },
+  "DC:L3off_UAin_DS_caps1": {
+   "AUROC_P": 0.7773224098843372,
+   "AUROC_S": 0.8545046351932342
+  },
+  "DC:L3on_UAin_DS_caps1": {
+   "AUROC_P": 0.7676810663628807,
+   "AUROC_S": 0.8259328196336052
+  },
+  "DC+SP(oof,panel)": {
+   "AUROC_P": 0.7704521929267618
+  }
+ },
+ "diagnostics": {
+  "default_config_anchor": {
+   "config": "L3on_UAin_DS_caps1",
+   "use_L3": true,
+   "unalign_in_denominator": true,
+   "weights": {
+    "deepseek-v3.1": 0.05,
+    "gemini-2.5-flash": 0.7432212989688103,
+    "gemma-3-27b": 0.31531867082044357,
+    "gpt-4.1-mini": 0.926493750827266,
+    "gpt-oss-120b": 0.9051228344969013,
+    "llama-3.1-8b": 0.05,
+    "mistral-small-3.2-24b": 0.15415173793120793,
+    "phi-4": 0.05,
+    "qwen-2.5-7b": 0.05
+   },
+   "half_caps": false,
+   "rule_1b": true,
+   "AUROC_P": 0.7676810663628807,
+   "AUROC_S": 0.8259328196336052,
+   "mean": 0.796806942998243,
+   "coverage": 0.9522222222222222,
+   "n_P": 609,
+   "n_S": 5846,
+   "weight_p": {
+    "deepseek-v3.1": 0.5092740346908674,
+    "gemini-2.5-flash": 0.6776998636273586,
+    "gemma-3-27b": 0.5781829546260733,
+    "gpt-4.1-mini": 0.7163634024506671,
+    "gpt-oss-120b": 0.7120011079615899,
+    "llama-3.1-8b": 0.38073401087080266,
+    "mistral-small-3.2-24b": 0.5384618014222726,
+    "phi-4": 0.45564930989595903,
+    "qwen-2.5-7b": 0.3901390351505412
+   },
+   "nontransitivity": 0.00356328082563824,
+   "share_pairs_equiv_only_L2L3": 0.05838525554442072,
+   "share_equiv_from_L2L3": 0.1399185548710452
+  },
+  "L1_uniform_vs_round2_LC_maj": {
+   "pearson": 0.982339742950659,
+   "share_abs_diff_lt_0.01": 0.9274603174603174
+  },
+  "L1_reproduces_round2_equiv": {
+   "n_round2_equiv": 8180,
+   "n_reproduced": 8180,
+   "share": 1.0
+  },
+  "T4_dev_anchor": {
+   "gpt-4.1-mini": {
+    "n_P": 55,
+    "n_S": 672,
+    "DC_self_P": 0.7153026160845192,
+    "B8_P": 0.7153026160845192,
+    "DC_self_S": 0.6975313150494833,
+    "B8_S": 0.6996996311580177
+   },
+   "llama-3.1-8b": {
+    "n_P": 83,
+    "n_S": 627,
+    "DC_self_P": 0.6684493553298271,
+    "B8_P": 0.6683883854758049,
+    "DC_self_S": 0.7844366500026877,
+    "B8_S": 0.7849271622856528
+   }
+  }
+ },
+ "timestamp_utc": "2026-09-24T04:14:11.362292+00:00"
+}

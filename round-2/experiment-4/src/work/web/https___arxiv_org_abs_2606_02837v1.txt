@@ -1,0 +1,12 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+URL: https://arxiv.org/abs/2606.02837v1
+Type: HTML
+Pattern: (39|36|42\.5|42|24|20)\s?%|incorrect FOL|fewer than \d+% (4 matches in 8311 chars)
+
+--- Content ---
+
+1858:... have never been rigorously audited. Our first contribution is to present a systematic human inspection of the validation split of \textsf{FOLIO} and a subset of \textsf{MALLS} test instances, finding that approximately 39% and 36% of entries, respectively, contain incorrect FOL formalizations (i.e., ground truth labels), with additional rates of ambiguous NL sentences (16.4% and 48%) and incorrect NLI labels in \textsf{FOLIO} (8.4%). Our second contribution is to develop and release corrected ...
+--
+2702:...d framework to support humans in manual reviewing NL-to-FOL datasets. By directing reviewers toward the most error-prone instances, we empirically show that it is possible to achieve 90% dataset accuracy after reviewing fewer than 24% of instances, compared to over 70% required by unguided review. We release all human-verified annotations and the code for our framework. 
+
+Subjects: |  Computation and Language (cs.CL); Artificial Intelligence (cs.AI) ...

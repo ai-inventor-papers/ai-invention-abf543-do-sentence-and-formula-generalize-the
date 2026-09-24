@@ -1,0 +1,59 @@
+{
+ "ds": {
+  "p": {
+   "deepseek-v3.1": 0.4910936054608217,
+   "gemini-2.5-flash": 0.6303974763731166,
+   "gemma-3-27b": 0.6174932461847644,
+   "gpt-4.1-mini": 0.7780212062703812,
+   "gpt-oss-120b": 0.5691302238410567,
+   "llama-3.1-8b": 0.3578819628983081,
+   "mistral-small-3.2-24b": 0.5418202955134643,
+   "phi-4": 0.4541337889042976,
+   "qwen-2.5-7b": 0.40357889288148435
+  },
+  "w": {
+   "deepseek-v3.1": 0.05,
+   "gemini-2.5-flash": 0.5339223675813899,
+   "gemma-3-27b": 0.47892182094570823,
+   "gpt-4.1-mini": 1.2541719276547167,
+   "gpt-oss-120b": 0.27830337136992145,
+   "llama-3.1-8b": 0.05,
+   "mistral-small-3.2-24b": 0.16767291333629797,
+   "phi-4": 0.05,
+   "qwen-2.5-7b": 0.05
+  },
+  "pi": 0.999,
+  "rho": 0.04683856386137501,
+  "loglik": -176.0540936790975,
+  "seed_spread_p": 5.048478253122379e-05,
+  "degenerate": false,
+  "iters": 12
+ },
+ "weights_used": {
+  "deepseek-v3.1": 0.05,
+  "gemini-2.5-flash": 0.5339223675813899,
+  "gemma-3-27b": 0.47892182094570823,
+  "gpt-4.1-mini": 1.2541719276547167,
+  "gpt-oss-120b": 0.27830337136992145,
+  "llama-3.1-8b": 0.05,
+  "mistral-small-3.2-24b": 0.16767291333629797,
+  "phi-4": 0.05,
+  "qwen-2.5-7b": 0.05
+ },
+ "l1_crosscheck": {
+  "n_compared": 634,
+  "agreement": 1.0,
+  "counts": {
+   "exp3=equiv|dc_L1=EQUIV": 224,
+   "exp3=nonequiv|dc_L1=COMPATIBLE": 31,
+   "exp3=nonequiv|dc_L1=UNALIGNABLE": 349,
+   "exp3=nonequiv|dc_L1=WEAKER": 11,
+   "exp3=nonequiv|dc_L1=STRONGER": 19
+  },
+  "disagreements": []
+ },
+ "n_items": 180,
+ "n_gold": 20,
+ "seconds": 38.47566890716553,
+ "sids": 20
+}
