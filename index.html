@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peer Agreement as a Reference-Free Signal of NL→FOL Faithfulness, and Where It Fails</title>
+<meta name="description" content="Agreement among nine LLMs' formalizations of a sentence, checked by an SMT solver without reading predicate names, predicts NL-to-FOL faithfulness on short sentences but fails when most systems share an error.">
+<style>
+:root {
+  --ground: #fbfaf7;
+  --surface: #ffffff;
+  --ink: #1b1c1e;
+  --ink-2: #4a4d52;
+  --ink-3: #6b6f75;
+  --rule: #e2dfd8;
+  --rule-strong: #cfcac0;
+  --accent: #0b5a9c;
+  --accent-soft: #e8f0f7;
+  --focus: #0b5a9c;
+  --measure: 70ch;
+  --wide: 62rem;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1.125rem;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--accent); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 2px; }
+
+.skip {
+  position: absolute; left: 1rem; top: -4rem; z-index: 100;
+  background: var(--ink); color: #fff; padding: 0.6rem 1rem; border-radius: 4px;
+  font-size: 1rem; text-decoration: none;
+}
+.skip:focus { top: 1rem; }
+
+/* Layout */
+.shell {
+  max-width: 82rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+@media (min-width: 1100px) {
+  .shell {
+    display: grid;
+    grid-template-columns: 12.5rem minmax(0, 1fr);
+    gap: 3.5rem;
+    padding: 0 2rem;
+  }
+}
+
+/* Section navigation */
+.toc {
+  position: sticky; top: 0; z-index: 20;
+  background: rgba(251, 250, 247, 0.96);
+  border-bottom: 1px solid var(--rule);
+  margin: 0 -1rem;
+}
+.toc ol {
+  list-style: none; margin: 0; padding: 0 1rem;
+  display: flex; gap: 0.25rem;
+  overflow-x: auto; scrollbar-width: thin;
+}
+.toc a {
+  display: block; white-space: nowrap;
+  padding: 0.7rem 0.6rem;
+  font-size: 0.9rem; color: var(--ink-2); text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+.toc a:hover { color: var(--ink); }
+.toc a[aria-current="true"] { color: var(--accent); border-bottom-color: var(--accent); font-weight: 600; }
+.toc-label { display: none; }
+@media (min-width: 1100px) {
+  .toc {
+    margin: 0; border: 0; background: none;
+    align-self: start; top: 0; padding-top: 3.25rem;
+  }
+  .toc-label {
+    display: block; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--ink-3); margin: 0 0 0.75rem; font-weight: 600;
+  }
+  .toc ol { flex-direction: column; gap: 0; padding: 0; overflow: visible; }
+  .toc a {
+    padding: 0.35rem 0 0.35rem 0.9rem;
+    border-bottom: 0; border-left: 2px solid var(--rule);
+    font-size: 0.95rem;
+  }
+  .toc a[aria-current="true"] { border-left-color: var(--accent); }
+}
+
+main { min-width: 0; padding-bottom: 2rem; }
+section { padding-top: 4.5rem; scroll-margin-top: 3.5rem; }
+@media (min-width: 1100px) { section { scroll-margin-top: 1rem; } }
+section + section { border-top: 1px solid var(--rule); margin-top: 4.5rem; }
+main > section:first-child { border-top: 0; }
+
+/* Type */
+h1, h2, h3 { line-height: 1.2; letter-spacing: -0.01em; margin: 0; }
+h1 { font-size: clamp(1.9rem, 1.2rem + 3vw, 3.1rem); font-weight: 700; max-width: 22ch; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.1rem); font-weight: 700; margin-bottom: 1.5rem; }
+h3 { font-size: 1.3rem; font-weight: 650; margin: 3rem 0 0.9rem; }
+p { margin: 0 0 1.1rem; max-width: var(--measure); }
+.eyebrow {
+  font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--ink-3); font-weight: 600; margin: 0 0 1rem;
+}
+.lede { font-size: 1.25rem; line-height: 1.6; color: var(--ink); max-width: 64ch; }
+.muted { color: var(--ink-2); }
+.small { font-size: 0.95rem; }
+.num { font-variant-numeric: tabular-nums; }
+.code-link { font-size: 0.85em; white-space: nowrap; }
+
+/* Hero */
+.hero { padding-top: 3.25rem; }
+.hero h1 { margin-bottom: 1.75rem; }
+.tldr-label { font-weight: 700; }
+.links { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+.btn {
+  display: inline-block; padding: 0.65rem 1.1rem; border-radius: 4px;
+  font-size: 1rem; font-weight: 600; text-decoration: none; line-height: 1.3;
+  border: 1px solid var(--accent); color: var(--accent); background: var(--surface);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.btn:hover { background: var(--accent-soft); }
+.btn.primary { background: var(--accent); color: #fff; }
+.btn.primary:hover { background: #084a82; }
+
+/* Headline numbers */
+.figures-row {
+  display: grid; gap: 0; margin: 2.75rem 0 0;
+  grid-template-columns: repeat(auto-fit, minmax(13.5rem, 1fr));
+  border-top: 1px solid var(--rule-strong);
+  max-width: var(--wide);
+}
+.stat { padding: 1.1rem 1.25rem 1.1rem 0; border-bottom: 1px solid var(--rule); }
+.stat .big { font-size: 2.2rem; font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.stat .big small { font-size: 1.1rem; font-weight: 600; color: var(--ink-2); letter-spacing: 0; }
+.stat p { font-size: 0.95rem; line-height: 1.5; color: var(--ink-2); margin: 0.45rem 0 0; }
+
+/* Contribution cards */
+.cards { display: grid; gap: 0; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); max-width: var(--wide); border-top: 1px solid var(--rule-strong); }
+.card { padding: 1.4rem 1.5rem 1.5rem 0; border-bottom: 1px solid var(--rule); }
+.card h3 { font-size: 1.12rem; margin: 0 0 0.5rem; }
+.card p { font-size: 1rem; line-height: 1.6; margin: 0; color: var(--ink-2); }
+.card .idx { font-size: 0.85rem; color: var(--ink-3); font-weight: 600; font-variant-numeric: tabular-nums; display: block; margin-bottom: 0.4rem; }
+
+/* Method steps */
+.steps { list-style: none; padding: 0; margin: 2rem 0 0; counter-reset: step; max-width: var(--measure); }
+.steps li { position: relative; padding: 0 0 1.4rem 3rem; counter-increment: step; }
+.steps li::before {
+  content: counter(step); position: absolute; left: 0; top: 0.05rem;
+  width: 2rem; height: 2rem; border-radius: 50%;
+  border: 1px solid var(--rule-strong); background: var(--surface);
+  font-size: 0.95rem; font-weight: 700; display: grid; place-items: center; color: var(--ink-2);
+}
+.steps strong { display: block; font-size: 1.05rem; }
+.steps p { margin: 0.2rem 0 0; }
+.formula {
+  font-family: var(--mono); font-size: 0.98rem; background: var(--surface);
+  border: 1px solid var(--rule); border-radius: 4px; padding: 0.7rem 0.9rem; margin: 0.6rem 0 0;
+  overflow-x: auto; white-space: nowrap;
+}
+ul.plain { padding-left: 1.2rem; max-width: var(--measure); margin: 0 0 1.1rem; }
+ul.plain li { margin-bottom: 0.45rem; }
+
+/* Figures */
+figure { margin: 2rem 0; max-width: var(--wide); }
+figcaption { font-size: 0.95rem; line-height: 1.55; color: var(--ink-2); margin-top: 0.8rem; max-width: var(--measure); }
+figcaption b { color: var(--ink); }
+.fig-open {
+  display: block; width: 100%; padding: 0; margin: 0; border: 1px solid var(--rule);
+  background: #fff; cursor: zoom-in; border-radius: 3px;
+  transition: border-color 0.15s ease;
+}
+.fig-open:hover { border-color: var(--rule-strong); }
+.fig-open img { width: 100%; }
+.enlarge-hint { font-size: 0.85rem; color: var(--ink-3); }
+
+.gallery { display: grid; gap: 3rem; grid-template-columns: minmax(0, 1fr); max-width: var(--wide); }
+.gallery figure { margin: 0; }
+.gallery h3 { font-size: 1.1rem; margin: 0 0 0.75rem; }
+
+/* Tables */
+.table-wrap { overflow-x: auto; max-width: var(--wide); margin: 1.5rem 0 2rem; border-top: 1px solid var(--rule-strong); }
+.table-wrap:focus-visible { outline-offset: 2px; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95rem; font-variant-numeric: tabular-nums; }
+@media (max-width: 700px) {
+  table { min-width: 34rem; font-size: 0.9rem; }
+  tbody th { min-width: 11rem; }
+}
+.tcap { font-size: 0.9rem; color: var(--ink-2); line-height: 1.5; margin: -1.3rem 0 2.2rem; max-width: var(--wide); }
+th, td { padding: 0.5rem 0.9rem 0.5rem 0; text-align: left; vertical-align: top; border-bottom: 1px solid var(--rule); }
+thead th { font-size: 0.85rem; font-weight: 650; color: var(--ink-2); white-space: nowrap; }
+td.n, th.n { text-align: right; white-space: nowrap; }
+tbody th { font-weight: 500; }
+tr.ours th, tr.ours td { font-weight: 700; }
+tr.ours { background: var(--accent-soft); }
+tr.ours th { padding-left: 0.4rem; }
+
+/* Limitations */
+.limits { list-style: none; padding: 0; margin: 0; max-width: var(--measure); }
+.limits li { padding: 1.1rem 0; border-top: 1px solid var(--rule); }
+.limits li:last-child { border-bottom: 1px solid var(--rule); }
+.limits strong { display: block; margin-bottom: 0.25rem; }
+
+/* Footer */
+footer { border-top: 1px solid var(--rule-strong); margin-top: 5rem; padding: 2.5rem 0 4rem; scroll-margin-top: 3.5rem; }
+footer h2 { font-size: 1.3rem; margin-bottom: 1rem; }
+footer .links { margin-top: 0; }
+footer p { font-size: 0.95rem; color: var(--ink-2); margin-top: 1.5rem; }
+
+/* Lightbox */
+dialog.lightbox {
+  position: fixed; inset: 0;
+  border: 0; padding: 0; margin: 0; max-width: none; max-height: none;
+  width: 100%; height: 100%;
+  background: rgba(20, 21, 23, 0.86);
+  color: var(--ink);
+}
+dialog.lightbox::backdrop { background: transparent; }
+dialog.lightbox[open] { display: flex; align-items: center; justify-content: center; animation: fade 0.18s ease; }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+.lb-panel {
+  background: var(--surface); border-radius: 6px;
+  width: min(96vw, 84rem); max-height: 94vh; max-height: 94dvh;
+  display: flex; flex-direction: column; overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+}
+.lb-bar { display: flex; align-items: center; gap: 0.5rem; padding: 0.6rem 0.75rem 0.6rem 1.1rem; border-bottom: 1px solid var(--rule); }
+.lb-bar h2 { font-size: 1rem; font-weight: 650; margin: 0; flex: 1; min-width: 0; line-height: 1.35; }
+.lb-btn {
+  font: inherit; font-size: 0.92rem; font-weight: 600; color: var(--ink);
+  background: var(--surface); border: 1px solid var(--rule-strong); border-radius: 4px;
+  padding: 0.4rem 0.75rem; cursor: pointer; white-space: nowrap;
+}
+.lb-btn:hover { background: var(--accent-soft); }
+.lb-body { overflow: auto; padding: 1rem 1.1rem 1.2rem; }
+.lb-body img { width: auto; max-width: 100%; max-height: calc(94vh - 10rem); margin: 0 auto; }
+.lb-body p { font-size: 0.95rem; color: var(--ink-2); margin: 0.9rem 0 0; max-width: 90ch; }
+@media (max-width: 600px) {
+  .lb-bar { flex-wrap: wrap; }
+  .lb-bar h2 { flex-basis: 100%; }
+  .lb-body img { width: 170%; max-width: none; max-height: none; }
+}
+
+@media (max-width: 600px) {
+  body { font-size: 1.0625rem; }
+  .lede { font-size: 1.12rem; }
+  section { padding-top: 3rem; }
+  section + section { margin-top: 3rem; }
+  .stat .big { font-size: 1.9rem; }
+  .card { padding-right: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<div class="shell">
+  <nav class="toc" aria-label="Sections">
+    <p class="toc-label" aria-hidden="true">On this page</p>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#contributions">Contributions</a></li>
+      <li><a href="#method">Method</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#gallery">Figures</a></li>
+      <li><a href="#limitations">Limitations</a></li>
+      <li><a href="#links">Links</a></li>
+    </ol>
+  </nav>
+
+  <div class="content">
+  <main id="main" tabindex="-1">
+
+    <!-- 1. HERO -->
+    <section id="overview" class="hero" aria-labelledby="title">
+      <p class="eyebrow">Reference-free evaluation of NL→FOL translation</p>
+      <h1 id="title">Peer Agreement as a Reference-Free Signal of NL→FOL Faithfulness, and Where It Fails</h1>
+      <p class="lede"><span class="tldr-label">TL;DR.</span> When no gold formula exists, can you tell whether an LLM's first-order logic translation says what the sentence says? We let nine LLMs formalize the same sentence and score each formula by how many of the others an SMT solver proves logically equivalent to it, without ever reading predicate names. On 450 fresh sentences this peer agreement score reaches <strong class="num">0.827</strong> AUROC against a blinded LLM panel and <strong class="num">0.874</strong> against solver labels, where a gemini-2.5-flash judge reaches 0.791 and 0.727. It is a complement, not a replacement: its gain on top of the judge is about 0.03 AUROC with an interval that touches zero, and on sentences where most systems share an error it falls below chance, to 0.419.</p>
+      <ul class="links">
+        <li><a class="btn primary" href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-abf543-do-sentence-and-formula-generalize-the@fork/run_ujABDGgoK_5Q/paper.pdf">Read the paper (PDF)</a></li>
+        <li><a class="btn" href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-abf543-do-sentence-and-formula-generalize-the@main/report.pdf">Read the full research report</a></li>
+        <li><a class="btn" href="https://github.com/ai-inventor-papers/ai-invention-abf543-do-sentence-and-formula-generalize-the/tree/fork/run_ujABDGgoK_5Q">Code repository</a></li>
+      </ul>
+    </section>
+
+    <!-- 2. CONTRIBUTIONS -->
+    <section id="contributions" aria-labelledby="contrib-h">
+      <h2 id="contrib-h">Contributions</h2>
+      <div class="cards">
+        <article class="card">
+          <span class="idx">01</span>
+          <h3>A name-blind agreement score, frozen before evaluation</h3>
+          <p>It ignores predicate names and weights systems by reliability. On 450 fresh sentences it reaches 0.827 AUROC on panel labels and 0.874 on audited solver labels, against 0.791 and 0.727 for a gemini-2.5-flash judge.</p>
+        </article>
+        <article class="card">
+          <span class="idx">02</span>
+          <h3>An estimate of what it adds</h3>
+          <p>Stacked on judge, roundtrip and structural scores it adds +0.033 AUROC on panel labels (95% CI [−0.001, 0.066]) and +0.118 on solver labels. It does not beat binary Dawid–Skene agreement (0.830), and its direction and error-typing parts add nothing.</p>
+        </article>
+        <article class="card">
+          <span class="idx">03</span>
+          <h3>A mapped failure boundary</h3>
+          <p>Exactly invariant to predicate renaming, where the judge loses 0.151 AUROC on random-token vocabulary. It falls to 0.419 on sentences whose majority meaning is wrong, and to 0.705 against the judge's 0.927 on long legal definitions.</p>
+        </article>
+        <article class="card">
+          <span class="idx">04</span>
+          <h3>A clear use: flagging wrong benchmark gold</h3>
+          <p>With the shipped gold as a tenth peer, the score flags wrong gold at 0.837 to 0.859 AUROC and adds +0.070 over a judge run on the gold alone.</p>
+        </article>
+        <article class="card">
+          <span class="idx">05</span>
+          <h3>Negative results for three other families</h3>
+          <p>A monotonicity signature, judgment worlds built by a solver, and instance consequence NLI with a small model: none beats the judge on current systems.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. METHOD -->
+    <section id="method" aria-labelledby="method-h">
+      <h2 id="method-h">Method</h2>
+      <p>Correct FOL is not unique. Two systems can name predicates differently, split a concept differently, or write logically equivalent formulas, and both be right. Comparing with a gold formula fails twice over: benchmark gold is itself often wrong, and a faithful candidate need not be equivalent to it. The one source of evidence that needs neither the gold nor the text is the other systems. If several independent systems formalize the same sentence, a solver can compare their outputs with each other.</p>
+
+      <figure>
+        <button type="button" class="fig-open" data-fig="1" aria-label="Enlarge figure: How the peer agreement score is computed">
+          <img src="figures/fig2_v0.jpg" width="3168" height="1344" loading="lazy" alt="Pipeline diagram. A candidate formula and eight peer formulas from other systems pass through a name-free alignment (bijection, then partial map), then an SMT solver labels each aligned pair EQUIV, STRONGER, WEAKER, INCOMPARABLE, CONTRADICTORY or UNALIGNABLE. EQUIV links form equivalence clusters, a one-coin Dawid-Skene model gives each system a weight, and the score is the weighted share of equivalent peers. The sentence is marked as not read; a dashed branch shows the gold scored as a tenth peer to flag wrong gold.">
+        </button>
+        <figcaption><b>How the peer agreement score is computed.</b> A candidate formula is compared with each peer formula (other systems' outputs for the same sentence) after a vocabulary alignment that ignores predicate names (a bijection, then a partial map). An SMT solver decides the logical relation of each aligned pair. EQUIV relations define equivalence clusters, from which a Dawid–Skene model with one accuracy parameter per system, fitted without labels, estimates one reliability weight per system. The score is the weighted share of peers that are equivalent to the candidate. The sentence text and predicate names are never read. <span class="enlarge-hint">Select the image to enlarge.</span></figcaption>
+      </figure>
+
+      <ol class="steps">
+        <li><strong>What goes in</strong><p>A candidate formula <i>F</i> from one system and peer formulas <i>P</i><sub>1</sub> … <i>P</i><sub>m</sub>: the outputs of the other systems for the same sentence. No gold, no shared vocabulary. The score may read the peers but never the text, the gold or predicate names.</p></li>
+        <li><strong>Align without names</strong><p>For each peer, search for a map from its predicates and constants into those of <i>F</i>, using structure only. First an arity-preserving bijection; failing that, an injective partial map that leaves some predicates unmatched, provided at least 50% of the peer's predicate occurrences are mapped. The partial map admits peers that decompose a concept differently.</p></li>
+        <li><strong>Let the solver decide the relation</strong><p>Pairs are first compared on 64 fixed random finite structures of domain size 2 and 3, which refutes equivalence soundly and cheaply. Undecided pairs go to an unbounded Z3 query over an uninterpreted sort, then to grounding over domains up to size 3. The outcome is EQUIV, STRONGER, WEAKER, INCOMPARABLE, CONTRADICTORY or UNALIGNABLE. Because maps never consult names, any consistent renaming leaves the result unchanged.</p></li>
+        <li><strong>Weight systems by reliability, without labels</strong><p>EQUIV links a sentence's parseable outputs into equivalence clusters. A one-coin Dawid–Skene model fitted over these clusters across all sentences returns one reliability weight per system, floored at 0.05.</p></li>
+        <li><strong>What comes out</strong><p>The weighted share of covered peers that are equivalent to the candidate, with UNALIGNABLE peers kept in the denominator:</p>
+          <p class="formula" aria-label="PA of F equals the sum over peers j of w j times the indicator that the relation of F to P j is EQUIV, divided by the sum over j of w j">PA(F) = Σ<sub>j</sub> w<sub>j</sub> · 1[rel(F, P<sub>j</sub>) = EQUIV] / Σ<sub>j</sub> w<sub>j</sub></p>
+          <p>An unparseable candidate, or one with fewer than two covered peers, gets 0.5 and stays in every evaluation. The same machinery scores a benchmark's gold formula as a tenth system, which flags wrong gold with no extra model call.</p></li>
+      </ol>
+
+      <h3>Why it is built this way</h3>
+      <p>The configuration was frozen on 700 development sentences before any fresh label existed, chosen from a 12-configuration grid by the mean of panel and solver AUROC, with ties within 0.005 going to the simpler configuration. It uses bijections and partial maps, keeps UNALIGNABLE peers in the denominator, and uses Dawid–Skene weights. Two further components were tested and left out: granularity definitions, which let one predicate stand for a conjunction of up to two literals, and a strength profile meant to name the error type.</p>
+
+      <h3>Data and labels</h3>
+      <ul class="plain">
+        <li><strong>Systems.</strong> Nine LLMs from seven families (llama-3.1-8b, qwen-2.5-7b, mistral-small-3.2-24b, gpt-4.1-mini, gemini-2.5-flash, deepseek-v3.1, gemma-3-27b, phi-4, gpt-oss-120b), one zero-shot prompt with free predicate naming, temperature 0.</li>
+        <li><strong>Development set.</strong> 700 sentences (250 MALLS, 250 FOLIO v2 training stories disjoint from both validation versions, 200 ProverQA medium and hard), with 45.1% in the top complexity tercile. <a class="code-link" href="https://github.com/ai-inventor-papers/ai-invention-abf543-do-sentence-and-formula-generalize-the/tree/main/round-1/dataset-1">Code for this dataset</a>. Used only for configuration and mechanism tests.</li>
+        <li><strong>Fresh set.</strong> 450 new sentences (MALLS 170, FOLIO 150, ProverQA 130), half in the top tercile, zero string or story overlap with development. 4,050 greedy candidates, of which 222 are unparseable and kept.</li>
+        <li><strong>Legal set.</strong> 158 sentences from the EU AI Act, GDPR, DSA, DMA, Data Act and the SARA tax-code clauses, binned by exception and condition markers into 0–1 (91), 2–3 (51) and 4 or more (16). <a class="code-link" href="https://github.com/ai-inventor-papers/ai-invention-abf543-do-sentence-and-formula-generalize-the/tree/main/round-2/experiment-5">Code for the legal experiment</a>. Greedy parse rate there is 73.3%.</li>
+        <li><strong>Two label families, both required.</strong> <em>Panel labels</em>: a blinded panel of claude-haiku-4.5, grok-4.3 and glm-4.6 (Cohen κ = 0.57 against human corrections on 99 MALLS items). <em>Audited solver labels</em>: solver equivalence to gold after the panel audits it. Solver labels share the score's equivalence checker; panel labels can favour LLM judges. A claim counts only if it holds under both.</li>
+      </ul>
+
+      <div class="table-wrap" tabindex="0" role="region" aria-labelledby="cap-labels">
+        <table>
+          
+          <thead><tr><th scope="col">Quantity</th><th scope="col" class="n">Development (700)</th><th scope="col" class="n">Fresh (450)</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">wrong shipped gold, MALLS</th><td class="n">0.456</td><td class="n">0.553</td></tr>
+            <tr><th scope="row">wrong shipped gold, FOLIO v2 training split</th><td class="n">0.620</td><td class="n">0.620</td></tr>
+            <tr><th scope="row">wrong shipped gold, ProverQA</th><td class="n">0.175</td><td class="n">0.146</td></tr>
+            <tr><th scope="row">judged faithful, not solver equivalent</th><td class="n">0.439 [0.395, 0.486]</td><td class="n">0.438</td></tr>
+            <tr><th scope="row">agreement of solver and panel</th><td class="n">0.676</td><td class="n">0.689</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="tcap" id="cap-labels">Label quality. Wrong-gold rates are the panel's audit of shipped gold; "judged faithful, not solver equivalent" is the share judged faithful by the panel among candidates the solver calls not equivalent to audited gold.</p>
+    </section>
+
+    <!-- 4. RESULTS -->
+    <section id="results" aria-labelledby="results-h">
+      <h2 id="results-h">Results</h2>
+      <p>All numbers are item-level AUROC with 2,000-draw bootstrap intervals clustered by sentence, on the 450 fresh sentences unless stated. Panel labels cover 256 adjudicated items; solver labels cover 3,720 rows.</p>
+
+      <div class="figures-row" role="list">
+        <div class="stat" role="listitem">
+          <div class="big">0.827 <small>/ 0.874</small></div>
+          <p>Peer agreement AUROC on panel / solver labels. LLM judge: 0.791 / 0.727.</p>
+        </div>
+        <div class="stat" role="listitem">
+          <div class="big">+0.033</div>
+          <p>Gain over a judge, roundtrip and structural base on panel labels, 95% CI [−0.001, 0.066]. Solver labels: +0.118.</p>
+        </div>
+        <div class="stat" role="listitem">
+          <div class="big">0.419</div>
+          <p>AUROC where the sentence's modal cluster is wrong (61 items). The judge holds 0.786.</p>
+        </div>
+        <div class="stat" role="listitem">
+          <div class="big">0.705 <small>vs 0.927</small></div>
+          <p>Peer agreement against the LLM judge on 655 labelled legal-definition items.</p>
+        </div>
+      </div>
+
+      <h3>Peer agreement predicts faithfulness on fresh sentences</h3>
+      <p>Peer agreement reaches 0.827 AUROC against panel labels and 0.874 against audited solver labels; the LLM judge reaches 0.791 and 0.727. With unparseable outputs scored 0 instead of 0.5 it reaches 0.853 on panel labels. The configuration transferred from development (0.777 panel, 0.855 solver) without loss. Parse rate and the structural metrics sit near chance under both label families.</p>
+
+      <figure>
+        <button type="button" class="fig-open" data-fig="0" aria-label="Enlarge figure: Peer agreement predicts faithfulness until peers share an error">
+          <img src="figures/fig1_v0.png" width="1400" height="788" loading="lazy" alt="Two-panel chart. Left: horizontal bars of AUROC under panel and solver labels for eight scores; peer agreement is 0.827 and 0.874, binary Dawid-Skene 0.830 and 0.865, majority clustering 0.797 and 0.859, LLM judge 0.791 and 0.727, down to parse rate near 0.5. Right: when the modal cluster is faithful, peer agreement scores 0.883 against the judge's 0.782; when it is unfaithful, peer agreement drops to 0.419 and majority clustering to 0.433 while the judge stays at 0.786.">
+        </button>
+        <figcaption><b>Peer agreement predicts faithfulness until peers share an error.</b> Peer agreement on 450 fresh sentences formalized by nine LLMs. (a) AUROC with 95% intervals from a bootstrap clustered by sentence, under labels from a blinded LLM panel (256 items) and audited solver labels (3,720 rows; roundtrip NLI on 260 rows). Peer agreement is above the gemini-2.5-flash judge under both label families and ties binary Dawid–Skene agreement; parse rate and the structural consistency metrics are near chance. (b) AUROC under panel labels, split by whether the sentence's modal equivalence cluster is faithful. When most systems share an error, agreement falls below chance while the judge is unaffected.</figcaption>
+      </figure>
+
+      <div class="table-wrap" tabindex="0" role="region" aria-labelledby="cap-main">
+        <table>
+          
+          <thead><tr><th scope="col">Score</th><th scope="col">Panel</th><th scope="col">Solver</th><th scope="col" class="n">Coverage</th></tr></thead>
+          <tbody>
+            <tr class="ours"><th scope="row">peer agreement (frozen)</th><td>0.827 [0.770, 0.877]</td><td>0.874 [0.849, 0.897]</td><td class="n">0.945</td></tr>
+            <tr><th scope="row">latent class, one accuracy per system</th><td>0.834 [0.776, 0.885]</td><td>0.850 [0.823, 0.876]</td><td class="n">0.930</td></tr>
+            <tr><th scope="row">binary Dawid–Skene agreement</th><td>0.830 [0.773, 0.878]</td><td>0.865 [0.840, 0.889]</td><td class="n">0.930</td></tr>
+            <tr><th scope="row">latent class, two populations (Hui–Walter)</th><td>0.836 [0.778, 0.887]</td><td>0.852 [0.824, 0.877]</td><td class="n">0.930</td></tr>
+            <tr><th scope="row">majority equivalence clustering</th><td>0.797 [0.737, 0.850]</td><td>0.859 [0.833, 0.883]</td><td class="n">0.930</td></tr>
+            <tr><th scope="row">self-consistency, 2 sampled systems</th><td>0.843 [0.777, 0.904], n = 143</td><td>0.784 [0.753, 0.813], n = 823</td><td class="n">0.993</td></tr>
+            <tr><th scope="row">peer agreement, own samples as peers</th><td>0.842 [0.775, 0.903], n = 143</td><td>0.784 [0.754, 0.814], n = 823</td><td class="n">0.993</td></tr>
+            <tr><th scope="row">LLM judge (gemini-2.5-flash)</th><td>0.791 [0.726, 0.843]</td><td>0.727 [0.698, 0.755]</td><td class="n">1.000</td></tr>
+            <tr><th scope="row">roundtrip NLI (L)</th><td>0.784 [0.724, 0.835]</td><td>0.619 [0.546, 0.687], n = 260</td><td class="n">1.000</td></tr>
+            <tr><th scope="row">roundtrip cosine (L)</th><td>0.752 [0.686, 0.817]</td><td>0.657 [0.587, 0.730], n = 260</td><td class="n">1.000</td></tr>
+            <tr><th scope="row">vocabulary conformity control</th><td>0.674 [0.598, 0.746]</td><td>0.791 [0.764, 0.815]</td><td class="n">0.945</td></tr>
+            <tr><th scope="row">error typing judge (L)</th><td>0.659 [0.611, 0.710]</td><td>0.593 [0.557, 0.631], n = 260</td><td class="n">1.000</td></tr>
+            <tr><th scope="row">structural consistency metrics</th><td>0.554 [0.522, 0.590]</td><td>0.503 [0.500, 0.505]</td><td class="n">1.000</td></tr>
+            <tr><th scope="row">parse rate</th><td>0.549 [0.518, 0.584]</td><td>0.500 [0.500, 0.500]</td><td class="n">1.000</td></tr>
+            <tr><th scope="row">strength profile (directional component)</th><td>0.415 [0.358, 0.467], n = 245</td><td>0.464 [0.449, 0.480]</td><td class="n">1.000</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="tcap" id="cap-main">AUROC [95% CI] on the fresh set under panel labels (256 adjudicated items) and audited solver labels (3,720 rows unless stated). (L) marks a baseline computed with a local Qwen3-8B model. Coverage is the share of rows a score covers without the 0.5 default; the two rows that use samples are computed only for gpt-4.1-mini and llama-3.1-8b.</p>
+
+      <p>Two checks rule out the simplest artefacts. The score does not merely reproduce the solver label: inside the 168 panel items the solver calls not equivalent to audited gold, it still separates faithful from unfaithful at 0.776 [0.679, 0.858], against 0.738 for the judge. Nor does it merely reward conventional names: it beats the vocabulary conformity control by +0.152 on panel labels and +0.083 on solver labels. Across nine systems, per-system mean scores track per-system faithful rates at Kendall τ = 0.889 under solver labels and 0.556 under panel labels (judge: 0.722 and 0.833); with nine systems these are descriptive.</p>
+
+      <h3>The added signal is small and ties an existing agreement score</h3>
+      <p>Added to the base of judge, parse rate, roundtrip NLI, roundtrip cosine and structural metrics, peer agreement raises panel AUROC from 0.886 to 0.919. The +0.033 gain has a 95% interval that just includes zero; a directional test at the 5% level gives a lower bound of +0.005. The paper reads this as an increment of about 0.02 to 0.03 AUROC on short sentences, at the edge of significance under panel labels.</p>
+      <div class="table-wrap" tabindex="0" role="region" aria-labelledby="cap-tests">
+        <table>
+          
+          <thead><tr><th scope="col">Comparison</th><th scope="col">Panel</th><th scope="col">Solver</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">base + peer agreement − base</th><td>+0.033 [−0.001, 0.066]</td><td>+0.118 [0.051, 0.192]</td></tr>
+            <tr><th scope="row">same, placebo (score shuffled within strata)</th><td>−0.003 [−0.016, 0.008]</td><td>−0.001 [−0.010, 0.007]</td></tr>
+            <tr><th scope="row">peer agreement − majority equivalence clustering</th><td>+0.030 [0.012, 0.049]</td><td>+0.015 [0.005, 0.026]</td></tr>
+            <tr><th scope="row">peer agreement − binary Dawid–Skene agreement</th><td>−0.003 [−0.024, 0.017]</td><td>+0.009 [−0.000, 0.019]</td></tr>
+            <tr><th scope="row">peer agreement − vocabulary conformity control</th><td>+0.152 [0.096, 0.209]</td><td>+0.083 [0.066, 0.102]</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="tcap" id="cap-tests">Comparisons fixed in advance, on the fresh set. Differences are paired, with 95% intervals from a bootstrap clustered by sentence.</p>
+      <p>Peer agreement beats majority clustering, the mechanism of the nearest published work, under both label families. It does not beat binary Dawid–Skene agreement on panel labels. The gain is real but modest, and an existing latent-class estimator already captures it.</p>
+
+      <h3>The reliability weights carry the gain; direction and error typing do not</h3>
+      <div class="table-wrap" tabindex="0" role="region" aria-labelledby="cap-abl">
+        <table>
+          
+          <thead><tr><th scope="col">Configuration</th><th scope="col" class="n">Panel</th><th scope="col" class="n">Solver</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">bijection only, uniform weights</th><td class="n">0.801</td><td class="n">0.864</td></tr>
+            <tr><th scope="row">+ partial maps, uniform weights</th><td class="n">0.801</td><td class="n">0.863</td></tr>
+            <tr><th scope="row">+ granularity definitions, uniform weights</th><td class="n">0.791</td><td class="n">0.839</td></tr>
+            <tr class="ours"><th scope="row">bijection + partial maps, Dawid–Skene weights (frozen)</th><td class="n">0.827</td><td class="n">0.874</td></tr>
+            <tr><th scope="row">frozen + granularity definitions</th><td class="n">0.820</td><td class="n">0.859</td></tr>
+            <tr><th scope="row">frozen + strength profile (stacked, held-out folds)</th><td class="n">0.791</td><td class="n">0.867</td></tr>
+            <tr><th scope="row">strength profile alone</th><td class="n">0.415</td><td class="n">0.464</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="tcap" id="cap-abl">Component ablation on the fresh set, AUROC.</p>
+      <p>The strength profile alone ranks candidates below chance, and adding it lowers panel AUROC. Error typing from it named the panel's primary error type for 12.2% of fresh unfaithful items, against 25.5% for always answering "added condition" (development 21.3% against 25.7%; legal 4.4% against 21.9%). Granularity definitions also have a mechanical cost: a definition of the form Q := ¬P absorbs a single negation (detection 0.511 with definitions, 1.000 without), a definition that adds a conjunct absorbs a dropped restrictor (0.659 against 0.995), and the definitions add 11.9% spurious equivalences between formulas from unrelated sentences. <a class="code-link" href="https://github.com/ai-inventor-papers/ai-invention-abf543-do-sentence-and-formula-generalize-the/tree/main/round-2/experiment-4">Code for this test</a></p>
+
+      <h3>Agreement is exactly invariant to vocabulary</h3>
+      <p>Because alignment never reads names, renaming cannot move the score. On 223 development sentences with faithful gold, each gold was rendered in the modal peer's vocabulary, in random tokens and in WordNet synonyms, against 739 operator mutants per rendering. Peer agreement without granularity definitions separates faithful formulas from mutants at 0.999 AUROC in every rendering. The LLM judge falls from 0.945 with conventional names to 0.794 with random tokens and 0.763 when the faithful formula uses random tokens and its mutants use conventional names. The vocabulary conformity control collapses to 0.176 in that crossed condition.</p>
+      <p>On real candidates, over 1,695 solver-verified meaning-preserving rewrites of 400 fresh candidates, the false alarm rate was 0.25% for synonym renamings, 0.50% for random renamings, and zero for contrapositive, De Morgan and reorder rewrites. The vocabulary conformity control changed on 86.4% of synonym renamings. On 104 sentences paired with entity-renamed paraphrases, the judge's mean score dropped by 0.096 while its AUROC did not change significantly (−0.022 [−0.067, 0.030]).</p>
+
+      <h3>Agreement fails when most systems share an error</h3>
+      <p>Where a sentence's modal cluster is faithful, peer agreement reaches 0.883 [0.822, 0.934] against the judge's 0.782. Where it is not (61 items), peer agreement falls to 0.419 [0.292, 0.557], below chance, while the judge holds 0.786. Majority clustering does the same (0.867 and 0.433). Mode correctness is read from the labels, so this split is descriptive.</p>
+      <p>A controlled dose test isolates the mechanism. For 200 development sentences, <i>k</i> of the eight peers were replaced by renamed copies of a mutant. Detection falls from 0.988 at <i>k</i> = 0 to 0.791 at <i>k</i> = 2, 0.409 at <i>k</i> = 4 and 0 at <i>k</i> = 8 when peers are replaced in random order, and reaches 0 already at <i>k</i> = 4 when faithful peers go first. Renamed copies were recognized as equivalent in 502 of 502 audited pairs, so the boundary is arithmetic of peer weight, not a property of the solver. On real development data, concordance within sentences is 0.831 when wrong-meaning clusters hold under a quarter of the peer weight and 0.449 when they hold three quarters or more (logistic slope −2.08 [−2.55, −1.61]); the modal cluster is wrong in 284 of 700 sentences.</p>
+
+      <h3>Complexity and long legal definitions</h3>
+      <p>On the fresh set, under panel labels, the score's lead over the judge shrinks with complexity: +0.088, +0.107 and −0.028 in the bottom, middle and top terciles (slope −0.058 [−0.135, 0.022], not significant). It is weakest with two or more quantifiers (0.659 against the judge's 0.778) and strongest with three or more conditions (0.871 against 0.787). Public corpora are rich in connectives, not exceptions: FOLIO contains one <i>unless</i> or <i>except</i> in 2,656 sentence-formula pairs.</p>
+      <p>On the legal set the result is clearly negative for agreement. Peer agreement reaches 0.705, the LLM judge 0.927 and the frontier judge 0.852, and the score trails the judge in every marker bin. Stacked on judge and parse rate it adds +0.021 [−0.001, 0.046]; over the full base, +0.008 [−0.012, 0.028]. Equivalence is rare on long text (4.8% of legal pairs against 38.5% on fresh sentences), and in 76% of the 62 sentences with a labelled modal cluster, that cluster is unfaithful. There the score fell to 0.624 while the judge held 0.946.</p>
+      <div class="table-wrap" tabindex="0" role="region" aria-labelledby="cap-legal">
+        <table>
+          
+          <thead><tr><th scope="col">Marker bin (items, faithful)</th><th scope="col" class="n">Peer agreement</th><th scope="col" class="n">LLM judge</th><th scope="col" class="n">Frontier judge</th><th scope="col" class="n">Majority clustering</th><th scope="col" class="n">Roundtrip NLI (L)</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">all (655, 67)</th><td class="n">0.705</td><td class="n"><strong>0.927</strong></td><td class="n">0.852</td><td class="n">0.754</td><td class="n">0.694</td></tr>
+            <tr><th scope="row">95% CI</th><td class="n">[0.608, 0.792]</td><td class="n">[0.900, 0.949]</td><td class="n">[0.786, 0.904]</td><td class="n">[0.670, 0.828]</td><td class="n">[0.601, 0.773]</td></tr>
+            <tr><th scope="row">0–1 markers (419, 56)</th><td class="n">0.726</td><td class="n"><strong>0.923</strong></td><td class="n">0.862</td><td class="n">0.795</td><td class="n">0.728</td></tr>
+            <tr><th scope="row">2–3 markers (162, 6)</th><td class="n">0.566</td><td class="n"><strong>0.931</strong></td><td class="n">0.823</td><td class="n">0.548</td><td class="n">0.534</td></tr>
+            <tr><th scope="row">≥ 4 markers (74, 5)</th><td class="n">0.685</td><td class="n"><strong>0.909</strong></td><td class="n">0.785</td><td class="n">0.493</td><td class="n">0.685</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="tcap" id="cap-legal">Legal set, weighted AUROC against panel labels from the sentence alone (655 items, 67 faithful), by exception and condition marker count.</p>
+      <p>These are the weakest labels in the study: an LLM panel judging the sentence alone, with κ = 0.17 on the bin with four or more markers. The ordering held under each single member's labels and on the 515 unanimous items (peer agreement 0.866, judge 0.974), but with 11 faithful items in the upper two bins those bins do not support a conclusion.</p>
+
+      <h3>Agreement flags wrong benchmark gold</h3>
+      <p>Treating the shipped gold as a tenth peer gives a reference-free flag for wrong gold. On ProverQA, 19 of the 25 golds it scores lowest are wrong, at a 17.5% base rate. On the 450 fresh golds its precision is 0.80 among the 50 it scores lowest.</p>
+      <div class="table-wrap" tabindex="0" role="region" aria-labelledby="cap-gold">
+        <table>
+          
+          <thead><tr><th scope="col">Population</th><th scope="col">AUROC [95% CI]</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">development, pooled (700 golds, 43% wrong)</th><td>0.837 [0.809, 0.864]</td></tr>
+            <tr><th scope="row">development, ProverQA / MALLS / FOLIO</th><td>0.891 / 0.783 / 0.733</td></tr>
+            <tr><th scope="row">fresh, pooled (450 golds, 46% wrong)</th><td>0.859</td></tr>
+            <tr><th scope="row">development: LLM judge on gold → + peer agreement</th><td>0.825 → 0.896, +0.070 [0.045, 0.096]</td></tr>
+            <tr><th scope="row">development: error typing judge on gold → + peer agreement</th><td>0.841 → 0.889, +0.048 [0.028, 0.070]</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="tcap" id="cap-gold">Wrong-gold flagging with the gold as a tenth peer, against the panel's gold audit.</p>
+
+      <h3>Other reference-free families do not beat a judge on current systems</h3>
+      <p>On 2023-era Logic-LM outputs for the FOLIO validation split, labelled by solver equivalence to gold, the monotonicity signature and the judgment worlds both ranked candidates above an LLM judge (<a class="code-link" href="https://github.com/ai-inventor-papers/ai-invention-abf543-do-sentence-and-formula-generalize-the/tree/main/round-1/experiment-1">signature code</a>, <a class="code-link" href="https://github.com/ai-inventor-papers/ai-invention-abf543-do-sentence-and-formula-generalize-the/tree/main/round-1/experiment-2">worlds code</a>). On current systems the order reversed. The signature's polarity comparison added nothing beyond its own lexical alignment (+0.011 [−0.010, 0.031]) and named real error types less often than the majority class (11.1% against 24.9%). The worlds lost to the judge in the top complexity tercile by −0.098 [−0.184, −0.014], the regime where they had led. The judge that collapsed on the older screen's top tercile (0.552) held 0.772 there on current outputs.</p>
+      <div class="table-wrap" tabindex="0" role="region" aria-labelledby="cap-fam">
+        <table>
+          
+          <thead><tr><th scope="col">Score</th><th scope="col" class="n">2023 screen</th><th scope="col" class="n">Current systems</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">monotonicity signature, rule-based polarity</th><td class="n">0.718</td><td class="n">0.642</td></tr>
+            <tr><th scope="row">monotonicity signature, LLM probe</th><td class="n">0.711</td><td class="n">0.657</td></tr>
+            <tr><th scope="row">judgment worlds</th><td class="n">0.701</td><td class="n">0.665</td></tr>
+            <tr><th scope="row">instance consequence NLI (DeBERTa)</th><td class="n">0.603</td><td class="n">n/a</td></tr>
+            <tr><th scope="row">latent-class agreement, one accuracy per system</th><td class="n">0.853</td><td class="n">0.756</td></tr>
+            <tr><th scope="row">LLM judge (gemini-2.5-flash)</th><td class="n">0.644 to 0.665</td><td class="n">0.745 to 0.762</td></tr>
+            <tr><th scope="row">frontier judge (gemini-2.5-pro)</th><td class="n">n/a</td><td class="n">0.825</td></tr>
+            <tr><th scope="row">roundtrip NLI</th><td class="n">0.660</td><td class="n">0.734</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="tcap" id="cap-fam">Reference-free families on two populations. The 2023 screen is 835 Logic-LM candidates for 300 FOLIO validation sentences, with solver labels against gold; current systems are the 609 development panel items from nine current LLMs. Three repeated judge runs on current systems gave 0.762, 0.749 and 0.745.</p>
+      <p>The frontier judge's lead also depends on the labels: on the same development items it scored 0.827 against panel labels and 0.738 against solver labels, while the cheap judge moved by only +0.005, and it scored its own model family's outputs higher (0.853 against 0.817).</p>
+
+      <h3>Cost</h3>
+      <p>When peer outputs already exist the score needs no API call and about 0.16 s of solver time per item. Generating eight peers costs about $0.00039 per short item, 13 times the judge's $0.00003, and $0.0019 per legal item, 31 times the judge. With a system's own samples as peers it reduces to sampling self-consistency (0.842 against 0.843 on fresh panel items).</p>
+    </section>
+
+    <!-- 5. GALLERY -->
+    <section id="gallery" aria-labelledby="gallery-h">
+      <h2 id="gallery-h">Figures</h2>
+      <p class="muted small">Select any figure to open it full size. Escape, the close button or a click outside closes it; the arrow keys move between figures.</p>
+      <div class="gallery">
+        <figure>
+          <h3>Peer agreement predicts faithfulness until peers share an error</h3>
+          <button type="button" class="fig-open" data-fig="0" aria-label="Enlarge figure: Peer agreement predicts faithfulness until peers share an error">
+            <img src="figures/fig1_v0.png" width="1400" height="788" loading="lazy" alt="Bar charts of AUROC on the fresh set: peer agreement 0.827 panel and 0.874 solver, above the LLM judge's 0.791 and 0.727, and falling to 0.419 when the modal cluster is unfaithful while the judge stays at 0.786.">
+          </button>
+          <figcaption>Peer agreement on 450 fresh sentences formalized by nine LLMs. (a) AUROC with 95% intervals from a bootstrap clustered by sentence, under labels from a blinded LLM panel (256 items) and audited solver labels (3,720 rows; roundtrip NLI on 260 rows). Peer agreement is above the gemini-2.5-flash judge under both label families and ties binary Dawid–Skene agreement; parse rate and the structural consistency metrics are near chance. (b) AUROC under panel labels, split by whether the sentence's modal equivalence cluster is faithful. When most systems share an error, agreement falls below chance while the judge is unaffected.</figcaption>
+        </figure>
+        <figure>
+          <h3>How the peer agreement score is computed</h3>
+          <button type="button" class="fig-open" data-fig="1" aria-label="Enlarge figure: How the peer agreement score is computed">
+            <img src="figures/fig2_v0.jpg" width="3168" height="1344" loading="lazy" alt="Pipeline diagram: candidate and peer formulas go through name-free alignment, a Z3 relation per pair, equivalence clusters with Dawid-Skene weights, and out comes the weighted share of equivalent peers; the sentence is never read.">
+          </button>
+          <figcaption>A candidate formula is compared with each peer formula (other systems' outputs for the same sentence) after a vocabulary alignment that ignores predicate names (a bijection, then a partial map). An SMT solver decides the logical relation of each aligned pair. EQUIV relations define equivalence clusters, from which a Dawid–Skene model with one accuracy parameter per system, fitted without labels, estimates one reliability weight per system. The score is the weighted share of peers that are equivalent to the candidate. The sentence text and predicate names are never read.</figcaption>
+        </figure>
+        <figure>
+          <h3>Agreement ignores vocabulary; the judge does not</h3>
+          <button type="button" class="fig-open" data-fig="2" aria-label="Enlarge figure: Agreement ignores vocabulary; the judge does not">
+            <img src="figures/fig3_v0.png" width="1400" height="788" loading="lazy" alt="Grouped bars for four vocabulary renderings. Peer agreement and majority clustering stay at 0.999 and 0.998 in every rendering; the LLM judge drops from 0.945 with conventional names to 0.794 with random tokens and 0.763 crossed; the vocabulary-conformity control falls to 0.176 in the crossed condition.">
+          </button>
+          <figcaption>Constructed vocabulary test on 223 development sentences with faithful gold: AUROC of faithful formulas against 739 operator mutants, with the same formulas rendered in the modal peer's vocabulary, in random tokens, in WordNet synonyms, and crossed (faithful formula in random tokens, mutants in conventional names). Peer agreement (without granularity definitions) and majority clustering are unchanged across renderings; the LLM judge loses up to 0.182 AUROC and the vocabulary conformity control collapses in the crossed condition.</figcaption>
+        </figure>
+        <figure>
+          <h3>Shared errors defeat agreement by peer arithmetic</h3>
+          <button type="button" class="fig-open" data-fig="3" aria-label="Enlarge figure: Shared errors defeat agreement by peer arithmetic">
+            <img src="figures/fig4_v0.png" width="1400" height="788" loading="lazy" alt="Left: detection falls as more of eight peers are replaced by copies of the error, from 0.988 at zero to 0 at eight in random order, and to 0 by four when faithful peers go first. Right: within-sentence concordance drops from 0.831 and 0.885 when wrong-meaning clusters hold under half the peer weight to 0.560 and 0.449 above half.">
+          </button>
+          <figcaption>The boundary set by shared error. (a) Controlled dose test on 200 development sentences (560 items, four operators): probability that the faithful formula scores above a mutant when <i>k</i> of its eight peers are replaced by renamed copies of the mutant, for the configuration without granularity definitions, replacing peers in random order or faithful peers first. (b) Real development data (6,772 faithful × unfaithful pairs in 508 sentences, development configuration): concordance within sentences of the agreement score by the share of peer weight held by clusters with the wrong meaning, with 95% intervals; logistic slope −2.08 [−2.55, −1.61].</figcaption>
+        </figure>
+        <figure>
+          <h3>Agreement versus the judge as text gets complex</h3>
+          <button type="button" class="fig-open" data-fig="4" aria-label="Enlarge figure: Agreement versus the judge as text gets complex">
+            <img src="figures/fig5_v0.png" width="1400" height="788" loading="lazy" alt="Left: dot plot of AUROC for peer agreement and the LLM judge across token, quantifier, nesting and condition strata on the fresh set, with agreement ahead on simple strata and behind on two or more quantifiers, deeper nesting and long sentences. Right: legal definitions by marker bin, where the LLM judge (0.923, 0.931, 0.909) and frontier judge lead peer agreement and majority clustering in every bin.">
+          </button>
+          <figcaption>Reliability by complexity under panel labels. (a) Fresh set: AUROC of peer agreement and the LLM judge per stratum of the four complexity features (items per stratum in parentheses); agreement leads on short sentences, sentences without quantifiers, sentences with shallow nesting and sentences with three or more conditions, and trails on two or more quantifiers, deeper nesting and long sentences. (b) Legal definitions (655 items, panel labels from the sentence alone) by number of exception and condition markers: every reference-free score trails both judges in every bin; the upper two bins hold only 6 and 5 faithful items.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 6. LIMITATIONS -->
+    <section id="limitations" aria-labelledby="limits-h">
+      <h2 id="limits-h">Limitations</h2>
+      <ul class="limits">
+        <li><strong>Thin increment.</strong> The increment under panel labels over the base of judge and roundtrip scores is +0.033 with a 95% confidence interval of [−0.001, 0.066]. It is significant only under a directional test, and it matches, rather than exceeds, what latent-class agreement showed on development data. The fresh panel has 256 items (Kish effective sample size 202).</li>
+        <li><strong>No gain over an existing estimator.</strong> Peer agreement does not beat binary Dawid–Skene agreement on panel labels, and its gain over majority clustering comes from reliability weighting, not from anything new in the comparison.</li>
+        <li><strong>LLM labels.</strong> Panel labels are LLM judgments, with κ = 0.57 against human corrections on MALLS and 0.37 pairwise agreement on the primary error type. No human adjudication was used. On legal text the labels come from the sentence alone, κ falls to 0.17 on sentences with four or more markers, and the panel's sensitivity to exception errors is uncertified; the legal conclusions are correspondingly weak.</li>
+        <li><strong>Substituted and missing baselines.</strong> Roundtrip baselines on the fresh and legal sets used a local Qwen3-8B back-translation, which favoured outputs of Qwen models (0.968 against 0.766 roundtrip NLI AUROC on the 18 panel items generated by Qwen models). The frontier judge was not run on fresh items. GenV, FormalAlign and the relabelling framework of Brunello et al. were not benchmarked.</li>
+        <li><strong>Operating conditions.</strong> The score needs several independent systems per sentence and cannot score a lone output beyond what self-consistency gives. It fails under shared error, which is frequent on long text.</li>
+        <li><strong>Signal between sentences.</strong> On development solver labels, shuffling labels within sentences leaves the score at 0.70 AUROC against a true 0.82, so much of its item-level AUROC separates easy from hard sentences rather than candidates within a sentence. The fresh within-sentence comparison (0.929 against 0.786 for the judge over 70 pairs) used pairs sampled from one modal and one minority output per sentence, a design that favours agreement.</li>
+        <li><strong>Error types.</strong> No reference-free method in the study named real error types better than always predicting the most frequent type.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer id="links" aria-labelledby="links-h">
+    <h2 id="links-h">Paper, report and code</h2>
+    <ul class="links">
+      <li><a class="btn primary" href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-abf543-do-sentence-and-formula-generalize-the@fork/run_ujABDGgoK_5Q/paper.pdf">Read the paper (PDF)</a></li>
+      <li><a class="btn" href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-abf543-do-sentence-and-formula-generalize-the@main/report.pdf">Read the full research report</a></li>
+      <li><a class="btn" href="https://github.com/ai-inventor-papers/ai-invention-abf543-do-sentence-and-formula-generalize-the/tree/fork/run_ujABDGgoK_5Q">Code repository</a></li>
+    </ul>
+    <p>Peer Agreement as a Reference-Free Signal of NL→FOL Faithfulness, and Where It Fails. The full research report records every experiment, table and dead end behind this paper.</p>
+  </footer>
+  </div>
+</div>
+
+<dialog class="lightbox" id="lightbox" aria-labelledby="lb-title">
+  <div class="lb-panel">
+    <div class="lb-bar">
+      <h2 id="lb-title">Figure</h2>
+      <button type="button" class="lb-btn" id="lb-prev" aria-label="Previous figure">Previous</button>
+      <button type="button" class="lb-btn" id="lb-next" aria-label="Next figure">Next</button>
+      <button type="button" class="lb-btn" id="lb-close" aria-label="Close figure">Close</button>
+    </div>
+    <div class="lb-body">
+      <img id="lb-img" src="figures/fig1_v0.png" alt="Enlarged figure">
+      <p id="lb-cap"></p>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(function () {
+  "use strict";
+
+  /* Section tracking for the navigation */
+  var links = Array.prototype.slice.call(document.querySelectorAll(".toc a"));
+  var targets = links.map(function (a) { return document.querySelector(a.getAttribute("href")); });
+  function setCurrent(id) {
+    links.forEach(function (a) {
+      if (a.getAttribute("href") === "#" + id) {
+        a.setAttribute("aria-current", "true");
+        if (window.matchMedia("(max-width: 1099px)").matches && a.scrollIntoView) {
+          var list = a.closest("ol");
+          var left = a.offsetLeft - list.clientWidth / 2 + a.clientWidth / 2;
+          list.scrollLeft = left;
+        }
+      } else {
+        a.removeAttribute("aria-current");
+      }
+    });
+  }
+  function update() {
+    var probe = window.innerHeight * 0.3;
+    var current = targets[0] ? targets[0].id : "";
+    targets.forEach(function (t) {
+      if (t && t.getBoundingClientRect().top - probe <= 0) current = t.id;
+    });
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+      current = targets[targets.length - 1].id;
+    }
+    setCurrent(current);
+  }
+  var ticking = false;
+  window.addEventListener("scroll", function () {
+    if (!ticking) { ticking = true; window.requestAnimationFrame(function () { update(); ticking = false; }); }
+  }, { passive: true });
+  window.addEventListener("resize", update);
+  update();
+
+  /* Lightbox */
+  var figs = [
+    { src: "figures/fig1_v0.png", title: "Peer agreement predicts faithfulness until peers share an error" },
+    { src: "figures/fig2_v0.jpg", title: "How the peer agreement score is computed" },
+    { src: "figures/fig3_v0.png", title: "Agreement ignores vocabulary; the judge does not" },
+    { src: "figures/fig4_v0.png", title: "Shared errors defeat agreement by peer arithmetic" },
+    { src: "figures/fig5_v0.png", title: "Agreement versus the judge as text gets complex" }
+  ];
+  // Captions and alt text come from the gallery so they are written once.
+  var galleryFigs = document.querySelectorAll("#gallery figure");
+  galleryFigs.forEach(function (f, i) {
+    figs[i].cap = f.querySelector("figcaption").textContent;
+    figs[i].alt = f.querySelector("img").getAttribute("alt");
+  });
+
+  var dlg = document.getElementById("lightbox");
+  var img = document.getElementById("lb-img");
+  var cap = document.getElementById("lb-cap");
+  var ttl = document.getElementById("lb-title");
+  var btnClose = document.getElementById("lb-close");
+  var btnPrev = document.getElementById("lb-prev");
+  var btnNext = document.getElementById("lb-next");
+  var index = 0;
+  var opener = null;
+
+  function show(i) {
+    index = (i + figs.length) % figs.length;
+    var f = figs[index];
+    img.src = f.src;
+    img.alt = f.alt;
+    ttl.textContent = "Figure " + (index + 1) + " of " + figs.length + ": " + f.title;
+    cap.textContent = f.cap;
+  }
+  function open(i, trigger) {
+    opener = trigger;
+    show(i);
+    if (typeof dlg.showModal === "function") { dlg.showModal(); } else { dlg.setAttribute("open", ""); }
+    btnClose.focus();
+  }
+  function close() {
+    if (dlg.open) {
+      if (typeof dlg.close === "function") { dlg.close(); } else { dlg.removeAttribute("open"); }
+    }
+  }
+  dlg.addEventListener("close", function () {
+    if (opener) { opener.focus(); opener = null; }
+  });
+
+  document.querySelectorAll(".fig-open").forEach(function (b) {
+    b.addEventListener("click", function () { open(parseInt(b.getAttribute("data-fig"), 10), b); });
+  });
+  btnClose.addEventListener("click", close);
+  btnPrev.addEventListener("click", function () { show(index - 1); });
+  btnNext.addEventListener("click", function () { show(index + 1); });
+
+  // A click on the dimmed area outside the panel closes the lightbox.
+  dlg.addEventListener("click", function (e) { if (e.target === dlg) close(); });
+
+  dlg.addEventListener("cancel", function (e) { e.preventDefault(); close(); });
+  dlg.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") { e.preventDefault(); close(); return; }
+    if (e.key === "ArrowRight") { e.preventDefault(); show(index + 1); return; }
+    if (e.key === "ArrowLeft") { e.preventDefault(); show(index - 1); return; }
+    if (e.key === "Tab") {
+      var items = Array.prototype.slice.call(dlg.querySelectorAll("button, [href], [tabindex]:not([tabindex='-1'])"));
+      var first = items[0], last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      else if (items.indexOf(document.activeElement) === -1) { e.preventDefault(); first.focus(); }
+    }
+  });
+})();
+</script>
+</body>
+</html>
