@@ -1,0 +1,98 @@
+{
+ "note": "Arm A signature predicted \u2248 chance on SCOPE_SWAP/CARD (blind spots); compare in iter 2",
+ "TVJT_pairwise": {
+  "CARD|screen": {
+   "rate": 1.0,
+   "n": 3,
+   "wilson": [
+    0.4385,
+    1.0
+   ]
+  }
+ },
+ "NLI_pairwise": {
+  "CARD|screen": {
+   "rate": 0.75,
+   "n": 2,
+   "n_no_differing_hypothesis": 1,
+   "wilson": [
+    0.1979,
+    0.9733
+   ]
+  },
+  "CARD|screen_controlled": {
+   "rate": 1.0,
+   "n": 1,
+   "n_no_differing_hypothesis": 0,
+   "wilson": [
+    0.2065,
+    1.0
+   ]
+  }
+ },
+ "chance": 0.5,
+ "TVJT|SCOPE_SWAP|screen": {
+  "rate": null,
+  "n": 0,
+  "wilson": [
+   null,
+   null
+  ]
+ },
+ "TVJT|SCOPE_SWAP|screen+supplement": {
+  "rate": null,
+  "n": 0,
+  "wilson": [
+   null,
+   null
+  ]
+ },
+ "TVJT|CARD|screen": {
+  "rate": 1.0,
+  "n": 3,
+  "wilson": [
+   0.4385,
+   1.0
+  ]
+ },
+ "TVJT|CARD|screen+supplement": {
+  "rate": 1.0,
+  "n": 3,
+  "wilson": [
+   0.4385,
+   1.0
+  ]
+ },
+ "NLI_deberta|SCOPE_SWAP|screen": {
+  "rate": null,
+  "n": 0,
+  "wilson": [
+   null,
+   null
+  ]
+ },
+ "NLI_deberta|SCOPE_SWAP|screen+supplement": {
+  "rate": null,
+  "n": 0,
+  "wilson": [
+   null,
+   null
+  ]
+ },
+ "NLI_deberta|CARD|screen": {
+  "rate": 0.75,
+  "n": 2,
+  "wilson": [
+   0.1979,
+   0.9733
+  ]
+ },
+ "NLI_deberta|CARD|screen+supplement": {
+  "rate": 0.75,
+  "n": 2,
+  "wilson": [
+   0.1979,
+   0.9733
+  ]
+ }
+}

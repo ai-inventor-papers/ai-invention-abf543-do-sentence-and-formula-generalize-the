@@ -1,0 +1,3129 @@
+{
+ "recipe": "Logic-LM FOLIO-dev {gpt-3.5-turbo,gpt-4,text-davinci-003} x FOLIO v0.0 validation; norm(s)=re.sub(r'\\s+',' ',s.lower()).strip().rstrip('.'); sha1(norm(nl)) sort; first 300",
+ "sentences": [
+  {
+   "nl": "Some evergreens are not objects of worship.",
+   "story_id": 111,
+   "gold_fol": "∃x ∃y (Evergreen(x) ∧ Evergreen(y) ∧ ¬ObjectOfWorship(x) ∧ ¬ObjectOfWorship(y) ∧ ¬(x=y))",
+   "gold_source": "corrected",
+   "gold_fol_orig": "∃x (Evergreen(x) ∧ ¬ObjectOfWorship(x))",
+   "gold_fol_corr": "∃x ∃y (Evergreen(x) ∧ Evergreen(y) ∧ ¬ObjectOfWorship(x) ∧ ¬ObjectOfWorship(y) ∧ ¬(x=y))",
+   "corr_flag": false,
+   "ambiguity": true,
+   "corr_id": "concl_262_111",
+   "sha1": "007519ff96ffc889d2147ce03bcd041c7cdadc31",
+   "sid": "007519ff96",
+   "features": {
+    "n_tokens": 7,
+    "n_quant": 2,
+    "depth": 5,
+    "n_cond": 5,
+    "n_text_markers": 1,
+    "n_gold_binconn": 4,
+    "composite": 1.0572366698228919
+   },
+   "tercile": "top"
+  },
+  {
+   "nl": "An animal is either a monkey or a bird.",
+   "story_id": 125,
+   "gold_fol": "∀x ( Monkey (x) ∨  Bird (x))",
+   "gold_source": "original",
+   "gold_fol_orig": "∀x ( Monkey (x) ∨  Bird (x))",
+   "gold_fol_corr": null,
+   "corr_flag": null,
+   "ambiguity": null,
+   "corr_id": null,
+   "sha1": "014eff9a2bf628211d1bc4193c7db7f9a40c6dff",
+   "sid": "014eff9a2b",
+   "features": {
+    "n_tokens": 9,
+    "n_quant": 1,
+    "depth": 3,
+    "n_cond": 2,
+    "n_text_markers": 1,
+    "n_gold_binconn": 1,
+    "composite": -0.01618839930345889
+   },
+   "tercile": "mid"
+  },
+  {
+   "nl": "Breaking Bad is a TV show in which roses are given out on Monday at 8 pm.",
+   "story_id": 165,
+   "gold_fol": "Show(breakingBad) ∧ GivesOutOnTV(breakingBad, rose) ∧ AiringAt(breakingBad, eightPMMonday)",
+   "gold_source": "corrected",
+   "gold_fol_orig": "Mondayat8(breakingbad) ∧ RoseGivenOutOnTv(breakingbad)",
+   "gold_fol_corr": "Show(breakingBad) ∧ GivesOutOnTV(breakingBad, rose) ∧ AiringAt(breakingBad, eightPMMonday)",
+   "corr_flag": true,
+   "ambiguity": false,
+   "corr_id": "concl_318_165",
+   "sha1": "0166601dd04e07223032fadb2c77140ff9008ca3",
+   "sid": "0166601dd0",
+   "features": {
+    "n_tokens": 17,
+    "n_quant": 0,
+    "depth": 2,
+    "n_cond": 2,
+    "n_text_markers": 0,
+    "n_gold_binconn": 2,
+    "composite": -0.021775515311833388
+   },
+   "tercile": "low"
+  },
+  {
+   "nl": "Dani Shapiro is a novel writer.",
+   "story_id": 185,
+   "gold_fol": "WritesNovel(daniShapiro)",
+   "gold_source": "corrected",
+   "gold_fol_orig": "WritesNovel(dani_Shapiro)",
+   "gold_fol_corr": "WritesNovel(daniShapiro)",
+   "corr_flag": true,
+   "ambiguity": false,
+   "corr_id": "concl_64_185",
+   "sha1": "0206b4ea580ba09232d1d20c36374af9a6c14dac",
+   "sid": "0206b4ea58",
+   "features": {
+    "n_tokens": 6,
+    "n_quant": 0,
+    "depth": 1,
+    "n_cond": 0,
+    "n_text_markers": 0,
+    "n_gold_binconn": 0,
+    "composite": -1.2345880524216182
+   },
+   "tercile": "low"
+  },
+  {
+   "nl": "Vienna Music Society premiered Symphony No. 9.",
+   "story_id": 36,
+   "gold_fol": "Premiered(viennamusicsociety, symphony9)",
+   "gold_source": "original",
+   "gold_fol_orig": "Premiered(viennamusicsociety, symphony9)",
+   "gold_fol_corr": null,
+   "corr_flag": null,
+   "ambiguity": null,
+   "corr_id": null,
+   "sha1": "0208f0729ca75a3a825a1c5708fc805bdfcac211",
+   "sid": "0208f0729c",
+   "features": {
+    "n_tokens": 7,
+    "n_quant": 0,
+    "depth": 1,
+    "n_cond": 1,
+    "n_text_markers": 1,
+    "n_gold_binconn": 0,
+    "composite": -1.0051472041889382
+   },
+   "tercile": "low"
+  },
+  {
+   "nl": "If a koala is a quokka, then the koala either loves to sleep or is very fluffy.",
+   "story_id": 98,
+   "gold_fol": "Quokka(koala) → LoveToSleep(koala) ⊕ VeryFluffy(koala)",
+   "gold_source": "original",
+   "gold_fol_orig": "Quokka(koala) → LoveToSleep(koala) ⊕ VeryFluffy(koala)",
+   "gold_fol_corr": null,
+   "corr_flag": null,
+   "ambiguity": null,
+   "corr_id": null,
+   "sha1": "022c51fe4071545992095ce54e337bfb5d513db8",
+   "sid": "022c51fe40",
+   "features": {
+    "n_tokens": 17,
+    "n_quant": 0,
+    "depth": 3,
+    "n_cond": 4,
+    "n_text_markers": 2,
+    "n_gold_binconn": 2,
+    "composite": 0.5046087293863893
+   },
+   "tercile": "top"
+  },
+  {
+   "nl": "Subway does not provide take-out service.",
+   "story_id": 86,
+   "gold_fol": "¬(NoTakeOutService(subway) ∧ NegativeReview(subway)) → PopularAmongLocalResidents(subway) ∧ NoTakeOutService(subway)",
+   "gold_source": "original",
+   "gold_fol_orig": "¬(NoTakeOutService(subway) ∧ NegativeReview(subway)) → PopularAmongLocalResidents(subway) ∧ NoTakeOutService(subway)",
+   "gold_fol_corr": null,
+   "corr_flag": null,
+   "ambiguity": null,
+   "corr_id": null,
+   "sha1": "026646b128ee21f635a43b86e26016c576979105",
+   "sid": "026646b128",
+   "features": {
+    "n_tokens": 7,
+    "n_quant": 0,
+    "depth": 4,
+    "n_cond": 4,
+    "n_text_markers": 1,
+    "n_gold_binconn": 3,
+    "composite": 0.07289070131993439
+   },
+   "tercile": "mid"
+  },
+  {
+   "nl": "Machine Learning algorithms can be categorized as supervised learning, unsupervised learning, and reinforcement learning.",
+   "story_id": 138,
+   "gold_fol": "∀x (MachineLearningAlgorithm(x) ↔ (SupervisedLearningAlgorithm(x) ∨ UnsupervisedLearningAlgorithm(x) ∨ ReinforcementLearningAlgorithm(x)))",
+   "gold_source": "corrected",
+   "gold_fol_orig": "MLAlgorithm(supervisedLearning) ∨ MLAlgorithm(unsupervisedLearning) ∨ MLAlgorithm(reinforcementLearning)",
+   "gold_fol_corr": "∀x (MachineLearningAlgorithm(x) ↔ (SupervisedLearningAlgorithm(x) ∨ UnsupervisedLearningAlgorithm(x) ∨ ReinforcementLearningAlgorithm(x)))",
+   "corr_flag": true,
+   "ambiguity": true,
+   "corr_id": "story_131#0",
+   "sha1": "03274a56dde4e58c4c5d0faeee15405e295cd13a",
+   "sid": "03274a56dd",
+   "features": {
+    "n_tokens": 14,
+    "n_quant": 1,
+    "depth": 4,
+    "n_cond": 3,
+    "n_text_markers": 0,
+    "n_gold_binconn": 3,
+    "composite": 0.6551704293865723
+   },
+   "tercile": "top"
+  },
+  {
+   "nl": "Joe's license plate begins with the number 34.",
+   "story_id": 74,
+   "gold_fol": "∃x (Owns(joe, x) ∧ BeginWith(x, num34) ∧ ∃y VehicleRegistrationPlateIn(x, y))",
+   "gold_source": "corrected",
+   "gold_fol_orig": "Beginwith(joe, number34)",
+   "gold_fol_corr": "∃x (Owns(joe, x) ∧ BeginWith(x, num34) ∧ ∃y VehicleRegistrationPlateIn(x, y))",
+   "corr_flag": true,
+   "ambiguity": false,
+   "corr_id": "concl_83_74",
+   "sha1": "032de04afe01fbfbff3e8c81f69e1a8e80ce95c2",
+   "sid": "032de04afe",
+   "features": {
+    "n_tokens": 9,
+    "n_quant": 2,
+    "depth": 4,
+    "n_cond": 2,
+    "n_text_markers": 0,
+    "n_gold_binconn": 2,
+    "composite": 0.48861929300423335
+   },
+   "tercile": "mid"
+  },
+  {
+   "nl": "Dried Thai chilies are cupcakes and a product of Baked by Melissa.",
+   "story_id": 83,
+   "gold_fol": "Cupcake(driedThaiChilies) ∧ ProductsOfBakedByMelissa(driedThaiChilies)",
+   "gold_source": "original",
+   "gold_fol_orig": "Cupcake(driedThaiChilies) ∧ ProductsOfBakedByMelissa(driedThaiChilies)",
+   "gold_fol_corr": null,
+   "corr_flag": null,
+   "ambiguity": null,
+   "corr_id": null,
+   "sha1": "04492133401f7e64198b2bf33478e6da0a00515d",
+   "sid": "0449213340",
+   "features": {
+    "n_tokens": 12,
+    "n_quant": 0,
+    "depth": 2,
+    "n_cond": 1,
+    "n_text_markers": 0,
+    "n_gold_binconn": 1,
+    "composite": -0.5008266516941723
+   },
+   "tercile": "low"
+  }
+ ],
+ "real": [
+  {
+   "item_id": "007519ff96:gpt-3.5-turbo",
+   "sid": "007519ff96",
+   "system": "gpt-3.5-turbo",
+   "cand_fol": "∃x (Evergreen(x) ∧ ¬ObjectOfWorship(x))",
+   "cand_story": 111,
+   "line_kind": "Conclusion",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "FirTree",
+     "arity": 1,
+     "gloss": "x is a fir tree."
+    },
+    {
+     "name": "Evergreen",
+     "arity": 1,
+     "gloss": "x is an evergreen."
+    },
+    {
+     "name": "ObjectOfWorship",
+     "arity": 1,
+     "gloss": "x is an object of worship."
+    }
+   ],
+   "alt_cands": [],
+   "label_corr": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": {
+     "preds": {
+      "Evergreen": "Evergreen",
+      "ObjectOfWorship": "ObjectOfWorship"
+     },
+     "consts": {}
+    },
+    "lex_is_equiv_bijection": null,
+    "n_bij": 2,
+    "seconds": 0.034,
+    "reason": "no_bijection"
+   },
+   "label_orig": {
+    "status": "equiv",
+    "bounded_equiv": true,
+    "unbounded_status": "unsat",
+    "bijection": {
+     "preds": {
+      "Evergreen": "Evergreen",
+      "ObjectOfWorship": "ObjectOfWorship"
+     },
+     "consts": {}
+    },
+    "status_lex": "equiv",
+    "lex_bijection": {
+     "preds": {
+      "Evergreen": "Evergreen",
+      "ObjectOfWorship": "ObjectOfWorship"
+     },
+     "consts": {}
+    },
+    "lex_is_equiv_bijection": true,
+    "n_bij": 2,
+    "seconds": 0.01,
+    "reason": ""
+   },
+   "status": "nonequiv",
+   "status_lex": "nonequiv",
+   "correct": 0,
+   "correct_lex": 0,
+   "correct_orig": 1,
+   "correct_orig_lex": 1,
+   "gold_source": "corrected"
+  },
+  {
+   "item_id": "007519ff96:gpt-4",
+   "sid": "007519ff96",
+   "system": "gpt-4",
+   "cand_fol": "∃x (Evergreen(x) ∧ ¬Worship(x))",
+   "cand_story": 111,
+   "line_kind": "Conclusion",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "Fir",
+     "arity": 1,
+     "gloss": "x is a fir tree."
+    },
+    {
+     "name": "Evergreen",
+     "arity": 1,
+     "gloss": "x is an evergreen."
+    },
+    {
+     "name": "Worship",
+     "arity": 1,
+     "gloss": "x is an object of worship."
+    }
+   ],
+   "alt_cands": [],
+   "label_corr": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": {
+     "preds": {
+      "Evergreen": "Evergreen",
+      "Worship": "ObjectOfWorship"
+     },
+     "consts": {}
+    },
+    "lex_is_equiv_bijection": null,
+    "n_bij": 2,
+    "seconds": 0.036,
+    "reason": "no_bijection"
+   },
+   "label_orig": {
+    "status": "equiv",
+    "bounded_equiv": true,
+    "unbounded_status": "unsat",
+    "bijection": {
+     "preds": {
+      "Evergreen": "Evergreen",
+      "Worship": "ObjectOfWorship"
+     },
+     "consts": {}
+    },
+    "status_lex": "equiv",
+    "lex_bijection": {
+     "preds": {
+      "Evergreen": "Evergreen",
+      "Worship": "ObjectOfWorship"
+     },
+     "consts": {}
+    },
+    "lex_is_equiv_bijection": true,
+    "n_bij": 2,
+    "seconds": 0.01,
+    "reason": ""
+   },
+   "status": "nonequiv",
+   "status_lex": "nonequiv",
+   "correct": 0,
+   "correct_lex": 0,
+   "correct_orig": 1,
+   "correct_orig_lex": 1,
+   "gold_source": "corrected"
+  },
+  {
+   "item_id": "007519ff96:text-davinci-003",
+   "sid": "007519ff96",
+   "system": "text-davinci-003",
+   "cand_fol": "∃x (Evergreen(x) ∧ ¬Worship(x))",
+   "cand_story": 111,
+   "line_kind": "Conclusion",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "FirTree",
+     "arity": 1,
+     "gloss": "x is a fir tree."
+    },
+    {
+     "name": "Evergreen",
+     "arity": 1,
+     "gloss": "x is an evergreen."
+    },
+    {
+     "name": "Worship",
+     "arity": 1,
+     "gloss": "x is an object of worship."
+    }
+   ],
+   "alt_cands": [],
+   "label_corr": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": {
+     "preds": {
+      "Evergreen": "Evergreen",
+      "Worship": "ObjectOfWorship"
+     },
+     "consts": {}
+    },
+    "lex_is_equiv_bijection": null,
+    "n_bij": 2,
+    "seconds": 0.036,
+    "reason": "no_bijection"
+   },
+   "label_orig": {
+    "status": "equiv",
+    "bounded_equiv": true,
+    "unbounded_status": "unsat",
+    "bijection": {
+     "preds": {
+      "Evergreen": "Evergreen",
+      "Worship": "ObjectOfWorship"
+     },
+     "consts": {}
+    },
+    "status_lex": "equiv",
+    "lex_bijection": {
+     "preds": {
+      "Evergreen": "Evergreen",
+      "Worship": "ObjectOfWorship"
+     },
+     "consts": {}
+    },
+    "lex_is_equiv_bijection": true,
+    "n_bij": 2,
+    "seconds": 0.01,
+    "reason": ""
+   },
+   "status": "nonequiv",
+   "status_lex": "nonequiv",
+   "correct": 0,
+   "correct_lex": 0,
+   "correct_orig": 1,
+   "correct_orig_lex": 1,
+   "gold_source": "corrected"
+  },
+  {
+   "item_id": "014eff9a2b:gpt-3.5-turbo",
+   "sid": "014eff9a2b",
+   "system": "gpt-3.5-turbo",
+   "cand_fol": "∀x (Animal(x) ↔ (Monkey(x) ∨ Bird(x)))",
+   "cand_story": 125,
+   "line_kind": "Premises",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "Mammal",
+     "arity": 1,
+     "gloss": "x is a mammal."
+    },
+    {
+     "name": "Animal",
+     "arity": 1,
+     "gloss": "x is an animal."
+    },
+    {
+     "name": "Monkey",
+     "arity": 1,
+     "gloss": "x is a monkey."
+    },
+    {
+     "name": "Bird",
+     "arity": 1,
+     "gloss": "x is a bird."
+    },
+    {
+     "name": "Fly",
+     "arity": 1,
+     "gloss": "x can fly."
+    },
+    {
+     "name": "Wings",
+     "arity": 1,
+     "gloss": "x has wings."
+    },
+    {
+     "name": "Breathe",
+     "arity": 1,
+     "gloss": "x breathes."
+    }
+   ],
+   "alt_cands": [
+    "∀x (Animal(x) ↔ (Monkey(x) ∨ Bird(x)))",
+    "∀x (Animal(x) ↔ (Monkey(x) ∨ Bird(x)))"
+   ],
+   "label_corr": null,
+   "label_orig": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": null,
+    "lex_is_equiv_bijection": null,
+    "n_bij": null,
+    "seconds": 0.0,
+    "reason": "vocab_shape"
+   },
+   "status": "nonequiv",
+   "status_lex": "nonequiv",
+   "correct": 0,
+   "correct_lex": 0,
+   "correct_orig": 0,
+   "correct_orig_lex": 0,
+   "gold_source": "original"
+  },
+  {
+   "item_id": "014eff9a2b:gpt-4",
+   "sid": "014eff9a2b",
+   "system": "gpt-4",
+   "cand_fol": "∀x (Animal(x) → (Monkey(x) ⊕ Bird(x)))",
+   "cand_story": 125,
+   "line_kind": "Premises",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "Mammal",
+     "arity": 1,
+     "gloss": "x is a mammal."
+    },
+    {
+     "name": "Animal",
+     "arity": 1,
+     "gloss": "x is an animal."
+    },
+    {
+     "name": "Monkey",
+     "arity": 1,
+     "gloss": "x is a monkey."
+    },
+    {
+     "name": "Bird",
+     "arity": 1,
+     "gloss": "x is a bird."
+    },
+    {
+     "name": "Fly",
+     "arity": 1,
+     "gloss": "x can fly."
+    },
+    {
+     "name": "Breathe",
+     "arity": 1,
+     "gloss": "x can breathe."
+    },
+    {
+     "name": "Wing",
+     "arity": 1,
+     "gloss": "x has wings."
+    }
+   ],
+   "alt_cands": [
+    "∀x (Animal(x) → (Monkey(x) ⊕ Bird(x)))",
+    "∀x (Animal(x) → (Monkey(x) ⊕ Bird(x)))"
+   ],
+   "label_corr": null,
+   "label_orig": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": null,
+    "lex_is_equiv_bijection": null,
+    "n_bij": null,
+    "seconds": 0.0,
+    "reason": "vocab_shape"
+   },
+   "status": "nonequiv",
+   "status_lex": "nonequiv",
+   "correct": 0,
+   "correct_lex": 0,
+   "correct_orig": 0,
+   "correct_orig_lex": 0,
+   "gold_source": "original"
+  },
+  {
+   "item_id": "014eff9a2b:text-davinci-003",
+   "sid": "014eff9a2b",
+   "system": "text-davinci-003",
+   "cand_fol": "∀x (Monkey(x) ⊕ Bird(x))",
+   "cand_story": 125,
+   "line_kind": "Premises",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "Mammal",
+     "arity": 1,
+     "gloss": "x is a mammal."
+    },
+    {
+     "name": "Animal",
+     "arity": 1,
+     "gloss": "x is an animal."
+    },
+    {
+     "name": "Monkey",
+     "arity": 1,
+     "gloss": "x is a monkey."
+    },
+    {
+     "name": "Bird",
+     "arity": 1,
+     "gloss": "x is a bird."
+    },
+    {
+     "name": "Fly",
+     "arity": 1,
+     "gloss": "x can fly."
+    },
+    {
+     "name": "Wing",
+     "arity": 1,
+     "gloss": "x has wings."
+    },
+    {
+     "name": "Breathe",
+     "arity": 1,
+     "gloss": "x breathes."
+    }
+   ],
+   "alt_cands": [
+    "(∃x (Monkey(x)) ∨ ∃x (Bird(x)))",
+    "∀x (Monkey(x) ⊕ Bird(x))"
+   ],
+   "label_corr": null,
+   "label_orig": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": {
+     "preds": {
+      "Bird": "Bird",
+      "Monkey": "Monkey"
+     },
+     "consts": {}
+    },
+    "lex_is_equiv_bijection": null,
+    "n_bij": 2,
+    "seconds": 0.002,
+    "reason": "no_bijection"
+   },
+   "status": "nonequiv",
+   "status_lex": "nonequiv",
+   "correct": 0,
+   "correct_lex": 0,
+   "correct_orig": 0,
+   "correct_orig_lex": 0,
+   "gold_source": "original"
+  },
+  {
+   "item_id": "0166601dd0:gpt-3.5-turbo",
+   "sid": "0166601dd0",
+   "system": "gpt-3.5-turbo",
+   "cand_fol": "∃x (TVShow(x) ∧ Monday(x) ∧ Time(x, 8pm) ∧ GiveOut(x, rose))",
+   "cand_story": 165,
+   "line_kind": "Conclusion",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "GiveOut",
+     "arity": 2,
+     "gloss": "x gives out y."
+    },
+    {
+     "name": "TVShow",
+     "arity": 1,
+     "gloss": "x is a TV show."
+    },
+    {
+     "name": "Rose",
+     "arity": 1,
+     "gloss": "x is a rose."
+    },
+    {
+     "name": "Bachelor",
+     "arity": 1,
+     "gloss": "x is on the Bachelor."
+    },
+    {
+     "name": "Portray",
+     "arity": 2,
+     "gloss": "x portrays y."
+    },
+    {
+     "name": "Real",
+     "arity": 1,
+     "gloss": "x is real."
+    },
+    {
+     "name": "RealityTV",
+     "arity": 1,
+     "gloss": "x is a reality TV show."
+    }
+   ],
+   "alt_cands": [],
+   "label_corr": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": null,
+    "lex_is_equiv_bijection": null,
+    "n_bij": null,
+    "seconds": 0.0,
+    "reason": "vocab_shape"
+   },
+   "label_orig": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": null,
+    "lex_is_equiv_bijection": null,
+    "n_bij": null,
+    "seconds": 0.0,
+    "reason": "vocab_shape"
+   },
+   "status": "nonequiv",
+   "status_lex": "nonequiv",
+   "correct": 0,
+   "correct_lex": 0,
+   "correct_orig": 0,
+   "correct_orig_lex": 0,
+   "gold_source": "corrected"
+  },
+  {
+   "item_id": "0166601dd0:gpt-4",
+   "sid": "0166601dd0",
+   "system": "gpt-4",
+   "cand_fol": "Monday8pmRose(breakingBad)",
+   "cand_story": 165,
+   "line_kind": "Conclusion",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "Monday8pmRose",
+     "arity": 1,
+     "gloss": "On some Mondays at 8 pm, roses are given out on x."
+    },
+    {
+     "name": "BachelorRose",
+     "arity": 1,
+     "gloss": "Every rose given out on x is on the Bachelor."
+    },
+    {
+     "name": "BachelorRealLife",
+     "arity": 1,
+     "gloss": "Everything on x portrays the lives of real people."
+    },
+    {
+     "name": "RealityTV",
+     "arity": 1,
+     "gloss": "x is a reality TV show."
+    }
+   ],
+   "alt_cands": [],
+   "label_corr": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": null,
+    "lex_is_equiv_bijection": null,
+    "n_bij": null,
+    "seconds": 0.0,
+    "reason": "vocab_shape"
+   },
+   "label_orig": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": null,
+    "lex_is_equiv_bijection": null,
+    "n_bij": null,
+    "seconds": 0.0,
+    "reason": "vocab_shape"
+   },
+   "status": "nonequiv",
+   "status_lex": "nonequiv",
+   "correct": 0,
+   "correct_lex": 0,
+   "correct_orig": 0,
+   "correct_orig_lex": 0,
+   "gold_source": "corrected"
+  },
+  {
+   "item_id": "0166601dd0:text-davinci-003",
+   "sid": "0166601dd0",
+   "system": "text-davinci-003",
+   "cand_fol": "¬Rose(breakingBad)",
+   "cand_story": 165,
+   "line_kind": "Conclusion",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "Rose",
+     "arity": 1,
+     "gloss": "x is a rose given out on TV."
+    },
+    {
+     "name": "Bachelor",
+     "arity": 1,
+     "gloss": "x is on the Bachelor."
+    },
+    {
+     "name": "Portray",
+     "arity": 2,
+     "gloss": "x portrays the lives of real people y."
+    },
+    {
+     "name": "Reality",
+     "arity": 1,
+     "gloss": "x is a reality TV show."
+    },
+    {
+     "name": "BreakingBad",
+     "arity": 1,
+     "gloss": "x is Breaking Bad."
+    }
+   ],
+   "alt_cands": [],
+   "label_corr": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": null,
+    "lex_is_equiv_bijection": null,
+    "n_bij": null,
+    "seconds": 0.0,
+    "reason": "vocab_shape"
+   },
+   "label_orig": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": null,
+    "lex_is_equiv_bijection": null,
+    "n_bij": null,
+    "seconds": 0.0,
+    "reason": "vocab_shape"
+   },
+   "status": "nonequiv",
+   "status_lex": "nonequiv",
+   "correct": 0,
+   "correct_lex": 0,
+   "correct_orig": 0,
+   "correct_orig_lex": 0,
+   "gold_source": "corrected"
+  },
+  {
+   "item_id": "0206b4ea58:gpt-3.5-turbo",
+   "sid": "0206b4ea58",
+   "system": "gpt-3.5-turbo",
+   "cand_fol": "NovelWriter(daniShapiro)",
+   "cand_story": 185,
+   "line_kind": "Conclusion",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "Podcast",
+     "arity": 1,
+     "gloss": "x is a podcast."
+    },
+    {
+     "name": "Novel",
+     "arity": 1,
+     "gloss": "x is a novel."
+    },
+    {
+     "name": "Person",
+     "arity": 1,
+     "gloss": "x is a person."
+    },
+    {
+     "name": "BornIn",
+     "arity": 2,
+     "gloss": "x is born in y."
+    },
+    {
+     "name": "American",
+     "arity": 1,
+     "gloss": "x is American."
+    },
+    {
+     "name": "Writer",
+     "arity": 1,
+     "gloss": "x is a writer."
+    },
+    {
+     "name": "Book",
+     "arity": 1,
+     "gloss": "x is a book."
+    },
+    {
+     "name": "WrittenBy",
+     "arity": 2,
+     "gloss": "x is written by y."
+    },
+    {
+     "name": "NovelWriter",
+     "arity": 1,
+     "gloss": "x is a novel writer."
+    },
+    {
+     "name": "Created",
+     "arity": 2,
+     "gloss": "x created y."
+    },
+    {
+     "name": "City",
+     "arity": 1,
+     "gloss": "x is a city."
+    }
+   ],
+   "alt_cands": [],
+   "label_corr": {
+    "status": "equiv",
+    "bounded_equiv": true,
+    "unbounded_status": "unsat",
+    "bijection": {
+     "preds": {
+      "NovelWriter": "WritesNovel"
+     },
+     "consts": {
+      "daniShapiro": "daniShapiro"
+     }
+    },
+    "status_lex": "equiv",
+    "lex_bijection": {
+     "preds": {
+      "NovelWriter": "WritesNovel"
+     },
+     "consts": {
+      "daniShapiro": "daniShapiro"
+     }
+    },
+    "lex_is_equiv_bijection": true,
+    "n_bij": 1,
+    "seconds": 0.003,
+    "reason": ""
+   },
+   "label_orig": {
+    "status": "equiv",
+    "bounded_equiv": true,
+    "unbounded_status": "unsat",
+    "bijection": {
+     "preds": {
+      "NovelWriter": "WritesNovel"
+     },
+     "consts": {
+      "daniShapiro": "dani_Shapiro"
+     }
+    },
+    "status_lex": "equiv",
+    "lex_bijection": {
+     "preds": {
+      "NovelWriter": "WritesNovel"
+     },
+     "consts": {
+      "daniShapiro": "dani_Shapiro"
+     }
+    },
+    "lex_is_equiv_bijection": true,
+    "n_bij": 1,
+    "seconds": 0.003,
+    "reason": ""
+   },
+   "status": "equiv",
+   "status_lex": "equiv",
+   "correct": 1,
+   "correct_lex": 1,
+   "correct_orig": 1,
+   "correct_orig_lex": 1,
+   "gold_source": "corrected"
+  },
+  {
+   "item_id": "0206b4ea58:gpt-4",
+   "sid": "0206b4ea58",
+   "system": "gpt-4",
+   "cand_fol": "NovelWriter(daniShapiro)",
+   "cand_story": 185,
+   "line_kind": "Conclusion",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "Novel",
+     "arity": 1,
+     "gloss": "x is a novel."
+    },
+    {
+     "name": "Podcast",
+     "arity": 1,
+     "gloss": "x is a podcast."
+    },
+    {
+     "name": "BornInAmericanCity",
+     "arity": 1,
+     "gloss": "x is born in American City."
+    },
+    {
+     "name": "American",
+     "arity": 1,
+     "gloss": "x is American."
+    },
+    {
+     "name": "Book",
+     "arity": 1,
+     "gloss": "x is a book."
+    },
+    {
+     "name": "WrittenBy",
+     "arity": 2,
+     "gloss": "x is written by y."
+    },
+    {
+     "name": "NovelWriter",
+     "arity": 1,
+     "gloss": "x is a novel writer."
+    },
+    {
+     "name": "AmericanWriter",
+     "arity": 1,
+     "gloss": "x is an American writer."
+    },
+    {
+     "name": "Created",
+     "arity": 2,
+     "gloss": "x created y."
+    }
+   ],
+   "alt_cands": [],
+   "label_corr": {
+    "status": "equiv",
+    "bounded_equiv": true,
+    "unbounded_status": "unsat",
+    "bijection": {
+     "preds": {
+      "NovelWriter": "WritesNovel"
+     },
+     "consts": {
+      "daniShapiro": "daniShapiro"
+     }
+    },
+    "status_lex": "equiv",
+    "lex_bijection": {
+     "preds": {
+      "NovelWriter": "WritesNovel"
+     },
+     "consts": {
+      "daniShapiro": "daniShapiro"
+     }
+    },
+    "lex_is_equiv_bijection": true,
+    "n_bij": 1,
+    "seconds": 0.003,
+    "reason": ""
+   },
+   "label_orig": {
+    "status": "equiv",
+    "bounded_equiv": true,
+    "unbounded_status": "unsat",
+    "bijection": {
+     "preds": {
+      "NovelWriter": "WritesNovel"
+     },
+     "consts": {
+      "daniShapiro": "dani_Shapiro"
+     }
+    },
+    "status_lex": "equiv",
+    "lex_bijection": {
+     "preds": {
+      "NovelWriter": "WritesNovel"
+     },
+     "consts": {
+      "daniShapiro": "dani_Shapiro"
+     }
+    },
+    "lex_is_equiv_bijection": true,
+    "n_bij": 1,
+    "seconds": 0.003,
+    "reason": ""
+   },
+   "status": "equiv",
+   "status_lex": "equiv",
+   "correct": 1,
+   "correct_lex": 1,
+   "correct_orig": 1,
+   "correct_orig_lex": 1,
+   "gold_source": "corrected"
+  },
+  {
+   "item_id": "0206b4ea58:text-davinci-003",
+   "sid": "0206b4ea58",
+   "system": "text-davinci-003",
+   "cand_fol": "NovelWriter(dani)",
+   "cand_story": 185,
+   "line_kind": "Conclusion",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "Podcast",
+     "arity": 1,
+     "gloss": "x is a podcast."
+    },
+    {
+     "name": "Novel",
+     "arity": 1,
+     "gloss": "x is a novel."
+    },
+    {
+     "name": "American",
+     "arity": 1,
+     "gloss": "x is an American."
+    },
+    {
+     "name": "Born",
+     "arity": 2,
+     "gloss": "x is born in y."
+    },
+    {
+     "name": "Book",
+     "arity": 1,
+     "gloss": "x is a book."
+    },
+    {
+     "name": "Writer",
+     "arity": 1,
+     "gloss": "x is a writer."
+    },
+    {
+     "name": "Written",
+     "arity": 2,
+     "gloss": "x is written by y."
+    },
+    {
+     "name": "NovelWriter",
+     "arity": 1,
+     "gloss": "x is a novel writer."
+    },
+    {
+     "name": "Create",
+     "arity": 2,
+     "gloss": "x creates y."
+    }
+   ],
+   "alt_cands": [],
+   "label_corr": {
+    "status": "equiv",
+    "bounded_equiv": true,
+    "unbounded_status": "unsat",
+    "bijection": {
+     "preds": {
+      "NovelWriter": "WritesNovel"
+     },
+     "consts": {
+      "dani": "daniShapiro"
+     }
+    },
+    "status_lex": "equiv",
+    "lex_bijection": {
+     "preds": {
+      "NovelWriter": "WritesNovel"
+     },
+     "consts": {
+      "dani": "daniShapiro"
+     }
+    },
+    "lex_is_equiv_bijection": true,
+    "n_bij": 1,
+    "seconds": 0.003,
+    "reason": ""
+   },
+   "label_orig": {
+    "status": "equiv",
+    "bounded_equiv": true,
+    "unbounded_status": "unsat",
+    "bijection": {
+     "preds": {
+      "NovelWriter": "WritesNovel"
+     },
+     "consts": {
+      "dani": "dani_Shapiro"
+     }
+    },
+    "status_lex": "equiv",
+    "lex_bijection": {
+     "preds": {
+      "NovelWriter": "WritesNovel"
+     },
+     "consts": {
+      "dani": "dani_Shapiro"
+     }
+    },
+    "lex_is_equiv_bijection": true,
+    "n_bij": 1,
+    "seconds": 0.003,
+    "reason": ""
+   },
+   "status": "equiv",
+   "status_lex": "equiv",
+   "correct": 1,
+   "correct_lex": 1,
+   "correct_orig": 1,
+   "correct_orig_lex": 1,
+   "gold_source": "corrected"
+  },
+  {
+   "item_id": "0208f0729c:gpt-4",
+   "sid": "0208f0729c",
+   "system": "gpt-4",
+   "cand_fol": "Premiere(viennaMusicSociety, symphonyNo9)",
+   "cand_story": 36,
+   "line_kind": "Premises",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "MusicPiece",
+     "arity": 1,
+     "gloss": "x is a music piece."
+    },
+    {
+     "name": "Composer",
+     "arity": 1,
+     "gloss": "x is a composer."
+    },
+    {
+     "name": "Write",
+     "arity": 2,
+     "gloss": "x writes y."
+    },
+    {
+     "name": "Premiere",
+     "arity": 2,
+     "gloss": "x premieres y."
+    },
+    {
+     "name": "Orchestra",
+     "arity": 1,
+     "gloss": "x is an orchestra."
+    },
+    {
+     "name": "Lead",
+     "arity": 2,
+     "gloss": "x leads y."
+    },
+    {
+     "name": "Conductor",
+     "arity": 1,
+     "gloss": "x is a conductor."
+    }
+   ],
+   "alt_cands": [
+    "Orchestra(viennaMusicSociety) ∧ Premiere(viennaMusicSociety, symphonyNo9)",
+    "Premiere(viennaMusicSociety, symphonyNo9)"
+   ],
+   "label_corr": null,
+   "label_orig": {
+    "status": "equiv",
+    "bounded_equiv": true,
+    "unbounded_status": "unsat",
+    "bijection": {
+     "preds": {
+      "Premiere": "Premiered"
+     },
+     "consts": {
+      "symphonyNo9": "symphony9",
+      "viennaMusicSociety": "viennamusicsociety"
+     }
+    },
+    "status_lex": "equiv",
+    "lex_bijection": {
+     "preds": {
+      "Premiere": "Premiered"
+     },
+     "consts": {
+      "symphonyNo9": "symphony9",
+      "viennaMusicSociety": "viennamusicsociety"
+     }
+    },
+    "lex_is_equiv_bijection": true,
+    "n_bij": 2,
+    "seconds": 0.006,
+    "reason": ""
+   },
+   "status": "equiv",
+   "status_lex": "equiv",
+   "correct": 1,
+   "correct_lex": 1,
+   "correct_orig": 1,
+   "correct_orig_lex": 1,
+   "gold_source": "original"
+  },
+  {
+   "item_id": "0208f0729c:text-davinci-003",
+   "sid": "0208f0729c",
+   "system": "text-davinci-003",
+   "cand_fol": "Premiere(viennaMusicSociety, symphonyNo9) ∧ Orchestra(viennaMusicSociety)",
+   "cand_story": 36,
+   "line_kind": "Premises",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "Composer",
+     "arity": 1,
+     "gloss": "x is a composer."
+    },
+    {
+     "name": "Write",
+     "arity": 2,
+     "gloss": "x writes y."
+    },
+    {
+     "name": "MusicPiece",
+     "arity": 1,
+     "gloss": "x is a music piece."
+    },
+    {
+     "name": "Beethoven",
+     "arity": 1,
+     "gloss": "x is Beethoven."
+    },
+    {
+     "name": "Premiere",
+     "arity": 2,
+     "gloss": "x premieres y."
+    },
+    {
+     "name": "Orchestra",
+     "arity": 1,
+     "gloss": "x is an orchestra."
+    },
+    {
+     "name": "Lead",
+     "arity": 2,
+     "gloss": "x leads y."
+    },
+    {
+     "name": "Conductor",
+     "arity": 1,
+     "gloss": "x is a conductor."
+    }
+   ],
+   "alt_cands": [
+    "Premiere(viennaMusicSociety, symphonyNo9)"
+   ],
+   "label_corr": null,
+   "label_orig": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": null,
+    "lex_is_equiv_bijection": null,
+    "n_bij": null,
+    "seconds": 0.0,
+    "reason": "vocab_shape"
+   },
+   "status": "nonequiv",
+   "status_lex": "nonequiv",
+   "correct": 0,
+   "correct_lex": 0,
+   "correct_orig": 0,
+   "correct_orig_lex": 0,
+   "gold_source": "original"
+  },
+  {
+   "item_id": "022c51fe40:gpt-3.5-turbo",
+   "sid": "022c51fe40",
+   "system": "gpt-3.5-turbo",
+   "cand_fol": "(Koala(x) ∧ Quokka(x)) → (Sleep(x) ∨ Fluffy(x))",
+   "cand_story": 98,
+   "line_kind": "Conclusion",
+   "parse_ok": true,
+   "free_vars": true,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "LovedBy",
+     "arity": 2,
+     "gloss": "x is loved by y."
+    },
+    {
+     "name": "Favorite",
+     "arity": 2,
+     "gloss": "x is y's favorite."
+    },
+    {
+     "name": "Animal",
+     "arity": 1,
+     "gloss": "x is an animal."
+    },
+    {
+     "name": "Australia",
+     "arity": 1,
+     "gloss": "x is from Australia."
+    },
+    {
+     "name": "Quokka",
+     "arity": 1,
+     "gloss": "x is a quokka."
+    },
+    {
+     "name": "Fluffy",
+     "arity": 1,
+     "gloss": "x is very fluffy."
+    },
+    {
+     "name": "Sleep",
+     "arity": 1,
+     "gloss": "x loves to sleep."
+    },
+    {
+     "name": "Koala",
+     "arity": 1,
+     "gloss": "x is a koala."
+    }
+   ],
+   "alt_cands": [],
+   "label_corr": null,
+   "label_orig": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": null,
+    "lex_is_equiv_bijection": null,
+    "n_bij": null,
+    "seconds": 0.0,
+    "reason": "vocab_shape"
+   },
+   "status": "nonequiv",
+   "status_lex": "nonequiv",
+   "correct": 0,
+   "correct_lex": 0,
+   "correct_orig": 0,
+   "correct_orig_lex": 0,
+   "gold_source": "original"
+  },
+  {
+   "item_id": "022c51fe40:gpt-4",
+   "sid": "022c51fe40",
+   "system": "gpt-4",
+   "cand_fol": "∀x (Koala(x) ∧ Quokka(x) → (Sleep(x) ∨ Fluffy(x)))",
+   "cand_story": 98,
+   "line_kind": "Conclusion",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "LovedByTourists",
+     "arity": 1,
+     "gloss": "x is loved by tourists."
+    },
+    {
+     "name": "Favorite",
+     "arity": 1,
+     "gloss": "x is Max's favorite animal."
+    },
+    {
+     "name": "FromAustralia",
+     "arity": 1,
+     "gloss": "x is from Australia."
+    },
+    {
+     "name": "Quokka",
+     "arity": 1,
+     "gloss": "x is a quokka."
+    },
+    {
+     "name": "Fluffy",
+     "arity": 1,
+     "gloss": "x is very fluffy."
+    },
+    {
+     "name": "Sleep",
+     "arity": 1,
+     "gloss": "x loves to sleep."
+    },
+    {
+     "name": "Koala",
+     "arity": 1,
+     "gloss": "x is a koala."
+    }
+   ],
+   "alt_cands": [],
+   "label_corr": null,
+   "label_orig": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": null,
+    "lex_is_equiv_bijection": null,
+    "n_bij": null,
+    "seconds": 0.0,
+    "reason": "vocab_shape"
+   },
+   "status": "nonequiv",
+   "status_lex": "nonequiv",
+   "correct": 0,
+   "correct_lex": 0,
+   "correct_orig": 0,
+   "correct_orig_lex": 0,
+   "gold_source": "original"
+  },
+  {
+   "item_id": "022c51fe40:text-davinci-003",
+   "sid": "022c51fe40",
+   "system": "text-davinci-003",
+   "cand_fol": "∀x (Koala(x) ∧ Quokka(x) → Sleep(x) ⊕ Fluffy(x))",
+   "cand_story": 98,
+   "line_kind": "Conclusion",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "LovedByTourists",
+     "arity": 1,
+     "gloss": "x is loved by tourists."
+    },
+    {
+     "name": "Favorite",
+     "arity": 2,
+     "gloss": "x is y's favorite."
+    },
+    {
+     "name": "Animal",
+     "arity": 1,
+     "gloss": "x is an animal."
+    },
+    {
+     "name": "Australia",
+     "arity": 1,
+     "gloss": "x is from Australia."
+    },
+    {
+     "name": "Quokka",
+     "arity": 1,
+     "gloss": "x is a quokka."
+    },
+    {
+     "name": "Fluffy",
+     "arity": 1,
+     "gloss": "x is very fluffy."
+    },
+    {
+     "name": "Sleep",
+     "arity": 1,
+     "gloss": "x loves to sleep."
+    },
+    {
+     "name": "Koala",
+     "arity": 1,
+     "gloss": "x is a koala."
+    }
+   ],
+   "alt_cands": [],
+   "label_corr": null,
+   "label_orig": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": null,
+    "lex_is_equiv_bijection": null,
+    "n_bij": null,
+    "seconds": 0.0,
+    "reason": "vocab_shape"
+   },
+   "status": "nonequiv",
+   "status_lex": "nonequiv",
+   "correct": 0,
+   "correct_lex": 0,
+   "correct_orig": 0,
+   "correct_orig_lex": 0,
+   "gold_source": "original"
+  },
+  {
+   "item_id": "026646b128:gpt-3.5-turbo",
+   "sid": "026646b128",
+   "system": "gpt-3.5-turbo",
+   "cand_fol": "¬TakeOut(subway)",
+   "cand_story": 86,
+   "line_kind": "Conclusion",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "Listed",
+     "arity": 1,
+     "gloss": "x is listed in Yelp's recommendations."
+    },
+    {
+     "name": "NegativeReviews",
+     "arity": 1,
+     "gloss": "x receives many negative reviews."
+    },
+    {
+     "name": "Rating",
+     "arity": 2,
+     "gloss": "x has a rating of y."
+    },
+    {
+     "name": "TakeOut",
+     "arity": 1,
+     "gloss": "x provides take-out service."
+    },
+    {
+     "name": "Popular",
+     "arity": 1,
+     "gloss": "x is popular among local residents."
+    },
+    {
+     "name": "Restaurant",
+     "arity": 1,
+     "gloss": "x is a restaurant."
+    },
+    {
+     "name": "Subway",
+     "arity": 1,
+     "gloss": "x is Subway."
+    }
+   ],
+   "alt_cands": [],
+   "label_corr": null,
+   "label_orig": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": null,
+    "lex_is_equiv_bijection": null,
+    "n_bij": null,
+    "seconds": 0.0,
+    "reason": "vocab_shape"
+   },
+   "status": "nonequiv",
+   "status_lex": "nonequiv",
+   "correct": 0,
+   "correct_lex": 0,
+   "correct_orig": 0,
+   "correct_orig_lex": 0,
+   "gold_source": "original"
+  },
+  {
+   "item_id": "026646b128:gpt-4",
+   "sid": "026646b128",
+   "system": "gpt-4",
+   "cand_fol": "¬TakeOut(subway)",
+   "cand_story": 86,
+   "line_kind": "Conclusion",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "Listed",
+     "arity": 1,
+     "gloss": "x is listed in Yelp’s recommendations."
+    },
+    {
+     "name": "NegativeReviews",
+     "arity": 1,
+     "gloss": "x receives many negative reviews."
+    },
+    {
+     "name": "Rating",
+     "arity": 2,
+     "gloss": "x has a rating of y."
+    },
+    {
+     "name": "TakeOut",
+     "arity": 1,
+     "gloss": "x provides take-out service."
+    },
+    {
+     "name": "Popular",
+     "arity": 1,
+     "gloss": "x is popular among local residents."
+    }
+   ],
+   "alt_cands": [],
+   "label_corr": null,
+   "label_orig": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": null,
+    "lex_is_equiv_bijection": null,
+    "n_bij": null,
+    "seconds": 0.0,
+    "reason": "vocab_shape"
+   },
+   "status": "nonequiv",
+   "status_lex": "nonequiv",
+   "correct": 0,
+   "correct_lex": 0,
+   "correct_orig": 0,
+   "correct_orig_lex": 0,
+   "gold_source": "original"
+  },
+  {
+   "item_id": "026646b128:text-davinci-003",
+   "sid": "026646b128",
+   "system": "text-davinci-003",
+   "cand_fol": "¬TakeOut(subway)",
+   "cand_story": 86,
+   "line_kind": "Conclusion",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "Recommend",
+     "arity": 1,
+     "gloss": "x is listed in Yelp's recommendations."
+    },
+    {
+     "name": "Negative",
+     "arity": 1,
+     "gloss": "x receives many negative reviews."
+    },
+    {
+     "name": "Rating",
+     "arity": 2,
+     "gloss": "x has a rating of y."
+    },
+    {
+     "name": "TakeOut",
+     "arity": 1,
+     "gloss": "x provides take-out service."
+    },
+    {
+     "name": "Popular",
+     "arity": 1,
+     "gloss": "x is popular among local residents."
+    }
+   ],
+   "alt_cands": [],
+   "label_corr": null,
+   "label_orig": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": null,
+    "lex_is_equiv_bijection": null,
+    "n_bij": null,
+    "seconds": 0.0,
+    "reason": "vocab_shape"
+   },
+   "status": "nonequiv",
+   "status_lex": "nonequiv",
+   "correct": 0,
+   "correct_lex": 0,
+   "correct_orig": 0,
+   "correct_orig_lex": 0,
+   "gold_source": "original"
+  },
+  {
+   "item_id": "03274a56dd:gpt-3.5-turbo",
+   "sid": "03274a56dd",
+   "system": "gpt-3.5-turbo",
+   "cand_fol": "∀x (MachineLearningAlgorithm(x) → (SupervisedLearning(x) ∨ UnsupervisedLearning(x) ∨ ReinforcementLearning(x)))",
+   "cand_story": 138,
+   "line_kind": "Premises",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "SupervisedLearning",
+     "arity": 1,
+     "gloss": "x is a supervised learning algorithm."
+    },
+    {
+     "name": "UnsupervisedLearning",
+     "arity": 1,
+     "gloss": "x is an unsupervised learning algorithm."
+    },
+    {
+     "name": "ReinforcementLearning",
+     "arity": 1,
+     "gloss": "x is a reinforcement learning algorithm."
+    },
+    {
+     "name": "RequiresLabelledData",
+     "arity": 1,
+     "gloss": "x requires labelled data."
+    },
+    {
+     "name": "Train",
+     "arity": 2,
+     "gloss": "x is used to train y."
+    },
+    {
+     "name": "StateOfTheArtTextSummarizationModel",
+     "arity": 1,
+     "gloss": "x is the state-of-the-art text summarization model."
+    }
+   ],
+   "alt_cands": [
+    "∀x (MachineLearningAlgorithm(x) → (SupervisedLearning(x) ∨ UnsupervisedLearning(x) ∨ ReinforcementLearning(x)))"
+   ],
+   "label_corr": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": {
+     "preds": {
+      "MachineLearningAlgorithm": "MachineLearningAlgorithm",
+      "ReinforcementLearning": "ReinforcementLearningAlgorithm",
+      "SupervisedLearning": "SupervisedLearningAlgorithm",
+      "UnsupervisedLearning": "UnsupervisedLearningAlgorithm"
+     },
+     "consts": {}
+    },
+    "lex_is_equiv_bijection": null,
+    "n_bij": 24,
+    "seconds": 0.003,
+    "reason": "no_bijection"
+   },
+   "label_orig": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": null,
+    "lex_is_equiv_bijection": null,
+    "n_bij": null,
+    "seconds": 0.0,
+    "reason": "vocab_shape"
+   },
+   "status": "nonequiv",
+   "status_lex": "nonequiv",
+   "correct": 0,
+   "correct_lex": 0,
+   "correct_orig": 0,
+   "correct_orig_lex": 0,
+   "gold_source": "corrected"
+  },
+  {
+   "item_id": "03274a56dd:gpt-4",
+   "sid": "03274a56dd",
+   "system": "gpt-4",
+   "cand_fol": "∀x (Category(x, machineLearning) → (Category(x, supervisedLearning) ∨ Category(x, unsupervisedLearning) ∨ Category(x, reinforcementLearning)))",
+   "cand_story": 138,
+   "line_kind": "Premises",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "Category",
+     "arity": 2,
+     "gloss": "x is categorized as y."
+    },
+    {
+     "name": "RequireLabelledData",
+     "arity": 1,
+     "gloss": "x requires labelled data."
+    },
+    {
+     "name": "Train",
+     "arity": 2,
+     "gloss": "x is used to train y."
+    },
+    {
+     "name": "StateOfTheArt",
+     "arity": 1,
+     "gloss": "x is a state-of-the-art model."
+    }
+   ],
+   "alt_cands": [
+    "∀x (Category(x, machineLearning) → (Category(x, supervisedLearning) ∨ Category(x, unsupervisedLearning) ∨ Category(x, reinforcementLearning)))"
+   ],
+   "label_corr": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": null,
+    "lex_is_equiv_bijection": null,
+    "n_bij": null,
+    "seconds": 0.0,
+    "reason": "vocab_shape"
+   },
+   "label_orig": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": null,
+    "lex_is_equiv_bijection": null,
+    "n_bij": null,
+    "seconds": 0.0,
+    "reason": "vocab_shape"
+   },
+   "status": "nonequiv",
+   "status_lex": "nonequiv",
+   "correct": 0,
+   "correct_lex": 0,
+   "correct_orig": 0,
+   "correct_orig_lex": 0,
+   "gold_source": "corrected"
+  },
+  {
+   "item_id": "03274a56dd:text-davinci-003",
+   "sid": "03274a56dd",
+   "system": "text-davinci-003",
+   "cand_fol": "∃x (MLAlgorithm(x) ∧ Supervised(x)) ∧ ∃x (MLAlgorithm(x) ∧ Unsupervised(x)) ∧ ∃x (MLAlgorithm(x) ∧ Reinforcement(x))",
+   "cand_story": 138,
+   "line_kind": "Premises",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "MLAlgorithm",
+     "arity": 1,
+     "gloss": "x is a Machine Learning algorithm."
+    },
+    {
+     "name": "Supervised",
+     "arity": 1,
+     "gloss": "x is a supervised learning algorithm."
+    },
+    {
+     "name": "Unsupervised",
+     "arity": 1,
+     "gloss": "x is an unsupervised learning algorithm."
+    },
+    {
+     "name": "Reinforcement",
+     "arity": 1,
+     "gloss": "x is a reinforcement learning algorithm."
+    },
+    {
+     "name": "Label",
+     "arity": 1,
+     "gloss": "x requires labelled data."
+    },
+    {
+     "name": "Train",
+     "arity": 2,
+     "gloss": "x is trained with y."
+    },
+    {
+     "name": "SummarizationModel",
+     "arity": 1,
+     "gloss": "x is the state-of-the-art text summarization model."
+    }
+   ],
+   "alt_cands": [],
+   "label_corr": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": {
+     "preds": {
+      "MLAlgorithm": "MachineLearningAlgorithm",
+      "Reinforcement": "ReinforcementLearningAlgorithm",
+      "Supervised": "SupervisedLearningAlgorithm",
+      "Unsupervised": "UnsupervisedLearningAlgorithm"
+     },
+     "consts": {}
+    },
+    "lex_is_equiv_bijection": null,
+    "n_bij": 24,
+    "seconds": 0.004,
+    "reason": "no_bijection"
+   },
+   "label_orig": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": null,
+    "lex_is_equiv_bijection": null,
+    "n_bij": null,
+    "seconds": 0.0,
+    "reason": "vocab_shape"
+   },
+   "status": "nonequiv",
+   "status_lex": "nonequiv",
+   "correct": 0,
+   "correct_lex": 0,
+   "correct_orig": 0,
+   "correct_orig_lex": 0,
+   "gold_source": "corrected"
+  },
+  {
+   "item_id": "032de04afe:gpt-3.5-turbo",
+   "sid": "032de04afe",
+   "system": "gpt-3.5-turbo",
+   "cand_fol": "BeginWith(joePlate, 34)",
+   "cand_story": 74,
+   "line_kind": "Conclusion",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "Plate",
+     "arity": 1,
+     "gloss": "x is a vehicle registration plate."
+    },
+    {
+     "name": "Istanbul",
+     "arity": 1,
+     "gloss": "x is from Istanbul."
+    },
+    {
+     "name": "BeginWith",
+     "arity": 2,
+     "gloss": "x begins with the number y."
+    },
+    {
+     "name": "Joe",
+     "arity": 1,
+     "gloss": "x is Joe."
+    },
+    {
+     "name": "Tom",
+     "arity": 1,
+     "gloss": "x is Tom."
+    },
+    {
+     "name": "LicensePlate",
+     "arity": 1,
+     "gloss": "x is a license plate."
+    }
+   ],
+   "alt_cands": [],
+   "label_corr": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": null,
+    "lex_is_equiv_bijection": null,
+    "n_bij": null,
+    "seconds": 0.0,
+    "reason": "vocab_shape"
+   },
+   "label_orig": {
+    "status": "equiv",
+    "bounded_equiv": true,
+    "unbounded_status": "unsat",
+    "bijection": {
+     "preds": {
+      "BeginWith": "Beginwith"
+     },
+     "consts": {
+      "34": "number34",
+      "joePlate": "joe"
+     }
+    },
+    "status_lex": "equiv",
+    "lex_bijection": {
+     "preds": {
+      "BeginWith": "Beginwith"
+     },
+     "consts": {
+      "34": "number34",
+      "joePlate": "joe"
+     }
+    },
+    "lex_is_equiv_bijection": true,
+    "n_bij": 2,
+    "seconds": 0.008,
+    "reason": ""
+   },
+   "status": "nonequiv",
+   "status_lex": "nonequiv",
+   "correct": 0,
+   "correct_lex": 0,
+   "correct_orig": 1,
+   "correct_orig_lex": 1,
+   "gold_source": "corrected"
+  },
+  {
+   "item_id": "032de04afe:gpt-4",
+   "sid": "032de04afe",
+   "system": "gpt-4",
+   "cand_fol": "Begin34(joe)",
+   "cand_story": 74,
+   "line_kind": "Conclusion",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "Begin34",
+     "arity": 1,
+     "gloss": "x begins with the number 34."
+    },
+    {
+     "name": "FromIstanbul",
+     "arity": 1,
+     "gloss": "x is from Istanbul."
+    },
+    {
+     "name": "Plate",
+     "arity": 1,
+     "gloss": "x is a vehicle registration plate."
+    }
+   ],
+   "alt_cands": [],
+   "label_corr": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": null,
+    "lex_is_equiv_bijection": null,
+    "n_bij": null,
+    "seconds": 0.0,
+    "reason": "vocab_shape"
+   },
+   "label_orig": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": null,
+    "lex_is_equiv_bijection": null,
+    "n_bij": null,
+    "seconds": 0.0,
+    "reason": "vocab_shape"
+   },
+   "status": "nonequiv",
+   "status_lex": "nonequiv",
+   "correct": 0,
+   "correct_lex": 0,
+   "correct_orig": 0,
+   "correct_orig_lex": 0,
+   "gold_source": "corrected"
+  },
+  {
+   "item_id": "032de04afe:text-davinci-003",
+   "sid": "032de04afe",
+   "system": "text-davinci-003",
+   "cand_fol": "Begin(joe, 34)",
+   "cand_story": 74,
+   "line_kind": "Conclusion",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "Plate",
+     "arity": 1,
+     "gloss": "x is a vehicle registration plate."
+    },
+    {
+     "name": "Istanbul",
+     "arity": 1,
+     "gloss": "x is from Istanbul."
+    },
+    {
+     "name": "Begin",
+     "arity": 2,
+     "gloss": "x begins with the number y."
+    }
+   ],
+   "alt_cands": [],
+   "label_corr": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": null,
+    "lex_is_equiv_bijection": null,
+    "n_bij": null,
+    "seconds": 0.0,
+    "reason": "vocab_shape"
+   },
+   "label_orig": {
+    "status": "equiv",
+    "bounded_equiv": true,
+    "unbounded_status": "unsat",
+    "bijection": {
+     "preds": {
+      "Begin": "Beginwith"
+     },
+     "consts": {
+      "34": "number34",
+      "joe": "joe"
+     }
+    },
+    "status_lex": "equiv",
+    "lex_bijection": {
+     "preds": {
+      "Begin": "Beginwith"
+     },
+     "consts": {
+      "34": "number34",
+      "joe": "joe"
+     }
+    },
+    "lex_is_equiv_bijection": true,
+    "n_bij": 2,
+    "seconds": 0.007,
+    "reason": ""
+   },
+   "status": "nonequiv",
+   "status_lex": "nonequiv",
+   "correct": 0,
+   "correct_lex": 0,
+   "correct_orig": 1,
+   "correct_orig_lex": 1,
+   "gold_source": "corrected"
+  },
+  {
+   "item_id": "0449213340:gpt-3.5-turbo",
+   "sid": "0449213340",
+   "system": "gpt-3.5-turbo",
+   "cand_fol": "Cupcake(driedThaiChilies) ∧ Product(driedThaiChilies, BakedByMelissa)",
+   "cand_story": 83,
+   "line_kind": "Conclusion",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "Bakery",
+     "arity": 1,
+     "gloss": "x is a bakery."
+    },
+    {
+     "name": "Spicy",
+     "arity": 1,
+     "gloss": "x is spicy."
+    },
+    {
+     "name": "Cupcake",
+     "arity": 1,
+     "gloss": "x is a cupcake."
+    },
+    {
+     "name": "Hotpot",
+     "arity": 1,
+     "gloss": "x is a hotpot."
+    },
+    {
+     "name": "Product",
+     "arity": 2,
+     "gloss": "x is a product of y."
+    },
+    {
+     "name": "BakedByMelissa",
+     "arity": 1,
+     "gloss": "x is a product of Baked by Melissa."
+    }
+   ],
+   "alt_cands": [],
+   "label_corr": null,
+   "label_orig": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": null,
+    "lex_is_equiv_bijection": null,
+    "n_bij": null,
+    "seconds": 0.0,
+    "reason": "vocab_shape"
+   },
+   "status": "nonequiv",
+   "status_lex": "nonequiv",
+   "correct": 0,
+   "correct_lex": 0,
+   "correct_orig": 0,
+   "correct_orig_lex": 0,
+   "gold_source": "original"
+  },
+  {
+   "item_id": "0449213340:gpt-4",
+   "sid": "0449213340",
+   "system": "gpt-4",
+   "cand_fol": "Cupcake(driedThaiChilies) ∧ Product(driedThaiChilies, bakedByMelissa)",
+   "cand_story": 83,
+   "line_kind": "Conclusion",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "Bakery",
+     "arity": 1,
+     "gloss": "x is a bakery."
+    },
+    {
+     "name": "Spicy",
+     "arity": 1,
+     "gloss": "x is spicy."
+    },
+    {
+     "name": "Cupcake",
+     "arity": 1,
+     "gloss": "x is a cupcake."
+    },
+    {
+     "name": "Hotpot",
+     "arity": 1,
+     "gloss": "x is a hotpot."
+    },
+    {
+     "name": "Product",
+     "arity": 2,
+     "gloss": "x is a product of y."
+    }
+   ],
+   "alt_cands": [],
+   "label_corr": null,
+   "label_orig": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": null,
+    "lex_is_equiv_bijection": null,
+    "n_bij": null,
+    "seconds": 0.0,
+    "reason": "vocab_shape"
+   },
+   "status": "nonequiv",
+   "status_lex": "nonequiv",
+   "correct": 0,
+   "correct_lex": 0,
+   "correct_orig": 0,
+   "correct_orig_lex": 0,
+   "gold_source": "original"
+  },
+  {
+   "item_id": "0449213340:text-davinci-003",
+   "sid": "0449213340",
+   "system": "text-davinci-003",
+   "cand_fol": "False",
+   "cand_story": 83,
+   "line_kind": "Conclusion",
+   "parse_ok": true,
+   "free_vars": false,
+   "parse_error": "",
+   "declared_preds": [
+    {
+     "name": "Bakery",
+     "arity": 1,
+     "gloss": "x is a bakery."
+    },
+    {
+     "name": "Spicy",
+     "arity": 1,
+     "gloss": "x is spicy."
+    },
+    {
+     "name": "Cupcake",
+     "arity": 1,
+     "gloss": "x is a cupcake."
+    },
+    {
+     "name": "Hotpot",
+     "arity": 1,
+     "gloss": "x is a hotpot."
+    },
+    {
+     "name": "Product",
+     "arity": 2,
+     "gloss": "x is a product of y."
+    }
+   ],
+   "alt_cands": [],
+   "label_corr": null,
+   "label_orig": {
+    "status": "nonequiv",
+    "bounded_equiv": false,
+    "unbounded_status": null,
+    "bijection": null,
+    "status_lex": "nonequiv",
+    "lex_bijection": null,
+    "lex_is_equiv_bijection": null,
+    "n_bij": null,
+    "seconds": 0.0,
+    "reason": "vocab_shape"
+   },
+   "status": "nonequiv",
+   "status_lex": "nonequiv",
+   "correct": 0,
+   "correct_lex": 0,
+   "correct_orig": 0,
+   "correct_orig_lex": 0,
+   "gold_source": "original"
+  }
+ ],
+ "mutants": [
+  {
+   "mid": "007519ff96:M:ADD",
+   "sid": "007519ff96",
+   "operator": "ADD",
+   "fol": "∃x (∃y (Evergreen(x) ∧ Evergreen(y) ∧ ¬ObjectOfWorship(x) ∧ ¬ObjectOfWorship(y) ∧ x ≠ y ∧ FirTree(y)))"
+  },
+  {
+   "mid": "007519ff96:M:ANDOR",
+   "sid": "007519ff96",
+   "operator": "ANDOR",
+   "fol": "∃x (∃y (Evergreen(x) ∨ Evergreen(y) ∨ ¬ObjectOfWorship(x) ∨ ¬ObjectOfWorship(y) ∨ x ≠ y))"
+  },
+  {
+   "mid": "007519ff96:M:CARD",
+   "sid": "007519ff96",
+   "operator": "CARD",
+   "fol": "∃x (∃y (∃y2 (y ≠ y2 ∧ Evergreen(x) ∧ Evergreen(y) ∧ ¬ObjectOfWorship(x) ∧ ¬ObjectOfWorship(y) ∧ x ≠ y ∧ Evergreen(x) ∧ Evergreen(y2) ∧ ¬ObjectOfWorship(x) ∧ ¬ObjectOfWorship(y2) ∧ x ≠ y2)))"
+  },
+  {
+   "mid": "007519ff96:M:DROP",
+   "sid": "007519ff96",
+   "operator": "DROP",
+   "fol": "∃x (∃y (Evergreen(y) ∧ ¬ObjectOfWorship(x) ∧ ¬ObjectOfWorship(y) ∧ x ≠ y))"
+  },
+  {
+   "mid": "007519ff96:M:MERGE",
+   "sid": "007519ff96",
+   "operator": "MERGE",
+   "fol": "∃x (∃y (ObjectOfWorship(x) ∧ ObjectOfWorship(y) ∧ ¬ObjectOfWorship(x) ∧ ¬ObjectOfWorship(y) ∧ x ≠ y))"
+  },
+  {
+   "mid": "007519ff96:M:NEG",
+   "sid": "007519ff96",
+   "operator": "NEG",
+   "fol": "∃x (∃y (Evergreen(x) ∧ Evergreen(y) ∧ ¬ObjectOfWorship(x) ∧ ObjectOfWorship(y) ∧ x ≠ y))"
+  },
+  {
+   "mid": "007519ff96:M:QUANT",
+   "sid": "007519ff96",
+   "operator": "QUANT",
+   "fol": "∃x (∀y ((Evergreen(x) ∧ Evergreen(y) ∧ ¬ObjectOfWorship(x)) → (¬ObjectOfWorship(y) ∧ x ≠ y)))"
+  },
+  {
+   "mid": "014eff9a2b:M:ADD",
+   "sid": "014eff9a2b",
+   "operator": "ADD",
+   "fol": "∀x ((Monkey(x) ∨ Bird(x)) ∧ Fly(x))"
+  },
+  {
+   "mid": "014eff9a2b:M:ANDOR",
+   "sid": "014eff9a2b",
+   "operator": "ANDOR",
+   "fol": "∀x (Monkey(x) ∧ Bird(x))"
+  },
+  {
+   "mid": "014eff9a2b:M:MERGE",
+   "sid": "014eff9a2b",
+   "operator": "MERGE",
+   "fol": "∀x (Bird(x) ∨ Bird(x))"
+  },
+  {
+   "mid": "014eff9a2b:M:NEG",
+   "sid": "014eff9a2b",
+   "operator": "NEG",
+   "fol": "∀x (Monkey(x) ∨ ¬Bird(x))"
+  },
+  {
+   "mid": "014eff9a2b:M:QUANT",
+   "sid": "014eff9a2b",
+   "operator": "QUANT",
+   "fol": "∃x (Monkey(x) ∨ Bird(x))"
+  },
+  {
+   "mid": "0166601dd0:M:ADD",
+   "sid": "0166601dd0",
+   "operator": "ADD",
+   "fol": "Show(breakingBad) ∧ GivesOutOnTV(breakingBad, rose) ∧ AiringAt(breakingBad, eightPMMonday) ∧ RealityTVShow(breakingBad)"
+  },
+  {
+   "mid": "0166601dd0:M:ANDOR",
+   "sid": "0166601dd0",
+   "operator": "ANDOR",
+   "fol": "Show(breakingBad) ∨ GivesOutOnTV(breakingBad, rose) ∨ AiringAt(breakingBad, eightPMMonday)"
+  },
+  {
+   "mid": "0166601dd0:M:ARG_SWAP",
+   "sid": "0166601dd0",
+   "operator": "ARG_SWAP",
+   "fol": "Show(breakingBad) ∧ GivesOutOnTV(breakingBad, rose) ∧ AiringAt(eightPMMonday, breakingBad)"
+  },
+  {
+   "mid": "0166601dd0:M:DROP",
+   "sid": "0166601dd0",
+   "operator": "DROP",
+   "fol": "GivesOutOnTV(breakingBad, rose) ∧ AiringAt(breakingBad, eightPMMonday)"
+  },
+  {
+   "mid": "0166601dd0:M:NEG",
+   "sid": "0166601dd0",
+   "operator": "NEG",
+   "fol": "Show(breakingBad) ∧ GivesOutOnTV(breakingBad, rose) ∧ ¬AiringAt(breakingBad, eightPMMonday)"
+  },
+  {
+   "mid": "0206b4ea58:M:ADD",
+   "sid": "0206b4ea58",
+   "operator": "ADD",
+   "fol": "WritesNovel(daniShapiro) ∧ IsNovel(daniShapiro)"
+  },
+  {
+   "mid": "0206b4ea58:M:NEG",
+   "sid": "0206b4ea58",
+   "operator": "NEG",
+   "fol": "¬WritesNovel(daniShapiro)"
+  },
+  {
+   "mid": "0208f0729c:M:ADD",
+   "sid": "0208f0729c",
+   "operator": "ADD",
+   "fol": "Premiered(viennamusicsociety, symphony9) ∧ Conductor(viennamusicsociety)"
+  },
+  {
+   "mid": "0208f0729c:M:ARG_SWAP",
+   "sid": "0208f0729c",
+   "operator": "ARG_SWAP",
+   "fol": "Premiered(symphony9, viennamusicsociety)"
+  },
+  {
+   "mid": "0208f0729c:M:NEG",
+   "sid": "0208f0729c",
+   "operator": "NEG",
+   "fol": "¬Premiered(viennamusicsociety, symphony9)"
+  },
+  {
+   "mid": "022c51fe40:M:ADD",
+   "sid": "022c51fe40",
+   "operator": "ADD",
+   "fol": "((Quokka(koala) ∧ AnimalsFromAustralia(koala)) → LoveToSleep(koala)) ⊕ VeryFluffy(koala)"
+  },
+  {
+   "mid": "022c51fe40:M:IMPL_REV",
+   "sid": "022c51fe40",
+   "operator": "IMPL_REV",
+   "fol": "(LoveToSleep(koala) → Quokka(koala)) ⊕ VeryFluffy(koala)"
+  },
+  {
+   "mid": "022c51fe40:M:MERGE",
+   "sid": "022c51fe40",
+   "operator": "MERGE",
+   "fol": "(VeryFluffy(koala) → LoveToSleep(koala)) ⊕ VeryFluffy(koala)"
+  },
+  {
+   "mid": "022c51fe40:M:NEG",
+   "sid": "022c51fe40",
+   "operator": "NEG",
+   "fol": "(Quokka(koala) → ¬LoveToSleep(koala)) ⊕ VeryFluffy(koala)"
+  },
+  {
+   "mid": "026646b128:M:ADD",
+   "sid": "026646b128",
+   "operator": "ADD",
+   "fol": "(¬(NoTakeOutService(subway) ∧ NegativeReview(subway)) ∧ RatingGreaterThan9(subway)) → (PopularAmongLocalResidents(subway) ∧ NoTakeOutService(subway))"
+  },
+  {
+   "mid": "026646b128:M:ANDOR",
+   "sid": "026646b128",
+   "operator": "ANDOR",
+   "fol": "¬(NoTakeOutService(subway) ∨ NegativeReview(subway)) → (PopularAmongLocalResidents(subway) ∧ NoTakeOutService(subway))"
+  },
+  {
+   "mid": "026646b128:M:DROP",
+   "sid": "026646b128",
+   "operator": "DROP",
+   "fol": "¬NoTakeOutService(subway) → (PopularAmongLocalResidents(subway) ∧ NoTakeOutService(subway))"
+  },
+  {
+   "mid": "026646b128:M:IMPL_REV",
+   "sid": "026646b128",
+   "operator": "IMPL_REV",
+   "fol": "(PopularAmongLocalResidents(subway) ∧ NoTakeOutService(subway)) → ¬(NoTakeOutService(subway) ∧ NegativeReview(subway))"
+  },
+  {
+   "mid": "026646b128:M:MERGE",
+   "sid": "026646b128",
+   "operator": "MERGE",
+   "fol": "¬(NegativeReview(subway) ∧ NegativeReview(subway)) → (PopularAmongLocalResidents(subway) ∧ NegativeReview(subway))"
+  },
+  {
+   "mid": "026646b128:M:NEG",
+   "sid": "026646b128",
+   "operator": "NEG",
+   "fol": "(NoTakeOutService(subway) ∧ NegativeReview(subway)) → (PopularAmongLocalResidents(subway) ∧ NoTakeOutService(subway))"
+  },
+  {
+   "mid": "03274a56dd:M:ADD",
+   "sid": "03274a56dd",
+   "operator": "ADD",
+   "fol": "∀x ((MachineLearningAlgorithm(x) ↔ (SupervisedLearningAlgorithm(x) ∨ UnsupervisedLearningAlgorithm(x) ∨ ReinforcementLearningAlgorithm(x))) ∧ RequireLabelledData(x))"
+  },
+  {
+   "mid": "03274a56dd:M:ANDOR",
+   "sid": "03274a56dd",
+   "operator": "ANDOR",
+   "fol": "∀x (MachineLearningAlgorithm(x) ↔ (SupervisedLearningAlgorithm(x) ∧ UnsupervisedLearningAlgorithm(x) ∧ ReinforcementLearningAlgorithm(x)))"
+  },
+  {
+   "mid": "03274a56dd:M:MERGE",
+   "sid": "03274a56dd",
+   "operator": "MERGE",
+   "fol": "∀x (MachineLearningAlgorithm(x) ↔ (SupervisedLearningAlgorithm(x) ∨ SupervisedLearningAlgorithm(x) ∨ ReinforcementLearningAlgorithm(x)))"
+  },
+  {
+   "mid": "03274a56dd:M:NEG",
+   "sid": "03274a56dd",
+   "operator": "NEG",
+   "fol": "∀x (¬MachineLearningAlgorithm(x) ↔ (SupervisedLearningAlgorithm(x) ∨ UnsupervisedLearningAlgorithm(x) ∨ ReinforcementLearningAlgorithm(x)))"
+  },
+  {
+   "mid": "03274a56dd:M:QUANT",
+   "sid": "03274a56dd",
+   "operator": "QUANT",
+   "fol": "∃x (MachineLearningAlgorithm(x) ↔ (SupervisedLearningAlgorithm(x) ∨ UnsupervisedLearningAlgorithm(x) ∨ ReinforcementLearningAlgorithm(x)))"
+  },
+  {
+   "mid": "032de04afe:M:ADD",
+   "sid": "032de04afe",
+   "operator": "ADD",
+   "fol": "∃x (Owns(joe, x) ∧ BeginWith(x, num34) ∧ (∃y (VehicleRegistrationPlateIn(x, y) ∧ FromIstanbul(y))))"
+  },
+  {
+   "mid": "032de04afe:M:ANDOR",
+   "sid": "032de04afe",
+   "operator": "ANDOR",
+   "fol": "∃x (Owns(joe, x) ∨ BeginWith(x, num34) ∨ (∃y (VehicleRegistrationPlateIn(x, y))))"
+  },
+  {
+   "mid": "032de04afe:M:ARG_SWAP",
+   "sid": "032de04afe",
+   "operator": "ARG_SWAP",
+   "fol": "∃x (Owns(joe, x) ∧ BeginWith(x, num34) ∧ (∃y (VehicleRegistrationPlateIn(y, x))))"
+  },
+  {
+   "mid": "032de04afe:M:CARD",
+   "sid": "032de04afe",
+   "operator": "CARD",
+   "fol": "∃x (∃x2 (x ≠ x2 ∧ Owns(joe, x) ∧ BeginWith(x, num34) ∧ (∃y (VehicleRegistrationPlateIn(x, y))) ∧ Owns(joe, x2) ∧ BeginWith(x2, num34) ∧ (∃y (VehicleRegistrationPlateIn(x2, y)))))"
+  },
+  {
+   "mid": "032de04afe:M:DROP",
+   "sid": "032de04afe",
+   "operator": "DROP",
+   "fol": "∃x (Owns(joe, x) ∧ (∃y (VehicleRegistrationPlateIn(x, y))))"
+  },
+  {
+   "mid": "032de04afe:M:NEG",
+   "sid": "032de04afe",
+   "operator": "NEG",
+   "fol": "∃x (Owns(joe, x) ∧ BeginWith(x, num34) ∧ (∃y (¬VehicleRegistrationPlateIn(x, y))))"
+  },
+  {
+   "mid": "032de04afe:M:QUANT",
+   "sid": "032de04afe",
+   "operator": "QUANT",
+   "fol": "∀x (Owns(joe, x) → (BeginWith(x, num34) ∧ (∃y (VehicleRegistrationPlateIn(x, y)))))"
+  },
+  {
+   "mid": "0449213340:M:ADD",
+   "sid": "0449213340",
+   "operator": "ADD",
+   "fol": "Cupcake(driedThaiChilies) ∧ ProductsOfBakedByMelissa(driedThaiChilies) ∧ Bakery(driedThaiChilies)"
+  },
+  {
+   "mid": "0449213340:M:ANDOR",
+   "sid": "0449213340",
+   "operator": "ANDOR",
+   "fol": "Cupcake(driedThaiChilies) ∨ ProductsOfBakedByMelissa(driedThaiChilies)"
+  },
+  {
+   "mid": "0449213340:M:DROP",
+   "sid": "0449213340",
+   "operator": "DROP",
+   "fol": "Cupcake(driedThaiChilies)"
+  },
+  {
+   "mid": "0449213340:M:MERGE",
+   "sid": "0449213340",
+   "operator": "MERGE",
+   "fol": "ProductsOfBakedByMelissa(driedThaiChilies) ∧ ProductsOfBakedByMelissa(driedThaiChilies)"
+  },
+  {
+   "mid": "0449213340:M:NEG",
+   "sid": "0449213340",
+   "operator": "NEG",
+   "fol": "¬Cupcake(driedThaiChilies) ∧ ProductsOfBakedByMelissa(driedThaiChilies)"
+  }
+ ],
+ "rewrites": [
+  {
+   "rid": "007519ff96:R:DEMORGAN",
+   "sid": "007519ff96",
+   "kind": "DEMORGAN",
+   "fol": "∃x (∃y (¬(¬Evergreen(x) ∨ ¬Evergreen(y) ∨ ObjectOfWorship(x) ∨ ObjectOfWorship(y) ∨ x = y)))",
+   "rename_map": {}
+  },
+  {
+   "rid": "007519ff96:R:SYN_RENAME",
+   "sid": "007519ff96",
+   "kind": "SYN_RENAME",
+   "fol": "∃x (∃y (Evergreen(x) ∧ Evergreen(y) ∧ ¬ObjectOfRevere(x) ∧ ¬ObjectOfRevere(y) ∧ x ≠ y))",
+   "rename_map": {
+    "ObjectOfWorship": "ObjectOfRevere"
+   }
+  },
+  {
+   "rid": "014eff9a2b:R:REORDER",
+   "sid": "014eff9a2b",
+   "kind": "REORDER",
+   "fol": "∀x (Bird(x) ∨ Monkey(x))",
+   "rename_map": {}
+  },
+  {
+   "rid": "014eff9a2b:R:SYN_RENAME",
+   "sid": "014eff9a2b",
+   "kind": "SYN_RENAME",
+   "fol": "∀x (Tinker(x) ∨ Fowl(x))",
+   "rename_map": {
+    "Monkey": "Tinker",
+    "Bird": "Fowl"
+   }
+  },
+  {
+   "rid": "0166601dd0:R:REORDER",
+   "sid": "0166601dd0",
+   "kind": "REORDER",
+   "fol": "AiringAt(breakingBad, eightPMMonday) ∧ Show(breakingBad) ∧ GivesOutOnTV(breakingBad, rose)",
+   "rename_map": {}
+  },
+  {
+   "rid": "0166601dd0:R:SYN_RENAME",
+   "sid": "0166601dd0",
+   "kind": "SYN_RENAME",
+   "fol": "Demonstrate(breakingBad) ∧ GivesOutOnTelevision(breakingBad, rose) ∧ AiringAstatine(breakingBad, eightPMMonday)",
+   "rename_map": {
+    "Show": "Demonstrate",
+    "GivesOutOnTV": "GivesOutOnTelevision",
+    "AiringAt": "AiringAstatine"
+   }
+  },
+  {
+   "rid": "0206b4ea58:R:SYN_RENAME",
+   "sid": "0206b4ea58",
+   "kind": "SYN_RENAME",
+   "fol": "WritesRefreshing(daniShapiro)",
+   "rename_map": {
+    "WritesNovel": "WritesRefreshing"
+   }
+  },
+  {
+   "rid": "0208f0729c:R:SYN_RENAME",
+   "sid": "0208f0729c",
+   "kind": "SYN_RENAME",
+   "fol": "Premier(viennamusicsociety, symphony9)",
+   "rename_map": {
+    "Premiered": "Premier"
+   }
+  },
+  {
+   "rid": "022c51fe40:R:CONTRAPOS",
+   "sid": "022c51fe40",
+   "kind": "CONTRAPOS",
+   "fol": "(¬LoveToSleep(koala) → ¬Quokka(koala)) ⊕ VeryFluffy(koala)",
+   "rename_map": {}
+  },
+  {
+   "rid": "022c51fe40:R:SYN_RENAME",
+   "sid": "022c51fe40",
+   "kind": "SYN_RENAME",
+   "fol": "(Quokka(koala) → LoveToKip(koala)) ⊕ VeryDowny(koala)",
+   "rename_map": {
+    "LoveToSleep": "LoveToKip",
+    "VeryFluffy": "VeryDowny"
+   }
+  },
+  {
+   "rid": "026646b128:R:DEMORGAN",
+   "sid": "026646b128",
+   "kind": "DEMORGAN",
+   "fol": "(¬NoTakeOutService(subway) ∨ ¬NegativeReview(subway)) → (PopularAmongLocalResidents(subway) ∧ NoTakeOutService(subway))",
+   "rename_map": {}
+  },
+  {
+   "rid": "026646b128:R:SYN_RENAME",
+   "sid": "026646b128",
+   "kind": "SYN_RENAME",
+   "fol": "¬(NoTakeOutServe(subway) ∧ NegativeReappraisal(subway)) → (PopularAmongLocalOccupant(subway) ∧ NoTakeOutServe(subway))",
+   "rename_map": {
+    "NoTakeOutService": "NoTakeOutServe",
+    "NegativeReview": "NegativeReappraisal",
+    "PopularAmongLocalResidents": "PopularAmongLocalOccupant"
+   }
+  },
+  {
+   "rid": "03274a56dd:R:DEMORGAN",
+   "sid": "03274a56dd",
+   "kind": "DEMORGAN",
+   "fol": "∀x (MachineLearningAlgorithm(x) ↔ ¬(¬SupervisedLearningAlgorithm(x) ∧ ¬UnsupervisedLearningAlgorithm(x) ∧ ¬ReinforcementLearningAlgorithm(x)))",
+   "rename_map": {}
+  },
+  {
+   "rid": "03274a56dd:R:REORDER",
+   "sid": "03274a56dd",
+   "kind": "REORDER",
+   "fol": "∀x (MachineLearningAlgorithm(x) ↔ (ReinforcementLearningAlgorithm(x) ∨ UnsupervisedLearningAlgorithm(x) ∨ SupervisedLearningAlgorithm(x)))",
+   "rename_map": {}
+  },
+  {
+   "rid": "032de04afe:R:PRENEX",
+   "sid": "032de04afe",
+   "kind": "PRENEX",
+   "fol": "∃x (∃y (Owns(joe, x) ∧ BeginWith(x, num34) ∧ VehicleRegistrationPlateIn(x, y)))",
+   "rename_map": {}
+  },
+  {
+   "rid": "032de04afe:R:REORDER",
+   "sid": "032de04afe",
+   "kind": "REORDER",
+   "fol": "∃x (Owns(joe, x) ∧ (∃y (VehicleRegistrationPlateIn(x, y))) ∧ BeginWith(x, num34))",
+   "rename_map": {}
+  },
+  {
+   "rid": "0449213340:R:DEMORGAN",
+   "sid": "0449213340",
+   "kind": "DEMORGAN",
+   "fol": "¬(¬Cupcake(driedThaiChilies) ∨ ¬ProductsOfBakedByMelissa(driedThaiChilies))",
+   "rename_map": {}
+  },
+  {
+   "rid": "0449213340:R:REORDER",
+   "sid": "0449213340",
+   "kind": "REORDER",
+   "fol": "ProductsOfBakedByMelissa(driedThaiChilies) ∧ Cupcake(driedThaiChilies)",
+   "rename_map": {}
+  }
+ ],
+ "counts": {
+  "gold_v0_unique_sentences": 569,
+  "corrected_release": {
+   "source": "HF DSAVlab-UNIUD/FOLIO_validation-curated (arXiv:2606.02837)",
+   "n_sentence_entries": 410,
+   "story_split_fail": 30,
+   "concl": 202,
+   "story_split_ok": 43
+  },
+  "logiclm_gpt-3.5-turbo": {
+   "n_lines": 1203,
+   "n_matched": 1052,
+   "n_unmatched": 151,
+   "n_unique_matched_sentences": 482
+  },
+  "logiclm_gpt-4": {
+   "n_lines": 1260,
+   "n_matched": 1181,
+   "n_unmatched": 79,
+   "n_unique_matched_sentences": 542
+  },
+  "logiclm_text-davinci-003": {
+   "n_lines": 1165,
+   "n_matched": 1053,
+   "n_unmatched": 112,
+   "n_unique_matched_sentences": 500
+  },
+  "diag_fuzzy95_unmatched_lines": 125,
+  "n_unique_matched_sentences": 547,
+  "gold_exclusions": {
+   "gold_unparseable": 10
+  },
+  "gold_exclusion_examples": {
+   "gold_unparseable": [
+    [
+     "All growth companies’ stocks are volatile.",
+     "∀x (GrowthCompanies’Stocks(x) → PriceVolatile(x))",
+     "unsupported symbol '’'"
+    ],
+    [
+     "All mature companies’ stocks are suitable for a retirement fund.",
+     " ∀x (MatureCompanies’Stocks(x) → SuitableForRetirementRund(x))",
+     "unsupported symbol '’'"
+    ],
+    [
+     "If KO is a growth company’s stock or if its price is volatile, then KO is neithe",
+     "GrowthCompanies’Stocks(kO) ∨ PriceVolatile(kO) → ¬Companies’Stocks(kO) ∨ ¬PriceVolatile(kO)",
+     "unsupported symbol '’'"
+    ],
+    [
+     "KO is a company stock.",
+     "Companies’Stocks(kO)",
+     "unsupported symbol '’'"
+    ],
+    [
+     "KO is a company stock and a growth company’s stock.",
+     "Companies’Stocks(kO) ∧ GrowthCompanies’Stocks(kO)",
+     "unsupported symbol '’'"
+    ]
+   ]
+  },
+  "n_screen_sentences": 10,
+  "n_real": 29,
+  "real_per_system": {
+   "gpt-3.5-turbo": 9,
+   "gpt-4": 10,
+   "text-davinci-003": 10
+  },
+  "duplicate_occurrence_hist": {
+   "1": 22,
+   "2": 3,
+   "3": 4
+  },
+  "n_real_parse_ok": 29,
+  "label_status": {
+   "nonequiv": 25,
+   "equiv": 4
+  },
+  "label_status_by_system": {
+   "gpt-3.5-turbo": {
+    "nonequiv": 8,
+    "equiv": 1
+   },
+   "gpt-4": {
+    "nonequiv": 8,
+    "equiv": 2
+   },
+   "text-davinci-003": {
+    "nonequiv": 9,
+    "equiv": 1
+   }
+  },
+  "label_orig_status_by_system": {
+   "gpt-3.5-turbo": {
+    "equiv": 3,
+    "nonequiv": 6
+   },
+   "gpt-4": {
+    "equiv": 3,
+    "nonequiv": 7
+   },
+   "text-davinci-003": {
+    "equiv": 3,
+    "nonequiv": 7
+   }
+  },
+  "mutant_log": {
+   "NEG": {
+    "kept": 10
+   },
+   "QUANT": {
+    "kept": 4,
+    "NA": 6
+   },
+   "IMPL_REV": {
+    "NA": 8,
+    "kept": 2
+   },
+   "DROP": {
+    "kept": 5,
+    "NA": 5
+   },
+   "ADD": {
+    "kept": 10
+   },
+   "ARG_SWAP": {
+    "NA": 7,
+    "kept": 3
+   },
+   "ANDOR": {
+    "kept": 7,
+    "NA": 3
+   },
+   "SCOPE": {
+    "NA": 10
+   },
+   "MERGE": {
+    "kept": 6,
+    "NA": 4
+   },
+   "CARD": {
+    "kept": 2,
+    "NA": 8
+   },
+   "SYN_RENAME": {
+    "kept": 7
+   },
+   "DEMORGAN": {
+    "kept": 4,
+    "NA": 3
+   },
+   "PRENEX": {
+    "NA": 6,
+    "kept": 1
+   },
+   "CONTRAPOS": {
+    "kept": 1,
+    "NA": 5
+   },
+   "REORDER": {
+    "NA": 3,
+    "kept": 5
+   }
+  },
+  "n_mutants": 49,
+  "n_rewrites": 18,
+  "mutants_per_operator": {
+   "ADD": 10,
+   "ANDOR": 7,
+   "CARD": 2,
+   "DROP": 5,
+   "MERGE": 6,
+   "NEG": 10,
+   "QUANT": 4,
+   "ARG_SWAP": 3,
+   "IMPL_REV": 2
+  },
+  "rewrites_per_kind": {
+   "DEMORGAN": 4,
+   "SYN_RENAME": 7,
+   "REORDER": 5,
+   "CONTRAPOS": 1,
+   "PRENEX": 1
+  },
+  "n_tokens_source": "regex",
+  "tercile_sizes": {
+   "top": 3,
+   "mid": 3,
+   "low": 4
+  },
+  "gold_source": {
+   "corrected": 5,
+   "original": 5
+  },
+  "gold_corr_flag_true": 4
+ }
+}

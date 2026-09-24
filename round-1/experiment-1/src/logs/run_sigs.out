@@ -1,0 +1,16 @@
+12:25:03|INFO   |2645 formulas, 2645 to compute
+12:25:09|INFO   |sigs 200/2645 5s
+12:25:10|INFO   |sigs 400/2645 6s
+12:25:10|INFO   |sigs 600/2645 7s
+12:25:12|INFO   |sigs 800/2645 9s
+12:25:13|INFO   |sigs 1000/2645 10s
+12:25:15|INFO   |sigs 1200/2645 11s
+12:25:16|INFO   |sigs 1400/2645 12s
+12:25:16|INFO   |sigs 1600/2645 13s
+12:25:17|INFO   |sigs 1800/2645 14s
+12:25:18|INFO   |sigs 2000/2645 14s
+12:25:19|INFO   |sigs 2200/2645 15s
+12:25:20|INFO   |sigs 2400/2645 17s
+12:25:21|INFO   |sigs 2600/2645 18s
+12:25:22|INFO   |sigs done in 19s; errors=1 mean_s=0.03 unknown_total=0
+12:25:30|INFO   |B7: Counter({1: 774, 0: 61}) story_sat=Counter({'sat': 595, 'unsat': 10, 'no_parseable': 6, 'error:(0,)': 1})

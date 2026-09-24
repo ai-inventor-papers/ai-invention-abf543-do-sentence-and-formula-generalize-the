@@ -1,0 +1,5 @@
+12:33:54|INFO   |auditing 890 golds
+12:41:38|INFO   |ProverQA spot check flagged 10/30 = 33.33%
+12:41:38|INFO   |escalating ProverQA audit to all 200
+12:42:45|INFO   |audit spend $3.427; total $4.899
+12:42:45|INFO   |audit meta: {'proverqa_spot_flagged': 10, 'proverqa_spot_n': 30, 'proverqa_escalated': True, 'n_items': 1060, 'final_counts': {'True': 597, 'False': 463}, 'cascade_rules': {'M1_tiebreak': 264, 'M2==M3': 796}}

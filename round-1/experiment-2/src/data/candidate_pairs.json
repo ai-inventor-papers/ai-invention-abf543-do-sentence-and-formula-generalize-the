@@ -1,0 +1,3321 @@
+{
+ "007519ff96": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "014eff9a2b": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "0166601dd0": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "0206b4ea58": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "0208f0729c": {
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "022c51fe40": {
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "026646b128": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "03274a56dd": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "032de04afe": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "0449213340": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "051b20dd39": {
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "052084c091": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "053f4b2ccc": {},
+ "0560d852b1": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "06b729053a": {},
+ "06cb075bb7": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "073bea62ee": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "0781962d62": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "0852779fbe": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "08f3864552": {
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "093c1e802b": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "093fe384bb": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "0a891a3010": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "0aa0e29902": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "0aca39478e": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "0af87b475a": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "0b2a4a8754": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "0b7eb0e2a2": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "0bd80fe54a": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "0c5ef9ceb3": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "0c64bf787b": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "0c654e60e8": {
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "0de7105739": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "0debdc3542": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "0e40569b05": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "0e6670bc6e": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "0f8ac1b7ee": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "0fad845c8f": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "107c21ed9f": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "1254a6b92d": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "1289c1961a": {
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "12906465c0": {},
+ "12b6dd0bbb": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "135e9ce488": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "137f589ba3": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "13d2c34683": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "14dbaca64e": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "156cdb6a8a": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "15f6fd1e8f": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "16756b7a96": {},
+ "16d29b51e7": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "16ef9ca7b1": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "17331943f7": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "176237dcba": {
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "17c328863a": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "197b708f7c": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "199edcfa5c": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "19cfd9f550": {},
+ "19fd8e77e5": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "1a5d8af37f": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "1a61602650": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "1ae447916c": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "1d9b3c2c03": {
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "1dbeb2d240": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "1e7c291737": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "1e9fa7f02d": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "1eaac89581": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "1ead5225fa": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "1f051cab7c": {
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "1f7e4ecc1a": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "1fafe19670": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "2041ce6517": {
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "2188b2feb9": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "224eed3d9f": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "22e951f75f": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "2378bedeba": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "2395bee8e5": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "2437b2b28d": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "24d6efd7cd": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "251c28b820": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "256d947d55": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "25dbcae474": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "26dd4745be": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "272aa248e1": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "272ab85923": {},
+ "273407fba3": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "277645b67a": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "2aaed79dfd": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "2b6a0175c7": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "2bde51a495": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "2c8cb35982": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "2d48314874": {
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "2dbfbd6ef7": {},
+ "2f091e5d1d": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "306d7088e6": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "312bdd0032": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "317784959d": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "31d6ea14b5": {},
+ "343a3ee0de": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "343ae947e9": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "352e73a2f8": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "353f5c0c46": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "35c80d08b0": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "36ed71baf9": {},
+ "36f87ecfec": {},
+ "3723f8d67e": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "37d9aee15c": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "382b5daa77": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "3866ffd7f1": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "39aaa24b4b": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "39ee666511": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "3b39518b06": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "3bc1cc8d00": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "3bdd48e638": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "3c1ae52841": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "3ca110563f": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "3d6f4348c7": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "3d7594dce4": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "3e0220eedc": {},
+ "3e79d05029": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "3fbab7d4d8": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "404cbf902d": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "43718eb294": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "43a970cd7b": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "447290c9b8": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "4490640725": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "4533da3110": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "458df093c0": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "4603068451": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "46638f0934": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "46c307ee3b": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "473d0291ec": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "476d5093e1": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "47732a0480": {},
+ "4779e59788": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "47d1a135fa": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "482977ead5": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "48d49cd946": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "48e3164f01": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "496aadee0d": {
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "499cf3aa9b": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "4a69a9f37b": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "4a9e6c5403": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "4b72fe4227": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "4c28bd2b40": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "4d1e75887a": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "4d35693599": {},
+ "4d3bb208d6": {},
+ "4d4769759f": {
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "4d4ead6d54": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "4d9991603e": {},
+ "4db56e53f3": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "4dc8ce2f8b": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "4f2d4ac8a3": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "50892c96d5": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "50dffa6caa": {
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "50f6a260b5": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "5110572f72": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "519838a969": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "5202c3f33c": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "5303fef3bc": {
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "533f28a24c": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "536ef95d6c": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "5374a5d336": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "5431281bf2": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "545e34d0c1": {},
+ "552c3bc3d0": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "55373b8d54": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "55bb4fc129": {
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "57eb8730e6": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "5813bbaf6d": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "58162b5a84": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "59343be59f": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "5935e757ab": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "59603e224f": {},
+ "5a1fe5b741": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "5b9f826017": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "5e2601237f": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "5eb4a10233": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "5f8675703b": {},
+ "5f940fd2dd": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "5fb3042fb4": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "5fcea12f37": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "60a5113fa4": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "622b68d7c9": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "6238793bbe": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "62ebe88dbf": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "6375134b38": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "6450b4f50f": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "645f1be0f1": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "64b9e9eff7": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "6731c0cfe6": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "67b9b243c5": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "67fc72dc41": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "6841930906": {
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "686669800b": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "68ba88c5bd": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "69291d9c95": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "69911e538a": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "69e749e8f7": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "6a3b57f20f": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "6a7c6f3103": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "6af81e669e": {
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "6b46dbd239": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "6b6ec8449a": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "6bc05bb50d": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "6bca7681ef": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "6c6704e97b": {
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "6cf3fbc1fb": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "6d8f0ec8fc": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "6d98b27e08": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "6dda12062c": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "6de0ffb3dd": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "6dec20d04c": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "6dfe12d7a8": {},
+ "6e544369e1": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "6f4934f186": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "704ffbcbef": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "7092fd0828": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "70caea8312": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "71328643c6": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "7136f932a7": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "716f939e2c": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "7175cd85ae": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "725cd5bf1f": {
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "733b6dac15": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "736a76e5ae": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "75db1bdaa3": {},
+ "75f9cd795e": {
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "761943a849": {
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "77ec67da6b": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "781beb2175": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "783b045fe6": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "78c83fea33": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "7958a2b5c8": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "79fdeef7e7": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "7a6e8a866e": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "7a71052def": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "7ae92744d4": {},
+ "7bc14cc4bc": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "7c488e1201": {
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "7cde7af1cc": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "7d1538a7cf": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "7db9732d84": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "7f94c6e1c8": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "8012b54cc1": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "8044788025": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "816f09288c": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "824548ef46": {
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "82d0748605": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "83a8bdf92e": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "8497f5a0a2": {
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "856dfbbeae": {
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "8571662a72": {
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "85bde1cec7": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "85ca83e7e8": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "85f8d1aa53": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "86701c1703": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "875cc6c999": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "877a38356a": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "8849538e74": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "8862c41716": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "886cbd8da5": {
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "889f3730ff": {},
+ "8927915c21": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "896451cf37": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "89d0c7f83e": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "8a204a4852": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "8a56bf8029": {
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "8a9baf6bf8": {},
+ "8aef7b2216": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "8c7c4774b5": {
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "8cf42320f0": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "8d14111df8": {
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "8db7c92ab6": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "8e6a6afab9": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "8ea8b5e99f": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "8ed9efe6a2": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "8f98fbf674": {},
+ "905abb5a74": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "908fd1c684": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "90a83c6ca8": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "90c60e16af": {},
+ "919644aca1": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "91994195db": {
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "91e585fd30": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "924e6a53dd": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "92da8c3f4a": {},
+ "92f6fc40db": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "9326318356": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "932ff8df34": {},
+ "94537ee60d": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "94971ce995": {},
+ "952186f250": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "95880b9e18": {
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "95c86fca04": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "96e2c01e1c": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ },
+ "98128c570b": {
+  "gpt-3.5-turbo|gpt-4": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-3.5-turbo|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  },
+  "gpt-4|text-davinci-003": {
+   "bij": "nonequiv",
+   "str": "nonequiv"
+  }
+ },
+ "98e1c483e3": {},
+ "99360315e9": {
+  "gpt-4|text-davinci-003": {
+   "bij": "equiv",
+   "str": "equiv"
+  }
+ }
+}
