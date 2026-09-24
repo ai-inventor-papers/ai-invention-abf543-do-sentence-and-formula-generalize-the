@@ -1,0 +1,18 @@
+04:06:09|INFO   |generation jobs: 8360 (greedy 3960)
+04:07:06|INFO   |500/8360 57s spent phase $0.051
+04:07:40|INFO   |1000/8360 92s spent phase $0.100
+04:08:24|INFO   |1500/8360 135s spent phase $0.126
+04:09:04|INFO   |2000/8360 176s spent phase $0.166
+04:09:42|INFO   |2500/8360 213s spent phase $0.177
+04:10:08|INFO   |3000/8360 240s spent phase $0.186
+04:10:35|INFO   |3500/8360 266s spent phase $0.194
+04:10:58|INFO   |4000/8360 289s spent phase $0.208
+04:11:22|INFO   |4500/8360 314s spent phase $0.262
+04:11:46|INFO   |5000/8360 337s spent phase $0.316
+04:12:12|INFO   |5500/8360 363s spent phase $0.370
+04:12:38|INFO   |6000/8360 390s spent phase $0.424
+04:13:00|INFO   |6500/8360 412s spent phase $0.444
+04:13:23|INFO   |7000/8360 434s spent phase $0.446
+04:13:47|INFO   |7500/8360 458s spent phase $0.449
+04:14:13|INFO   |8000/8360 485s spent phase $0.452
+04:14:37|INFO   |generation done: calls 8360 failed 0 phase $0.4535 total $0.4535 in 508s

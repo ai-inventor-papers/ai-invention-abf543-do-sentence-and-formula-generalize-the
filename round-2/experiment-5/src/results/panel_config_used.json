@@ -1,0 +1,33 @@
+{
+ "members": {
+  "M1": {
+   "model": "anthropic/claude-haiku-4.5",
+   "params": {
+    "temperature": 0.0,
+    "max_tokens": 900
+   }
+  },
+  "M2": {
+   "model": "x-ai/grok-4.3",
+   "params": {
+    "temperature": 0.0,
+    "max_tokens": 4000,
+    "reasoning": {
+     "effort": "low"
+    }
+   }
+  },
+  "M3": {
+   "model": "z-ai/glm-4.6",
+   "params": {
+    "temperature": 0.0,
+    "max_tokens": 900,
+    "reasoning": {
+     "enabled": false
+    }
+   }
+  }
+ },
+ "failed": [],
+ "gate": ">=0.80 accuracy on 40 known-label single-formula items (no-gold prompt)"
+}

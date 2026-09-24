@@ -1,0 +1,24 @@
+{"key": "375986cac6ea7658455458dd0c255b3a1a2e7131", "relation": "COMPATIBLE-INCOMPARABLE", "level": 2, "map": {"ExportableData": "FunctionalEquivalence", "DataProcessingService": "NewService", "MateriallyComparableOutcome": "SameServiceType"}, "cmap": {}, "defs": null, "n_maps": {"2": 103, "3": 300}, "n_z3": 40, "timed_out": false, "relation_l12": "COMPATIBLE-INCOMPARABLE", "level_l12": 2, "map_l12": {"ExportableData": "FunctionalEquivalence", "DataProcessingService": "NewService", "MateriallyComparableOutcome": "SameServiceType"}, "direction": "B_in_A", "seconds": 3.606, "n_preds_a": 13, "n_preds_b": 5, "big_rule_applied": false, "kind": "greedy"}
+{"key": "381854359c9694a5b28d3974fe244011d7437b7a", "relation": "UNKNOWN", "reason": "worker_killed", "kind": "greedy", "seconds": null}
+{"key": "4b3690bf18ad0c68b80b3a59bd81b87acb411a67", "relation": "UNKNOWN", "reason": "worker_killed", "kind": "greedy", "seconds": null}
+{"key": "4e0f33718232ea5bef75009d2aaf238313b60d66", "relation": "UNKNOWN", "reason": "worker_killed", "kind": "greedy", "seconds": null}
+{"key": "53d98c5aca6890ee65f831421e28f0e47521126f", "relation": "UNKNOWN", "reason": "worker_killed", "kind": "greedy", "seconds": null}
+{"key": "5f15f88cf322a0db671755f0ce5b9c7569a03fcb", "relation": "UNKNOWN", "reason": "worker_killed", "kind": "greedy", "seconds": null}
+{"key": "637a03933364687206532c4de29976d9f22d3dde", "relation": "UNKNOWN", "reason": "worker_killed", "kind": "greedy", "seconds": null}
+{"key": "79a0aa60a64ce61f4335092e422fe1d5bce63d11", "relation": "UNKNOWN", "reason": "worker_killed", "kind": "greedy", "seconds": null}
+{"key": "812c66b00d302c452f8e9b74fb53e0b78be0c3d6", "relation": "UNKNOWN", "reason": "worker_killed", "kind": "greedy", "seconds": null}
+{"key": "8b5eae1f5a06541c49c2732961bc3afa34697f9f", "relation": "UNKNOWN", "reason": "worker_killed", "kind": "greedy", "seconds": null}
+{"key": "8ea22a3b470f6764d8f873bb58d8daced428efca", "relation": "UNKNOWN", "reason": "worker_killed", "kind": "greedy", "seconds": null}
+{"key": "8f58a8f2b642f344af4068a4dbf403bd0f0e8f6a", "relation": "UNKNOWN", "reason": "worker_killed", "kind": "greedy", "seconds": null}
+{"key": "93aace31481e64b377a556f4c5d3618f63f1e932", "relation": "UNKNOWN", "reason": "worker_killed", "kind": "greedy", "seconds": null}
+{"key": "9db9990e5623b216ff3694ea179e5c00be818109", "relation": "UNKNOWN", "reason": "worker_killed", "kind": "greedy", "seconds": null}
+{"key": "a62abe9a75f481a1b7456d8efa2d16eb767e6a67", "relation": "UNKNOWN", "reason": "worker_killed", "kind": "greedy", "seconds": null}
+{"key": "bd4ac88f4cc7f8151f239ba53da56aeabd46d3c0", "relation": "UNKNOWN", "reason": "worker_killed", "kind": "greedy", "seconds": null}
+{"key": "c6fb81c017b9ebe99ec7b3ed36f5e7032b9bb2ef", "relation": "UNKNOWN", "reason": "worker_killed", "kind": "greedy", "seconds": null}
+{"key": "ccc5e1d4544c35574dc8ea5d7e0e255fa872c835", "relation": "UNKNOWN", "reason": "worker_killed", "kind": "greedy", "seconds": null}
+{"key": "d9fe60b4bab564783fe34722e0853171821b6e18", "relation": "UNKNOWN", "reason": "worker_killed", "kind": "greedy", "seconds": null}
+{"key": "e7f1c88ed97db8453e416e4ae968d62b1655e4a0", "relation": "UNKNOWN", "reason": "worker_killed", "kind": "greedy", "seconds": null}
+{"key": "f4d1aec680ea9873c7b649d893266effe2152702", "relation": "UNKNOWN", "reason": "worker_killed", "kind": "greedy", "seconds": null}
+{"key": "ce8c4c5dfa9f1134ac89157e207dd8937dc0a7ab", "relation": "UNKNOWN", "reason": "worker_killed", "kind": "lone", "seconds": null}
+{"key": "f4d4ab97b2be58c1c4734731cceb2e83bca937e9", "relation": "UNKNOWN", "reason": "worker_killed", "kind": "lone", "seconds": null}
+{"key": "f88cb4982956fc76a3a9f868e545b885016e871f", "relation": "UNKNOWN", "reason": "worker_killed", "kind": "lone", "seconds": null}

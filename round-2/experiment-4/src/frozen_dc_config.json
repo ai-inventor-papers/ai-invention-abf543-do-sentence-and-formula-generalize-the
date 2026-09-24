@@ -1,0 +1,119 @@
+{
+ "contract": "DC v1 (this artifact; no external contract file was found)",
+ "limits": {
+  "L1_cap": 5040,
+  "L2_cap": 2000,
+  "L2_min_occurrence_cover": 0.5,
+  "L3_cap_defsets": 300,
+  "L3_max_defs": 2,
+  "L3_base_maps": 3,
+  "wall_s_per_pair": 12.0,
+  "z3_timeout_ms": 3000,
+  "bounded_fallback_nmax": 3,
+  "max_z3_equiv_tries": 6,
+  "max_z3_entail_tries": 6,
+  "fingerprint_structures": 64,
+  "fingerprint_domains": [
+   2,
+   3
+  ],
+  "worker_rlimit_as_gb": 3.0
+ },
+ "ordering_rule": "maps sorted by (-fingerprint agreement, -occurrence match, -polarity match, -n mapped, first-occurrence structure); names never used",
+ "selection_rule": "max rank EQUIV > STRONGER=WEAKER over all levels (lower level wins ties); else the relation under the top map of the lowest level with any map (COMPATIBLE/CONTRADICTORY/UNKNOWN); none -> UNALIGNABLE",
+ "score_rule": "sum w*[EQUIV] / sum w over peers with rel != UNKNOWN (UNALIGNABLE in the denominator); unparseable or < 2 covered peers -> 0.5",
+ "weights": {
+  "deepseek-v3.1": 0.05,
+  "gemini-2.5-flash": 0.6803910496699106,
+  "gemma-3-27b": 0.34433815850121413,
+  "gpt-4.1-mini": 0.7633425660417635,
+  "gpt-oss-120b": 0.8139101897695132,
+  "llama-3.1-8b": 0.05,
+  "mistral-small-3.2-24b": 0.12183771620422454,
+  "phi-4": 0.05,
+  "qwen-2.5-7b": 0.05
+ },
+ "ds_fit": {
+  "p": {
+   "deepseek-v3.1": 0.500740278410539,
+   "gemini-2.5-flash": 0.6638259700498238,
+   "gemma-3-27b": 0.585243927112922,
+   "gpt-4.1-mini": 0.6820790007315506,
+   "gpt-oss-120b": 0.6929421155338897,
+   "llama-3.1-8b": 0.3881090093769214,
+   "mistral-small-3.2-24b": 0.5304218054971982,
+   "phi-4": 0.47135204164664574,
+   "qwen-2.5-7b": 0.3915525813479087
+  },
+  "w": {
+   "deepseek-v3.1": 0.05,
+   "gemini-2.5-flash": 0.6803910496699106,
+   "gemma-3-27b": 0.34433815850121413,
+   "gpt-4.1-mini": 0.7633425660417635,
+   "gpt-oss-120b": 0.8139101897695132,
+   "llama-3.1-8b": 0.05,
+   "mistral-small-3.2-24b": 0.12183771620422454,
+   "phi-4": 0.05,
+   "qwen-2.5-7b": 0.05
+  },
+  "pi": 0.999,
+  "rho": 0.08234441351168835,
+  "loglik": -6694.095362402936,
+  "seed_spread_p": 2.228334738951787e-08,
+  "degenerate": false,
+  "iters": 8
+ },
+ "code_sha256": {
+  "dc/__init__.py": "ecbe8bf15cf89fed158d397043f257f632d1345767fafbc1b033ae49e320481c",
+  "dc/align.py": "8b2526fb802771f78e85cd48808e9444c34882de4510a2f36c332331311a0303",
+  "dc/common.py": "b5b8e35969bf40b71d9881fa8f1524dbae64a98f8916f2ea1c8e5c7c69674d02",
+  "dc/core.py": "c687164f722d24316c0b6727f22cbfab1a8124209b6aac44d64f29a17bef463c",
+  "dc/fp.py": "294c571bb9b10cad20fe2d531aa980d1d7189ea3daeee3b95341d29b4b3af018",
+  "dc/front.py": "19cb6b8a156458462172770c71b6bc7877c57ba4be5fe0a805756a9c22f77362",
+  "dc/pairs.py": "c69e9135a2e299972c3951b78280116e9f7ef06c932023b4688fc6f6fcfe24df",
+  "dc/relation.py": "bb94a5873651a03aabeba7669bb62784c115cb8e6f1960fb614d26540649b245",
+  "dc/stats.py": "584ce452701895df92b706a39991e586617adda9a2f9563e5d1af7b611dcf05b"
+ },
+ "dev_anchor": {
+  "DC": {
+   "auroc": 0.7690638923647817,
+   "ci": [
+    0.7172009569382827,
+    0.8194404294078721
+   ],
+   "n": 609,
+   "n_sentences": 387,
+   "n_missing": 0
+  },
+  "S0_L1": {
+   "auroc": 0.6355507528811474,
+   "ci": [
+    0.5751174875050536,
+    0.6927845193918628
+   ],
+   "n": 609,
+   "n_sentences": 387,
+   "n_missing": 0
+  },
+  "S2_L3": {
+   "auroc": 0.7577304375862091,
+   "ci": [
+    0.7078170664988594,
+    0.805112367565568
+   ],
+   "n": 609,
+   "n_sentences": 387,
+   "n_missing": 0
+  },
+  "DC_L2w": {
+   "auroc": 0.7739621507579241,
+   "ci": [
+    0.7203380977618697,
+    0.8247279809882477
+   ],
+   "n": 609,
+   "n_sentences": 387,
+   "n_missing": 0
+  }
+ }
+}

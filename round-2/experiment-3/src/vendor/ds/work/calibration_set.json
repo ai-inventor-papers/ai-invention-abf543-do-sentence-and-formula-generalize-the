@@ -1,0 +1,387 @@
+[
+ {
+  "kind": "gold",
+  "sentence": "If Carter is dedicated to research, then he is either skilled in classification or successful in botanical discoveries.",
+  "formula": "dedicated_to_research(Carter) → (skilled_in_classification(Carter) ∨ successful_in_botanical_discoveries(Carter))",
+  "label_faithful": true,
+  "source_id": "proverqa_dev_easy_420_0",
+  "op": "none",
+  "cal_id": "cal00"
+ },
+ {
+  "kind": "gold",
+  "sentence": "If Rome is gentle, then he either inspires conservation efforts or thrives in his habitat, but not both.",
+  "formula": "gentle(Rome) → (inspire_conservation(Rome) ⊕ thrive_in_habitat(Rome))",
+  "label_faithful": true,
+  "source_id": "proverqa_dev_easy_99_2",
+  "op": "none",
+  "cal_id": "cal01"
+ },
+ {
+  "kind": "gold",
+  "sentence": "If Adalynn values individuality, then she advocates for limited government and fosters critical thinking.",
+  "formula": "values_individuality(Adalynn) → (advocates_for_limited_government(Adalynn) ∧ fosters_critical_thinking(Adalynn))",
+  "label_faithful": true,
+  "source_id": "proverqa_dev_easy_187_4",
+  "op": "none",
+  "cal_id": "cal02"
+ },
+ {
+  "kind": "gold",
+  "sentence": "If Amalia is either reflective or empathetic (but not both), then she is inspired.",
+  "formula": "(reflective(Amalia) ⊕ empathetic(Amalia)) → inspired(Amalia)",
+  "label_faithful": true,
+  "source_id": "proverqa_dev_easy_106_0",
+  "op": "none",
+  "cal_id": "cal03"
+ },
+ {
+  "kind": "gold",
+  "sentence": "If Clay is an outdoorsman, then he is either carefree or practical, but not both.",
+  "formula": "outdoorsman(Clay) → (carefree(Clay) ⊕ practical(Clay))",
+  "label_faithful": true,
+  "source_id": "proverqa_dev_easy_492_0",
+  "op": "none",
+  "cal_id": "cal04"
+ },
+ {
+  "kind": "gold",
+  "sentence": "Anyone who asks tough questions and seeks truth can be intelligent.",
+  "formula": "∀x ((asks_tough_questions(x) ∧ seeks_truth(x)) → intelligent(x))",
+  "label_faithful": true,
+  "source_id": "proverqa_dev_easy_400_3",
+  "op": "none",
+  "cal_id": "cal05"
+ },
+ {
+  "kind": "gold",
+  "sentence": "If Jude is either an environmentalist or a biologist (but not both), then he is influential.",
+  "formula": "(environmentalist(Jude) ⊕ biologist(Jude)) → influential(Jude)",
+  "label_faithful": true,
+  "source_id": "proverqa_dev_easy_26_2",
+  "op": "none",
+  "cal_id": "cal06"
+ },
+ {
+  "kind": "gold",
+  "sentence": "If Zora is an expressive performer, then she evokes emotional responses and has a seductive stage presence.",
+  "formula": "expressive_performer(Zora) → (evokes_emotional_responses(Zora) ∧ has_seductive_stage_presence(Zora))",
+  "label_faithful": true,
+  "source_id": "proverqa_dev_easy_214_3",
+  "op": "none",
+  "cal_id": "cal07"
+ },
+ {
+  "kind": "gold",
+  "sentence": "If Lilith either wins battles or leads soldiers (but not both), then she is an experienced warrior.",
+  "formula": "(wins_battles(Lilith) ⊕ leads_soldiers(Lilith)) → experienced_warrior(Lilith)",
+  "label_faithful": true,
+  "source_id": "proverqa_dev_easy_204_3",
+  "op": "none",
+  "cal_id": "cal08"
+ },
+ {
+  "kind": "gold",
+  "sentence": "For all fish, if a fish lives in shoals and follows others, then it is a schooling fish.",
+  "formula": "∀x ((lives_in_shoals(x) ∧ follows_others(x)) → schooling_fish(x))",
+  "label_faithful": true,
+  "source_id": "proverqa_dev_easy_78_5",
+  "op": "none",
+  "cal_id": "cal09"
+ },
+ {
+  "kind": "gold",
+  "sentence": "If Siena faces physical challenges and is determined, then she will find new creative paths.",
+  "formula": "(face_physical_challenges(Siena) ∧ be_determined(Siena)) → find_new_creative_paths(Siena)",
+  "label_faithful": true,
+  "source_id": "proverqa_dev_easy_35_1",
+  "op": "none",
+  "cal_id": "cal10"
+ },
+ {
+  "kind": "gold",
+  "sentence": "If Karina is diagnosed with neurosarcoma, then she can either find a cure or inspire others, but not both.",
+  "formula": "diagnosed_with_neurosarcoma(Karina) → (find_a_cure(Karina) ⊕ inspire_others(Karina))",
+  "label_faithful": true,
+  "source_id": "proverqa_dev_easy_489_2",
+  "op": "none",
+  "cal_id": "cal11"
+ },
+ {
+  "kind": "gold",
+  "sentence": "If Laney either exhibited bravery or demonstrated intelligence (but not both), then he earned the respect of Genghis Khan.",
+  "formula": "(exhibited_bravery(Laney) ⊕ demonstrated_intelligence(Laney)) → earned_the_respect_of_Genghis_Khan(Laney)",
+  "label_faithful": true,
+  "source_id": "proverqa_dev_easy_340_0",
+  "op": "none",
+  "cal_id": "cal12"
+ },
+ {
+  "kind": "gold",
+  "sentence": "For every human, they either have a green thumb or they don't, but not both.",
+  "formula": "∀x (has_green_thumb(x) ⊕ has_no_green_thumb(x))",
+  "label_faithful": true,
+  "source_id": "proverqa_dev_easy_90_1",
+  "op": "none",
+  "cal_id": "cal13"
+ },
+ {
+  "kind": "gold",
+  "sentence": "If Arlo works in an orchard, then he either studies plant species or classifies fruit varieties, but not both.",
+  "formula": "work_in_orchard(Arlo) → (study_plant_species(Arlo) ⊕ classify_fruit_varieties(Arlo))",
+  "label_faithful": true,
+  "source_id": "proverqa_dev_easy_330_1",
+  "op": "none",
+  "cal_id": "cal14"
+ },
+ {
+  "kind": "mutant",
+  "sentence": "If Cruz is wise, then he can either expand territory or foster prosperity, but not both.",
+  "formula": "¬wise(Cruz) → (expand_territory(Cruz) ⊕ foster_prosperity(Cruz))",
+  "label_faithful": false,
+  "source_id": "proverqa_dev_easy_311_3",
+  "op": "negation_flip",
+  "gold": "wise(Cruz) → (expand_territory(Cruz) ⊕ foster_prosperity(Cruz))",
+  "cal_id": "cal15"
+ },
+ {
+  "kind": "mutant",
+  "sentence": "If Madelynn studies marine life, then she can either gain recognition or contribute to conservation, but not both.",
+  "formula": "study_marine_life(Madelynn) → (¬gain_recognition(Madelynn) ⊕ contribute_to_conservation(Madelynn))",
+  "label_faithful": false,
+  "source_id": "proverqa_dev_easy_482_0",
+  "op": "negation_flip",
+  "gold": "study_marine_life(Madelynn) → (gain_recognition(Madelynn) ⊕ contribute_to_conservation(Madelynn))",
+  "cal_id": "cal16"
+ },
+ {
+  "kind": "mutant",
+  "sentence": "If Manuel is an innovative film director, then he is either critically acclaimed or influential, but not both.",
+  "formula": "innovative(Manuel) → (¬critically_acclaimed(Manuel) ⊕ influential(Manuel))",
+  "label_faithful": false,
+  "source_id": "proverqa_dev_easy_191_2",
+  "op": "negation_flip",
+  "gold": "innovative(Manuel) → (critically_acclaimed(Manuel) ⊕ influential(Manuel))",
+  "cal_id": "cal17"
+ },
+ {
+  "kind": "mutant",
+  "sentence": "For every human, either they have good skin health or bad skin health, but not both.",
+  "formula": "∃x (has_good_skin_health(x) ⊕ has_bad_skin_health(x))",
+  "label_faithful": false,
+  "source_id": "proverqa_dev_easy_138_4",
+  "op": "quantifier_swap",
+  "gold": "∀x (has_good_skin_health(x) ⊕ has_bad_skin_health(x))",
+  "cal_id": "cal18"
+ },
+ {
+  "kind": "mutant",
+  "sentence": "Everyone either follows a structured approach or has innovative ideas, but not both is not a must.",
+  "formula": "∃x (follow_structured_approach(x) ⊕ have_innovative_ideas(x))",
+  "label_faithful": false,
+  "source_id": "proverqa_dev_easy_136_3",
+  "op": "quantifier_swap",
+  "gold": "∀x (follow_structured_approach(x) ⊕ have_innovative_ideas(x))",
+  "cal_id": "cal19"
+ },
+ {
+  "kind": "mutant",
+  "sentence": "For every human, they are either ambidextrous or not ambidextrous, but not both.",
+  "formula": "∃x (ambidextrous(x) ⊕ not_ambidextrous(x))",
+  "label_faithful": false,
+  "source_id": "proverqa_dev_easy_109_2",
+  "op": "quantifier_swap",
+  "gold": "∀x (ambidextrous(x) ⊕ not_ambidextrous(x))",
+  "cal_id": "cal20"
+ },
+ {
+  "kind": "mutant",
+  "sentence": "If Emmett either works diligently or pays attention to details (but not both), then he is meticulous.",
+  "formula": "meticulous(Emmett) → (works_diligently(Emmett) ⊕ pays_attention_to_details(Emmett))",
+  "label_faithful": false,
+  "source_id": "proverqa_dev_easy_165_1",
+  "op": "implication_reversal",
+  "gold": "(works_diligently(Emmett) ⊕ pays_attention_to_details(Emmett)) → meticulous(Emmett)",
+  "cal_id": "cal21"
+ },
+ {
+  "kind": "mutant",
+  "sentence": "If Eliam is a skilled craftsman, then she either focuses on creating masterpieces or appreciates the small details, but not both.",
+  "formula": "(create_masterpieces(Eliam) ⊕ appreciate_details(Eliam)) → skilled_craftsman(Eliam)",
+  "label_faithful": false,
+  "source_id": "proverqa_dev_easy_162_0",
+  "op": "implication_reversal",
+  "gold": "skilled_craftsman(Eliam) → (create_masterpieces(Eliam) ⊕ appreciate_details(Eliam))",
+  "cal_id": "cal22"
+ },
+ {
+  "kind": "mutant",
+  "sentence": "If Aarav is creative, then he is either famous or influential, but not both.",
+  "formula": "(famous(Aarav) ⊕ influential(Aarav)) → creative(Aarav)",
+  "label_faithful": false,
+  "source_id": "proverqa_dev_easy_62_2",
+  "op": "implication_reversal",
+  "gold": "creative(Aarav) → (famous(Aarav) ⊕ influential(Aarav))",
+  "cal_id": "cal23"
+ },
+ {
+  "kind": "mutant",
+  "sentence": "For all ships, if a ship has a reinforced hull, then it can withstand harsh weather and earn the trust of its crew.",
+  "formula": "∀x (reinforced_hull(x) → earn_crew_trust(x))",
+  "label_faithful": false,
+  "source_id": "proverqa_dev_easy_143_4",
+  "op": "drop_conjunct",
+  "gold": "∀x (reinforced_hull(x) → (withstand_harsh_weather(x) ∧ earn_crew_trust(x)))",
+  "cal_id": "cal24"
+ },
+ {
+  "kind": "mutant",
+  "sentence": "If Ernesto studies electromagnetism and experiments with currents, then he will make new discoveries.",
+  "formula": "experiment_with_currents(Ernesto) → make_new_discoveries(Ernesto)",
+  "label_faithful": false,
+  "source_id": "proverqa_dev_easy_103_2",
+  "op": "drop_conjunct",
+  "gold": "(study_electromagnetism(Ernesto) ∧ experiment_with_currents(Ernesto)) → make_new_discoveries(Ernesto)",
+  "cal_id": "cal25"
+ },
+ {
+  "kind": "mutant",
+  "sentence": "If Abdullah loves animals, then he values companionship and enjoys simplicity.",
+  "formula": "love_animals(Abdullah) → enjoy_simplicity(Abdullah)",
+  "label_faithful": false,
+  "source_id": "proverqa_dev_easy_382_1",
+  "op": "drop_conjunct",
+  "gold": "love_animals(Abdullah) → (value_companionship(Abdullah) ∧ enjoy_simplicity(Abdullah))",
+  "cal_id": "cal26"
+ },
+ {
+  "kind": "mutant",
+  "sentence": "If Arlo researches nature, then he either discovers new species or studies plant species (or both).",
+  "formula": "research_nature(Arlo) → (discover_new_species(Arlo) ∧ study_plant_species(Arlo))",
+  "label_faithful": false,
+  "source_id": "proverqa_dev_easy_330_3",
+  "op": "connective_and_or",
+  "gold": "research_nature(Arlo) → (discover_new_species(Arlo) ∨ study_plant_species(Arlo))",
+  "cal_id": "cal27"
+ },
+ {
+  "kind": "mutant",
+  "sentence": "If Cakes is dishonest, then he is either manipulative or isolated (or both).",
+  "formula": "dishonest(Cakes) → (manipulative(Cakes) ∧ isolated(Cakes))",
+  "label_faithful": false,
+  "source_id": "proverqa_dev_easy_198_2",
+  "op": "connective_and_or",
+  "gold": "dishonest(Cakes) → (manipulative(Cakes) ∨ isolated(Cakes))",
+  "cal_id": "cal28"
+ },
+ {
+  "kind": "mutant",
+  "sentence": "Anyone who experiments frequently or learns from others can know unique recipes.",
+  "formula": "∀x ((experiment_frequently(x) ∧ learn_from_others(x)) → know_unique_recipes(x))",
+  "label_faithful": false,
+  "source_id": "proverqa_dev_easy_113_1",
+  "op": "connective_and_or",
+  "gold": "∀x ((experiment_frequently(x) ∨ learn_from_others(x)) → know_unique_recipes(x))",
+  "cal_id": "cal29"
+ },
+ {
+  "kind": "rewrite",
+  "sentence": "If Yusuf is dedicated to conservation, then he can either earn international recognition or inspire others, but not both.",
+  "formula": "IsDedicatedToConservationProp(Yusuf) → (IsEarnInternationalRecognitionProp(Yusuf) ⊕ IsInspireOthersProp(Yusuf))",
+  "label_faithful": true,
+  "source_id": "proverqa_dev_easy_294_1",
+  "op": "predicate_renaming",
+  "gold": "dedicated_to_conservation(Yusuf) → (earn_international_recognition(Yusuf) ⊕ inspire_others(Yusuf))",
+  "cal_id": "cal30"
+ },
+ {
+  "kind": "rewrite",
+  "sentence": "If Alec is driven, then he is either experienced or seasoned, but not both.",
+  "formula": "IsIsDrivenProp(Alec) → (IsExperiencedProp(Alec) ⊕ IsSeasonedProp(Alec))",
+  "label_faithful": true,
+  "source_id": "proverqa_dev_easy_357_0",
+  "op": "predicate_renaming",
+  "gold": "is_driven(Alec) → (experienced(Alec) ⊕ seasoned(Alec))",
+  "cal_id": "cal31"
+ },
+ {
+  "kind": "rewrite",
+  "sentence": "If Judah is either globally known or locally famous (but not both), then he is a respected artist.",
+  "formula": "(IsGloballyKnownProp(Judah) ⊕ IsLocallyFamousProp(Judah)) → IsRespectedArtistProp(Judah)",
+  "label_faithful": true,
+  "source_id": "proverqa_dev_easy_385_0",
+  "op": "predicate_renaming",
+  "gold": "(globally_known(Judah) ⊕ locally_famous(Judah)) → respected_artist(Judah)",
+  "cal_id": "cal32"
+ },
+ {
+  "kind": "rewrite",
+  "sentence": "If Judah is artistic, then he is either commercially successful or critically acclaimed, but not both.",
+  "formula": "¬artistic(Judah) ∨ (commercially_successful(Judah) ⊕ critically_acclaimed(Judah))",
+  "label_faithful": true,
+  "source_id": "proverqa_dev_easy_310_0",
+  "op": "material_implication",
+  "gold": "artistic(Judah) → (commercially_successful(Judah) ⊕ critically_acclaimed(Judah))",
+  "cal_id": "cal33"
+ },
+ {
+  "kind": "rewrite",
+  "sentence": "If Kayleigh either perceives pain or responds to stimuli (but not both), then she has a brain.",
+  "formula": "¬have_brain(Kayleigh) → ¬(perceives_pain(Kayleigh) ⊕ responds_to_stimuli(Kayleigh))",
+  "label_faithful": true,
+  "source_id": "proverqa_dev_easy_131_3",
+  "op": "contrapositive",
+  "gold": "(perceives_pain(Kayleigh) ⊕ responds_to_stimuli(Kayleigh)) → have_brain(Kayleigh)",
+  "cal_id": "cal34"
+ },
+ {
+  "kind": "rewrite",
+  "sentence": "If Allyson focuses on her art, then she can either gain recognition or stay true to her vision, but not both.",
+  "formula": "¬(gain_recognition(Allyson) ⊕ stay_true_to_vision(Allyson)) → ¬focus_on_art(Allyson)",
+  "label_faithful": true,
+  "source_id": "proverqa_dev_easy_375_1",
+  "op": "contrapositive",
+  "gold": "focus_on_art(Allyson) → (gain_recognition(Allyson) ⊕ stay_true_to_vision(Allyson))",
+  "cal_id": "cal35"
+ },
+ {
+  "kind": "rewrite",
+  "sentence": "If Bodhi leads the factory, then he can either increase profit or preserve traditions, but not both.",
+  "formula": "¬(increase_profit(Bodhi) ⊕ preserve_traditions(Bodhi)) → ¬lead_factory(Bodhi)",
+  "label_faithful": true,
+  "source_id": "proverqa_dev_easy_161_1",
+  "op": "contrapositive",
+  "gold": "lead_factory(Bodhi) → (increase_profit(Bodhi) ⊕ preserve_traditions(Bodhi))",
+  "cal_id": "cal36"
+ },
+ {
+  "kind": "rewrite",
+  "sentence": "If Zechariah is fashionable, then she either appreciates flowers or enjoys nature (but not both).",
+  "formula": "¬is_fashionable(Zechariah) ∨ (appreciate_flowers(Zechariah) ⊕ enjoy_nature(Zechariah))",
+  "label_faithful": true,
+  "source_id": "proverqa_dev_easy_34_3",
+  "op": "material_implication",
+  "gold": "is_fashionable(Zechariah) → (appreciate_flowers(Zechariah) ⊕ enjoy_nature(Zechariah))",
+  "cal_id": "cal37"
+ },
+ {
+  "kind": "rewrite",
+  "sentence": "If Rudy can appreciate everyday moments, then he can either find inner peace or inspire others, but not both.",
+  "formula": "¬appreciate_moments(Rudy) ∨ (find_inner_peace(Rudy) ⊕ inspire_others(Rudy))",
+  "label_faithful": true,
+  "source_id": "proverqa_dev_easy_329_2",
+  "op": "material_implication",
+  "gold": "appreciate_moments(Rudy) → (find_inner_peace(Rudy) ⊕ inspire_others(Rudy))",
+  "cal_id": "cal38"
+ },
+ {
+  "kind": "rewrite",
+  "sentence": "For all humans, if someone is self-teaching, then they either have determination or a strong work ethic (or both).",
+  "formula": "∀x (¬(have_determination(x) ∨ have_hard_work_ethic(x)) → ¬self_teaching(x))",
+  "label_faithful": true,
+  "source_id": "proverqa_dev_easy_472_0",
+  "op": "contrapositive",
+  "gold": "∀x (self_teaching(x) → (have_determination(x) ∨ have_hard_work_ethic(x)))",
+  "cal_id": "cal39"
+ }
+]

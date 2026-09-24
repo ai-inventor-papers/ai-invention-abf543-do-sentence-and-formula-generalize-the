@@ -1,0 +1,26 @@
+04:43:19|INFO   |[dev] sentences 700 pairs 13987 workers 5 budget 120.0s
+04:43:20|INFO   |[dev] done 0/700 running 5 elapsed 1s
+04:44:19|INFO   |[dev] done 47/700 running 5 elapsed 60s
+04:44:20|INFO   |[dev] done 48/700 running 4 elapsed 61s
+04:45:19|INFO   |[dev] done 98/700 running 4 elapsed 120s
+04:45:20|INFO   |[dev] done 98/700 running 5 elapsed 121s
+04:46:20|INFO   |[dev] done 144/700 running 5 elapsed 180s
+04:46:20|INFO   |[dev] done 144/700 running 5 elapsed 181s
+04:47:20|INFO   |[dev] done 202/700 running 5 elapsed 241s
+04:48:19|INFO   |[dev] done 259/700 running 5 elapsed 300s
+04:48:20|INFO   |[dev] done 260/700 running 4 elapsed 301s
+04:49:19|INFO   |[dev] done 310/700 running 5 elapsed 360s
+04:49:20|INFO   |[dev] done 310/700 running 5 elapsed 361s
+04:50:20|INFO   |[dev] done 364/700 running 5 elapsed 420s
+04:50:20|INFO   |[dev] done 364/700 running 5 elapsed 421s
+04:51:19|INFO   |[dev] done 408/700 running 4 elapsed 480s
+04:51:20|INFO   |[dev] done 409/700 running 4 elapsed 481s
+04:52:19|INFO   |[dev] done 470/700 running 3 elapsed 540s
+04:52:20|INFO   |[dev] done 471/700 running 4 elapsed 541s
+04:53:19|INFO   |[dev] done 538/700 running 4 elapsed 600s
+04:53:20|INFO   |[dev] done 538/700 running 5 elapsed 601s
+04:54:19|INFO   |[dev] done 608/700 running 5 elapsed 660s
+04:54:20|INFO   |[dev] done 609/700 running 4 elapsed 661s
+04:55:19|INFO   |[dev] done 684/700 running 2 elapsed 720s
+04:55:20|INFO   |[dev] done 686/700 running 0 elapsed 721s
+04:55:28|INFO   |[dev] {"n_pairs": 13987, "sec_mean": 0.19025859726889255, "sec_p90": 0.146, "sec_total": 2661.147, "relations": {"UNALIGNABLE": 1377, "EQUIV": 3192, "COMPATIBLE-INCOMPARABLE": 5363, "WEAKER": 2455, "STRONGER": 1593, "CONTRADICTORY": 7}, "levels": {"None": 1377, "3": 1730, "1": 4369, "2": 6511}, "sec_by_npreds": {"<=6": {"n": 13284, "mean": 0.18386878952122854}, "7-12": {"n": 703, "mean": 0.3110014224751067}}, "wall_s": 726.0, "n_missing_marked_unknown": 0, "n_sentences": 700, "limits": {"l1_cap": 5040, "l2_cap": 2000, "l3_cap": 300, "l2_min_cov": 0.5, "l3_max_defs": 2, "l3_max_lits": 2, "domains": [1, 2, 3, 4], "z3_timeout_ms": 5000, "pair_seconds": 20.0, "order": "default", "n_random": 24, "n_models": 6, "max_z3_maps": 40}, "big_rule": null}

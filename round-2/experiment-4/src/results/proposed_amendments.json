@@ -1,0 +1,25 @@
+{
+ "status": "PROPOSED for the confirmation artifact; NOT applied here (frozen config unchanged)",
+ "amendments": [
+  {
+   "id": "A1_drop_or_restrict_L3",
+   "evidence": "M1 per-op: NEG det DC 0.52 vs DC_L2w 1.00; DROP_CONJ 0.68 vs 0.98; crossed AUROC 0.805 vs 0.999; M4(a) L3 adds 11.9% spurious EQUIV on non-isomorphic cross-sentence pairs; dev panel DC_L2w 0.774 >= DC 0.769",
+   "proposal": "freeze DC_L2w (levels L1+L2, DS weights) as primary; if L3 is kept, forbid single negated-literal definitions and require a lexical (WordNet lemma) cover for compound definitions (as the dataset's L2)"
+  },
+  {
+   "id": "A2_name_free_role_tiebreak",
+   "evidence": "M2: 1/999 DC changes and 0.4-0.5% relation-vector changes under renaming, all traced to the source/target role tie-break following the lexicographic (lo, hi) pair order",
+   "proposal": "break role ties with a name-free structural key (formula with symbols replaced by first-occurrence indices), or search both directions and take the max rank"
+  },
+  {
+   "id": "A3_typing_direct_relation",
+   "evidence": "M5 typing top-1 0.213 < majority 0.257; clusters built by transitive closure of (L3) EQUIV can place a mutant 'in' the mode",
+   "proposal": "type against the mode representative by the DIRECT relation, store the best map per level, and fall back to the repair variant"
+  },
+  {
+   "id": "A4_report_within_sentence",
+   "evidence": "M4(b): within-sentence label shuffle keeps panel AUROC at 0.73 (true 0.77)",
+   "proposal": "make within-sentence AUROC / partnered detection co-primary in the confirmation artifact"
+  }
+ ]
+}

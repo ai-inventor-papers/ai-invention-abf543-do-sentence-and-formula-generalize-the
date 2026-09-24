@@ -1,0 +1,15 @@
+04:15:01|INFO   |DC fresh pair jobs: greedy 14520, within 11705
+04:15:09|INFO   |pairs: 26225 jobs, 13491 new unique (921 identical strings), 12570 to solve
+04:15:41|INFO   |pairs 1000/12570 32s (31.2/s)
+04:15:49|INFO   |pairs 2000/12570 40s (49.8/s)
+04:15:54|INFO   |pairs 3000/12570 45s (66.0/s)
+04:15:56|INFO   |pairs 4000/12570 48s (84.1/s)
+04:15:59|INFO   |pairs 5000/12570 50s (99.4/s)
+04:16:01|INFO   |pairs 6000/12570 53s (114.1/s)
+04:16:03|INFO   |pairs 7000/12570 54s (128.8/s)
+04:16:05|INFO   |pairs 8000/12570 56s (142.7/s)
+04:16:06|INFO   |pairs 9000/12570 58s (156.3/s)
+04:16:07|INFO   |pairs 10000/12570 59s (170.3/s)
+04:16:08|INFO   |pairs 11000/12570 60s (184.1/s)
+04:16:09|INFO   |pairs 12000/12570 60s (198.7/s)
+04:16:11|INFO   |pairs done: {'n_solved': 12570, 'wall_s': 61.8, 'mean_s': 0.05713341288782817, 'p95_s': 0.20454999999999926, 'max_s': 20.005}

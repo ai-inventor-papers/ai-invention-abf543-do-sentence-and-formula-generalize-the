@@ -1,0 +1,33 @@
+04:27:01|INFO   |[legal_fp] sentences 158 pairs 5949 workers 5 budget 300.0s
+04:27:02|INFO   |[legal_fp] done 0/158 running 5 elapsed 1s
+04:28:02|INFO   |[legal_fp] done 7/158 running 5 elapsed 60s
+04:28:02|INFO   |[legal_fp] done 7/158 running 5 elapsed 61s
+04:29:01|INFO   |[legal_fp] done 17/158 running 5 elapsed 120s
+04:29:02|INFO   |[legal_fp] done 17/158 running 5 elapsed 121s
+04:30:01|INFO   |[legal_fp] done 28/158 running 5 elapsed 180s
+04:30:02|INFO   |[legal_fp] done 28/158 running 5 elapsed 181s
+04:31:02|INFO   |[legal_fp] done 40/158 running 5 elapsed 240s
+04:31:02|INFO   |[legal_fp] done 40/158 running 5 elapsed 241s
+04:32:01|INFO   |[legal_fp] done 58/158 running 5 elapsed 300s
+04:32:02|INFO   |[legal_fp] done 58/158 running 5 elapsed 301s
+04:33:01|INFO   |[legal_fp] done 78/158 running 5 elapsed 360s
+04:33:02|INFO   |[legal_fp] done 78/158 running 5 elapsed 361s
+04:34:02|INFO   |[legal_fp] done 97/158 running 5 elapsed 420s
+04:34:02|INFO   |[legal_fp] done 97/158 running 5 elapsed 421s
+04:35:01|INFO   |[legal_fp] done 109/158 running 5 elapsed 480s
+04:35:02|INFO   |[legal_fp] done 109/158 running 5 elapsed 481s
+04:36:01|INFO   |[legal_fp] done 122/158 running 5 elapsed 540s
+04:36:02|INFO   |[legal_fp] done 123/158 running 4 elapsed 541s
+04:37:02|INFO   |[legal_fp] done 143/158 running 4 elapsed 600s
+04:37:02|INFO   |[legal_fp] done 144/158 running 4 elapsed 601s
+04:38:01|INFO   |[legal_fp] done 150/158 running 2 elapsed 660s
+04:38:02|INFO   |[legal_fp] done 150/158 running 2 elapsed 661s
+04:39:01|INFO   |[legal_fp] done 150/158 running 2 elapsed 720s
+04:39:02|INFO   |[legal_fp] done 150/158 running 2 elapsed 721s
+04:40:01|INFO   |[legal_fp] done 151/158 running 1 elapsed 780s
+04:40:02|INFO   |[legal_fp] done 151/158 running 1 elapsed 781s
+04:41:01|INFO   |[legal_fp] done 151/158 running 1 elapsed 840s
+04:41:02|INFO   |[legal_fp] done 151/158 running 1 elapsed 841s
+04:42:01|INFO   |[legal_fp] done 151/158 running 1 elapsed 900s
+04:42:02|INFO   |[legal_fp] done 151/158 running 1 elapsed 901s
+04:42:31|INFO   |[legal_fp] {"n_pairs": 5949, "sec_mean": 0.38238499489622313, "sec_p90": 0.7676000000000004, "sec_total": 2247.659, "relations": {"STRONGER": 306, "COMPATIBLE-INCOMPARABLE": 3609, "WEAKER": 1234, "EQUIV": 377, "UNALIGNABLE": 332, "UNKNOWN": 91}, "levels": {"2": 4543, "1": 547, "3": 436, "None": 423}, "sec_by_npreds": {"7-12": {"n": 2840, "mean": 0.319425}, "<=6": {"n": 2111, "mean": 0.143273803884415}, ">12": {"n": 907, "mean": 1.1444773980154357}}, "wall_s": 928.4, "n_missing_marked_unknown": 71, "n_sentences": 158, "limits": {"l1_cap": 5040, "l2_cap": 2000, "l3_cap": 300, "l2_min_cov": 0.5, "l3_max_defs": 2, "l3_max_lits": 2, "domains": [1, 2, 3, 4], "z3_timeout_ms": 5000, "pair_seconds": 20.0, "order": "fp", "n_random": 24, "n_models": 6, "max_z3_maps": 40}, "big_rule": null}
