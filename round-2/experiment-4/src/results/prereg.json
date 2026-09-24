@@ -1,59 +1,38 @@
 {
- "labels": {
-  "P": "heldout_confirm & label_source==panel3 (609); y = L3_majority, w = L3_sampling_weight",
-  "T": "heldout_confirm top tercile; y_hard = output∈{faithful,unfaithful}; y_soft = stratum p",
-  "Ccon": "contamination rows paired with originals"
+ "written_at": "2026-09-24T04:10:16",
+ "frozen_dc_config_sha256": "7ebda7e259f85147c6ec26e98cac018c907fc1d2c2352153d0c6679d07f0d960",
+ "status": "all DEV; mechanism / confound / boundary questions only; nothing confirmatory",
+ "M1": {
+  "design": "<=300 S1 sentences x {conf, tok, syn} vocab arms x {F + 6 operator mutants}; peers = 9 real outputs; frozen weights",
+  "P1_DC_arm_gap": "|AUROC_conf - AUROC_tok| < 0.02 and |AUROC_conf - AUROC_syn| < 0.02 (non-iso mutants); 'equivalent' if the 90% CI lies within +-0.03",
+  "P2_DC_crossed": "AUROC(F_tok vs M_conf) >= 0.85",
+  "P3_VC_gap": "VC gap (conf - tok) > 0.2",
+  "P4_VC_crossed": "VC crossed AUROC < 0.5",
+  "P5_iso_blind_spot": "DC detection on L1-isomorphic (automorphic) mutants ~ 0.5 (CI contains 0.5)",
+  "P6_L3_granularity_blind_spot (added by this executor before scoring)": "DROP_CONJ and ADD_CONJ detection is LOWER with L3 (DC) than with L2 only (DC_L2w): lexical-free definitions can absorb a dropped/added restrictor (Dog__s := Dog AND Brown). Predicted: DC per-op detection(DROP_CONJ) < DC_L2w per-op detection(DROP_CONJ)",
+  "M1b": "DC ΔAUROC over [B1, parse_ok, VC] 95% lower bound > 0 (panel); reported also over [B1, parse, VC, LC_maj]"
  },
- "power_switch": {
-  "n_panel_top_label_free": 389,
-  "threshold": 150,
-  "decision": "H1 on P-top"
+ "M2": {
+  "P1_FA": "FA(delta=0.10) <= 0.05 for every rewrite kind",
+  "P2_rename_exact": "FA(delta=0) = 0 for syn_rename, tok_rename, var_rename (name-independent ordering)",
+  "P3_contamination": "mean Δ(orig - para) CI includes 0 and |Δ| < 0.096 (B1's Δ)"
  },
- "H1": "P-top: ΔAUROC_w(TVJT − B1) > 0 with paired sentence-cluster bootstrap (2000×, strata=corpus, seed 0) 95% CI lower bound > 0",
- "H2": "Δ_top − Δ_bottom > 0 (paired bootstrap CI) and Δ per n_conditions bin {0-1,2-3,4+} non-decreasing",
- "H2b": "weighted GLM y ~ z(s) + c + z(s):c, cluster-robust by sentence; joint β(TVJT:c) − β(B1:c) > 0",
- "repeat_for": [
-  "LC_onecoin",
-  "A3",
-  "B1x3",
-  "TVJT_iter1",
-  "TVJT_lite",
-  "B3sc (2 systems)"
- ],
- "error_types": "detection P(err < faithful same sentence), Wilson CIs; head-to-head scope∪cardinality vs A3",
- "stacking": "GroupKFold(5, sentence) weighted logistic C=1; S0=[B1,parse_ok], S1=S0+TVJT, S2=S1+LC+A3, S0z=S0+LC+A3; placebo shuffled TVJT",
- "contamination": "AUROC orig vs paraphrase (paired over the 104 sentence pairs), mean shift per label class",
- "decision_table": {
-  "CROSSOVER_CONFIRMED": "H1 LB>0 AND H2 LB>0",
-  "CROSSOVER_PARTIAL": "H1 holds, H2 n.s.",
-  "NOT_REPLICATED": "H1 CI includes 0",
-  "REVERSED": "H1 UB<0",
-  "REPAIR_OK": "frozen screen G2 passed and held-out G2 replication FA<=0.10",
-  "JUDGE_MATCHED": "TVJT − B1x3 top-tercile LB>0",
-  "STACK_INCREMENT": "S2 − S0z LB>0",
-  "PENDING": "verdict for a judge whose scores do not exist yet (gemini key limit)"
+ "M3": {
+  "P1_dose": "pooled detection >= 0.9 at k <= 2; in [0.3, 0.7] at k = 4; <= 0.3 at k >= 6",
+  "P2_arb": "DC+arb detection at k in {4,6,8} > DC detection at the same k",
+  "P3_real_shared_bias": "negative slope of within-sentence DC concordance on wrong_conc; detection < 0.5 in the top bin (>= 0.75)"
  },
- "bins": {
-  "tercile": [
-   "bottom",
-   "middle",
-   "top"
-  ],
-  "n_conditions": [
-   [
-    0,
-    1
-   ],
-   [
-    2,
-    3
-   ],
-   [
-    4,
-    99
-   ]
-  ]
+ "M4": {
+  "P1_cross_sentence": "spurious EQUIV <= 2% on non-shape-isomorphic cross-sentence pairs; FLAG L3 if its increment > 5%",
+  "P2_shuffle": "within-sentence label shuffle AUROC ~ 0.5 (reported vs the signature's 0.648)",
+  "P3_lexical_anchor": "EQUIVs that are non-EQUIV under the trigram map are ENRICHED among panel-unfaithful items (manufactured agreement)"
  },
- "local_variant": "dropped (chance-level world agreement); no local-judge results are reported",
- "zero_llm_now": "H1/H2-style crossover tables (AUROC_w by tercile / n_conditions with paired bootstrap growth CIs) are run NOW for the zero-LLM metrics LC_onecoin, A3, parse_ok (+B3sc on 2 systems); TVJT*/B1/B1x3 rows are filled by the same code when gemini scores exist"
+ "M5": {
+  "P1_ladder": "largest step lift in within-sentence detection is on added_condition",
+  "P2_typing": "DC contract typing weighted top-1 on panel-unfaithful items > majority baseline 0.249"
+ },
+ "M7": {
+  "P1_goldflag": "DC(gold) AUROC vs L0 gold_faithful_final > 0.5 (CI lower bound > 0.5); stacking with B1_gold/TJ_gold adds > 0"
+ },
+ "analysis_rules": "2,000 sentence-clustered bootstrap draws (stratified corpus x tercile for AUROCs); n < 20 per class = descriptive; iso mutants never pooled into primary AUROCs; failures reported, never fixed by changing the frozen config (amendments -> results/proposed_amendments.json)"
 }

@@ -1,13 +1,13 @@
 entries:
   - path: .venv/
     delete: regenerable
-    source: "python method.py --stage setup   # uv venv .venv --python 3.12 && uv pip install -r pyproject.toml (+ torch cpu, sentence-transformers)"
-  - path: .pytest_cache/
-    delete: regenerable
-    source: ".venv/bin/python -m pytest -q -c pytest.ini tests/test_core.py"
+    source: "uv venv .venv --python=3.12 && uv pip install --python=.venv/bin/python z3-solver numpy scipy scikit-learn pandas nltk loguru aiohttp tenacity pytest orjson psutil spacy 'en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl'"
   - path: nltk_data/
     delete: redownloadable
-    source: ".venv/bin/python -c \"import nltk; [nltk.download(p, download_dir='nltk_data') for p in ('wordnet','omw-1.4')]\" && cd nltk_data/corpora && unzip -o wordnet.zip && unzip -o omw-1.4.zip"
+    source: "mkdir -p nltk_data/corpora && curl -sL -o nltk_data/corpora/wordnet.zip https://raw.githubusercontent.com/nltk/nltk_data/gh-pages/packages/corpora/wordnet.zip && (cd nltk_data/corpora && unzip -q -o wordnet.zip)"
   - path: "**/__pycache__/"
     delete: regenerable
-    source: "created automatically by Python on import (python method.py --stage all)"
+    source: "python bytecode; recreated on import"
+  - path: .pytest_cache/
+    delete: regenerable
+    source: ".venv/bin/python -m pytest -q -c pytest.ini tests/test_dc.py"
