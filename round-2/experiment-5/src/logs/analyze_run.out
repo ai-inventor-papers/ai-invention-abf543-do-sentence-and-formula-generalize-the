@@ -1,13 +1,0 @@
-15:57:40|INFO   |panel rows 609; unfaithful 302
-/ai-inventor/aii_data/runs/run_qY2a2IS-WLIs/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/analyze.py:155: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  "auroc_unw": auc(y, s), "spearman": float(stats.spearmanr(s, y).correlation),
-15:58:20|INFO   |V4 done: {"delta_M1_M0": {"delta": 0.009171039197537367, "ci95": [-0.012089402559033069, 0.029340732237954543]}, "delta_M2_M0": {"delta": 0.011052090812325277, "ci95": [-0.010181393913067716, 0.03141779016628654]}, "delta_M3_M3base": {"delta": 0.005955325253336197, "ci95": [-0.01110610032178487, 0.02300493094595234]}, "delta_B1_S_B1only": {"delta": 0.056892462004942135, "ci95": [0.008041737104178368, 0.10421364610524636]}}
-15:58:21|INFO   |V1 done
-/ai-inventor/aii_data/runs/run_qY2a2IS-WLIs/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/analyze.py:399: RuntimeWarning: invalid value encountered in scalar divide
-  f = lambda ix: float(np.nansum(v[ix] * ww[ix]) / ww[ix][~np.isnan(v[ix])].sum())  # noqa: E731
-15:58:24|INFO   |V2 done
-15:59:58|INFO   |run_batch: 51 jobs, 0 uncached, est $0.000; spent so far $4.4759 of cap $6.0
-Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 1060.44it/s]
-16:01:53|INFO   |V3 done
-16:01:59|INFO   |run_batch: 407 jobs, 0 uncached, est $0.000; spent so far $4.4759 of cap $6.0
-16:03:20|INFO   |VERDICTS: {'DIAGNOSER_POSITIVE': False, 'FLAGGER_POSITIVE': False, 'POLARITY_CARRIES_SIGNAL': False, 'RENAME_FIXED': False, 'BLIND_SPOTS_CONFIRMED': False}
