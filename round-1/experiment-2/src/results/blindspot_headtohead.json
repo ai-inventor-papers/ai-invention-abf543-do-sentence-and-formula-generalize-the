@@ -1,0 +1,217 @@
+{
+ "note": "Arm A signature predicted \u2248 chance on SCOPE_SWAP/CARD (blind spots); compare in iter 2",
+ "TVJT_pairwise": {
+  "CARD|screen": {
+   "rate": 0.7619,
+   "n": 84,
+   "wilson": [
+    0.6606,
+    0.8403
+   ]
+  },
+  "CARD|supplement": {
+   "rate": 0.7105,
+   "n": 38,
+   "wilson": [
+    0.5524,
+    0.83
+   ]
+  },
+  "CARD|supplement_folio_train": {
+   "rate": 0.6008,
+   "n": 258,
+   "wilson": [
+    0.54,
+    0.6586
+   ]
+  },
+  "CARD|supplement_malls_curated": {
+   "rate": 0.6364,
+   "n": 22,
+   "wilson": [
+    0.4295,
+    0.8027
+   ]
+  },
+  "CARD|supplement_malls_test": {
+   "rate": 0.7576,
+   "n": 66,
+   "wilson": [
+    0.6419,
+    0.8449
+   ]
+  },
+  "SCOPE_SWAP|supplement_folio_train": {
+   "rate": 0.6429,
+   "n": 14,
+   "wilson": [
+    0.3876,
+    0.8366
+   ]
+  },
+  "SCOPE_SWAP|supplement_malls_curated": {
+   "rate": 0.6667,
+   "n": 6,
+   "wilson": [
+    0.3,
+    0.9032
+   ]
+  },
+  "SCOPE_SWAP|supplement_malls_test": {
+   "rate": 0.6471,
+   "n": 17,
+   "wilson": [
+    0.413,
+    0.8269
+   ]
+  }
+ },
+ "NLI_pairwise": {
+  "CARD|screen": {
+   "rate": 0.6429,
+   "n": 56,
+   "n_no_differing_hypothesis": 32,
+   "wilson": [
+    0.5119,
+    0.7554
+   ]
+  },
+  "CARD|screen_controlled": {
+   "rate": 0.6786,
+   "n": 28,
+   "n_no_differing_hypothesis": 14,
+   "wilson": [
+    0.4934,
+    0.8207
+   ]
+  },
+  "CARD|supplement": {
+   "rate": 0.6579,
+   "n": 38,
+   "n_no_differing_hypothesis": 20,
+   "wilson": [
+    0.4989,
+    0.7879
+   ]
+  },
+  "CARD|supplement_folio_train": {
+   "rate": 0.6047,
+   "n": 258,
+   "n_no_differing_hypothesis": 142,
+   "wilson": [
+    0.5439,
+    0.6624
+   ]
+  },
+  "CARD|supplement_malls_curated": {
+   "rate": 0.6364,
+   "n": 22,
+   "n_no_differing_hypothesis": 16,
+   "wilson": [
+    0.4295,
+    0.8027
+   ]
+  },
+  "CARD|supplement_malls_test": {
+   "rate": 0.5303,
+   "n": 66,
+   "n_no_differing_hypothesis": 46,
+   "wilson": [
+    0.4116,
+    0.6457
+   ]
+  },
+  "SCOPE_SWAP|supplement_folio_train": {
+   "rate": 0.4643,
+   "n": 14,
+   "n_no_differing_hypothesis": 13,
+   "wilson": [
+    0.2404,
+    0.7035
+   ]
+  },
+  "SCOPE_SWAP|supplement_malls_curated": {
+   "rate": 0.5,
+   "n": 6,
+   "n_no_differing_hypothesis": 6,
+   "wilson": [
+    0.1876,
+    0.8124
+   ]
+  },
+  "SCOPE_SWAP|supplement_malls_test": {
+   "rate": 0.4706,
+   "n": 17,
+   "n_no_differing_hypothesis": 14,
+   "wilson": [
+    0.2616,
+    0.6904
+   ]
+  }
+ },
+ "chance": 0.5,
+ "TVJT|SCOPE_SWAP|screen": {
+  "rate": null,
+  "n": 0,
+  "wilson": [
+   null,
+   null
+  ]
+ },
+ "TVJT|SCOPE_SWAP|screen+supplement": {
+  "rate": 0.6487,
+  "n": 37,
+  "wilson": [
+   0.4876,
+   0.7818
+  ]
+ },
+ "TVJT|CARD|screen": {
+  "rate": 0.7619,
+  "n": 84,
+  "wilson": [
+   0.6606,
+   0.8403
+  ]
+ },
+ "TVJT|CARD|screen+supplement": {
+  "rate": 0.6624,
+  "n": 468,
+  "wilson": [
+   0.6184,
+   0.7038
+  ]
+ },
+ "NLI_deberta|SCOPE_SWAP|screen": {
+  "rate": null,
+  "n": 0,
+  "wilson": [
+   null,
+   null
+  ]
+ },
+ "NLI_deberta|SCOPE_SWAP|screen+supplement": {
+  "rate": 0.473,
+  "n": 37,
+  "wilson": [
+   0.3224,
+   0.6287
+  ]
+ },
+ "NLI_deberta|CARD|screen": {
+  "rate": 0.6429,
+  "n": 56,
+  "wilson": [
+   0.512,
+   0.7555
+  ]
+ },
+ "NLI_deberta|CARD|screen+supplement": {
+  "rate": 0.6046,
+  "n": 440,
+  "wilson": [
+   0.5582,
+   0.6492
+  ]
+ }
+}

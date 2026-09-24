@@ -1,0 +1,3 @@
+12:43:54|INFO   |L3 sample 460: Counter({'nonequiv': 400, 'equiv': 60}) frame={'frame_total': 5848, 'frame_nonequiv': 3879, 'frame_equiv': 1969, 'frame_l2_granular': 77}
+12:48:43|INFO   |L3 spend $2.458; total $7.480
+12:48:43|INFO   |L3 majority counts {'True': 242, 'False': 217, 'None': 1}
