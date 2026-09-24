@@ -1,0 +1,8 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+URL: https://arxiv.org/abs/2606.02837
+Type: HTML
+Pattern: (39|36|42\.5|42|24|20)\s?%|incorrect FOL|fewer than \d+% (1 matches in 8350 chars)
+
+--- Content ---
+
+1903:...tribution is to present a systematic human inspection of the validation split of \textsf{FOLIO} and a subset of \textsf{MALLS} test instances, finding that approximately 42.5\% and 42\% of entries, respectively, contain incorrect FOL formalizations (i.e., ground truth labels), with additional rates of ambiguous NL sentences (17.8\% and 51\%) and incorrect NLI labels in \textsf{FOLIO} (8.4\%). Our second contribution is to develop and release correct...

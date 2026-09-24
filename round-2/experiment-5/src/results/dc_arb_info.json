@@ -1,0 +1,43 @@
+{
+ "n_sentences_with_world": 143,
+ "n_verdicts": 143,
+ "n_candidates_adjusted": 396,
+ "judge": "local Qwen/Qwen3-8B (substitute for flash)",
+ "examples": [
+  {
+   "sid": "00856ba4b3",
+   "prompt": "Here are all the facts of a small situation. Anything not listed is false. The individuals are exactly: Alex.\nFacts:\n- Alex is/has: put into service by union institution\n\nSentence: (48) ‘national competent authority’ means a notifying authority or a market surveillance authority; as regards AI systems put into service or used by Union institutions, agencies, offices and bodies, references to national competent authorities or market surveillance authorities in this Regulation shall be construed as references to the European Data Protection Supervisor;\n\nIs the SENTENCE true in this situation (interpret general statements as being about the listed individuals)? Answer yes or no only.",
+   "verdict": false,
+   "A_true": true,
+   "n_facts": 1
+  },
+  {
+   "sid": "0272b8d897",
+   "prompt": "Here are all the facts of a small situation. Anything not listed is false. The individuals are exactly: Alex.\nFacts:\n- (no facts: every property and relation is false)\n\nSentence: (51) ‘non-personal data’ means data other than personal data as defined in Article 4, point (1), of Regulation (EU) 2016/679;\n\nIs the SENTENCE true in this situation (interpret general statements as being about the listed individuals)? Answer yes or no only.",
+   "verdict": false,
+   "A_true": true,
+   "n_facts": 0
+  },
+  {
+   "sid": "04477b9976",
+   "prompt": "Here are all the facts of a small situation. Anything not listed is false. The individuals are exactly: Article51.\nFacts:\n- established by member state: Article51, Article51\n- Article51 is/has: independent public authority\n\nSentence: (21) ‘supervisory authority’ means an independent public authority which is established by a Member State pursuant to Article 51\n\nIs the SENTENCE true in this situation (interpret general statements as being about the listed individuals)? Answer yes or no only.",
+   "verdict": true,
+   "A_true": false,
+   "n_facts": 2
+  },
+  {
+   "sid": "047b1476c9",
+   "prompt": "Here are all the facts of a small situation. Anything not listed is false. The individuals are exactly: Alex.\nFacts:\n- Alex is/has: affects compliance\n- Alex is/has: after market or service\n- Alex is/has: change\n\nSentence: (23) ‘substantial modification’ means a change to an AI system after its placing on the market or putting into service which is not foreseen or planned in the initial conformity assessment carried out by the provider and as a result of which the compliance of the AI system with the requirements set out in Chapter III, Section 2 is affected or results in a modification to the intended purpose for which the AI system has been assessed;\n\nIs the SENTENCE true in this situation (interpret general statements as being about the listed individuals)? Answer yes or no only.",
+   "verdict": true,
+   "A_true": false,
+   "n_facts": 3
+  },
+  {
+   "sid": "07d9cdecce",
+   "prompt": "Here are all the facts of a small situation. Anything not listed is false. The individuals are exactly: Alex.\nFacts:\n- Alex is/has: incomplete\n- Alex is/has: report\n\nSentence: Where necessary to ensure timely reporting, the provider or, where applicable, the deployer, may submit an initial report that is incomplete, followed by a complete report.\n\nIs the SENTENCE true in this situation (interpret general statements as being about the listed individuals)? Answer yes or no only.",
+   "verdict": true,
+   "A_true": true,
+   "n_facts": 2
+  }
+ ]
+}

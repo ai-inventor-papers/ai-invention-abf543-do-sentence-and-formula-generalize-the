@@ -1,0 +1,258 @@
+== devframe: s03_dev_frame.py
+04:57:32|INFO   |loaded 14236 dev rows Counter({'heldout_samples': 7000, 'heldout_confirm': 6300, 'contamination': 936})
+04:57:32|INFO   |dev greedy 6300; parse_ok 5999; panel items 609; solver-labelled 5846
+04:57:33|INFO   |dev baselines: 54478 scores for 7603 items
+== devpairs: pairs.py ../work/dev_pair_jobs.jsonl
+pairs: 22951 jobs, 0 new unique (0 identical strings), 0 to solve
+{"n_solved": 0}
+== devpairs: pairs.py ../work/dev_within_jobs.jsonl
+pairs: 17978 jobs, 0 new unique (0 identical strings), 0 to solve
+{"n_solved": 0}
+== freeze: receipt exists (results/frozen_config.json) -> not re-frozen
+== fresh: s05_fresh.py frame
+04:57:35|INFO   |fresh frame 8550 rows; greedy 4050 ([('deepseek-v3.1', 450), ('gemini-2.5-flash', 450)]...); greedy parse_ok 3828; samples 4500
+== fresh: s05_fresh.py dcpairs
+04:57:36|INFO   |DC fresh pair jobs: greedy 14520, within 11705
+04:57:36|INFO   |pairs: 26225 jobs, 0 new unique (0 identical strings), 0 to solve
+== fresh: s05_fresh.py lcpairs
+04:57:38|INFO   |LC pairs: 25626 jobs, 0 to compute
+04:57:38|INFO   |LC pairs done 0 in 0s
+== fresh: s05_fresh.py lc
+04:57:40|INFO   |LC_onecoin: {'loglik': -4171.919911805157, 'p_w': {'deepseek-v3.1': 0.4495622889702217, 'gemini-2.5-flash': 0.6628697545115404, 'gemma-3-27b': 0.5278900854633756, 'gpt-4.1-mini': 0.7330327732955021, 'gpt-oss-120b': 0.6900988764099211, 'llama-3.1-8b': 0.3360427207003362, 'mistral-small-3.2-24b': 0.5534632975240257, 'phi-4': 0.44256043838080666, 'qwen-2.5-7b': 0.3539596709342358}, 'pi': 0.999, 'rho': 0.06630177793235191, 'iters': 8, 'best_restart': 7, 'degenerate': False}
+04:57:42|INFO   |gold-as-rater: {'p_gold': 0.001, 'est_gold_error': 0.999, 'p_w': {'deepseek-v3.1': 0.4498418848657463, 'gemini-2.5-flash': 0.6624894003302326, 'gemma-3-27b': 0.5282992653591801, 'gpt-4.1-mini': 0.7329999722946651, 'gpt-oss-120b': 0.6909155703684519, 'llama-3.1-8b': 0.33667588338553167, 'mistral-small-3.2-24b': 0.5536160475405234, 'phi-4': 0.44337211588558584, 'qwen-2.5-7b': 0.35435779718512833}, 'pi': 0.999, 'rho': 0.04596675625197573, 'observed_curated_changed_rate': None, 'n_curated': 0, 'observed_v1_nonequiv_curated_rate': None, 'note': 'no AUROC for this variant (gold is the label source: circular)'}
+04:57:45|INFO   |LC_onecoin_str: {'loglik': -20.709902380559445, 'p_w': {'deepseek-v3.1': 0.001, 'gemini-2.5-flash': 0.001, 'gemma-3-27b': 0.001, 'gpt-4.1-mini': 0.001, 'gpt-oss-120b': 0.001, 'llama-3.1-8b': 0.001, 'mistral-small-3.2-24b': 0.001, 'phi-4': 0.001, 'qwen-2.5-7b': 0.001}, 'pi': 0.001, 'rho': 0.001, 'iters': 7, 'best_restart': 0, 'degenerate': True}
+04:57:55|INFO   |LC fresh: Counter({'LC_onecoin': 4050, 'LC_maj': 4050, 'LC_huiwalter': 4050, 'LC_onecoin_str': 4050, 'LC_ds_binary': 4050, 'LC_within': 900, 'B8': 900}); missing pairs 0
+== fresh: s05_fresh.py b7
+04:57:58|INFO   |B7 fresh: Counter({1: 3802, 0: 248}); joint Counter({'sat': 3835, 'no_parseable': 213, 'unsat': 2})
+== fresh: s05_fresh.py vc
+04:58:09|INFO   |VC fresh 4050 (lemmatizer wordnet)
+== local: s09b_local.py
+04:59:52|INFO   |loaded Qwen/Qwen3-8B@b968826d9c46:bf16 in 31s; VRAM 16.4 GB
+04:59:52|INFO   |[b3L_back] 272 prompts, 0 to generate
+04:59:52|INFO   |[tjL] 272 prompts, 0 to generate
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights:  83%|████████▎ | 85/103 [00:00<00:00, 835.39it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 860.01it/s]
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 745.33it/s]
+05:00:14|INFO   |B3 GPU scored 272/272 in 20s on cuda (MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli)
+05:00:15|INFO   |TJ_L parsed 272/272; B3L covered 272
+== scores: s10_scores.py
+05:00:21|INFO   |DC scored 4050; weights {'deepseek-v3.1': 0.05, 'gemini-2.5-flash': 0.7059153383437408, 'gemma-3-27b': 0.05642800514593151, 'gpt-4.1-mini': 1.015876074705476, 'gpt-oss-120b': 0.793242265955421, 'llama-3.1-8b': 0.05, 'mistral-small-3.2-24b': 0.21480098266197561, 'phi-4': 0.05, 'qwen-2.5-7b': 0.05}
+05:00:46|INFO   |scores: Counter({'DC': 4050, 'DC0': 4050, 'LC_onecoin': 4050, 'LC_maj': 4050, 'LC_huiwalter': 4050, 'LC_ds_binary': 4050, 'VC': 4050, 'B1': 4050, 'B2': 4050, 'B7': 4050, 'B7_arity_self': 4050, 'B7_arity_story': 4050, 'B7_joint': 4050, 'sp_net': 3828, 'sp_incomparable': 3828, 'sp_contradictory': 3828, 'sp_unalignable': 3828, 'DC_self': 900, 'LC_within': 900, 'B8': 900, 'B7_jacc': 900, 'B3nliL': 272, 'B3cosL': 272, 'TJ_L': 272})
+== tests: s11_tests.py
+05:00:49|INFO   |panel items 256 (Kish 201.69710288802236); solver rows 3720; panel&solver 245
+05:01:09|INFO   |T1: {"panel": [0.0327474255745277, 0.005383516686227885], "solver": [0.11835188620902903, 0.059899779063616924], "panel_base_noB3": [0.12612479744615201, 0.07764808035412724], "solver_all_rows_base_noB3": [0.15877544441374236, 0.13351593600618442]}
+05:01:11|INFO   |T2: panel {'vs_LC_maj_LB>0': True, 'vs_LC_ds_binary_point>0': False, 'vs_VC_LB>0': True} solver {'vs_LC_maj_LB>0': True, 'vs_LC_ds_binary_point>0': True, 'vs_VC_LB>0': True}
+05:01:11|INFO   |T3: top1 0.12216141476768975 majority 0.2553993974163924 (added_condition) TJ 0.01748324867248997; recall {'added_condition': {'n': 27, 'recall_weighted': 0.03874224326963416, 'tj_recall_weighted': 0.0, 'status': 'underpowered'}, 'dropped_condition': {'n': 14, 'recall_weighted': 0.4103914022793086, 'tj_recall_weighted': 0.0627814133757422, 'status': 'underpowered'}, 'quantifier_forall_exists': {'n': 21, 'recall_weighted': 0.2518981429922329, 'tj_recall_weighted': 0.0, 'status': 'underpowered'}}; pc {'dropped_condition': {'n_pairs': 7, 'DC': 1.0, 'B1': 0.6428571428571429, 'diff_lb_5': 0.1428571428571429, 'status': 'underpowered'}, 'implication_direction_or_only': {'n_pairs': 7, 'DC': 1.0, 'B1': 0.7857142857142857, 'diff_lb_5': 0.0, 'status': 'underpowered'}}
+05:01:13|INFO   |DECISION {'T1': 'PASS', 'T2': 'label-dependent', 'T3': 'fail', 'T4': {'gpt-4.1-mini': 'fail', 'llama-3.1-8b': 'fail'}}
+== secondary: s12_secondary.py
+05:01:16|INFO   |label quality: {"fleiss_kappa_L3_full_subset": 0.5379679144385028, "n_L3_full_subset": 24, "fleiss_kappa_L0_full_subset": 0.46640316205533594, "n_L0_full_subset": 45, "wrong_gold_rate_by_corpus": {"malls": {"rate": 0.5529411764705883, "ci95": [0.4823529411764706, 0.6294117647058823], "n": 170}, "folio": {"rate": 0.62, "ci95": [0.54, 0.7], "n": 150}, "proverqa": {"rate": 0.14615384615384616, "ci95": [0.09230769230769231, 0.2076923076923077], "n": 130}}, "wrong_gold_rate_all": {"rate": 0.4577777777777778, "ci95": [0.4111111111111111, 0.5022222222222222], "n": 450}, "correct_but_inequivalent_rate_weighted": 0.43814715094574136, "n_solver_nonequiv_panel": 168, "panel_unfaithful_among_solver_equiv_weighted": 0.08112004992815525, "n_solver_equiv_panel": 77, "solver_panel_agreement_weighted": 0.6892586733283742
+05:01:25|INFO   |ladder {'panel': {'L1_uniform': 0.8006328040813288, 'L12_uniform': 0.8006328040813288, 'L123_uniform': 0.7908190859099717, 'LC_maj': 0.7968846160822831, 'LC_ds_binary': 0.8295204929460426, 'LC_onecoin': 0.8337812015165488, 'DC': 0.8266578921845197, 'DC:L3off_UAin_uniform_caps1': 0.8006328040813288, 'DC:L3on_UAin_DS_caps1': 0.8201277612836312, 'DC+SP(oof)': 0.7913523093820041}, 'solver': {'L1_uniform': 0.8636254643701452, 'L12_uniform': 0.8630989223542415, 'L123_uniform': 0.8391946823861718, 'LC_maj': 0.8590120045439195, 'LC_ds_binary': 0.865226274907126, 'LC_onecoin': 0.8503814743176445, 'DC': 0.8741019618679193, 'DC:L3off_UAin_uniform_caps1': 0.8630989223542415, 'DC:L3on_UAin_DS_caps1': 0.8593874919406834, 'DC+SP(oof)': 0.8673356666973688}}
+05:01:54|INFO   |pairs: 3828 jobs, 0 new unique (0 identical strings), 0 to solve
+05:01:55|INFO   |wrong-gold flag {'n': 450, 'base_rate': 0.4577777777777778, 'AUROC_1_minus_DC_gold': 0.8586463472863282, 'precision_at_50': 0.8}
+05:02:27|INFO   |pairs: 12799 jobs, 158 new unique (0 identical strings), 158 to solve
+05:02:29|INFO   |pairs 8/158 2s (3.8/s)
+05:02:33|INFO   |pairs done: {'n_solved': 158, 'wall_s': 5.7, 'mean_s': 0.058987341772151904, 'p95_s': 0.3551000000000001, 'max_s': 0.683}
+05:03:59|INFO   |pairs: 3236 jobs, 0 new unique (0 identical strings), 0 to solve
+05:04:01|INFO   |analysis written
+== secondary: s12b_extra.py
+05:04:13|INFO   |{"per_type": {"added_condition": {"n_unfaithful": 27, "status": "descriptive (n<30)", "DC": 0.7990160554421664, "DC0": 0.8249412834375351, "LC_maj": 0.7624764904758841, "LC_ds_binary": 0.7959718290254374, "B1": 0.7042722056216005, "B3nliL": 0.8269847530535491, "VC": 0.5698644263648044, "TJ_L": 0.6147756529489453}, "quantifier_forall_exists": {"n_unfaithful": 21, "status": "descriptive (n<30)", "DC": 0.8958539817549079, "DC0": 0.9136182786597524, "LC_maj": 0.8808699430618688, "LC_ds_binary": 0.9138864433162174, "B1": 0.8574671282629599, "B3nliL": 0.809303180972685, "VC": 0.7630926409906033, "TJ_L": 0.7812125134272984}, "dropped_condition": {"n_unfaithful": 14, "status": "descriptive (n<30)", "DC": 0.7848189203654597, "DC0": 0.8001546099545227, "LC_maj": 0.7811089631913015, "LC_ds_binary": 0.8168511516700219, "B1": 0.7474215970933114, "B3nliL": 0.8595094298851256, "VC": 0.7875338038598663, "TJ_L": 0.502868822452971}, "implication_direction_or_only": {"n_unfaithful": 12, "status": "descriptive (n<30)", "DC": 0.8807990943389399, "DC0": 0.9233098422734486, "LC_maj": 0.869548481615658, "LC_ds_binary": 0.9207215421520022, "B1": 0.8595279219912841, "B3nliL": 0.828733210037359, "VC": 0.6640878284263306, "TJ_L": 0.7225764960016041}, "quantifier_scope": {"n_unfaithful": 10, "status": "descriptive (n<30)", "DC": 0.8217495166623082, "DC0": 0.8381422146871721, "LC_maj": 0.7725175910539884, "LC_ds_binary": 0.7918994496116233, "B1": 0.8745455399199082, "B3nliL": 0.6390759258685386, "VC": 0.7230971743896507, "TJ_L": 0.7851884741901695}, "syntax_unparseable": {"n_unfaithful": 7, "status": "descriptive (n<30)", "DC": 0.7324153884999225, "DC0": 0.7695496854181301, "LC_maj": 0.7070813656630651, "LC_ds_binary": 0.736197515638311, "B1": 0.9633427053006994, "B3nliL": 0.7305986600608187, "VC": 0.5212771699416873, "TJ_L": 0.8897530486205402}, "connective_and_or": {"n_unfaithful": 6, "status": "descriptive (n<30)", "DC": 0.8096204471157776, "DC0": 0.8629361915733863, "LC_maj": 0.7279274430657753, "LC_ds_binary": 0.7509491518363953, "B1": 0.7035392669037909, "B3nliL": 0.8087094007857779, "VC": 0.5445529445554286, "TJ_L": 0.5667193360282509}, "conflation": {"n_unfaithful": 6, "status": "descriptive (n<30)", "DC": 0.8432555522311546, "DC0": 0.8395242444179927, "LC_maj": 0.7778358035672086, "LC_ds_binary": 0.811603972224733, "B1": 0.7144416861822996, "B3nliL": 0.7164114000578166, "VC": 0.8828747473134367, "TJ_L": 0.5498732084764731}, "wrong_constant": {"n_unfaithful": 3, "status": "desc
+== secondary: s12c_perturb.py
+05:04:22|INFO   |anchors 298; verified mutants 1429 Counter({'NEG': 296, 'IMPL_REV': 254, 'ADD': 254, 'QUANT': 207, 'ANDOR': 204, 'DROP': 163, 'ARG_SWAP': 51})
+05:04:23|INFO   |pairs: 10868 jobs, 0 new unique (0 identical strings), 0 to solve
+05:05:12|INFO   |{"NEG": {"n": 296, "expected_type": "negation_polarity", "detection_DC": 0.9290540540540541, "detection_DC_ci95": [0.9087837837837838, 0.9493243243243243], "mutant_still_in_mode": 0.05067567567567568, "typing_accuracy": 0.02027027027027027, "type_distribution": {"other": 235, "quantifier_forall_exists": 31, "negation_polarity": 6, "none": 15, "added_condition": 2, "dropped_condition": 7}, "relation_to_anchor": {"INCOMPARABLE": 286, "CONTRADICTORY": 8, "STRONGER": 2}, "detection_VC": 0.5, "mean_DC_anchor": 0.6115170591605685, "mean_DC_mutant": 6.206918873878706e-05}, "IMPL_REV": {"n": 254, "expected_type": "implication_direction_or_only", "detection_DC": 0.8877952755905512, "detection_DC_ci95": [0.860236220472441, 0.9153543307086615], "mutant_still_in_mode": 0.12992125984251968, "typing_accuracy": 0.2283464566929134, "type_distribution": {"implication_direction_or_only": 58, "other": 120, "added_condition": 3, "quantifier_forall_exists": 31, "dropped_condition": 8, "none": 33, "negation_polarity": 1}, "relation_to_anchor": {"INCOMPARABLE": 252, "CONTRADICTORY": 1, "WEAKER": 1}, "detection_VC": 0.5, "mean_DC_anchor": 0.6293738303136985, "mean_DC_mutant": 0.08107085994929158}, "ADD": {"n": 254, "expected_type": "added_condition", "detection_DC": 0.9133858267716536, "detection_DC_ci95": [0.8858267716535433, 0.9390255905511811], "mutant_still_in_mode": 0.07874015748031496, "typing_accuracy": 0.7204724409448819, "type_distribution": {"added_condition": 183, "other": 49, "none": 20, "dropped_condition": 1, "quantifier_forall_exists": 1}, "relation_to_anchor": {"WEAKER": 254}, "detection_VC": 0.96, "mean_DC_anchor": 0.6293738303136985, "mean_DC_mutant": 0.029349870248861754}, "ANDOR": {"n": 204, "expected_type": "connective_and_or", "detection_DC": 0.9191176470588235, "detection_DC_ci95": [0.8946078431372549, 0.9436274509803921], "mutant_still_in_mode": 0.06372549019607843, "typing_accuracy": 0.0, "type_distribution": {"other": 137, "added_condition": 14, "dropped_condition": 7, "quantifier_forall_exists": 33, "none": 13}, "relation_to_anchor": {"STRONGER": 93, "WEAKER": 104, "INCOMPARABLE": 7}, "detection_VC": 0.5, "mean_DC_anchor": 0.5503343836659775, "mean_DC_mutant": 0.0002504183722927133}, "QUANT": {"n": 207, "expected_type": "quantifier_forall_exists", "detection_DC": 0.8719806763285024, "detection_DC_ci95": [0.8381642512077294, 0.9082125603864735], "mutant_still_in_mode": 0.0821256038647343, "typing_accuracy": 0.5990338164251208, "type_distribution": {"other": 62, "quantifier_forall_exists": 124, "none": 17, "added_condition": 2, "dropped_condition": 2}, "relation_to_anchor": {"INCOMPARABLE": 191, "WEAKER": 9, "STRONGER": 7}, "detection_VC": 0.5, "mean_DC_anchor": 0.5300044243663418, "mean_DC_mutant": 0.022088759672606224}, "DROP": {"n": 163, "expected_type": "dropped_condition", "detection_DC": 0.8865030674846626, "detection_DC_ci95": [0.8496932515337423, 0.9202453987730062], "mutant_still_in_mode": 0.08588957055214724, "typing_accuracy": 0.49693
+== secondary: report_tables.py
+## Dev grid (freeze; 609 dev panel items + 5,846 dev solver rows)
+
+| config | AUROC_P | AUROC_S | mean | coverage | EQUIV-only-by-L2/L3 share of pairs | non-transitivity |
+|---|---|---|---|---|---|---|
+| L3on_UAin_DS_caps1 | 0.768 | 0.826 | 0.797 | 0.952 | 0.058 | 0.0036 |
+| L3on_UAin_uniform_caps1 | 0.760 | 0.813 | 0.786 | 0.952 | 0.058 | 0.0036 |
+| L3on_UAout_DS_caps1 | 0.782 | 0.814 | 0.798 | 0.930 | 0.058 | 0.0036 |
+| L3on_UAout_uniform_caps1 | 0.774 | 0.797 | 0.785 | 0.930 | 0.058 | 0.0036 |
+| L3off_UAin_DS_caps1 **(frozen)** | 0.777 | 0.855 | 0.816 | 0.952 | 0.001 | 0.0000 |
+| L3off_UAin_uniform_caps1 | 0.771 | 0.841 | 0.806 | 0.952 | 0.001 | 0.0000 |
+| L3off_UAout_DS_caps1 | 0.791 | 0.843 | 0.817 | 0.930 | 0.001 | 0.0000 |
+| L3off_UAout_uniform_caps1 | 0.784 | 0.826 | 0.805 | 0.930 | 0.001 | 0.0000 |
+| L3on_UAin_DS_caps0.5 | 0.768 | 0.826 | 0.797 | 0.952 | 0.058 | 0.0036 |
+| L3on_UAin_uniform_caps0.5 | 0.760 | 0.813 | 0.786 | 0.952 | 0.058 | 0.0036 |
+| L3on_UAout_DS_caps0.5 | 0.782 | 0.814 | 0.798 | 0.930 | 0.058 | 0.0036 |
+| L3on_UAout_uniform_caps0.5 | 0.774 | 0.797 | 0.785 | 0.930 | 0.058 | 0.0036 |
+
+## Fresh AUROC (panel: 256 adjudicated items, raked weights; solver: 3,720 audited-solver rows)
+
+| metric | AUROC_P [95% CI] | n_P | AUROC_S [95% CI] | n_S | coverage |
+|---|---|---|---|---|---|
+| DC0 | 0.853 [0.798, 0.898] | 256 | 0.874 [0.849, 0.897] | 3720 | 1.000 |
+| B8 | 0.843 [0.777, 0.904] | 143 | 0.784 [0.753, 0.813] | 823 | 0.993 |
+| DC_self | 0.842 [0.775, 0.903] | 143 | 0.784 [0.754, 0.814] | 823 | 0.993 |
+| LC_huiwalter | 0.836 [0.778, 0.887] | 256 | 0.852 [0.824, 0.877] | 3720 | 0.984 |
+| LC_onecoin | 0.834 [0.776, 0.885] | 256 | 0.850 [0.823, 0.876] | 3720 | 0.984 |
+| LC_ds_binary | 0.830 [0.773, 0.878] | 256 | 0.865 [0.840, 0.889] | 3720 | 0.984 |
+| DC | 0.827 [0.770, 0.877] | 256 | 0.874 [0.849, 0.897] | 3720 | 1.000 |
+| LC_maj | 0.797 [0.737, 0.850] | 256 | 0.859 [0.833, 0.883] | 3720 | 0.984 |
+| B1 | 0.791 [0.726, 0.843] | 256 | 0.727 [0.698, 0.755] | 3720 | 1.000 |
+| B3nliL | 0.784 [0.724, 0.835] | 256 | 0.619 [0.546, 0.687] | 260 | 1.000 |
+| B3cosL | 0.752 [0.686, 0.817] | 256 | 0.657 [0.587, 0.730] | 260 | 1.000 |
+| VC | 0.674 [0.598, 0.746] | 256 | 0.791 [0.764, 0.815] | 3720 | 1.000 |
+| TJ_L | 0.659 [0.611, 0.710] | 256 | 0.593 [0.557, 0.631] | 260 | 1.000 |
+| B7 | 0.554 [0.522, 0.590] | 256 | 0.503 [0.500, 0.505] | 3720 | 1.000 |
+| B2 | 0.549 [0.518, 0.584] | 256 | 0.500 [0.500, 0.500] | 3720 | 1.000 |
+| sp_net | 0.415 [0.358, 0.467] | 245 | 0.464 [0.449, 0.480] | 3720 | 1.000 |
+
+## Pre-registered tests (fresh only; PASS requires both labels; T3 panel-only)
+
+| test | panel | solver | verdict |
+|---|---|---|---|
+| T1 Δ AUROC(base+DC − base), base=[B1,B2,B3nliL,B3cosL,B7] | 0.033 [-0.001, 0.066] LB5 0.005 | 0.118 [0.051, 0.192] LB5 0.060 | **PASS** |
+| T1 placebo (DC shuffled in strata) | -0.003 [-0.016, 0.008] | -0.001 [-0.010, 0.007] | – |
+| T1 sensitivity base=[B1,B2,B7] | 0.126 [0.066, 0.189] | 0.159 [0.129, 0.190] (all 3,720 rows) | – |
+| T2 DC − LC_maj (LB>0) | 0.030 [0.012, 0.049] LB5 0.014 | 0.015 [0.005, 0.026] LB5 0.007 | |
+| T2 DC − LC_ds_binary (point>0) | -0.003 [-0.024, 0.017] LB5 -0.021 | 0.009 [-0.000, 0.019] LB5 0.001 | |
+| T2 DC − VC (LB>0) | 0.152 [0.096, 0.209] LB5 0.104 | 0.083 [0.066, 0.102] LB5 0.069 | |
+| T2 overall | False | True | **label-dependent** |
+| T3a top-1 type (DC 0.122 vs majority added_condition 0.255 + 0.10; TJ_L 0.017) | False | panel-only | |
+| T3b recall ≥ 0.5 (added / dropped / ∀∃) | added 0.039 (n=27), dropped 0.410 (n=14), quantifier 0.252 (n=21) | – | |
+| T3c within-sentence DC vs B1 | dropped_condition: DC 1.000 B1 0.643 (pairs 7, underpowered), implication_direction_or_only: DC 1.000 B1 0.786 (pairs 7, underpowered) | – | **fail** |
+| T4 gpt-4.1-mini | DC_self−B8 0.000 (LB5 0.000); stack Δ 0.015 (LB5 -0.062); n=76 | DC_self−B8 -0.002 (LB5 -0.007); stack Δ 0.089 (LB5 0.054); n=431 | **fail** |
+| T4 llama-3.1-8b | DC_self−B8 -0.016 (LB5 -0.041); stack Δ -0.042 (LB5 -0.103); n=67 | DC_self−B8 0.005 (LB5 -0.002); stack Δ 0.125 (LB5 0.081); n=392 | **fail** |
+
+## Circularity (panel items whose candidate is solver-NON-equivalent to the audited gold)
+
+| metric | AUROC_P non-equiv (n=168) | AUROC_P no-bijection (n=143) |
+|---|---|---|
+| DC | 0.776 [0.679, 0.858] | 0.771 [0.678, 0.855] |
+| LC_ds_binary | 0.805 [0.718, 0.878] | 0.796 [0.702, 0.871] |
+| LC_maj | 0.752 [0.654, 0.836] | 0.744 [0.644, 0.829] |
+| B1 | 0.738 [0.659, 0.816] | 0.744 [0.652, 0.822] |
+| B3nliL | 0.799 [0.738, 0.862] | 0.809 [0.733, 0.876] |
+| VC | 0.554 [0.437, 0.671] | 0.585 [0.462, 0.714] |
+| TJ_L | 0.647 [0.575, 0.713] | 0.633 [0.563, 0.706] |
+
+## Component ladder (fresh; derived from one relation cache)
+
+| step | AUROC_P | AUROC_S |
+|---|---|---|
+| L1_uniform | 0.801 | 0.864 |
+| L12_uniform | 0.801 | 0.863 |
+| L123_uniform | 0.791 | 0.839 |
+| LC_maj | 0.797 | 0.859 |
+| LC_ds_binary | 0.830 | 0.865 |
+| LC_onecoin | 0.834 | 0.850 |
+| DC | 0.827 | 0.874 |
+| DC:L3off_UAin_uniform_caps1 | 0.801 | 0.863 |
+| DC:L3on_UAin_DS_caps1 | 0.820 | 0.859 |
+| DC+SP(oof) | 0.791 | 0.867 |
+
+## Complexity (fresh, AUROC)
+
+| stratum | DC P | B1 P | DC S | B1 S | LC_ds_binary S |
+|---|---|---|---|---|---|
+| n_tokens=<=12 | 0.856 (n=80) | 0.764 (n=80) | 0.885 (n=1403) | 0.699 (n=1403) | 0.898 (n=1403) |
+| n_tokens=13-20 | 0.824 (n=136) | 0.797 (n=136) | 0.849 (n=1808) | 0.746 (n=1808) | 0.824 (n=1808) |
+| n_tokens=>20 | 0.727 (n=40) | 0.810 (n=40) | 0.881 (n=509) | 0.750 (n=509) | 0.868 (n=509) |
+| n_quantifiers=0 | 0.923 (n=62) | 0.743 (n=62) | 0.958 (n=932) | 0.814 (n=932) | 0.943 (n=932) |
+| n_quantifiers=1 | 0.829 (n=149) | 0.820 (n=149) | 0.841 (n=2104) | 0.662 (n=2104) | 0.849 (n=2104) |
+| n_quantifiers=2+ | 0.659 (n=45) | 0.778 (n=45) | 0.847 (n=684) | 0.721 (n=684) | 0.847 (n=684) |
+| nesting_depth=<=3 | 0.875 (n=164) | 0.796 (n=164) | 0.872 (n=2364) | 0.737 (n=2364) | 0.861 (n=2364) |
+| nesting_depth=4-5 | 0.661 (n=68) | 0.732 (n=68) | 0.849 (n=924) | 0.600 (n=924) | 0.848 (n=924) |
+| nesting_depth=6+ | 0.736 (n=24) | 0.780 (n=24) | 0.817 (n=432) | 0.734 (n=432) | 0.826 (n=432) |
+| n_conditions=0-1 | 0.768 (n=74) | 0.793 (n=74) | 0.885 (n=1142) | 0.718 (n=1142) | 0.897 (n=1142) |
+| n_conditions=2 | 0.795 (n=58) | 0.806 (n=58) | 0.884 (n=914) | 0.684 (n=914) | 0.873 (n=914) |
+| n_conditions=3+ | 0.871 (n=124) | 0.787 (n=124) | 0.860 (n=1664) | 0.754 (n=1664) | 0.837 (n=1664) |
+
+panel: tercile gap DC−B1 (bottom/middle/top) = 0.088, 0.107, -0.028; slope -0.058 [-0.135, 0.022]
+
+solver: tercile gap DC−B1 (bottom/middle/top) = 0.167, 0.166, 0.118; slope -0.024 [-0.059, 0.009]
+
+## Per panel error type (faithful vs unfaithful-of-type-X; all classes n<30 → descriptive)
+
+| type | n | DC | DC0 | LC_ds_binary | B1 | B3nliL | VC | TJ_L |
+|---|---|---|---|---|---|---|---|---|
+| added_condition | 27 | 0.799 | 0.825 | 0.796 | 0.704 | 0.827 | 0.570 | 0.615 |
+| quantifier_forall_exists | 21 | 0.896 | 0.914 | 0.914 | 0.857 | 0.809 | 0.763 | 0.781 |
+| dropped_condition | 14 | 0.785 | 0.800 | 0.817 | 0.747 | 0.860 | 0.788 | 0.503 |
+| implication_direction_or_only | 12 | 0.881 | 0.923 | 0.921 | 0.860 | 0.829 | 0.664 | 0.723 |
+| quantifier_scope | 10 | 0.822 | 0.838 | 0.792 | 0.875 | 0.639 | 0.723 | 0.785 |
+| syntax_unparseable | 7 | 0.732 | 0.770 | 0.736 | 0.963 | 0.731 | 0.521 | 0.890 |
+| connective_and_or | 6 | 0.810 | 0.863 | 0.751 | 0.704 | 0.809 | 0.545 | 0.567 |
+| conflation | 6 | 0.843 | 0.840 | 0.812 | 0.714 | 0.716 | 0.883 | 0.550 |
+| wrong_constant | 3 | 0.868 | 0.865 | 0.872 | 0.770 | 0.599 | 0.805 | 0.471 |
+| negation_polarity | 3 | 0.754 | 0.883 | 0.758 | 0.996 | 0.785 | 0.612 | 0.846 |
+| other | 3 | 0.763 | 0.760 | 0.753 | 0.654 | 0.603 | 0.485 | 0.471 |
+| argument_swap | 2 | 0.930 | 0.928 | 0.976 | 0.871 | 0.789 | 0.890 | 0.700 |
+| wrong_split | 2 | 0.839 | 0.928 | 0.822 | 0.770 | 0.889 | 0.799 | 0.471 |
+
+Within-sentence paired AUROC (panel, 70 faithful×unfaithful pairs in 70 sentences): DC 0.929 [0.864, 0.979]; DC0 0.929 [0.864, 0.979]; LC_ds_binary 0.914 [0.857, 0.971]; B1 0.786 [0.714, 0.850]; B3nliL 0.721 [0.614, 0.821]; VC 0.736 [0.643, 0.829]; TJ_L 0.693 [0.636, 0.750]
+
+## Shared bias (mode-right vs mode-wrong sentences)
+
+| stratum | DC | B1 | LC_maj |
+|---|---|---|---|
+| panel mode_right (n=195) | 0.883 [0.822, 0.934] | 0.782 | 0.867 |
+| panel mode_wrong (n=61) | 0.419 [0.292, 0.557] | 0.786 | 0.433 |
+| solver mode_right (n=2167) | 0.912 [0.876, 0.946] | 0.752 | 0.899 |
+| solver mode_wrong (n=1553) | 0.517 [0.458, 0.566] | 0.554 | 0.576 |
+
+## System level (9 systems; Kendall τ_b [sentence-bootstrap CI], pairwise accuracy)
+
+| metric | τ_b panel | pairwise panel | τ_b solver | pairwise solver |
+|---|---|---|---|---|
+| DC | 0.556 [0.222, 0.722] | 0.778 | 0.889 [0.667, 0.944] | 0.944 |
+| LC_ds_binary | 0.611 [0.222, 0.722] | 0.806 | 0.722 [0.556, 0.889] | 0.861 |
+| LC_maj | 0.500 [0.111, 0.667] | 0.750 | 0.611 [0.389, 0.778] | 0.806 |
+| B1 | 0.833 [0.389, 0.889] | 0.917 | 0.722 [0.611, 0.889] | 0.861 |
+| VC | 0.500 [0.167, 0.722] | 0.750 | 0.611 [0.444, 0.778] | 0.806 |
+| B2 | 0.479 [0.181, 0.761] | 0.722 | 0.704 [0.479, 0.761] | 0.833 |
+| B7 | 0.500 [0.222, 0.770] | 0.750 | 0.611 [0.457, 0.761] | 0.806 |
+
+## Invariance under solver-verified meaning-preserving rewrites (400 fresh candidates)
+
+| rewrite | n verified | DC false-alarm rate (|ΔDC|>0.05 or mode flip or type change) |
+|---|---|---|
+| SYN_RENAME | 396 | 0.0025 |
+| RAND_RENAME | 399 | 0.0050 |
+| CONTRAPOS | 311 | 0.0000 |
+| DEMORGAN | 276 | 0.0000 |
+| REORDER | 313 | 0.0000 |
+
+VC on the synonym-renamed subset: false-alarm rate 0.864 (mean |ΔVC| 0.199).
+
+## Wrong-gold flag (gold as a 10th peer)
+
+AUROC of 1 − DC_gold vs the L0 verdict = 0.859 (n=450, base rate 0.458); precision@50 = 0.800.
+
+## Label quality
+
+- Wrong shipped gold (L0): malls 0.553 [0.482, 0.629] (n=170); folio 0.620 [0.540, 0.700] (n=150); proverqa 0.146 [0.092, 0.208] (n=130)
+- Correct-but-inequivalent (panel-faithful share among solver-non-equivalent panel items, weighted): 0.438 (n=168)
+- Panel-unfaithful among solver-equivalent panel items: 0.081 (n=77)
+- Solver–panel agreement (weighted): 0.689
+- Fleiss κ: L3 full-panel subset 0.538 (n=24); L0 subset 0.466 (n=45)
+- Panel weights: {"frame_n": 3933, "n_items": 256, "n_floor_capped": 148, "kish_n_eff": 201.69710288802236, "max_min_ratio": 6.0}
+
+## Coverage and cost
+
+- Relation shares over 14520 fresh greedy pairs: INCOMPARABLE 0.315, WEAKER 0.113, EQUIV 0.385, STRONGER 0.096, UNALIGNABLE 0.090, CONTRADICTORY 0.001; EQUIV non-transitivity 0.0000.
+- Coverage: DC 0.945, LC_maj 0.930, LC_ds_binary 0.930, VC 0.945, B1 1.000, B7 1.000; unparseable greedy outputs 222 (kept, scored 0.5 by DC / 0 by DC0).
+- DC: $0 when peers exist; 0.158 s solver time per item (p95 0.528 s); $0.00039 per item if the 8 peers must be generated. B1: $0.000030 per item.
+
+## Contamination (dev, entity-renamed candidates)
+
+mean DC(original) − DC(renamed) = 0.000 [0.000, 0.000] over 936 pairs (B1 in round 2: +0.096): DC is exactly name-blind.
+
+## Frontier gap (dev anchor only)
+
+stack [B1, B2, DC] OOF AUROC_P 0.796 vs gemini-2.5-pro B1plus 0.825 (B1 0.762), n=609.
+
+## Controlled perturbations of 298 solver-verified faithful anchors (mechanism evidence only)
+
+| operator | n | P(DC(anchor) > DC(mutant)) [95% CI] | DC typing accuracy | mutant still in mode | VC detection |
+|---|---|---|---|---|---|
+| NEG (negation_polarity) | 296 | 0.929 [0.909, 0.949] | 0.020 | 0.051 | 0.500 |
+| IMPL_REV (implication_direction_or_only) | 254 | 0.888 [0.860, 0.915] | 0.228 | 0.130 | 0.500 |
+| ADD (added_condition) | 254 | 0.913 [0.886, 0.939] | 0.720 | 0.079 | 0.960 |
+| ANDOR (connective_and_or) | 204 | 0.919 [0.895, 0.944] | 0.000 | 0.064 | 0.500 |
+| QUANT (quantifier_forall_exists) | 207 | 0.872 [0.838, 0.908] | 0.599 | 0.082 | 0.500 |
+| DROP (dropped_condition) | 163 | 0.887 [0.850, 0.920] | 0.497 | 0.086 | 0.923 |
+| ARG_SWAP (argument_swap) | 51 | 0.647 [0.559, 0.735] | 0.196 | 0.157 | 0.500 |
+== export: s13_export.py
+05:05:16|INFO   |exported 8550 fresh rows, 4050 method_out examples

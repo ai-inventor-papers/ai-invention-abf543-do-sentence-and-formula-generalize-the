@@ -1,0 +1,31 @@
+04:13:53|INFO   |[legal] sentences 158 pairs 5949 workers 6 budget 300.0s
+04:13:53|INFO   |[legal] done 0/158 running 6 elapsed 1s
+04:14:53|INFO   |[legal] done 7/158 running 6 elapsed 60s
+04:14:53|INFO   |[legal] done 7/158 running 6 elapsed 61s
+04:15:53|INFO   |[legal] done 20/158 running 6 elapsed 120s
+04:15:53|INFO   |[legal] done 20/158 running 6 elapsed 121s
+04:16:53|INFO   |[legal] done 36/158 running 6 elapsed 180s
+04:16:53|INFO   |[legal] done 36/158 running 6 elapsed 181s
+04:17:53|INFO   |[legal] done 57/158 running 6 elapsed 240s
+04:17:53|INFO   |[legal] done 57/158 running 6 elapsed 241s
+04:18:53|INFO   |[legal] done 81/158 running 5 elapsed 300s
+04:18:53|INFO   |[legal] done 81/158 running 6 elapsed 301s
+04:19:53|INFO   |[legal] done 99/158 running 6 elapsed 360s
+04:19:53|INFO   |[legal] done 99/158 running 6 elapsed 361s
+04:20:53|INFO   |[legal] done 113/158 running 6 elapsed 420s
+04:20:53|INFO   |[legal] done 113/158 running 6 elapsed 421s
+04:21:53|INFO   |[legal] done 140/158 running 2 elapsed 480s
+04:21:53|INFO   |[legal] done 140/158 running 2 elapsed 481s
+04:22:53|INFO   |[legal] done 140/158 running 2 elapsed 540s
+04:22:53|INFO   |[legal] done 140/158 running 2 elapsed 541s
+04:23:53|INFO   |[legal] done 140/158 running 2 elapsed 600s
+04:23:53|INFO   |[legal] done 140/158 running 2 elapsed 601s
+04:24:53|INFO   |[legal] done 140/158 running 2 elapsed 660s
+04:24:53|INFO   |[legal] done 140/158 running 2 elapsed 661s
+04:25:53|INFO   |[legal] done 141/158 running 1 elapsed 720s
+04:25:53|INFO   |[legal] done 141/158 running 1 elapsed 721s
+04:26:53|INFO   |[legal] done 141/158 running 1 elapsed 780s
+04:26:53|INFO   |[legal] done 141/158 running 1 elapsed 781s
+04:27:53|INFO   |[legal] done 141/158 running 1 elapsed 840s
+04:27:53|INFO   |[legal] done 141/158 running 1 elapsed 841s
+04:27:58|INFO   |[legal] {"n_pairs": 5949, "sec_mean": 0.3991862878530113, "sec_p90": 0.7809000000000006, "sec_total": 2346.417, "relations": {"STRONGER": 287, "COMPATIBLE-INCOMPARABLE": 3608, "WEAKER": 1261, "EQUIV": 365, "UNALIGNABLE": 333, "UNKNOWN": 95}, "levels": {"2": 4520, "1": 546, "3": 455, "None": 428}, "sec_by_npreds": {"7-12": {"n": 2840, "mean": 0.3459221830985916}, "<=6": {"n": 2111, "mean": 0.1604992894362861}, ">12": {"n": 903, "mean": 1.1353089700996677}}, "wall_s": 844.0, "n_missing_marked_unknown": 71, "n_sentences": 158, "limits": {"l1_cap": 5040, "l2_cap": 2000, "l3_cap": 300, "l2_min_cov": 0.5, "l3_max_defs": 2, "l3_max_lits": 2, "domains": [1, 2, 3, 4], "z3_timeout_ms": 5000, "pair_seconds": 20.0, "order": "default", "n_random": 24, "n_models": 6, "max_z3_maps": 40}, "big_rule": null}

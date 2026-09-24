@@ -1,0 +1,91 @@
+L2/L3 EQUIV verdicts: 68 of 5949 pairs; sample of 10
+
+== EQUIV level 3 direction B_in_A (2.99s)
+A: ∀rwtp (((((((Documentation(rwtp) ∧ (∃obj HasObjective(rwtp, obj))) ∧ (∃meth HasMethodology(rwtp, meth))) ∧ (∃scope (GeographicalPopulationTemporalScope(scope) ∧ HasScope(rwtp, scope)))) ∧ (∃mon HasMonitoring(rwtp, mon))) ∧ (∃org HasOrganisation(rwtp, org))) ∧ (∃test (TestingRealWorldConditions(test) ∧ HasConduct(rwtp, test)))) → RealWorldTestingPlan(rwtp))
+B: ∀rwtp ((Documentation(rwtp) ∧ (∃obj (HasObjectives(rwtp, obj) ∧ (∃meth (HasMethodology(rwtp, meth) ∧ (∃scope (HasScope(rwtp, scope) ∧ (∃mon (HasMonitoring(rwtp, mon) ∧ (∃org (HasOrganisation(rwtp, org) ∧ (∃test (TestingRealWorldConditions(test) ∧ DescribesConduct(rwtp, test)))))))))))))) → RealWorldTestingPlan(rwtp))
+map(B->A): {'Documentation': 'Documentation', 'TestingRealWorldConditions': 'TestingRealWorldConditions', 'RealWorldTestingPlan': 'RealWorldTestingPlan', 'HasObjectives': 'HasObjective', 'HasMethodology': 'HasMethodology', 'HasMonitoring': 'HasMonitoring', 'HasOrganisation': 'HasOrganisation', 'DescribesConduct': 'HasConduct'}
+defs: {'HasScope': [['GeographicalPopulationTemporalScope', [1], False], ['HasScope', [0, 1], False]]}
+
+== EQUIV level 3 direction B_in_A (0.041s)
+A: ∀x (MarketSurveillanceAuthority(x) ↔ ((NationalAuthority(x) ∧ CarriesOutActivities(x, Regulation2019_1020)) ∧ TakesMeasures(x, Regulation2019_1020)))
+B: ∀x (MarketSurveillanceAuthority(x) ↔ (NationalAuthority(x) ∧ CarriesOutActivitiesAndMeasures(x, Regulation2019_1020)))
+map(B->A): {'MarketSurveillanceAuthority': 'MarketSurveillanceAuthority', 'NationalAuthority': 'NationalAuthority'}
+defs: {'CarriesOutActivitiesAndMeasures': [['CarriesOutActivities', [0, 1], False], ['TakesMeasures', [0, 1], False]]}
+
+== EQUIV level 3 direction B_in_A (0.043s)
+A: ∀x ((¬Married(x) ∧ ¬SurvivingSpouse(x)) → (ApplyParagraph1(x, " 750") ∧ ApplyParagraph2(x, " 750")))
+B: ∀x ((¬Married(x) ∧ ¬SurvivingSpouse(x)) → ApplyParagraphs12(x, 750))
+map(B->A): {'Married': 'Married', 'SurvivingSpouse': 'SurvivingSpouse'}
+defs: {'ApplyParagraphs12': [['ApplyParagraph1', [0, 1], False], ['ApplyParagraph2', [0, 1], False]]}
+
+== EQUIV level 3 direction B_in_A (0.008s)
+A: ∀x (Profiling(x) ↔ (DefinedInArticle4Point4(x) ∧ RegulationEU2016_679(x)))
+B: ∀x (Profiling(x) ↔ DefinedInArticle4Point4OfRegulationEU2016_679(x))
+map(B->A): {'Profiling': 'Profiling'}
+defs: {'DefinedInArticle4Point4OfRegulationEU2016_679': [['DefinedInArticle4Point4', [0], False], ['RegulationEU2016_679', [0], False]]}
+
+== EQUIV level 3 direction A_in_B (1.823s)
+A: ∀r ((((Risk(r) ∧ (∃hic ((HighImpactCapabilities(hic) ∧ SpecificTo(r, hic)) ∧ (∃gm (GeneralPurposeAIModel(gm) ∧ HasCapabilities(gm, hic)))))) ∧ ((((((∃um (UnionMarket(um) ∧ HasSignificantImpactOn(r, um))) ∨ (∃ph (PublicHealth(ph) ∧ NegativeEffectOn(r, ph)))) ∨ (∃sf (Safety(sf) ∧ NegativeEffectOn(r, sf)))) ∨ (∃ps (PublicSecurity(ps) ∧ NegativeEffectOn(r, ps)))) ∨ (∃fr (FundamentalRights(fr) ∧ NegativeEffectOn(r, fr)))) ∨ (∃soc (Society(soc) ∧ NegativeEffectOn(r, soc))))) ∧ (∃vc (ValueChain(vc) ∧ PropagatedAtScaleAcross(r, vc)))) → SystemicRisk(r))
+B: ∀r ((((Risk(r) ∧ (∃hic ((HighImpactCapabilityGPAIModel(hic) ∧ SpecificTo(r, hic)) ∧ (∃gm (GPAIModel(gm) ∧ HasHighImpactCapability(gm, hic)))))) ∧ ((((((∃m (UnionMarket(m) ∧ HasSignificantImpactOn(r, m))) ∨ (∃ph ((PublicHealth(ph) ∧ NegativeEffectOn(r, ph)) ∧ ReasonablyForeseeable(r)))) ∨ (∃s ((Safety(s) ∧ NegativeEffectOn(r, s)) ∧ ReasonablyForeseeable(r)))) ∨ (∃ps ((PublicSecurity(ps) ∧ NegativeEffectOn(r, ps)) ∧ ReasonablyForeseeable(r)))) ∨ (∃fr ((FundamentalRights(fr) ∧ NegativeEffectOn(r, fr)) ∧ ReasonablyForeseeable(r)))) ∨ (∃soc ((Society(soc) ∧ NegativeEffectOn(r, soc)) ∧ ReasonablyForeseeable(r))))) ∧ (∃vc (ValueChain(vc) ∧ CanBePropagatedAtScale(r, vc)))) → SystemicRisk(r))
+map(B->A): {'Risk': 'Risk', 'HighImpactCapabilities': 'HighImpactCapabilityGPAIModel', 'GeneralPurposeAIModel': 'GPAIModel', 'UnionMarket': 'UnionMarket', 'PublicHealth': 'PublicHealth', 'Safety': 'Safety', 'PublicSecurity': 'PublicSecurity', 'FundamentalRights': 'FundamentalRights', 'Society': 'Society', 'ValueChain': 'ValueChain', 'SystemicRisk': 'SystemicRisk', 'SpecificTo': 'SpecificTo', 'HasCapabilities': 'HasHighImpactCapability', 'HasSignificantImpactOn': 'HasSignificantImpactOn', 'PropagatedAtScaleAcross': 'CanBePropagatedAtScale'}
+defs: {'NegativeEffectOn': [['NegativeEffectOn', [0, 1], False], ['ReasonablyForeseeable', [0], False]]}
+
+== EQUIV level 3 direction B_in_A (0.194s)
+A: ∀x (InformedConsent(x) ↔ (((((((((Subject(x) ∧ FreelyGiven(x)) ∧ Specific(x)) ∧ Unambiguous(x)) ∧ Voluntary(x)) ∧ WillingToParticipate(x, Testing)) ∧ ParticularTesting(Testing)) ∧ RealWorldConditions(Testing)) ∧ InformedOfAllAspects(x, Testing)) ∧ RelevantToDecision(x, Testing)))
+B: ∀x (InformedConsent(x) ↔ ((((((((Subject(x) ∧ FreelyGiven(x)) ∧ Specific(x)) ∧ Unambiguous(x)) ∧ Voluntary(x)) ∧ WillingToParticipate(x, Testing)) ∧ ParticularTesting(Testing)) ∧ RealWorldConditions(Testing)) ∧ InformedOfAllRelevantAspects(x, Testing)))
+map(B->A): {'InformedConsent': 'InformedConsent', 'Subject': 'Subject', 'FreelyGiven': 'FreelyGiven', 'Specific': 'Specific', 'Unambiguous': 'Unambiguous', 'Voluntary': 'Voluntary', 'ParticularTesting': 'ParticularTesting', 'RealWorldConditions': 'RealWorldConditions', 'InformedOfAllRelevantAspects': 'RelevantToDecision'}
+defs: {'WillingToParticipate': [['WillingToParticipate', [0, 1], False], ['InformedOfAllAspects', [0, 1], False]]}
+
+== EQUIV level 3 direction B_in_A (0.042s)
+A: ∀x (Subject(x) → (∃y ((NaturalPerson(y) ∧ ParticipatesInTesting(x, y)) ∧ InRealWorldConditions(x, y))))
+B: ∀x (Subject(x) → (∃y (Person(y) ∧ Testing(x, y))))
+map(B->A): {'Subject': 'Subject', 'Person': 'NaturalPerson'}
+defs: {'Testing': [['ParticipatesInTesting', [0, 1], False], ['InRealWorldConditions', [0, 1], False]]}
+
+== EQUIV level 3 direction B_in_A (0.047s)
+A: ∀x (DigitalSector(x) ↔ (Sector(x) ∧ (∃y (ProductOrService(y) ∧ (ProvidedByMeansOf(x, y) ∨ (ProvidedThrough(x, y) ∧ InformationSocietyService(y)))))))
+B: ∀y (DigitalSector(y) ↔ (ProductOrService(y) ∧ (∃w (InformationSocietyService(w) ∧ (ProvidedByMeansOf(y, w) ∨ ProvidedThrough(y, w))))))
+map(B->A): {'DigitalSector': 'DigitalSector', 'ProductOrService': 'Sector', 'InformationSocietyService': 'ProductOrService', 'ProvidedByMeansOf': 'ProvidedByMeansOf'}
+defs: {'ProvidedThrough': [['ProvidedThrough', [0, 1], False], ['InformationSocietyService', [1], False]]}
+
+== EQUIV level 3 direction B_in_A (0.051s)
+A: ∀x (Deployer(x) → (∃y ((InformProvider(y) ∧ IntendedPurpose(y, x)) ∧ ProperUse(y, x))))
+B: ∀x (Deployer(x) → (∃y (Provider(y) ∧ InstructionsForUse(x, y))))
+map(B->A): {'Deployer': 'Deployer', 'Provider': 'InformProvider'}
+defs: {'InstructionsForUse': [['IntendedPurpose', [1, 0], False], ['ProperUse', [1, 0], False]]}
+
+== EQUIV level 3 direction A_in_B (0.024s)
+A: ∀x (OtherInfo(x) → Relevant(x))
+B: ∀x (ScientificPanel(x) → (AnyOtherInfo(x) → Relevant(x)))
+map(B->A): {'Relevant': 'Relevant'}
+defs: {'OtherInfo': [['ScientificPanel', [0], False], ['AnyOtherInfo', [0], False]]}
+
+== WEAKER level 2 direction B_in_A (0.305s)
+A: ∀rt ((((((RemoteBiometricIdentificationSystem(rt) ∧ (∃bd (((BiometricData(bd) ∧ Captures(rt, bd)) ∧ Compares(rt, bd)) ∧ Identifies(rt, bd)))) ∧ OccursWithoutSignificantDelay(rt)) ∧ (∃ii (BiometricIdentification(ii) ∧ Comprises(rt, ii)))) ∧ LimitedShortDelays(rt)) ∧ (∃c AvoidsCircumvention(rt, c))) → RealtimeRemoteBiometricIdentificationSystem(rt))
+B: ∀x ((System(x) ∧ RemoteBiometricIdentificationSystem(x)) → ((((Captures(x) ∧ Compares(x)) ∧ Identifies(x)) ∧ ¬SignificantDelay(x)) ∧ (InstantIdentification(x) ∨ (LimitedShortDelay(x) ∧ ¬Circumvention(x)))))
+map(B->A): {'System': 'RemoteBiometricIdentificationSystem', 'RemoteBiometricIdentificationSystem': 'OccursWithoutSignificantDelay', 'SignificantDelay': 'BiometricIdentification', 'LimitedShortDelay': 'LimitedShortDelays', 'Captures': 'RealtimeRemoteBiometricIdentificationSystem'}
+defs: None
+
+== WEAKER level 2 direction B_in_A (0.064s)
+A: ∀x ((AISystem(x) ∧ (∃y (BasedOn(x, y) ∧ GeneralPurposeAIModel(y)))) → (ServesVariousPurposes(x) ∨ (∃z (AISystem(z) ∧ IntegratedInto(x, z)))))
+B: ∀x (GeneralPurposeAISystem(x) ↔ (((AISystem(x) ∧ BasedOnGeneralPurposeAIModel(x)) ∧ HasCapabilityToServeVarietyOfPurposes(x)) ∧ (CanBeUsedDirectly(x) ∧ CanBeIntegratedInOtherAISystems(x))))
+map(B->A): {'GeneralPurposeAISystem': 'AISystem', 'BasedOnGeneralPurposeAIModel': 'GeneralPurposeAIModel', 'HasCapabilityToServeVarietyOfPurposes': 'ServesVariousPurposes'}
+defs: None
+
+== WEAKER level 2 direction B_in_A (0.035s)
+A: ∀x (((AISystem(x) ∧ Purpose(x, IdentifyOrInferEmotionsOrIntentions)) ∧ Basis(x, BiometricData)) → EmotionRecognitionSystem(x))
+B: ∀x (EmotionRecognitionSystem(x) ↔ (AISystem(x) ∧ (∃y ((NaturalPerson(y) ∧ BiometricDataOf(y, x)) ∧ IdentifiesEmotionsOrIntentions(x, y)))))
+map(B->A): {'EmotionRecognitionSystem': 'AISystem', 'BiometricDataOf': 'Basis', 'IdentifiesEmotionsOrIntentions': 'Purpose', 'AISystem': 'EmotionRecognitionSystem'}
+defs: None
+
+== WEAKER level 2 direction B_in_A (0.17s)
+A: ∀rt ((((((RemoteBiometricIdentificationSystem(rt) ∧ (∃bd (((BiometricData(bd) ∧ Captures(rt, bd)) ∧ Compares(rt, bd)) ∧ Identifies(rt, bd)))) ∧ OccursWithoutSignificantDelay(rt)) ∧ (∃ii (BiometricIdentification(ii) ∧ Comprises(rt, ii)))) ∧ LimitedShortDelays(rt)) ∧ (∃c AvoidsCircumvention(rt, c))) → RealtimeRemoteBiometricIdentificationSystem(rt))
+B: ∀x (RealTimeRemoteBiometricIDSystem(x) ↔ ((((RemoteBiometricIDSystem(x) ∧ CapturingWithoutSignificantDelay(x)) ∧ ComparisonWithoutSignificantDelay(x)) ∧ IdentificationWithoutSignificantDelay(x)) ∧ (InstantIdentification(x) ∨ LimitedShortDelaysToAvoidCircumvention(x))))
+map(B->A): {'RealTimeRemoteBiometricIDSystem': 'RemoteBiometricIdentificationSystem', 'RemoteBiometricIDSystem': 'RealtimeRemoteBiometricIdentificationSystem', 'ComparisonWithoutSignificantDelay': 'OccursWithoutSignificantDelay', 'IdentificationWithoutSignificantDelay': 'BiometricIdentification', 'InstantIdentification': 'LimitedShortDelays', 'LimitedShortDelaysToAvoidCircumvention': 'BiometricData'}
+defs: None
+
+== WEAKER level 2 direction B_in_A (0.138s)
+A: ∀x (((OperatorOfHighRiskAISystem(x) ∧ ¬ReferredInParagraph1(x)) ∧ PlacedOnMarketOrIntoServiceBefore(x, date2026_08_02)) → (SignificantDesignChangesFromDate(x, date2026_08_02) → AppliesRegulation(x)))
+B: ∀x (((OperatorOfHighRiskAISystem(x) ∧ ¬ReferredToInParagraph1(x)) ∧ (PlacedOnMarketBefore(x, 2026-08-02) ∨ PutIntoServiceBefore(x, 2026-08-02))) → (AppliesRegulation(x) ↔ SubjectToSignificantDesignChangesFrom(x, 2026-08-02)))
+map(B->A): {'OperatorOfHighRiskAISystem': 'OperatorOfHighRiskAISystem', 'ReferredToInParagraph1': 'ReferredInParagraph1', 'AppliesRegulation': 'AppliesRegulation', 'PutIntoServiceBefore': 'SignificantDesignChangesFromDate', 'SubjectToSignificantDesignChangesFrom': 'PlacedOnMarketOrIntoServiceBefore'}
+defs: None

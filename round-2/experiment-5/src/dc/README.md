@@ -1,0 +1,18 @@
+# `dc/` — Directional Consensus, contract v1
+
+These are gold-free, **text-blind** metrics for NL→FOL output quality. They are built from solver-checked agreement among independent systems' formalizations of the same text. Predicate and constant **names are never read as words**: every alignment is arity-preserving and chosen by solver search.
+
+| function | what it MEASURES |
+|---|---|
+| `align_pair(A, B, limits)` | Finds the lexical-free vocabulary correspondences under which B can be read in A's vocabulary. There are three levels: **L1**, arity-preserving bijections (cap 5,040; exhaustive when the total is ≤ cap); **L2**, partial injective maps covering ≥ 50% of B's predicate *occurrences*, with unmapped symbols kept fresh (cap 2,000); **L3**, granularity definitions, where ≤ 2 predicates are each defined as a conjunction of 2 **positive** literals over the other side's otherwise-unmatched predicates (cap 300; both directions). |
+| `pair_relation(A, B, limits)` | Gives the logical order of A and B under the most informative alignment, one of: EQUIV, STRONGER (A ⊨ B only), WEAKER, COMPATIBLE-INCOMPARABLE, CONTRADICTORY, UNALIGNABLE (no admissible map) or UNKNOWN (every map timed out). |
+| `directional_consensus(text, fol, peers, weights)` | Computes the reliability-weighted share of peers that are logically EQUIV to the candidate: `Σ_EQUIV w / Σ_{covered ∪ UNALIGNABLE} w`. UNKNOWN is excluded and counted as coverage loss. An unparseable candidate, or one with fewer than 2 covered peers, gets 0.5 with coverage 0. `text` is provenance only. |
+| `score_from_relations(rels, w)` | Computes the same score from precomputed pair relations; this is the batch path. |
+| `error_type(C, M, rel, c_is_a)` | Assigns a formula-only error type of candidate C relative to the modal representative M. STRONGER/WEAKER plus a predicate present only in C gives added_condition; plus a predicate present only in M gives dropped_condition. With the same predicates: a different quantifier gives quantifier_forall_exists; incomparable with antecedent and consequent swapped gives implication_direction_or_only; contradictory gives negation_polarity; a slot permutation gives argument_swap; anything else is other. It also sets `exception_involved`: the diffed literal is negated inside an antecedent. |
+| `ds_weights(obs, systems)` | Fits one-coin Dawid–Skene (vendor Arm B `latent_class.em`) on "in the equivalence cluster" observations and returns w = logit(sensitivity), clipped to [0.05, 3]. It uses no labels. |
+
+**How the check runs (`core.py`).** For each map, a vectorised numpy evaluator first refutes entailment directions. It evaluates on three sources of models: z3 models and countermodels of A (domains 2 and 3), B's models and countermodels transported through the map, and seeded random structures. Any direction that survives is decided by the vendor `fol_equiv.bounded_check` (propositional grounding over domains 1..4, 5 s) followed by an unbounded z3 entailment check (5 s). The pair wall-clock cap is 20 s. Each sentence runs in a subprocess (`worker.py`) with RLIMIT_CPU and RLIMIT_AS set, and a watchdog kills a hung worker.
+
+**Known limits, shown by the T0 unit tests (`results/unit_tests.json`):**
+- Positive granularity (`TallMan := Tall ∧ Man`) cannot be told apart from a dropped or added positive conjunct using the formulas alone. L3 therefore absorbs such errors, and `DC_noL3` measures how much this matters.
+- The pre-registered relation order ranks INCOMPARABLE above CONTRADICTORY. A negation flip therefore reads as INCOMPARABLE whenever some other map is jointly satisfiable. The score is unaffected; only negation_polarity typing becomes rare.

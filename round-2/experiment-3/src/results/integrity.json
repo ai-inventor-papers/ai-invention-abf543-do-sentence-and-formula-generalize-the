@@ -1,0 +1,11 @@
+{
+ "dc_tree_sha256_now": "7f805769fd6b109ad27f3f5191e877b01cd9d74bb8c8e5bca68398df889df965",
+ "dc_tree_sha256_receipt": "7f805769fd6b109ad27f3f5191e877b01cd9d74bb8c8e5bca68398df889df965",
+ "dc_tree_unchanged": true,
+ "receipt_sha256_verifies": true,
+ "dc_files_modified_after_freeze": [],
+ "vendor_files": 78,
+ "vendor_changed": [],
+ "ledger_total_usd": 2.3848,
+ "freeze_timestamp_utc": "2026-09-24T04:14:11.362292+00:00"
+}

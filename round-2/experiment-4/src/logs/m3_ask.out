@@ -1,0 +1,6 @@
+04:25:30|WARNING|[key_probe:] failed: HTTP 403: {"error": {"code": "aii_run_budget_exhausted", "message": "AI Inventor per-run OpenRouter budget reached for Test idea: $7.12 of $7.00 spent by this run in that phase. This is AI Inventor's internal l
+04:25:30|INFO   |key probe 0: ok=False HTTP 403: {"error": {"code": "aii_run_budget_exhausted", "message": "AI Inventor per-run OpenRouter budget reached for T
+04:35:30|WARNING|[key_probe:] failed: HTTP 403: {"error": {"code": "aii_run_budget_exhausted", "message": "AI Inventor per-run OpenRouter budget reached for Test idea: $7.12 of $7.00 spent by this run in that phase. This is AI Inventor's internal l
+04:35:30|INFO   |key probe 1: ok=False HTTP 403: {"error": {"code": "aii_run_budget_exhausted", "message": "AI Inventor per-run OpenRouter budget reached for T
+04:45:31|WARNING|[key_probe:] failed: HTTP 403: {"error": {"code": "aii_run_budget_exhausted", "message": "AI Inventor per-run OpenRouter budget reached for Test idea: $7.12 of $7.00 spent by this run in that phase. This is AI Inventor's internal l
+04:45:31|INFO   |key probe 2: ok=False HTTP 403: {"error": {"code": "aii_run_budget_exhausted", "message": "AI Inventor per-run OpenRouter budget reached for T
