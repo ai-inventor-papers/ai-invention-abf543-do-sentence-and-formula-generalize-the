@@ -1,0 +1,137 @@
+{
+  "type": "bar_grouped_ci_reference",
+  "renderer": "render_fig3.py (hand-written; house style + layout passes from aii-data-fig-gen)",
+  "title": "Agreement ignores vocabulary; the judge does not",
+  "ylabel": "AUROC (faithful vs mutant)",
+  "aspect": "16:9",
+  "width_in": 7.0,
+  "ylim": [
+    0,
+    1.05
+  ],
+  "value_format": ".3f",
+  "reference_line": {
+    "y": 0.5,
+    "label": "chance",
+    "style": "dashed"
+  },
+  "source": {
+    "file": "/ai-inventor/aii_data/runs/run_ujABDGgoK_5Q/3_invention_loop/iter_2/gen_art/gen_art_experiment_4/results/m1_confound.json",
+    "arms": {
+      "Conventional names": "arms.conf",
+      "Random tokens": "arms.tok",
+      "WordNet synonyms": "arms.syn",
+      "Crossed (faithful in tokens, mutants conventional)": "crossed"
+    },
+    "n_faithful": 223,
+    "n_mutants": 739,
+    "error_bars": "95% sentence-level bootstrap CI (key 'ci')"
+  },
+  "categories": [
+    "Conventional names",
+    "Random tokens",
+    "WordNet synonyms",
+    "Crossed (faithful in tokens, mutants conventional)"
+  ],
+  "tick_labels": [
+    "Conventional\nnames",
+    "Random\ntokens",
+    "WordNet\nsynonyms",
+    "Crossed (faithful in tokens,\nmutants conventional)"
+  ],
+  "group_width": 0.88,
+  "series": [
+    {
+      "label": "Peer agreement, no granularity defs (ours)",
+      "metric_key": "DC_L2w",
+      "color": "#1F4E8C",
+      "values": [
+        0.9988,
+        0.9988,
+        0.9988,
+        0.9988
+      ],
+      "ci_low": [
+        0.9976,
+        0.9976,
+        0.9976,
+        0.9976
+      ],
+      "ci_high": [
+        0.9997,
+        0.9997,
+        0.9997,
+        0.9997
+      ]
+    },
+    {
+      "label": "Majority equivalence clustering",
+      "metric_key": "LC_maj_star",
+      "color": "#8EC3E6",
+      "values": [
+        0.9976,
+        0.9976,
+        0.9976,
+        0.9976
+      ],
+      "ci_low": [
+        0.9945,
+        0.9945,
+        0.9945,
+        0.9945
+      ],
+      "ci_high": [
+        0.9994,
+        0.9994,
+        0.9994,
+        0.9994
+      ]
+    },
+    {
+      "label": "LLM judge (gemini-2.5-flash)",
+      "metric_key": "B1",
+      "color": "#9A9A9A",
+      "values": [
+        0.9451,
+        0.7942,
+        0.8898,
+        0.763
+      ],
+      "ci_low": [
+        0.9324,
+        0.7614,
+        0.8662,
+        0.7252
+      ],
+      "ci_high": [
+        0.9574,
+        0.8259,
+        0.9123,
+        0.799
+      ]
+    },
+    {
+      "label": "Vocabulary-conformity control",
+      "metric_key": "VC",
+      "color": "#E08A00",
+      "values": [
+        0.5424,
+        0.5332,
+        0.5335,
+        0.1756
+      ],
+      "ci_low": [
+        0.5282,
+        0.5189,
+        0.5191,
+        0.1504
+      ],
+      "ci_high": [
+        0.557,
+        0.5468,
+        0.5469,
+        0.2007
+      ]
+    }
+  ]
+}
