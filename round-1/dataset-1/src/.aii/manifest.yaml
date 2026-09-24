@@ -1,0 +1,19 @@
+entries:
+  - path: raw/pilot/
+    delete: regenerable
+    source: "python -c \"import zipfile; zipfile.ZipFile('/ai-inventor/aii_data/runs/run_qY2a2IS-WLIs/user_uploads/dpv_pilot_study.zip').extractall('raw/pilot')\""
+  - path: nltk_data/
+    delete: redownloadable
+    source: "python -c \"import nltk; [nltk.download(p, download_dir='nltk_data') for p in ('wordnet','omw-1.4')]\""
+  - path: .venv/
+    delete: regenerable
+    source: "uv venv .venv --python=3.12 && uv pip install --python=.venv/bin/python z3-solver nltk aiohttp loguru huggingface_hub numpy scipy tenacity requests pyyaml pytest"
+  - path: src/__pycache__/
+    delete: regenerable
+    source: "python bytecode cache; recreated on import"
+  - path: tests/__pycache__/
+    delete: regenerable
+    source: "python bytecode cache; recreated on import"
+  - path: .pytest_cache/
+    delete: regenerable
+    source: ".venv/bin/python -m pytest -q -c pytest.ini tests/test_fol.py"
