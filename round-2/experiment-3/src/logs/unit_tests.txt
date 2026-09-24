@@ -1,0 +1,17 @@
+PASSED tests/test_dc.py::test_renamed_equivalent
+PASSED tests/test_dc.py::test_added_conjunct
+PASSED tests/test_dc.py::test_dropped_conjunct
+PASSED tests/test_dc.py::test_L3_merges_added_conjunct_known_limit
+PASSED tests/test_dc.py::test_forall_exists
+PASSED tests/test_dc.py::test_reversed_implication_anchored
+PASSED tests/test_dc.py::test_negation_ground
+PASSED tests/test_dc.py::test_negation_universal_rule_1b
+PASSED tests/test_dc.py::test_argument_swap
+PASSED tests/test_dc.py::test_granularity_split_L3
+PASSED tests/test_dc.py::test_unalignable
+PASSED tests/test_dc.py::test_idempotence_dev
+PASSED tests/test_dc.py::test_symmetry_dev
+PASSED tests/test_dc.py::test_score_group_hand
+PASSED tests/test_dc.py::test_directional_consensus_api
+PASSED tests/test_dc.py::test_weights_recover_reliability
+16 passed in 8.38s

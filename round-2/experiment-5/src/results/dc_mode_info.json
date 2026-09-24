@@ -1,0 +1,926 @@
+{
+ "00856ba4b3": {
+  "mode_rep": "00856ba4b3:deepseek-v3.1:0",
+  "mode_weight_share": 0.125,
+  "mode_size": 1,
+  "n_clusters": 11
+ },
+ "0272b8d897": {
+  "mode_rep": "0272b8d897:gpt-oss-120b:0",
+  "mode_weight_share": 0.22222222222222224,
+  "mode_size": 2,
+  "n_clusters": 9
+ },
+ "04477b9976": {
+  "mode_rep": "04477b9976:gemma-3-27b:0",
+  "mode_weight_share": 0.2857142857142857,
+  "mode_size": 2,
+  "n_clusters": 6
+ },
+ "047b1476c9": {
+  "mode_rep": "047b1476c9:deepseek-v3.1:0",
+  "mode_weight_share": 0.14285714285714285,
+  "mode_size": 1,
+  "n_clusters": 8
+ },
+ "07d9cdecce": {
+  "mode_rep": "07d9cdecce:deepseek-v3.1:0",
+  "mode_weight_share": 0.11111111111111112,
+  "mode_size": 1,
+  "n_clusters": 9
+ },
+ "0a11cd941f": {
+  "mode_rep": "0a11cd941f:deepseek-v3.1:0",
+  "mode_weight_share": 0.11111111111111112,
+  "mode_size": 1,
+  "n_clusters": 13
+ },
+ "0cc98a146b": {
+  "mode_rep": "0cc98a146b:deepseek-v3.1:0",
+  "mode_weight_share": 0.125,
+  "mode_size": 1,
+  "n_clusters": 11
+ },
+ "10a77c966e": {
+  "mode_rep": "10a77c966e:phi-4:0",
+  "mode_weight_share": 0.2,
+  "mode_size": 2,
+  "n_clusters": 13
+ },
+ "166e1fcd27": {
+  "mode_rep": "166e1fcd27:deepseek-v3.1:0",
+  "mode_weight_share": 0.16666666666666666,
+  "mode_size": 1,
+  "n_clusters": 6
+ },
+ "16b084b33f": {
+  "mode_rep": "16b084b33f:deepseek-v3.1:0",
+  "mode_weight_share": 0.14285714285714285,
+  "mode_size": 1,
+  "n_clusters": 7
+ },
+ "1757a40f5b": {
+  "mode_rep": "1757a40f5b:gemini-2.5-flash:0",
+  "mode_weight_share": 0.2,
+  "mode_size": 1,
+  "n_clusters": 6
+ },
+ "1933dffea7": {
+  "mode_rep": "1933dffea7:deepseek-v3.1:0",
+  "mode_weight_share": 0.125,
+  "mode_size": 1,
+  "n_clusters": 12
+ },
+ "1a009d8062": {
+  "mode_rep": "1a009d8062:deepseek-v3.1:0",
+  "mode_weight_share": 0.125,
+  "mode_size": 1,
+  "n_clusters": 8
+ },
+ "1a83fbb807": {
+  "mode_rep": "1a83fbb807:deepseek-v3.1:0",
+  "mode_weight_share": 0.14285714285714285,
+  "mode_size": 1,
+  "n_clusters": 7
+ },
+ "1b4ce469e6": {
+  "mode_rep": "1b4ce469e6:phi-4:0",
+  "mode_weight_share": 0.33333333333333337,
+  "mode_size": 3,
+  "n_clusters": 11
+ },
+ "1be3eb25ce": {
+  "mode_rep": "1be3eb25ce:deepseek-v3.1:0",
+  "mode_weight_share": 0.125,
+  "mode_size": 1,
+  "n_clusters": 8
+ },
+ "1dfb9e89e7": {
+  "mode_rep": "1dfb9e89e7:qwen-2.5-7b:0",
+  "mode_weight_share": 0.37500000000000006,
+  "mode_size": 3,
+  "n_clusters": 6
+ },
+ "21c59037bb": {
+  "mode_rep": "21c59037bb:deepseek-v3.1:0",
+  "mode_weight_share": 0.125,
+  "mode_size": 1,
+  "n_clusters": 9
+ },
+ "238b6ee9cd": {
+  "mode_rep": "238b6ee9cd:phi-4:0",
+  "mode_weight_share": 0.6666666666666666,
+  "mode_size": 6,
+  "n_clusters": 4
+ },
+ "23b4af6ddd": {
+  "mode_rep": "23b4af6ddd:deepseek-v3.1:0",
+  "mode_weight_share": 0.16666666666666666,
+  "mode_size": 1,
+  "n_clusters": 6
+ },
+ "250b8f7ed9": {
+  "mode_rep": "250b8f7ed9:gpt-oss-120b:0",
+  "mode_weight_share": 1.0,
+  "mode_size": 1,
+  "n_clusters": 1
+ },
+ "251b4d69af": {
+  "mode_rep": "251b4d69af:phi-4:0",
+  "mode_weight_share": 0.4,
+  "mode_size": 4,
+  "n_clusters": 9
+ },
+ "25b45a6e1d": {
+  "mode_rep": "25b45a6e1d:deepseek-v3.1:0",
+  "mode_weight_share": 0.125,
+  "mode_size": 1,
+  "n_clusters": 9
+ },
+ "25d1a19752": {
+  "mode_rep": "25d1a19752:deepseek-v3.1:0",
+  "mode_weight_share": 0.16666666666666666,
+  "mode_size": 1,
+  "n_clusters": 6
+ },
+ "2668b95bce": {
+  "mode_rep": "2668b95bce:mistral-small-3.2-24b:0",
+  "mode_weight_share": 0.4444444444444445,
+  "mode_size": 4,
+  "n_clusters": 6
+ },
+ "286d22ee10": {
+  "mode_rep": "286d22ee10:deepseek-v3.1:0",
+  "mode_weight_share": 0.125,
+  "mode_size": 1,
+  "n_clusters": 8
+ },
+ "2940afeeea": {
+  "mode_rep": "2940afeeea:gemini-2.5-flash:0",
+  "mode_weight_share": 0.2,
+  "mode_size": 1,
+  "n_clusters": 5
+ },
+ "2a5d5cdfa0": {
+  "mode_rep": "2a5d5cdfa0:gemma-3-27b:0",
+  "mode_weight_share": 0.3333333333333333,
+  "mode_size": 1,
+  "n_clusters": 3
+ },
+ "2aa5dde8d1": {
+  "mode_rep": "2aa5dde8d1:mistral-small-3.2-24b:0",
+  "mode_weight_share": 0.625,
+  "mode_size": 5,
+  "n_clusters": 4
+ },
+ "2ad54a292a": {
+  "mode_rep": "2ad54a292a:gpt-4.1-mini:0",
+  "mode_weight_share": 0.22222222222222224,
+  "mode_size": 2,
+  "n_clusters": 11
+ },
+ "2cc8030728": {
+  "mode_rep": "2cc8030728:qwen-2.5-7b:0",
+  "mode_weight_share": 0.7,
+  "mode_size": 7,
+  "n_clusters": 5
+ },
+ "2d004db3a8": {
+  "mode_rep": "2d004db3a8:qwen-2.5-7b:0",
+  "mode_weight_share": 0.25,
+  "mode_size": 2,
+  "n_clusters": 6
+ },
+ "2f5914d8b6": {
+  "mode_rep": "2f5914d8b6:deepseek-v3.1:0",
+  "mode_weight_share": 0.11111111111111112,
+  "mode_size": 1,
+  "n_clusters": 11
+ },
+ "2fceed469d": {
+  "mode_rep": "2fceed469d:deepseek-v3.1:0",
+  "mode_weight_share": 0.2,
+  "mode_size": 1,
+  "n_clusters": 5
+ },
+ "304d210524": {
+  "mode_rep": "304d210524:deepseek-v3.1:0",
+  "mode_weight_share": 0.2,
+  "mode_size": 1,
+  "n_clusters": 5
+ },
+ "30ed33a490": {
+  "mode_rep": "30ed33a490:gemini-2.5-flash:0",
+  "mode_weight_share": 0.16666666666666669,
+  "mode_size": 1,
+  "n_clusters": 10
+ },
+ "33a3cd0a44": {
+  "mode_rep": "33a3cd0a44:gpt-4.1-mini:0",
+  "mode_weight_share": 0.16666666666666666,
+  "mode_size": 1,
+  "n_clusters": 6
+ },
+ "355357fff4": {
+  "mode_rep": "355357fff4:deepseek-v3.1:0",
+  "mode_weight_share": 0.14285714285714285,
+  "mode_size": 1,
+  "n_clusters": 7
+ },
+ "366a49d9f0": {
+  "mode_rep": "366a49d9f0:deepseek-v3.1:0",
+  "mode_weight_share": 0.11111111111111112,
+  "mode_size": 1,
+  "n_clusters": 12
+ },
+ "38151e2c6b": {
+  "mode_rep": "38151e2c6b:gemma-3-27b:0",
+  "mode_weight_share": 0.25,
+  "mode_size": 1,
+  "n_clusters": 4
+ },
+ "383dae5b63": {
+  "mode_rep": "383dae5b63:deepseek-v3.1:0",
+  "mode_weight_share": 0.11111111111111112,
+  "mode_size": 1,
+  "n_clusters": 10
+ },
+ "385cff03ab": {
+  "mode_rep": "385cff03ab:mistral-small-3.2-24b:0",
+  "mode_weight_share": 0.3333333333333333,
+  "mode_size": 2,
+  "n_clusters": 5
+ },
+ "3900e94afa": {
+  "mode_rep": "3900e94afa:gemini-2.5-flash:0",
+  "mode_weight_share": 0.125,
+  "mode_size": 1,
+  "n_clusters": 8
+ },
+ "39bba27bfb": {
+  "mode_rep": "39bba27bfb:deepseek-v3.1:0",
+  "mode_weight_share": 0.11111111111111112,
+  "mode_size": 1,
+  "n_clusters": 9
+ },
+ "3ce3f78c35": {
+  "mode_rep": "3ce3f78c35:deepseek-v3.1:0",
+  "mode_weight_share": 0.14285714285714285,
+  "mode_size": 1,
+  "n_clusters": 7
+ },
+ "3e1d02c47e": {
+  "mode_rep": "3e1d02c47e:deepseek-v3.1:0",
+  "mode_weight_share": 0.3333333333333333,
+  "mode_size": 1,
+  "n_clusters": 3
+ },
+ "40b6851610": {
+  "mode_rep": "40b6851610:gpt-oss-120b:0",
+  "mode_weight_share": 0.4,
+  "mode_size": 2,
+  "n_clusters": 4
+ },
+ "42fba8bad6": {
+  "mode_rep": "42fba8bad6:phi-4:0",
+  "mode_weight_share": 0.25,
+  "mode_size": 2,
+  "n_clusters": 9
+ },
+ "4361a97e44": {
+  "mode_rep": "4361a97e44:mistral-small-3.2-24b:0",
+  "mode_weight_share": 0.22222222222222224,
+  "mode_size": 2,
+  "n_clusters": 8
+ },
+ "43a721ebe4": {
+  "mode_rep": "43a721ebe4:phi-4:0",
+  "mode_weight_share": 0.7,
+  "mode_size": 7,
+  "n_clusters": 4
+ },
+ "440ca7c0a9": {
+  "mode_rep": "440ca7c0a9:qwen-2.5-7b:0",
+  "mode_weight_share": 0.625,
+  "mode_size": 5,
+  "n_clusters": 5
+ },
+ "445f1688a2": {
+  "mode_rep": "445f1688a2:deepseek-v3.1:0",
+  "mode_weight_share": 0.125,
+  "mode_size": 1,
+  "n_clusters": 8
+ },
+ "449a0911a6": {
+  "mode_rep": "449a0911a6:deepseek-v3.1:0",
+  "mode_weight_share": 0.14285714285714285,
+  "mode_size": 1,
+  "n_clusters": 11
+ },
+ "47dcb11069": {
+  "mode_rep": "47dcb11069:gpt-oss-120b:0",
+  "mode_weight_share": 0.22222222222222224,
+  "mode_size": 2,
+  "n_clusters": 8
+ },
+ "4cd640ea3e": {
+  "mode_rep": "4cd640ea3e:gemini-2.5-flash:0",
+  "mode_weight_share": 0.16666666666666666,
+  "mode_size": 1,
+  "n_clusters": 6
+ },
+ "529b554678": {
+  "mode_rep": "529b554678:gpt-oss-120b:0",
+  "mode_weight_share": 0.4285714285714286,
+  "mode_size": 3,
+  "n_clusters": 5
+ },
+ "53e2ea7424": {
+  "mode_rep": "53e2ea7424:deepseek-v3.1:0",
+  "mode_weight_share": 0.11111111111111112,
+  "mode_size": 1,
+  "n_clusters": 9
+ },
+ "55adab11f5": {
+  "mode_rep": "55adab11f5:gemini-2.5-flash:0",
+  "mode_weight_share": 0.25,
+  "mode_size": 1,
+  "n_clusters": 4
+ },
+ "5787eba683": {
+  "mode_rep": "5787eba683:gemini-2.5-flash:0",
+  "mode_weight_share": 0.16666666666666669,
+  "mode_size": 1,
+  "n_clusters": 11
+ },
+ "5b08df0b2a": {
+  "mode_rep": "5b08df0b2a:deepseek-v3.1:0",
+  "mode_weight_share": 0.25,
+  "mode_size": 1,
+  "n_clusters": 4
+ },
+ "5c8dcededb": {
+  "mode_rep": "5c8dcededb:gemma-3-27b:0",
+  "mode_weight_share": 0.16666666666666666,
+  "mode_size": 1,
+  "n_clusters": 6
+ },
+ "60e388abf3": {
+  "mode_rep": "60e388abf3:gpt-oss-120b:0",
+  "mode_weight_share": 0.5555555555555556,
+  "mode_size": 5,
+  "n_clusters": 8
+ },
+ "613b794488": {
+  "mode_rep": "613b794488:gemma-3-27b:0",
+  "mode_weight_share": 0.14285714285714285,
+  "mode_size": 1,
+  "n_clusters": 8
+ },
+ "643f4ff57c": {
+  "mode_rep": "643f4ff57c:deepseek-v3.1:0",
+  "mode_weight_share": 0.14285714285714285,
+  "mode_size": 1,
+  "n_clusters": 12
+ },
+ "655fc36b4e": {
+  "mode_rep": "655fc36b4e:deepseek-v3.1:0",
+  "mode_weight_share": 0.11111111111111112,
+  "mode_size": 1,
+  "n_clusters": 9
+ },
+ "6c6cfe01ed": {
+  "mode_rep": "6c6cfe01ed:deepseek-v3.1:0",
+  "mode_weight_share": 0.16666666666666666,
+  "mode_size": 1,
+  "n_clusters": 6
+ },
+ "6e9c88b92e": {
+  "mode_rep": "6e9c88b92e:deepseek-v3.1:0",
+  "mode_weight_share": 0.14285714285714285,
+  "mode_size": 1,
+  "n_clusters": 7
+ },
+ "6f8a945d56": {
+  "mode_rep": "6f8a945d56:gpt-4.1-mini:0",
+  "mode_weight_share": 0.37500000000000006,
+  "mode_size": 3,
+  "n_clusters": 6
+ },
+ "71be709dcf": {
+  "mode_rep": "71be709dcf:gpt-oss-120b:0",
+  "mode_weight_share": 0.5,
+  "mode_size": 4,
+  "n_clusters": 4
+ },
+ "71dc0e6734": {
+  "mode_rep": "71dc0e6734:deepseek-v3.1:0",
+  "mode_weight_share": 0.11111111111111112,
+  "mode_size": 1,
+  "n_clusters": 9
+ },
+ "75025be5c8": {
+  "mode_rep": "75025be5c8:deepseek-v3.1:0",
+  "mode_weight_share": 0.25,
+  "mode_size": 1,
+  "n_clusters": 4
+ },
+ "75d64d4e5f": {
+  "mode_rep": "75d64d4e5f:deepseek-v3.1:0",
+  "mode_weight_share": 0.14285714285714285,
+  "mode_size": 1,
+  "n_clusters": 7
+ },
+ "7762b9931b": {
+  "mode_rep": "7762b9931b:deepseek-v3.1:0",
+  "mode_weight_share": 0.11111111111111112,
+  "mode_size": 1,
+  "n_clusters": 11
+ },
+ "789e0f0fec": {
+  "mode_rep": "789e0f0fec:deepseek-v3.1:0",
+  "mode_weight_share": 0.11111111111111112,
+  "mode_size": 1,
+  "n_clusters": 9
+ },
+ "7905a96e88": {
+  "mode_rep": "7905a96e88:gemini-2.5-flash:0",
+  "mode_weight_share": 0.11111111111111112,
+  "mode_size": 1,
+  "n_clusters": 11
+ },
+ "7980c59d51": {
+  "mode_rep": "7980c59d51:gemini-2.5-flash:0",
+  "mode_weight_share": 0.16666666666666666,
+  "mode_size": 1,
+  "n_clusters": 6
+ },
+ "7d9236146c": {
+  "mode_rep": "7d9236146c:deepseek-v3.1:0",
+  "mode_weight_share": 0.2,
+  "mode_size": 1,
+  "n_clusters": 5
+ },
+ "7e57f864a4": {
+  "mode_rep": "7e57f864a4:deepseek-v3.1:0",
+  "mode_weight_share": 0.14285714285714285,
+  "mode_size": 1,
+  "n_clusters": 7
+ },
+ "7ed5017eed": {
+  "mode_rep": "7ed5017eed:deepseek-v3.1:0",
+  "mode_weight_share": 0.125,
+  "mode_size": 1,
+  "n_clusters": 8
+ },
+ "813e0de8e2": {
+  "mode_rep": "813e0de8e2:deepseek-v3.1:0",
+  "mode_weight_share": 0.2,
+  "mode_size": 1,
+  "n_clusters": 5
+ },
+ "82a8a239f9": {
+  "mode_rep": "82a8a239f9:deepseek-v3.1:0",
+  "mode_weight_share": 0.14285714285714285,
+  "mode_size": 1,
+  "n_clusters": 7
+ },
+ "831402b0db": {
+  "mode_rep": "831402b0db:deepseek-v3.1:0",
+  "mode_weight_share": 0.25,
+  "mode_size": 1,
+  "n_clusters": 4
+ },
+ "8b236728cb": {
+  "mode_rep": "8b236728cb:gemma-3-27b:0",
+  "mode_weight_share": 0.16666666666666666,
+  "mode_size": 1,
+  "n_clusters": 6
+ },
+ "8d27bdbbf9": {
+  "mode_rep": "8d27bdbbf9:deepseek-v3.1:0",
+  "mode_weight_share": 0.125,
+  "mode_size": 1,
+  "n_clusters": 8
+ },
+ "8e21fb7b4d": {
+  "mode_rep": "8e21fb7b4d:gpt-4.1-mini:0",
+  "mode_weight_share": 0.22222222222222224,
+  "mode_size": 2,
+  "n_clusters": 12
+ },
+ "8fb60a5dc2": {
+  "mode_rep": "8fb60a5dc2:mistral-small-3.2-24b:0",
+  "mode_weight_share": 0.22222222222222224,
+  "mode_size": 2,
+  "n_clusters": 9
+ },
+ "91ea589c6f": {
+  "mode_rep": "91ea589c6f:deepseek-v3.1:0",
+  "mode_weight_share": 0.16666666666666666,
+  "mode_size": 1,
+  "n_clusters": 6
+ },
+ "944f4bba63": {
+  "mode_rep": "944f4bba63:deepseek-v3.1:0",
+  "mode_weight_share": 0.16666666666666666,
+  "mode_size": 1,
+  "n_clusters": 6
+ },
+ "99f29f1666": {
+  "mode_rep": "99f29f1666:deepseek-v3.1:0",
+  "mode_weight_share": 0.2,
+  "mode_size": 1,
+  "n_clusters": 7
+ },
+ "9a8efddbc8": {
+  "mode_rep": "9a8efddbc8:gpt-4.1-mini:0",
+  "mode_weight_share": 0.2,
+  "mode_size": 1,
+  "n_clusters": 5
+ },
+ "9e6414935f": {
+  "mode_rep": "9e6414935f:gpt-4.1-mini:0",
+  "mode_weight_share": 0.3333333333333333,
+  "mode_size": 1,
+  "n_clusters": 3
+ },
+ "a36a832466": {
+  "mode_rep": "a36a832466:llama-3.1-8b:0",
+  "mode_weight_share": 0.25,
+  "mode_size": 1,
+  "n_clusters": 4
+ },
+ "a3b9122370": {
+  "mode_rep": "a3b9122370:gemini-2.5-flash:0",
+  "mode_weight_share": 0.16666666666666666,
+  "mode_size": 1,
+  "n_clusters": 6
+ },
+ "a705e72611": {
+  "mode_rep": "a705e72611:gpt-oss-120b:0",
+  "mode_weight_share": 0.5555555555555556,
+  "mode_size": 5,
+  "n_clusters": 5
+ },
+ "a74b35c0cb": {
+  "mode_rep": "a74b35c0cb:mistral-small-3.2-24b:0",
+  "mode_weight_share": 0.4,
+  "mode_size": 4,
+  "n_clusters": 8
+ },
+ "a8050e36d5": {
+  "mode_rep": "a8050e36d5:deepseek-v3.1:0",
+  "mode_weight_share": 0.125,
+  "mode_size": 1,
+  "n_clusters": 8
+ },
+ "a8dce0aec6": {
+  "mode_rep": "a8dce0aec6:deepseek-v3.1:0",
+  "mode_weight_share": 0.14285714285714285,
+  "mode_size": 1,
+  "n_clusters": 7
+ },
+ "a974d5fde9": {
+  "mode_rep": "a974d5fde9:deepseek-v3.1:0",
+  "mode_weight_share": 0.125,
+  "mode_size": 1,
+  "n_clusters": 8
+ },
+ "a982de1a15": {
+  "mode_rep": "a982de1a15:gpt-oss-120b:0",
+  "mode_weight_share": 0.25,
+  "mode_size": 2,
+  "n_clusters": 10
+ },
+ "aba3499fba": {
+  "mode_rep": "aba3499fba:gemini-2.5-flash:0",
+  "mode_weight_share": 0.25,
+  "mode_size": 1,
+  "n_clusters": 4
+ },
+ "ada5126d55": {
+  "mode_rep": "ada5126d55:deepseek-v3.1:0",
+  "mode_weight_share": 0.11111111111111112,
+  "mode_size": 1,
+  "n_clusters": 9
+ },
+ "ae65eb0f40": {
+  "mode_rep": "ae65eb0f40:llama-3.1-8b:0",
+  "mode_weight_share": 0.22222222222222224,
+  "mode_size": 2,
+  "n_clusters": 7
+ },
+ "ae9a094d8a": {
+  "mode_rep": "ae9a094d8a:deepseek-v3.1:0",
+  "mode_weight_share": 0.2,
+  "mode_size": 1,
+  "n_clusters": 5
+ },
+ "b1532a08c0": {
+  "mode_rep": "b1532a08c0:deepseek-v3.1:0",
+  "mode_weight_share": 0.14285714285714285,
+  "mode_size": 1,
+  "n_clusters": 7
+ },
+ "b316721a5a": {
+  "mode_rep": "b316721a5a:gemini-2.5-flash:0",
+  "mode_weight_share": 0.14285714285714285,
+  "mode_size": 1,
+  "n_clusters": 8
+ },
+ "b908bbc537": {
+  "mode_rep": "b908bbc537:deepseek-v3.1:0",
+  "mode_weight_share": 0.125,
+  "mode_size": 1,
+  "n_clusters": 9
+ },
+ "ba27a52449": {
+  "mode_rep": "ba27a52449:qwen-2.5-7b:0",
+  "mode_weight_share": 1.0,
+  "mode_size": 1,
+  "n_clusters": 1
+ },
+ "bc319fe7b2": {
+  "mode_rep": "bc319fe7b2:deepseek-v3.1:0",
+  "mode_weight_share": 0.125,
+  "mode_size": 1,
+  "n_clusters": 11
+ },
+ "bd2cf890c6": {
+  "mode_rep": "bd2cf890c6:gemini-2.5-flash:0",
+  "mode_weight_share": 0.3333333333333333,
+  "mode_size": 1,
+  "n_clusters": 3
+ },
+ "bf4e447637": {
+  "mode_rep": "bf4e447637:gemini-2.5-flash:0",
+  "mode_weight_share": 0.16666666666666666,
+  "mode_size": 1,
+  "n_clusters": 6
+ },
+ "c10c9076ac": {
+  "mode_rep": "c10c9076ac:deepseek-v3.1:0",
+  "mode_weight_share": 0.125,
+  "mode_size": 1,
+  "n_clusters": 12
+ },
+ "c3eacc41de": {
+  "mode_rep": "c3eacc41de:deepseek-v3.1:0",
+  "mode_weight_share": 0.125,
+  "mode_size": 1,
+  "n_clusters": 12
+ },
+ "c58b0a9ace": {
+  "mode_rep": "c58b0a9ace:deepseek-v3.1:0",
+  "mode_weight_share": 0.125,
+  "mode_size": 1,
+  "n_clusters": 10
+ },
+ "c6d89fb2cb": {
+  "mode_rep": "c6d89fb2cb:deepseek-v3.1:0",
+  "mode_weight_share": 0.16666666666666669,
+  "mode_size": 1,
+  "n_clusters": 9
+ },
+ "c8612f3339": {
+  "mode_rep": "c8612f3339:phi-4:0",
+  "mode_weight_share": 0.625,
+  "mode_size": 5,
+  "n_clusters": 4
+ },
+ "ca2d23f13b": {
+  "mode_rep": "ca2d23f13b:deepseek-v3.1:0",
+  "mode_weight_share": 0.14285714285714285,
+  "mode_size": 1,
+  "n_clusters": 8
+ },
+ "ca96dd37d3": {
+  "mode_rep": "ca96dd37d3:phi-4:0",
+  "mode_weight_share": 0.33333333333333337,
+  "mode_size": 3,
+  "n_clusters": 11
+ },
+ "cb24143795": {
+  "mode_rep": "cb24143795:gemma-3-27b:0",
+  "mode_weight_share": 0.16666666666666666,
+  "mode_size": 1,
+  "n_clusters": 6
+ },
+ "cb57c7f8fc": {
+  "mode_rep": "cb57c7f8fc:deepseek-v3.1:0",
+  "mode_weight_share": 0.25,
+  "mode_size": 1,
+  "n_clusters": 7
+ },
+ "ccc133ace1": {
+  "mode_rep": "ccc133ace1:qwen-2.5-7b:0",
+  "mode_weight_share": 0.4285714285714286,
+  "mode_size": 3,
+  "n_clusters": 5
+ },
+ "cd4deb1803": {
+  "mode_rep": "cd4deb1803:mistral-small-3.2-24b:0",
+  "mode_weight_share": 0.22222222222222224,
+  "mode_size": 2,
+  "n_clusters": 8
+ },
+ "cda68e5a9c": {
+  "mode_rep": "cda68e5a9c:deepseek-v3.1:0",
+  "mode_weight_share": 0.2,
+  "mode_size": 1,
+  "n_clusters": 5
+ },
+ "ce1fc64446": {
+  "mode_rep": "ce1fc64446:deepseek-v3.1:0",
+  "mode_weight_share": 0.1,
+  "mode_size": 1,
+  "n_clusters": 13
+ },
+ "d19e67cd56": {
+  "mode_rep": "d19e67cd56:deepseek-v3.1:0",
+  "mode_weight_share": 0.16666666666666666,
+  "mode_size": 1,
+  "n_clusters": 6
+ },
+ "d2570a8bb9": {
+  "mode_rep": "d2570a8bb9:gpt-4.1-mini:0",
+  "mode_weight_share": 0.22222222222222224,
+  "mode_size": 2,
+  "n_clusters": 10
+ },
+ "d54cb9dfe4": {
+  "mode_rep": "d54cb9dfe4:gpt-4.1-mini:0",
+  "mode_weight_share": 0.3333333333333333,
+  "mode_size": 2,
+  "n_clusters": 5
+ },
+ "d6f53e1b30": {
+  "mode_rep": "d6f53e1b30:llama-3.1-8b:0",
+  "mode_weight_share": 0.5,
+  "mode_size": 1,
+  "n_clusters": 2
+ },
+ "d74037fdd9": {
+  "mode_rep": "d74037fdd9:mistral-small-3.2-24b:0",
+  "mode_weight_share": 0.25,
+  "mode_size": 2,
+  "n_clusters": 9
+ },
+ "d7d5d20426": {
+  "mode_rep": "d7d5d20426:deepseek-v3.1:0",
+  "mode_weight_share": 0.14285714285714285,
+  "mode_size": 1,
+  "n_clusters": 7
+ },
+ "dad58e02b2": {
+  "mode_rep": "dad58e02b2:gemini-2.5-flash:0",
+  "mode_weight_share": 0.125,
+  "mode_size": 1,
+  "n_clusters": 13
+ },
+ "dbc3d2954f": {
+  "mode_rep": "dbc3d2954f:deepseek-v3.1:0",
+  "mode_weight_share": 0.11111111111111112,
+  "mode_size": 1,
+  "n_clusters": 12
+ },
+ "e0b40e3e3d": {
+  "mode_rep": "e0b40e3e3d:phi-4:0",
+  "mode_weight_share": 0.8333333333333334,
+  "mode_size": 10,
+  "n_clusters": 3
+ },
+ "e19f620d82": {
+  "mode_rep": "e19f620d82:phi-4:0",
+  "mode_weight_share": 0.22222222222222224,
+  "mode_size": 2,
+  "n_clusters": 7
+ },
+ "e1bc96394e": {
+  "mode_rep": "e1bc96394e:deepseek-v3.1:0",
+  "mode_weight_share": 0.16666666666666666,
+  "mode_size": 1,
+  "n_clusters": 6
+ },
+ "e20ac41e3f": {
+  "mode_rep": "e20ac41e3f:llama-3.1-8b:0",
+  "mode_weight_share": 0.37500000000000006,
+  "mode_size": 3,
+  "n_clusters": 6
+ },
+ "e2b38ede8e": {
+  "mode_rep": "e2b38ede8e:deepseek-v3.1:0",
+  "mode_weight_share": 0.11111111111111112,
+  "mode_size": 1,
+  "n_clusters": 12
+ },
+ "e332b8dcc8": {
+  "mode_rep": "e332b8dcc8:deepseek-v3.1:0",
+  "mode_weight_share": 0.16666666666666666,
+  "mode_size": 1,
+  "n_clusters": 6
+ },
+ "e900dae550": {
+  "mode_rep": "e900dae550:deepseek-v3.1:0",
+  "mode_weight_share": 0.16666666666666666,
+  "mode_size": 1,
+  "n_clusters": 6
+ },
+ "e92abe62cd": {
+  "mode_rep": "e92abe62cd:deepseek-v3.1:0",
+  "mode_weight_share": 0.16666666666666666,
+  "mode_size": 1,
+  "n_clusters": 6
+ },
+ "e99d394a3e": {
+  "mode_rep": "e99d394a3e:qwen-2.5-7b:0",
+  "mode_weight_share": 0.2857142857142857,
+  "mode_size": 2,
+  "n_clusters": 8
+ },
+ "ea42eaa9ab": {
+  "mode_rep": "ea42eaa9ab:gemini-2.5-flash:0",
+  "mode_weight_share": 0.16666666666666666,
+  "mode_size": 1,
+  "n_clusters": 6
+ },
+ "eb20ccc547": {
+  "mode_rep": "eb20ccc547:deepseek-v3.1:0",
+  "mode_weight_share": 0.125,
+  "mode_size": 1,
+  "n_clusters": 8
+ },
+ "ed3cb7b364": {
+  "mode_rep": "ed3cb7b364:phi-4:0",
+  "mode_weight_share": 0.22222222222222224,
+  "mode_size": 2,
+  "n_clusters": 6
+ },
+ "eea5da6fe8": {
+  "mode_rep": "eea5da6fe8:deepseek-v3.1:0",
+  "mode_weight_share": 0.1,
+  "mode_size": 1,
+  "n_clusters": 12
+ },
+ "f0bdbea862": {
+  "mode_rep": "f0bdbea862:gpt-oss-120b:0",
+  "mode_weight_share": 0.33333333333333337,
+  "mode_size": 3,
+  "n_clusters": 9
+ },
+ "f11ee84dfe": {
+  "mode_rep": "f11ee84dfe:qwen-2.5-7b:0",
+  "mode_weight_share": 0.5555555555555556,
+  "mode_size": 5,
+  "n_clusters": 5
+ },
+ "f3a1a099da": {
+  "mode_rep": "f3a1a099da:phi-4:0",
+  "mode_weight_share": 0.4444444444444445,
+  "mode_size": 4,
+  "n_clusters": 7
+ },
+ "f458ffc254": {
+  "mode_rep": "f458ffc254:deepseek-v3.1:0",
+  "mode_weight_share": 0.14285714285714285,
+  "mode_size": 1,
+  "n_clusters": 7
+ },
+ "f4cdb1d294": {
+  "mode_rep": "f4cdb1d294:deepseek-v3.1:0",
+  "mode_weight_share": 0.14285714285714285,
+  "mode_size": 1,
+  "n_clusters": 7
+ },
+ "f549d09bf2": {
+  "mode_rep": "f549d09bf2:qwen-2.5-7b:0",
+  "mode_weight_share": 0.25,
+  "mode_size": 2,
+  "n_clusters": 7
+ },
+ "f82eba2ce1": {
+  "mode_rep": "f82eba2ce1:deepseek-v3.1:0",
+  "mode_weight_share": 0.16666666666666666,
+  "mode_size": 1,
+  "n_clusters": 6
+ },
+ "fc6dad52e3": {
+  "mode_rep": "fc6dad52e3:qwen-2.5-7b:0",
+  "mode_weight_share": 0.4444444444444444,
+  "mode_size": 4,
+  "n_clusters": 6
+ },
+ "fd6a90df8c": {
+  "mode_rep": "fd6a90df8c:mistral-small-3.2-24b:0",
+  "mode_weight_share": 0.22222222222222224,
+  "mode_size": 2,
+  "n_clusters": 7
+ },
+ "feca780c31": {
+  "mode_rep": "feca780c31:qwen-2.5-7b:0",
+  "mode_weight_share": 0.25,
+  "mode_size": 2,
+  "n_clusters": 11
+ }
+}

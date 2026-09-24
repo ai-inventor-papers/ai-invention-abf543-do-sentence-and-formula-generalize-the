@@ -1,0 +1,15 @@
+{
+ "chain": [
+  {
+   "model": "google/gemini-2.5-pro",
+   "usd_per_call": 0.001053875,
+   "parse_rate": 1.0,
+   "n_ok": 20
+  }
+ ],
+ "model": "google/gemini-2.5-pro",
+ "frontier": true,
+ "n_run": 680,
+ "coverage": 1.0,
+ "phase_spent": 0.7357387499999996
+}

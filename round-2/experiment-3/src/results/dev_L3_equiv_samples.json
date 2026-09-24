@@ -1,0 +1,322 @@
+[
+ {
+  "sentence": "If Sam has high ambitions and future career goals and is a young teenage girl attending college, then Sam either does not have high ambitions and future career goals or is not a young teenage girl attending college.",
+  "a": "(((HighAmbitions(sam) ∧ CareerGoals(sam)) ∧ YoungTeenageGirl(sam)) ∧ AttendingCollege(sam)) → (((¬HighAmbitions(sam) ∨ ¬CareerGoals(sam)) ∨ ¬YoungTeenageGirl(sam)) ∨ ¬AttendingCollege(sam))",
+  "b": "((HighAmbitions(sam) ∧ FutureCareerGoals(sam)) ∧ YoungTeenageGirlAttendingCollege(sam)) → (¬(HighAmbitions(sam) ∧ FutureCareerGoals(sam)) ∨ ¬YoungTeenageGirlAttendingCollege(sam))",
+  "via_def": {
+   "side": "B",
+   "pred": "HighAmbitions",
+   "pattern": "('k', 'k')",
+   "neg": [
+    false,
+    false
+   ]
+  },
+  "L1": null,
+  "L2": "WEAKER"
+ },
+ {
+  "sentence": "If Sam has high ambitions and future career goals and is a young teenage girl attending college, then Sam either does not have high ambitions and future career goals or is not a young teenage girl attending college.",
+  "a": "(((HighAmbitions(Sam) ∧ FutureGoals(Sam)) ∧ YoungTeenageGirl(Sam)) ∧ AttendingCollege(Sam)) → (¬(HighAmbitions(Sam) ∧ FutureGoals(Sam)) ∨ ¬(YoungTeenageGirl(Sam) ∧ AttendingCollege(Sam)))",
+  "b": "((HighAmbitions(sam) ∧ FutureCareerGoals(sam)) ∧ YoungTeenageGirlAttendingCollege(sam)) → (¬(HighAmbitions(sam) ∧ FutureCareerGoals(sam)) ∨ ¬YoungTeenageGirlAttendingCollege(sam))",
+  "via_def": {
+   "side": "B",
+   "pred": "HighAmbitions",
+   "pattern": "('k', 'k')",
+   "neg": [
+    false,
+    false
+   ]
+  },
+  "L1": null,
+  "L2": "WEAKER"
+ },
+ {
+  "sentence": "If Sam has high ambitions and future career goals and is a young teenage girl attending college, then Sam either does not have high ambitions and future career goals or is not a young teenage girl attending college.",
+  "a": "(((HasAmbitions(sam) ∧ HasCareerGoals(sam)) ∧ YoungTeenageGirl(sam)) ∧ AttendsCollege(sam)) → (¬(HasAmbitions(sam) ∧ HasCareerGoals(sam)) ∨ ¬(YoungTeenageGirl(sam) ∧ AttendsCollege(sam)))",
+  "b": "((HighAmbitions(sam) ∧ FutureCareerGoals(sam)) ∧ YoungTeenageGirlAttendingCollege(sam)) → (¬(HighAmbitions(sam) ∧ FutureCareerGoals(sam)) ∨ ¬YoungTeenageGirlAttendingCollege(sam))",
+  "via_def": {
+   "side": "B",
+   "pred": "HighAmbitions",
+   "pattern": "('k', 'k')",
+   "neg": [
+    false,
+    false
+   ]
+  },
+  "L1": null,
+  "L2": "WEAKER"
+ },
+ {
+  "sentence": "A healthy diet consisting of a variety of fruits, vegetables, whole grains, and lean proteins promotes overall well-being and reduces the risk of chronic diseases.",
+  "a": "∀x ((((((Diet(x) ∧ Healthy(x)) ∧ ConsistsOf(x, Fruits)) ∧ ConsistsOf(x, Vegetables)) ∧ ConsistsOf(x, WholeGrains)) ∧ ConsistsOf(x, LeanProteins)) → (Promotes(x, WellBeing) ∧ ReducesRisk(x, ChronicDiseases)))",
+  "b": "∀x (((((HealthyDiet(x) ∧ ConsistsOf(x, Fruits)) ∧ ConsistsOf(x, Vegetables)) ∧ ConsistsOf(x, WholeGrains)) ∧ ConsistsOf(x, LeanProteins)) → (Promotes(x, WellBeing) ∧ ReducesRisk(x, ChronicDiseases)))",
+  "via_def": {
+   "side": "B",
+   "pred": "ConsistsOf",
+   "pattern": "(('u', 0), 'k')",
+   "neg": [
+    false,
+    false
+   ]
+  },
+  "L1": null,
+  "L2": "WEAKER"
+ },
+ {
+  "sentence": "If Sam has high ambitions and future career goals and is a young teenage girl attending college, then Sam either does not have high ambitions and future career goals or is not a young teenage girl attending college.",
+  "a": "(((HighAmbitions(sam) ∧ CareerGoals(sam)) ∧ YoungTeenageGirl(sam)) ∧ AttendingCollege(sam)) → (((¬HighAmbitions(sam) ∨ ¬CareerGoals(sam)) ∨ ¬YoungTeenageGirl(sam)) ∨ ¬AttendingCollege(sam))",
+  "b": "((HighAmbitions(sam) ∧ FutureGoals(sam)) ∧ YoungTeenGirlCollege(sam)) → (¬(HighAmbitions(sam) ∧ FutureGoals(sam)) ∨ ¬YoungTeenGirlCollege(sam))",
+  "via_def": {
+   "side": "B",
+   "pred": "HighAmbitions",
+   "pattern": "('k', 'k')",
+   "neg": [
+    false,
+    false
+   ]
+  },
+  "L1": null,
+  "L2": "WEAKER"
+ },
+ {
+  "sentence": "A healthy diet consisting of a variety of fruits, vegetables, whole grains, and lean proteins promotes overall well-being and reduces the risk of chronic diseases.",
+  "a": "∀d (((((HealthyDiet(d) ∧ Variety(d, fruits)) ∧ Variety(d, vegetables)) ∧ Variety(d, wholeGrains)) ∧ Variety(d, leanProteins)) → (Promotes(d, overallWellBeing) ∧ ReducesRisk(d, chronicDiseases)))",
+  "b": "∀x ((((((Diet(x) ∧ Healthy(x)) ∧ ConsistsOf(x, Fruits)) ∧ ConsistsOf(x, Vegetables)) ∧ ConsistsOf(x, WholeGrains)) ∧ ConsistsOf(x, LeanProteins)) → (Promotes(x, WellBeing) ∧ ReducesRisk(x, ChronicDiseases)))",
+  "via_def": {
+   "side": "A",
+   "pred": "Variety",
+   "pattern": "(('u', 0), 'k')",
+   "neg": [
+    false,
+    false
+   ]
+  },
+  "L1": null,
+  "L2": "STRONGER"
+ },
+ {
+  "sentence": "A sport that is played between two teams on a field with a ball and the objective is to score points by getting the ball into the opposing team's goal is a goal-based sport.",
+  "a": "∀x ((((((Sport(x) ∧ PlayedBetweenTwoTeams(x)) ∧ OnAField(x)) ∧ WithABall(x)) ∧ ObjectiveIsToScorePoints(x)) ∧ ScoreByGettingBallIntoOpposingGoal(x)) → GoalBasedSport(x))",
+  "b": "∀x (((((Sport(x) ∧ PlayedBetweenTwoTeams(x)) ∧ PlayedOnField(x)) ∧ UsesBall(x)) ∧ ObjectiveIsToScoreByGettingBallIntoOpposingGoal(x)) → GoalBasedSport(x))",
+  "via_def": {
+   "side": "B",
+   "pred": "Sport",
+   "pattern": "('k', 'k')",
+   "neg": [
+    false,
+    false
+   ]
+  },
+  "L1": null,
+  "L2": "WEAKER"
+ },
+ {
+  "sentence": "Elephantopus is widespread over much of Africa, southern Asia, Australia, and the Americas.",
+  "a": "(((Widespread(Elephantopus) ∧ Over(Elephantopus, Africa)) ∧ Over(Elephantopus, SouthernAsia)) ∧ Over(Elephantopus, Australia)) ∧ Over(Elephantopus, Americas)",
+  "b": "((Widespread(elephantopus, africa) ∧ Widespread(elephantopus, southern_asia)) ∧ Widespread(elephantopus, australia)) ∧ Widespread(elephantopus, americas)",
+  "via_def": {
+   "side": "B",
+   "pred": "Widespread",
+   "pattern": "(('u', 0), 'k')",
+   "neg": [
+    false,
+    false
+   ]
+  },
+  "L1": null,
+  "L2": "STRONGER"
+ },
+ {
+  "sentence": "Elephantopus is widespread over much of Africa, southern Asia, Australia, and the Americas.",
+  "a": "(((Widespread(Elephantopus) ∧ Over(Elephantopus, Africa)) ∧ Over(Elephantopus, SouthernAsia)) ∧ Over(Elephantopus, Australia)) ∧ Over(Elephantopus, Americas)",
+  "b": "((Widespread(Elephantopus, Africa) ∧ Widespread(Elephantopus, SouthernAsia)) ∧ Widespread(Elephantopus, Australia)) ∧ Widespread(Elephantopus, Americas)",
+  "via_def": {
+   "side": "B",
+   "pred": "Widespread",
+   "pattern": "(('u', 0), 'k')",
+   "neg": [
+    false,
+    false
+   ]
+  },
+  "L1": null,
+  "L2": "STRONGER"
+ },
+ {
+  "sentence": "If Sam has high ambitions and future career goals and is a young teenage girl attending college, then Sam either does not have high ambitions and future career goals or is not a young teenage girl attending college.",
+  "a": "∀x (Sam(x) → (((HasHighAmbitions(x) ∧ HasFutureGoals(x)) ∧ YoungTeenageGirlAttendingCollege(x)) → ((¬HasHighAmbitions(x) ∨ ¬HasFutureGoals(x)) ⊕ ¬YoungTeenageGirlAttendingCollege(x))))",
+  "b": "∀x (YoungTeenGirlAttendingCollege(x) → ((HighAmbitions(x) ∧ FutureCareerGoals(x)) → (¬(HighAmbitions(x) ∧ FutureCareerGoals(x)) ∨ ¬YoungTeenGirlAttendingCollege(x))))",
+  "via_def": {
+   "side": "B",
+   "pred": "YoungTeenGirlAttendingCollege",
+   "pattern": "('k', 'k')",
+   "neg": [
+    false,
+    false
+   ]
+  },
+  "L1": null,
+  "L2": "WEAKER"
+ },
+ {
+  "sentence": "If Sam has high ambitions and future career goals and is a young teenage girl attending college, then Sam either does not have high ambitions and future career goals or is not a young teenage girl attending college.",
+  "a": "(((HighAmbitions(Sam) ∧ FutureGoals(Sam)) ∧ YoungTeenageGirl(Sam)) ∧ AttendingCollege(Sam)) → (¬(HighAmbitions(Sam) ∧ FutureGoals(Sam)) ∨ ¬(YoungTeenageGirl(Sam) ∧ AttendingCollege(Sam)))",
+  "b": "((HighAmbitions(sam) ∧ FutureGoals(sam)) ∧ YoungTeenGirlCollege(sam)) → (¬(HighAmbitions(sam) ∧ FutureGoals(sam)) ∨ ¬YoungTeenGirlCollege(sam))",
+  "via_def": {
+   "side": "B",
+   "pred": "HighAmbitions",
+   "pattern": "('k', 'k')",
+   "neg": [
+    false,
+    false
+   ]
+  },
+  "L1": null,
+  "L2": "WEAKER"
+ },
+ {
+  "sentence": "If Sam has high ambitions and future career goals and is a young teenage girl attending college, then Sam either does not have high ambitions and future career goals or is not a young teenage girl attending college.",
+  "a": "(((HasAmbitions(sam) ∧ HasCareerGoals(sam)) ∧ YoungTeenageGirl(sam)) ∧ AttendsCollege(sam)) → (¬(HasAmbitions(sam) ∧ HasCareerGoals(sam)) ∨ ¬(YoungTeenageGirl(sam) ∧ AttendsCollege(sam)))",
+  "b": "((HighAmbitions(sam) ∧ FutureGoals(sam)) ∧ YoungTeenGirlCollege(sam)) → (¬(HighAmbitions(sam) ∧ FutureGoals(sam)) ∨ ¬YoungTeenGirlCollege(sam))",
+  "via_def": {
+   "side": "B",
+   "pred": "HighAmbitions",
+   "pattern": "('k', 'k')",
+   "neg": [
+    false,
+    false
+   ]
+  },
+  "L1": null,
+  "L2": "WEAKER"
+ },
+ {
+  "sentence": "If the L-2021 monitor is either in the library and produced by LG, or neither in the library nor produced by LG,  then L-2021 neither has a type-c port nor is produced by LG.",
+  "a": "∀x (((Monitor(x, \"L-2021\") ∧ (InLibrary(x) ∧ ProducedBy(x, \"LG\"))) ∨ ((Monitor(x, \"L-2021\") ∧ ¬InLibrary(x)) ∧ ¬ProducedBy(x, \"LG\"))) → (¬HasTypeCPort(x) ∧ ¬ProducedBy(x, \"LG\")))",
+  "b": "∀x ((Monitor(x) ∧ Model(x, l2021)) → (((InLibrary(x) ∧ ProducedBy(x, lg)) ∨ (¬InLibrary(x) ∧ ¬ProducedBy(x, lg))) → (¬HasTypeCPort(x) ∧ ¬ProducedBy(x, lg))))",
+  "via_def": {
+   "side": "A",
+   "pred": "Monitor",
+   "pattern": "(('u', 0), 'k')",
+   "neg": [
+    false,
+    false
+   ]
+  },
+  "L1": null,
+  "L2": "STRONGER"
+ },
+ {
+  "sentence": "William Dickinson went to schools located in the United Kingdom for both high school and university.",
+  "a": "∃s1 ∃s2 (((((((School(s1) ∧ LocatedIn(s1, UK)) ∧ HighSchool(s1)) ∧ Attended(william, s1)) ∧ School(s2)) ∧ LocatedIn(s2, UK)) ∧ University(s2)) ∧ Attended(william, s2))",
+  "b": "∃s1 ∃s2 (((((HighSchool(s1) ∧ University(s2)) ∧ WentTo(WilliamDickinson, s1)) ∧ WentTo(WilliamDickinson, s2)) ∧ LocatedIn(s1, UK)) ∧ LocatedIn(s2, UK))",
+  "via_def": {
+   "side": "B",
+   "pred": "WentTo",
+   "pattern": "(('u', 1), 'k')",
+   "neg": [
+    false,
+    false
+   ]
+  },
+  "L1": null,
+  "L2": "STRONGER"
+ },
+ {
+  "sentence": "A sport that is played between two teams on a field with a ball and the objective is to score points by getting the ball into the opposing team's goal is a goal-based sport.",
+  "a": "∀x ((((((Sport(x) ∧ PlayedBetweenTeams(x)) ∧ PlayedOnField(x)) ∧ UsesBall(x)) ∧ ObjectiveIsToScorePoints(x)) ∧ ScoringByGettingBallIntoGoal(x)) → GoalBasedSport(x))",
+  "b": "∀x (((((Sport(x) ∧ PlayedBetweenTwoTeams(x)) ∧ PlayedOnField(x)) ∧ UsesBall(x)) ∧ ObjectiveIsToScoreByGettingBallIntoOpposingGoal(x)) → GoalBasedSport(x))",
+  "via_def": {
+   "side": "B",
+   "pred": "Sport",
+   "pattern": "('k', 'k')",
+   "neg": [
+    false,
+    false
+   ]
+  },
+  "L1": null,
+  "L2": "WEAKER"
+ },
+ {
+  "sentence": "A sport that is played between two teams on a field with a ball and the objective is to score points by getting the ball into the opposing team's goal is a goal-based sport.",
+  "a": "∀x ((((((Sport(x) ∧ PlayedBetweenTwoTeams(x)) ∧ OnField(x)) ∧ HasBall(x)) ∧ ObjectiveScorePoints(x)) ∧ GoalOpposingTeamGoal(x)) → GoalBasedSport(x))",
+  "b": "∀x (((((Sport(x) ∧ PlayedBetweenTwoTeams(x)) ∧ PlayedOnField(x)) ∧ UsesBall(x)) ∧ ObjectiveIsToScoreByGettingBallIntoOpposingGoal(x)) → GoalBasedSport(x))",
+  "via_def": {
+   "side": "B",
+   "pred": "Sport",
+   "pattern": "('k', 'k')",
+   "neg": [
+    false,
+    false
+   ]
+  },
+  "L1": null,
+  "L2": "WEAKER"
+ },
+ {
+  "sentence": "Chefs prepare meals, waiters serve meals, and customers enjoy meals at a restaurant.",
+  "a": "((∀x (Chef(x) → (∃y (Meal(y) ∧ Prepares(x, y))))) ∧ (∀x (Waiter(x) → (∃y (Meal(y) ∧ Serves(x, y)))))) ∧ (∀x (Customer(x) → (∃y ((Meal(y) ∧ Enjoys(x, y)) ∧ AtRestaurant(x)))))",
+  "b": "∀x (((Chef(x) → (∃m (Meal(m) ∧ Prepare(x, m)))) ∧ (Waiter(x) → (∃m (Meal(m) ∧ Serve(x, m))))) ∧ (Customer(x) → (∃m (Meal(m) ∧ Enjoy(x, m)))))",
+  "via_def": {
+   "side": "B",
+   "pred": "Prepare",
+   "pattern": "(('u', 0), 'k')",
+   "neg": [
+    false,
+    false
+   ]
+  },
+  "L1": null,
+  "L2": "STRONGER"
+ },
+ {
+  "sentence": "If Sam has high ambitions and future career goals and is a young teenage girl attending college, then Sam either does not have high ambitions and future career goals or is not a young teenage girl attending college.",
+  "a": "(((HighAmbitions(sam) ∧ CareerGoals(sam)) ∧ YoungTeenageGirl(sam)) ∧ AttendingCollege(sam)) → (((¬HighAmbitions(sam) ∨ ¬CareerGoals(sam)) ∨ ¬YoungTeenageGirl(sam)) ∨ ¬AttendingCollege(sam))",
+  "b": "¬((HasHighAmbitions(sam) ∧ HasFutureCareerGoals(sam)) ∧ YoungTeenageGirlAttendingCollege(sam))",
+  "via_def": {
+   "side": "B",
+   "pred": "HasHighAmbitions",
+   "pattern": "('k', 'k')",
+   "neg": [
+    false,
+    false
+   ]
+  },
+  "L1": null,
+  "L2": "WEAKER"
+ },
+ {
+  "sentence": "Everyone who pursues wellbeing either engages in physical activity or maintains balance (or both).",
+  "a": "∀x (((PursuesWellbeing(x) → (EngagesInPhysicalActivity(x) ∨ MaintainsBalance(x))) ∧ ¬(EngagesInPhysicalActivity(x) ∧ MaintainsBalance(x))) ⊕ (EngagesInPhysicalActivity(x) ∧ MaintainsBalance(x)))",
+  "b": "∀x (Person(x) → (PursuesWellbeing(x) → (EngagesInPhysicalActivity(x) ∨ MaintainsBalance(x))))",
+  "via_def": {
+   "side": "A",
+   "pred": "PursuesWellbeing",
+   "pattern": "('k', 'k')",
+   "neg": [
+    false,
+    false
+   ]
+  },
+  "L1": null,
+  "L2": "STRONGER"
+ },
+ {
+  "sentence": "A sport that is played between two teams on a field with a ball and the objective is to score points by getting the ball into the opposing team's goal is a goal-based sport.",
+  "a": "∀x ((((((Sport(x) ∧ PlayedBetweenTwoTeams(x)) ∧ Field(x)) ∧ Ball(x)) ∧ ObjectiveScorePoints(x)) ∧ OpposingGoal(x)) → GoalBasedSport(x))",
+  "b": "∀x (((((Sport(x) ∧ PlayedBetweenTwoTeams(x)) ∧ PlayedOnField(x)) ∧ UsesBall(x)) ∧ ObjectiveIsToScoreByGettingBallIntoOpposingGoal(x)) → GoalBasedSport(x))",
+  "via_def": {
+   "side": "B",
+   "pred": "Sport",
+   "pattern": "('k', 'k')",
+   "neg": [
+    false,
+    false
+   ]
+  },
+  "L1": null,
+  "L2": "WEAKER"
+ }
+]

@@ -1,0 +1,188 @@
+{
+ "note": "mechanism evidence only (Thatikonda et al. 2025): controlled mutants of solver-verified faithful anchors",
+ "n_anchors": 298,
+ "by_operator": {
+  "NEG": {
+   "n": 296,
+   "expected_type": "negation_polarity",
+   "detection_DC": 0.9290540540540541,
+   "detection_DC_ci95": [
+    0.9087837837837838,
+    0.9493243243243243
+   ],
+   "mutant_still_in_mode": 0.05067567567567568,
+   "typing_accuracy": 0.02027027027027027,
+   "type_distribution": {
+    "other": 235,
+    "quantifier_forall_exists": 31,
+    "negation_polarity": 6,
+    "none": 15,
+    "added_condition": 2,
+    "dropped_condition": 7
+   },
+   "relation_to_anchor": {
+    "INCOMPARABLE": 286,
+    "CONTRADICTORY": 8,
+    "STRONGER": 2
+   },
+   "detection_VC": 0.5,
+   "mean_DC_anchor": 0.6115170591605685,
+   "mean_DC_mutant": 6.206918873878706e-05
+  },
+  "IMPL_REV": {
+   "n": 254,
+   "expected_type": "implication_direction_or_only",
+   "detection_DC": 0.8877952755905512,
+   "detection_DC_ci95": [
+    0.860236220472441,
+    0.9153543307086615
+   ],
+   "mutant_still_in_mode": 0.12992125984251968,
+   "typing_accuracy": 0.2283464566929134,
+   "type_distribution": {
+    "implication_direction_or_only": 58,
+    "other": 120,
+    "added_condition": 3,
+    "quantifier_forall_exists": 31,
+    "dropped_condition": 8,
+    "none": 33,
+    "negation_polarity": 1
+   },
+   "relation_to_anchor": {
+    "INCOMPARABLE": 252,
+    "CONTRADICTORY": 1,
+    "WEAKER": 1
+   },
+   "detection_VC": 0.5,
+   "mean_DC_anchor": 0.6293738303136985,
+   "mean_DC_mutant": 0.08107085994929158
+  },
+  "ADD": {
+   "n": 254,
+   "expected_type": "added_condition",
+   "detection_DC": 0.9133858267716536,
+   "detection_DC_ci95": [
+    0.8858267716535433,
+    0.9390255905511811
+   ],
+   "mutant_still_in_mode": 0.07874015748031496,
+   "typing_accuracy": 0.7204724409448819,
+   "type_distribution": {
+    "added_condition": 183,
+    "other": 49,
+    "none": 20,
+    "dropped_condition": 1,
+    "quantifier_forall_exists": 1
+   },
+   "relation_to_anchor": {
+    "WEAKER": 254
+   },
+   "detection_VC": 0.96,
+   "mean_DC_anchor": 0.6293738303136985,
+   "mean_DC_mutant": 0.029349870248861754
+  },
+  "ANDOR": {
+   "n": 204,
+   "expected_type": "connective_and_or",
+   "detection_DC": 0.9191176470588235,
+   "detection_DC_ci95": [
+    0.8946078431372549,
+    0.9436274509803921
+   ],
+   "mutant_still_in_mode": 0.06372549019607843,
+   "typing_accuracy": 0.0,
+   "type_distribution": {
+    "other": 137,
+    "added_condition": 14,
+    "dropped_condition": 7,
+    "quantifier_forall_exists": 33,
+    "none": 13
+   },
+   "relation_to_anchor": {
+    "STRONGER": 93,
+    "WEAKER": 104,
+    "INCOMPARABLE": 7
+   },
+   "detection_VC": 0.5,
+   "mean_DC_anchor": 0.5503343836659775,
+   "mean_DC_mutant": 0.0002504183722927133
+  },
+  "QUANT": {
+   "n": 207,
+   "expected_type": "quantifier_forall_exists",
+   "detection_DC": 0.8719806763285024,
+   "detection_DC_ci95": [
+    0.8381642512077294,
+    0.9082125603864735
+   ],
+   "mutant_still_in_mode": 0.0821256038647343,
+   "typing_accuracy": 0.5990338164251208,
+   "type_distribution": {
+    "other": 62,
+    "quantifier_forall_exists": 124,
+    "none": 17,
+    "added_condition": 2,
+    "dropped_condition": 2
+   },
+   "relation_to_anchor": {
+    "INCOMPARABLE": 191,
+    "WEAKER": 9,
+    "STRONGER": 7
+   },
+   "detection_VC": 0.5,
+   "mean_DC_anchor": 0.5300044243663418,
+   "mean_DC_mutant": 0.022088759672606224
+  },
+  "DROP": {
+   "n": 163,
+   "expected_type": "dropped_condition",
+   "detection_DC": 0.8865030674846626,
+   "detection_DC_ci95": [
+    0.8496932515337423,
+    0.9202453987730062
+   ],
+   "mutant_still_in_mode": 0.08588957055214724,
+   "typing_accuracy": 0.49693251533742333,
+   "type_distribution": {
+    "added_condition": 1,
+    "other": 61,
+    "none": 14,
+    "dropped_condition": 81,
+    "quantifier_forall_exists": 6
+   },
+   "relation_to_anchor": {
+    "STRONGER": 68,
+    "WEAKER": 89,
+    "INCOMPARABLE": 6
+   },
+   "detection_VC": 0.9233333333333333,
+   "mean_DC_anchor": 0.5280495897889691,
+   "mean_DC_mutant": 0.026739109614650737
+  },
+  "ARG_SWAP": {
+   "n": 51,
+   "expected_type": "argument_swap",
+   "detection_DC": 0.6470588235294118,
+   "detection_DC_ci95": [
+    0.5588235294117647,
+    0.7352941176470589
+   ],
+   "mutant_still_in_mode": 0.1568627450980392,
+   "typing_accuracy": 0.19607843137254902,
+   "type_distribution": {
+    "other": 28,
+    "argument_swap": 10,
+    "added_condition": 1,
+    "none": 8,
+    "quantifier_forall_exists": 4
+   },
+   "relation_to_anchor": {
+    "INCOMPARABLE": 50,
+    "STRONGER": 1
+   },
+   "detection_VC": 0.5,
+   "mean_DC_anchor": 0.31116682195978596,
+   "mean_DC_mutant": 0.10042333735584673
+  }
+ }
+}

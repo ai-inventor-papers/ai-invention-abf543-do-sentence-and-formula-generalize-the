@@ -1,0 +1,481 @@
+{
+ "n_items_with_changed_relations": 14,
+ "changed_pairs": [
+  {
+   "item_id": "0554eb4d20:deepseek-v3.1:0",
+   "kind": "syn_rename",
+   "peer": "qwen-2.5-7b",
+   "orig": "∀x (Mountain(x) → (InfluenceClimate(x) ∧ (AffectWindPatterns(x) ∨ AffectPrecipitation(x) ∨ AffectTemperature(x))))",
+   "renamed": "∀x (Mount(x) → (WorkClimate(x) ∧ (ImpactWindPatterns(x) ∨ ImpactPrecipitation(x) ∨ ImpactTemperature(x))))",
+   "peer_fol": "∀x (Mountain(x) → (CanInfluenceClimate(x) ↔ (AffectWindPatterns(x) ∧ AffectPrecipitation(x) ∧ AffectTemperature(x))))",
+   "rel_orig": "STRONGER",
+   "rel_renamed": "COMPATIBLE",
+   "levels": [
+    3,
+    1
+   ],
+   "timeouts": [
+    false,
+    false
+   ],
+   "targets": [
+    "A",
+    "A"
+   ],
+   "lo_is_cand": [
+    false,
+    true
+   ],
+   "n_maps_L2": [
+    1200,
+    1200
+   ],
+   "seconds": [
+    0.2983,
+    0.2945
+   ]
+  },
+  {
+   "item_id": "0554eb4d20:deepseek-v3.1:0",
+   "kind": "var_rename",
+   "peer": "qwen-2.5-7b",
+   "orig": "∀x (Mountain(x) → (InfluenceClimate(x) ∧ (AffectWindPatterns(x) ∨ AffectPrecipitation(x) ∨ AffectTemperature(x))))",
+   "renamed": "∀v1 (Mountain(v1) → (InfluenceClimate(v1) ∧ (AffectWindPatterns(v1) ∨ AffectPrecipitation(v1) ∨ AffectTemperature(v1))))",
+   "peer_fol": "∀x (Mountain(x) → (CanInfluenceClimate(x) ↔ (AffectWindPatterns(x) ∧ AffectPrecipitation(x) ∧ AffectTemperature(x))))",
+   "rel_orig": "STRONGER",
+   "rel_renamed": "COMPATIBLE",
+   "levels": [
+    3,
+    1
+   ],
+   "timeouts": [
+    false,
+    false
+   ],
+   "targets": [
+    "A",
+    "A"
+   ],
+   "lo_is_cand": [
+    false,
+    true
+   ],
+   "n_maps_L2": [
+    1200,
+    1200
+   ],
+   "seconds": [
+    0.2983,
+    0.2864
+   ]
+  },
+  {
+   "item_id": "0e66e970e0:gemini-2.5-flash:0",
+   "kind": "syn_rename",
+   "peer": "qwen-2.5-7b",
+   "orig": "∀x (Fruit(x) → ((Sweet(x) ⊕ Sour(x)) ∧ ¬Tasteless(x)))",
+   "renamed": "∀x (Yield(x) → ((Dessert(x) ⊕ Sourness(x)) ∧ ¬Pred_3(x)))",
+   "peer_fol": "∀x (Fruit(x) → (Sweet(x) ⊕ (Sour(x) ∧ ¬Tasteless(x))))",
+   "rel_orig": "STRONGER",
+   "rel_renamed": "EQUIV",
+   "levels": [
+    1,
+    3
+   ],
+   "timeouts": [
+    false,
+    false
+   ],
+   "targets": [
+    "A",
+    "A"
+   ],
+   "lo_is_cand": [
+    true,
+    false
+   ],
+   "n_maps_L2": [
+    168,
+    168
+   ],
+   "seconds": [
+    0.0529,
+    0.055
+   ]
+  },
+  {
+   "item_id": "0e66e970e0:gemini-2.5-flash:0",
+   "kind": "tok_rename",
+   "peer": "qwen-2.5-7b",
+   "orig": "∀x (Fruit(x) → ((Sweet(x) ⊕ Sour(x)) ∧ ¬Tasteless(x)))",
+   "renamed": "∀x (PSux6(x) → ((PCul4(x) ⊕ PTze2(x)) ∧ ¬PRew2(x)))",
+   "peer_fol": "∀x (Fruit(x) → (Sweet(x) ⊕ (Sour(x) ∧ ¬Tasteless(x))))",
+   "rel_orig": "STRONGER",
+   "rel_renamed": "EQUIV",
+   "levels": [
+    1,
+    3
+   ],
+   "timeouts": [
+    false,
+    false
+   ],
+   "targets": [
+    "A",
+    "A"
+   ],
+   "lo_is_cand": [
+    true,
+    false
+   ],
+   "n_maps_L2": [
+    168,
+    168
+   ],
+   "seconds": [
+    0.0529,
+    0.054
+   ]
+  },
+  {
+   "item_id": "0fb2473561:gpt-4.1-mini:0",
+   "kind": "var_rename",
+   "peer": "qwen-2.5-7b",
+   "orig": "∀x (WatchesVideos(murphy) → (((UsesComputers(murphy) ∨ ChecksEmails(murphy)) ∧ (¬Cats(x) ∨ ¬ChecksEmails(x))) → UsesComputers(murphy)))",
+   "renamed": "∀v1 (WatchesVideos(murphy) → (((UsesComputers(murphy) ∨ ChecksEmails(murphy)) ∧ (¬Cats(v1) ∨ ¬ChecksEmails(v1))) → UsesComputers(murphy)))",
+   "peer_fol": "∀x ((Murphy(x) ∧ WatchesVideos(x)) → (((UsesComputers(x) ∨ ChecksEmails(x)) ∧ ¬ChecksEmails(x)) → UsesComputers(x)))",
+   "rel_orig": "EQUIV",
+   "rel_renamed": "STRONGER",
+   "levels": [
+    3,
+    2
+   ],
+   "timeouts": [
+    false,
+    false
+   ],
+   "targets": [
+    "A",
+    "A"
+   ],
+   "lo_is_cand": [
+    false,
+    true
+   ],
+   "n_maps_L2": [
+    180,
+    180
+   ],
+   "seconds": [
+    0.107,
+    0.0473
+   ]
+  },
+  {
+   "item_id": "18dcd0933d:gemini-2.5-flash:0",
+   "kind": "tok_rename",
+   "peer": "qwen-2.5-7b",
+   "orig": "∀x (Human(x) → (LeadingEndocrinologist(x) → (MakesGroundbreakingDiscoveries(x) ∨ ImprovesPatientLives(x))))",
+   "renamed": "∀x (PPwt3(x) → (PZrl3(x) → (PRst3(x) ∨ PDwx6(x))))",
+   "peer_fol": "∀x (Human(x) → ∃y (LeadingEndocrinologist(y) ∧ (MakeGroundbreakingDiscoveries(y) ∨ ImprovePatientLives(y))))",
+   "rel_orig": "WEAKER",
+   "rel_renamed": "COMPATIBLE",
+   "levels": [
+    3,
+    1
+   ],
+   "timeouts": [
+    false,
+    false
+   ],
+   "targets": [
+    "A",
+    "A"
+   ],
+   "lo_is_cand": [
+    true,
+    false
+   ],
+   "n_maps_L2": [
+    168,
+    168
+   ],
+   "seconds": [
+    0.1051,
+    0.0476
+   ]
+  },
+  {
+   "item_id": "329375b78f:phi-4:0",
+   "kind": "var_rename",
+   "peer": "qwen-2.5-7b",
+   "orig": "∀x ((x = mark_zuckerberg ∧ ¬(Entrepreneur(x) ∨ HatesWorkingForOthers(x))) → ¬(RiskAverse(x) ∧ WorkingPerson(x)))",
+   "renamed": "∀v1 ((v1 = mark_zuckerberg ∧ ¬(Entrepreneur(v1) ∨ HatesWorkingForOthers(v1))) → ¬(RiskAverse(v1) ∧ WorkingPerson(v1)))",
+   "peer_fol": "∀x ((Mark(x) ∧ ¬Entrepreneur(x) ∧ ¬HatesWorkingForOthers(x)) → ¬RiskAverseWorker(x))",
+   "rel_orig": "WEAKER",
+   "rel_renamed": "COMPATIBLE",
+   "levels": [
+    2,
+    2
+   ],
+   "timeouts": [
+    false,
+    false
+   ],
+   "targets": [
+    "A",
+    "A"
+   ],
+   "lo_is_cand": [
+    false,
+    true
+   ],
+   "n_maps_L2": [
+    192,
+    192
+   ],
+   "seconds": [
+    0.0421,
+    0.0604
+   ]
+  },
+  {
+   "item_id": "3c3dc3a4a5:llama-3.1-8b:0",
+   "kind": "var_rename",
+   "peer": "gpt-4.1-mini",
+   "orig": "∀x (FamilyMember(x) ∧ ∃y (Pet(x, y) → ∃z (Roommate(x, z))))",
+   "renamed": "∀v1 (FamilyMember(v1) ∧ ∃v2 (Pet(v1, v2) → ∃v3 (Roommate(v1, v3))))",
+   "peer_fol": "∀x ((InEmmasFamily(x) ∧ ∃y (PetOwnedBy(x, y))) → ∃z (RoommateOf(x, z)))",
+   "rel_orig": "COMPATIBLE",
+   "rel_renamed": "STRONGER",
+   "levels": [
+    1,
+    3
+   ],
+   "timeouts": [
+    false,
+    false
+   ],
+   "targets": [
+    "A",
+    "A"
+   ],
+   "lo_is_cand": [
+    false,
+    true
+   ],
+   "n_maps_L2": [
+    6,
+    6
+   ],
+   "seconds": [
+    0.0091,
+    0.0109
+   ]
+  },
+  {
+   "item_id": "60396a0907:gpt-oss-120b:0",
+   "kind": "syn_rename",
+   "peer": "gemma-3-27b",
+   "orig": "∀x ((Employee(x) ∧ EligibleForPromotion(x)) → (RecommendationFromSupervisor(x) ∨ (WorkedTwoYears(x) ∧ GoodPerformanceRecord(x))))",
+   "renamed": "∀x ((Pred_1(x) ∧ EligibleForPublicity(x)) → (TestimonialFromSupervisor(x) ∨ (WorkTwoYears(x) ∧ GoodnessPerformanceRecord(x))))",
+   "peer_fol": "∀x ((Employee(x) ∧ EligibleForPromotion(x)) ↔ ((WorkedForTwoYears(x) ∧ GoodPerformanceRecord(x)) ∨ HasRecommendation(x, supervisor)))",
+   "rel_orig": "WEAKER",
+   "rel_renamed": "COMPATIBLE",
+   "levels": [
+    2,
+    2
+   ],
+   "timeouts": [
+    false,
+    false
+   ],
+   "targets": [
+    "A",
+    "A"
+   ],
+   "lo_is_cand": [
+    true,
+    false
+   ],
+   "n_maps_L2": [
+    360,
+    360
+   ],
+   "seconds": [
+    0.0727,
+    0.0856
+   ]
+  },
+  {
+   "item_id": "60396a0907:gpt-oss-120b:0",
+   "kind": "tok_rename",
+   "peer": "gemma-3-27b",
+   "orig": "∀x ((Employee(x) ∧ EligibleForPromotion(x)) → (RecommendationFromSupervisor(x) ∨ (WorkedTwoYears(x) ∧ GoodPerformanceRecord(x))))",
+   "renamed": "∀x ((PYwi0(x) ∧ PFym3(x)) → (PXnd2(x) ∨ (PPpy8(x) ∧ PZmh5(x))))",
+   "peer_fol": "∀x ((Employee(x) ∧ EligibleForPromotion(x)) ↔ ((WorkedForTwoYears(x) ∧ GoodPerformanceRecord(x)) ∨ HasRecommendation(x, supervisor)))",
+   "rel_orig": "WEAKER",
+   "rel_renamed": "COMPATIBLE",
+   "levels": [
+    2,
+    2
+   ],
+   "timeouts": [
+    false,
+    false
+   ],
+   "targets": [
+    "A",
+    "A"
+   ],
+   "lo_is_cand": [
+    true,
+    false
+   ],
+   "n_maps_L2": [
+    360,
+    360
+   ],
+   "seconds": [
+    0.0727,
+    0.084
+   ]
+  },
+  {
+   "item_id": "65e6402b54:gemini-2.5-flash:0",
+   "kind": "syn_rename",
+   "peer": "mistral-small-3.2-24b",
+   "orig": "∀x ((Apple(x) ∧ Red(x)) → Sweet(x)) ∧ ∀x ((Apple(x) ∧ Green(x)) → Sour(x)) ∧ ∀x ((Apple(x) ∧ Yellow(x)) → (Sweet(x) ∧ Sour(x)))",
+   "renamed": "∀x ((Pred_0(x) ∧ Redness(x)) → Dessert(x)) ∧ ∀x ((Pred_0(x) ∧ Greenness(x)) → Sourness(x)) ∧ ∀x ((Pred_0(x) ∧ Yellowness(x)) → (Dessert(x) ∧ Sourness(x)))",
+   "peer_fol": "∀x ((Apple(x) ∧ Red(x)) → Sweet(x)) ∧ ∀x ((Apple(x) ∧ Green(x)) → Sour(x)) ∧ ∀x ((Apple(x) ∧ Yellow(x)) → (Sweet(x) ⊕ Sour(x)))",
+   "rel_orig": "STRONGER",
+   "rel_renamed": "COMPATIBLE",
+   "levels": [
+    3,
+    1
+   ],
+   "timeouts": [
+    false,
+    false
+   ],
+   "targets": [
+    "A",
+    "A"
+   ],
+   "lo_is_cand": [
+    true,
+    false
+   ],
+   "n_maps_L2": [
+    1820,
+    1820
+   ],
+   "seconds": [
+    0.9409,
+    0.8756
+   ]
+  },
+  {
+   "item_id": "65e6402b54:gemini-2.5-flash:0",
+   "kind": "tok_rename",
+   "peer": "mistral-small-3.2-24b",
+   "orig": "∀x ((Apple(x) ∧ Red(x)) → Sweet(x)) ∧ ∀x ((Apple(x) ∧ Green(x)) → Sour(x)) ∧ ∀x ((Apple(x) ∧ Yellow(x)) → (Sweet(x) ∧ Sour(x)))",
+   "renamed": "∀x ((PDpb0(x) ∧ PEls2(x)) → PLbh5(x)) ∧ ∀x ((PDpb0(x) ∧ PXvz8(x)) → PDaa7(x)) ∧ ∀x ((PDpb0(x) ∧ PGyr4(x)) → (PLbh5(x) ∧ PDaa7(x)))",
+   "peer_fol": "∀x ((Apple(x) ∧ Red(x)) → Sweet(x)) ∧ ∀x ((Apple(x) ∧ Green(x)) → Sour(x)) ∧ ∀x ((Apple(x) ∧ Yellow(x)) → (Sweet(x) ⊕ Sour(x)))",
+   "rel_orig": "STRONGER",
+   "rel_renamed": "COMPATIBLE",
+   "levels": [
+    3,
+    1
+   ],
+   "timeouts": [
+    false,
+    false
+   ],
+   "targets": [
+    "A",
+    "A"
+   ],
+   "lo_is_cand": [
+    true,
+    false
+   ],
+   "n_maps_L2": [
+    1820,
+    1820
+   ],
+   "seconds": [
+    0.9409,
+    0.9495
+   ]
+  },
+  {
+   "item_id": "65e6402b54:gpt-oss-120b:0",
+   "kind": "syn_rename",
+   "peer": "mistral-small-3.2-24b",
+   "orig": "∀x ((Apple(x) ∧ Red(x)) → Sweet(x)) ∧ ∀x ((Apple(x) ∧ Green(x)) → Sour(x)) ∧ ∀x ((Apple(x) ∧ Yellow(x)) → (Sweet(x) ∧ Sour(x)))",
+   "renamed": "∀x ((Pred_0(x) ∧ Redness(x)) → Dessert(x)) ∧ ∀x ((Pred_0(x) ∧ Greenness(x)) → Sourness(x)) ∧ ∀x ((Pred_0(x) ∧ Yellowness(x)) → (Dessert(x) ∧ Sourness(x)))",
+   "peer_fol": "∀x ((Apple(x) ∧ Red(x)) → Sweet(x)) ∧ ∀x ((Apple(x) ∧ Green(x)) → Sour(x)) ∧ ∀x ((Apple(x) ∧ Yellow(x)) → (Sweet(x) ⊕ Sour(x)))",
+   "rel_orig": "STRONGER",
+   "rel_renamed": "COMPATIBLE",
+   "levels": [
+    3,
+    1
+   ],
+   "timeouts": [
+    false,
+    false
+   ],
+   "targets": [
+    "A",
+    "A"
+   ],
+   "lo_is_cand": [
+    true,
+    false
+   ],
+   "n_maps_L2": [
+    1820,
+    1820
+   ],
+   "seconds": [
+    0.9409,
+    0.8756
+   ]
+  },
+  {
+   "item_id": "65e6402b54:gpt-oss-120b:0",
+   "kind": "tok_rename",
+   "peer": "mistral-small-3.2-24b",
+   "orig": "∀x ((Apple(x) ∧ Red(x)) → Sweet(x)) ∧ ∀x ((Apple(x) ∧ Green(x)) → Sour(x)) ∧ ∀x ((Apple(x) ∧ Yellow(x)) → (Sweet(x) ∧ Sour(x)))",
+   "renamed": "∀x ((PNln5(x) ∧ PBpv7(x)) → PJhd3(x)) ∧ ∀x ((PNln5(x) ∧ PQfl7(x)) → PQzi0(x)) ∧ ∀x ((PNln5(x) ∧ PUtj7(x)) → (PJhd3(x) ∧ PQzi0(x)))",
+   "peer_fol": "∀x ((Apple(x) ∧ Red(x)) → Sweet(x)) ∧ ∀x ((Apple(x) ∧ Green(x)) → Sour(x)) ∧ ∀x ((Apple(x) ∧ Yellow(x)) → (Sweet(x) ⊕ Sour(x)))",
+   "rel_orig": "STRONGER",
+   "rel_renamed": "COMPATIBLE",
+   "levels": [
+    3,
+    1
+   ],
+   "timeouts": [
+    false,
+    false
+   ],
+   "targets": [
+    "A",
+    "A"
+   ],
+   "lo_is_cand": [
+    true,
+    false
+   ],
+   "n_maps_L2": [
+    1820,
+    1820
+   ],
+   "seconds": [
+    0.9409,
+    0.8961
+   ]
+  }
+ ]
+}
