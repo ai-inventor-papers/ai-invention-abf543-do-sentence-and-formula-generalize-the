@@ -1,0 +1,601 @@
+{
+ "M1_fallback_haiku": {
+  "member": "M1",
+  "model": "anthropic/claude-haiku-4.5",
+  "audit_accuracy": 0.9,
+  "n_audit": 40,
+  "adj_accuracy": 0.9,
+  "n_adj_judgments": 50,
+  "same_meaning_accuracy": 0.84,
+  "per_item": [
+   {
+    "cal_id": "cal00",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal01",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal02",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal03",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal04",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal05",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal06",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal07",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal08",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal09",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal10",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal11",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal12",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal13",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": false
+   },
+   {
+    "cal_id": "cal14",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal15",
+    "kind": "mutant",
+    "op": "negation_flip",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal16",
+    "kind": "mutant",
+    "op": "negation_flip",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal17",
+    "kind": "mutant",
+    "op": "negation_flip",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal18",
+    "kind": "mutant",
+    "op": "quantifier_swap",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal19",
+    "kind": "mutant",
+    "op": "quantifier_swap",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal20",
+    "kind": "mutant",
+    "op": "quantifier_swap",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal21",
+    "kind": "mutant",
+    "op": "implication_reversal",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal22",
+    "kind": "mutant",
+    "op": "implication_reversal",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal23",
+    "kind": "mutant",
+    "op": "implication_reversal",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal24",
+    "kind": "mutant",
+    "op": "drop_conjunct",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal25",
+    "kind": "mutant",
+    "op": "drop_conjunct",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal26",
+    "kind": "mutant",
+    "op": "drop_conjunct",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal27",
+    "kind": "mutant",
+    "op": "connective_and_or",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal28",
+    "kind": "mutant",
+    "op": "connective_and_or",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal29",
+    "kind": "mutant",
+    "op": "connective_and_or",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal30",
+    "kind": "rewrite",
+    "op": "predicate_renaming",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal31",
+    "kind": "rewrite",
+    "op": "predicate_renaming",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal32",
+    "kind": "rewrite",
+    "op": "predicate_renaming",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal33",
+    "kind": "rewrite",
+    "op": "material_implication",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal34",
+    "kind": "rewrite",
+    "op": "contrapositive",
+    "label": true,
+    "vote": false
+   },
+   {
+    "cal_id": "cal35",
+    "kind": "rewrite",
+    "op": "contrapositive",
+    "label": true,
+    "vote": false
+   },
+   {
+    "cal_id": "cal36",
+    "kind": "rewrite",
+    "op": "contrapositive",
+    "label": true,
+    "vote": false
+   },
+   {
+    "cal_id": "cal37",
+    "kind": "rewrite",
+    "op": "material_implication",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal38",
+    "kind": "rewrite",
+    "op": "material_implication",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal39",
+    "kind": "rewrite",
+    "op": "contrapositive",
+    "label": true,
+    "vote": true
+   }
+  ],
+  "config": {
+   "model": "anthropic/claude-haiku-4.5",
+   "params": {
+    "temperature": 0.0,
+    "max_tokens": 900
+   }
+  }
+ },
+ "M3_nothink": {
+  "member": "M3v",
+  "model": "z-ai/glm-4.6",
+  "audit_accuracy": 0.875,
+  "n_audit": 40,
+  "adj_accuracy": 0.94,
+  "n_adj_judgments": 50,
+  "same_meaning_accuracy": 0.88,
+  "per_item": [
+   {
+    "cal_id": "cal00",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal01",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal02",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal03",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal04",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal05",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal06",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal07",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal08",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal09",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal10",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal11",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal12",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal13",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": false
+   },
+   {
+    "cal_id": "cal14",
+    "kind": "gold",
+    "op": "none",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal15",
+    "kind": "mutant",
+    "op": "negation_flip",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal16",
+    "kind": "mutant",
+    "op": "negation_flip",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal17",
+    "kind": "mutant",
+    "op": "negation_flip",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal18",
+    "kind": "mutant",
+    "op": "quantifier_swap",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal19",
+    "kind": "mutant",
+    "op": "quantifier_swap",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal20",
+    "kind": "mutant",
+    "op": "quantifier_swap",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal21",
+    "kind": "mutant",
+    "op": "implication_reversal",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal22",
+    "kind": "mutant",
+    "op": "implication_reversal",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal23",
+    "kind": "mutant",
+    "op": "implication_reversal",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal24",
+    "kind": "mutant",
+    "op": "drop_conjunct",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal25",
+    "kind": "mutant",
+    "op": "drop_conjunct",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal26",
+    "kind": "mutant",
+    "op": "drop_conjunct",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal27",
+    "kind": "mutant",
+    "op": "connective_and_or",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal28",
+    "kind": "mutant",
+    "op": "connective_and_or",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal29",
+    "kind": "mutant",
+    "op": "connective_and_or",
+    "label": false,
+    "vote": false
+   },
+   {
+    "cal_id": "cal30",
+    "kind": "rewrite",
+    "op": "predicate_renaming",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal31",
+    "kind": "rewrite",
+    "op": "predicate_renaming",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal32",
+    "kind": "rewrite",
+    "op": "predicate_renaming",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal33",
+    "kind": "rewrite",
+    "op": "material_implication",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal34",
+    "kind": "rewrite",
+    "op": "contrapositive",
+    "label": true,
+    "vote": false
+   },
+   {
+    "cal_id": "cal35",
+    "kind": "rewrite",
+    "op": "contrapositive",
+    "label": true,
+    "vote": false
+   },
+   {
+    "cal_id": "cal36",
+    "kind": "rewrite",
+    "op": "contrapositive",
+    "label": true,
+    "vote": false
+   },
+   {
+    "cal_id": "cal37",
+    "kind": "rewrite",
+    "op": "material_implication",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal38",
+    "kind": "rewrite",
+    "op": "material_implication",
+    "label": true,
+    "vote": true
+   },
+   {
+    "cal_id": "cal39",
+    "kind": "rewrite",
+    "op": "contrapositive",
+    "label": true,
+    "vote": false
+   }
+  ],
+  "config": {
+   "model": "z-ai/glm-4.6",
+   "params": {
+    "temperature": 0.0,
+    "max_tokens": 900,
+    "reasoning": {
+     "enabled": false
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,29 @@
+{"ts": 1790166281.6020396, "stage": "test", "item_id": "t1", "prompt_tokens": 50, "completion_tokens": 2, "reasoning_tokens": 0, "cost": 2e-05, "seconds": 0.511}
+{"ts": 1790166803.5975976, "stage": "dev_T1", "item_id": "and/or restrictor", "prompt_tokens": 127, "completion_tokens": 6, "reasoning_tokens": 0, "cost": 5.31e-05, "seconds": 0.655}
+{"ts": 1790166804.2515192, "stage": "dev_T1", "item_id": "and/or scope", "prompt_tokens": 123, "completion_tokens": 11, "reasoning_tokens": 0, "cost": 6.44e-05, "seconds": 0.529}
+{"ts": 1790166804.8149586, "stage": "dev_T1", "item_id": "exception consequent swap", "prompt_tokens": 133, "completion_tokens": 11, "reasoning_tokens": 0, "cost": 6.74e-05, "seconds": 0.495}
+{"ts": 1790166805.683233, "stage": "dev_T1", "item_id": "wrong constant", "prompt_tokens": 140, "completion_tokens": 6, "reasoning_tokens": 0, "cost": 5.7e-05, "seconds": 0.835}
+{"ts": 1790166806.2433248, "stage": "dev_T1", "item_id": "scope 1", "prompt_tokens": 127, "completion_tokens": 11, "reasoning_tokens": 0, "cost": 6.56e-05, "seconds": 0.479}
+{"ts": 1790166806.7516134, "stage": "dev_T1", "item_id": "scope 2", "prompt_tokens": 130, "completion_tokens": 6, "reasoning_tokens": 0, "cost": 5.4e-05, "seconds": 0.485}
+{"ts": 1790166807.4761224, "stage": "dev_T1", "item_id": "cardinality 1", "prompt_tokens": 119, "completion_tokens": 6, "reasoning_tokens": 0, "cost": 5.07e-05, "seconds": 0.705}
+{"ts": 1790166808.0696187, "stage": "dev_T1", "item_id": "cardinality 2", "prompt_tokens": 129, "completion_tokens": 6, "reasoning_tokens": 0, "cost": 5.37e-05, "seconds": 0.543}
+{"ts": 1790166808.8687387, "stage": "dev_T2", "item_id": "030bc863ad", "prompt_tokens": 521, "completion_tokens": 47, "reasoning_tokens": 0, "cost": 0.0002738, "seconds": 0.641}
+{"ts": 1790166809.658816, "stage": "dev_T2", "item_id": "056167fe9e", "prompt_tokens": 286, "completion_tokens": 40, "reasoning_tokens": 0, "cost": 0.0001858, "seconds": 0.743}
+{"ts": 1790166810.5310707, "stage": "dev_T2", "item_id": "086d1d7f7e", "prompt_tokens": 457, "completion_tokens": 47, "reasoning_tokens": 0, "cost": 0.0002546, "seconds": 0.816}
+{"ts": 1790166811.0753725, "stage": "dev_T2", "item_id": "0c242b952e", "prompt_tokens": 279, "completion_tokens": 29, "reasoning_tokens": 0, "cost": 0.0001562, "seconds": 0.517}
+{"ts": 1790166811.943978, "stage": "dev_T2", "item_id": "12aedaf2c0", "prompt_tokens": 341, "completion_tokens": 48, "reasoning_tokens": 0, "cost": 0.0002223, "seconds": 0.762}
+{"ts": 1790166812.8422475, "stage": "dev_T2", "item_id": "1b06ddcee2", "prompt_tokens": 574, "completion_tokens": 47, "reasoning_tokens": 0, "cost": 0.0002897, "seconds": 0.802}
+{"ts": 1790166813.5541625, "stage": "dev_T2", "item_id": "2f4264431b", "prompt_tokens": 292, "completion_tokens": 32, "reasoning_tokens": 0, "cost": 0.0001676, "seconds": 0.625}
+{"ts": 1790166814.2884293, "stage": "dev_T2", "item_id": "3d6c553987", "prompt_tokens": 471, "completion_tokens": 48, "reasoning_tokens": 0, "cost": 0.0002613, "seconds": 0.698}
+{"ts": 1790166815.0151484, "stage": "dev_T2", "item_id": "4292485c32", "prompt_tokens": 318, "completion_tokens": 35, "reasoning_tokens": 0, "cost": 0.0001829, "seconds": 0.685}
+{"ts": 1790166815.5724084, "stage": "dev_T2", "item_id": "69aac72c3d", "prompt_tokens": 263, "completion_tokens": 23, "reasoning_tokens": 0, "cost": 0.0001364, "seconds": 0.52}
+{"ts": 1790166816.1631296, "stage": "dev_T2", "item_id": "6c8c8fdc0c", "prompt_tokens": 278, "completion_tokens": 24, "reasoning_tokens": 0, "cost": 0.0001434, "seconds": 0.544}
+{"ts": 1790166817.6674879, "stage": "dev_T2", "item_id": "81e303634b", "prompt_tokens": 351, "completion_tokens": 48, "reasoning_tokens": 0, "cost": 0.0002253, "seconds": 1.429}
+{"ts": 1790166818.3291998, "stage": "dev_T2", "item_id": "82f68dd508", "prompt_tokens": 281, "completion_tokens": 40, "reasoning_tokens": 0, "cost": 0.0001843, "seconds": 0.631}
+{"ts": 1790166818.8773046, "stage": "dev_T2", "item_id": "99ae2150f0", "prompt_tokens": 197, "completion_tokens": 12, "reasoning_tokens": 0, "cost": 8.91e-05, "seconds": 0.489}
+{"ts": 1790166819.5023055, "stage": "dev_T2", "item_id": "99b47ac51a", "prompt_tokens": 185, "completion_tokens": 24, "reasoning_tokens": 0, "cost": 0.0001155, "seconds": 0.578}
+{"ts": 1790166820.3412917, "stage": "dev_T2", "item_id": "99fe05162d", "prompt_tokens": 270, "completion_tokens": 40, "reasoning_tokens": 0, "cost": 0.000181, "seconds": 0.789}
+{"ts": 1790166820.8766341, "stage": "dev_T2", "item_id": "9a14f7da98", "prompt_tokens": 163, "completion_tokens": 17, "reasoning_tokens": 0, "cost": 9.14e-05, "seconds": 0.504}
+{"ts": 1790166821.4612434, "stage": "dev_T2", "item_id": "9a26ec028c", "prompt_tokens": 414, "completion_tokens": 48, "reasoning_tokens": 0, "cost": 0.0002442, "seconds": 0.492}
+{"ts": 1790166822.08016, "stage": "dev_T2", "item_id": "9a881a19f2", "prompt_tokens": 292, "completion_tokens": 40, "reasoning_tokens": 0, "cost": 0.0001876, "seconds": 0.584}
+{"ts": 1790166822.678554, "stage": "dev_T2", "item_id": "9aa9b3d800", "prompt_tokens": 170, "completion_tokens": 17, "reasoning_tokens": 0, "cost": 9.35e-05, "seconds": 0.551}

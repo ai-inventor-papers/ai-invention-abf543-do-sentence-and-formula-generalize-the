@@ -1,0 +1,123 @@
+{
+ "model": "google/gemini-2.5-flash",
+ "chosen": "thinking_1024",
+ "reasoning": {
+  "max_tokens": 1024
+ },
+ "rule": "thinking-off unless its downward accuracy < 0.80 AND thinking-on raises downward accuracy by >= 0.05",
+ "pilot": {
+  "thinking_off": {
+   "table": {
+    "overall": {
+     "acc": 0.68,
+     "n": 100
+    },
+    "up": {
+     "acc": 0.88,
+     "n": 50
+    },
+    "up_entailment": {
+     "acc": 0.84,
+     "n": 25
+    },
+    "up_neutral": {
+     "acc": 0.92,
+     "n": 25
+    },
+    "down": {
+     "acc": 0.48,
+     "n": 50
+    },
+    "down_entailment": {
+     "acc": 0.36,
+     "n": 25
+    },
+    "down_neutral": {
+     "acc": 0.6,
+     "n": 25
+    },
+    "balanced_acc": {
+     "acc": 0.6799999999999999,
+     "n": 4
+    }
+   },
+   "n_parse_fail": 0
+  },
+  "thinking_1024": {
+   "table": {
+    "overall": {
+     "acc": 0.77,
+     "n": 100
+    },
+    "up": {
+     "acc": 0.9,
+     "n": 50
+    },
+    "up_entailment": {
+     "acc": 0.88,
+     "n": 25
+    },
+    "up_neutral": {
+     "acc": 0.92,
+     "n": 25
+    },
+    "down": {
+     "acc": 0.64,
+     "n": 50
+    },
+    "down_entailment": {
+     "acc": 0.52,
+     "n": 25
+    },
+    "down_neutral": {
+     "acc": 0.76,
+     "n": 25
+    },
+    "balanced_acc": {
+     "acc": 0.77,
+     "n": 4
+    }
+   },
+   "n_parse_fail": 0
+  },
+  "gpt41mini_nothink": {
+   "table": {
+    "overall": {
+     "acc": 0.59,
+     "n": 100
+    },
+    "up": {
+     "acc": 0.86,
+     "n": 50
+    },
+    "up_entailment": {
+     "acc": 0.8,
+     "n": 25
+    },
+    "up_neutral": {
+     "acc": 0.92,
+     "n": 25
+    },
+    "down": {
+     "acc": 0.32,
+     "n": 50
+    },
+    "down_entailment": {
+     "acc": 0.24,
+     "n": 25
+    },
+    "down_neutral": {
+     "acc": 0.4,
+     "n": 25
+    },
+    "balanced_acc": {
+     "acc": 0.5900000000000001,
+     "n": 4
+    }
+   }
+  }
+ },
+ "b1_config": "thinking_off",
+ "fallback_gpt41mini_triggered": true,
+ "fallback_decision": "DEVIATION from fallback (11): both gemini configs had downward pilot accuracy < 0.70 (off 0.48, thinking-1024 0.64), which pre-registers a switch to openai/gpt-4.1-mini. gpt-4.1-mini was piloted on the same 100 MED items and scored downward 0.32 (overall 0.59), i.e. strictly worse; switching would weaken the text side, so the probe (and B4) keep google/gemini-2.5-flash with thinking budget 1024, the choice of the primary pre-registered rule. B1 stays gemini-2.5-flash thinking-off (cross-arm anchor)."
+}
